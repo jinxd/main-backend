@@ -1,0 +1,21 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "X5933694SW.com.nagel.superghost",
+        "paths": [
+          "superghost/private/*",
+          "api/*",
+          "open/ghost/*"
+        ]
+      },
+      {
+        "appID": "X5933694SW.com.nagel.ContainEye",
+        "paths": [
+          "open/containeye/*"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Ghost - Duel with Words</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="text-center py-4">
+        <h1 class="text-3xl font-bold">Ghost - Duel with Words</h1>
+        <nav class="mt-4">
+            <ul class="flex justify-center space-x-4">
+                <li><a href="/home" class="hover:text-blue-400">home</a></li>
+                <li><a href="/blog" class="hover:text-blue-400">blog</a></li>
+                <li><a href="/apps" class="hover:text-blue-400">apps</a></li>
+                <li><a href="/about" class="hover:text-blue-400">about</a></li>
+                <li><a href="/contact" class="hover:text-blue-400">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 max-w-3xl flex-grow">
+        <section class="mt-8">
+            <h1 class="text-4xl font-bold mb-6">Privacy Policy</h1>
+            <p class="mb-6">Effective Date: 3. August 2024</p>
+            
+            <h2 class="text-2xl font-bold mt-8 mb-4">1. Introduction</h2>
+            <p class="mb-4">Welcome to Ghost - Duel with Words ("I," "my," or "me"). I am committed to protecting your privacy and complying with the General Data Protection Regulation (GDPR). This Privacy Policy explains how I collect, use, and protect your personal data when you use my word game application.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">2. Data I Collect</h2>
+            <p class="mb-4">I collect and process the following limited personal data:</p>
+            <ul class="list-disc list-inside mb-4 ml-4">
+                <li>Usernames</li>
+                <li>Game scores</li>
+                <li>Basic Userinteraction (like app launch or game starts, wins and losses)</li>
+            </ul>
+            <p class="mb-4">I do not collect or store any other personal information such as email addresses, phone numbers, real names, IP addresses, or device identifiers.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">3. Purpose and Legal Basis for Processing</h2>
+            <p class="mb-4">I process your data for the following purposes:</p>
+            <ul class="list-disc list-inside mb-4 ml-4">
+                <li>To provide and maintain the game service</li>
+                <li>To track and display user scores</li>
+                <li>To improve the game experience</li>
+            </ul>
+            <p class="mb-4">The legal basis for processing this data is my legitimate interest in providing and improving my game service, as well as the performance of my contract with you to provide the game service.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">4. Data Storage and Security</h2>
+            <p class="mb-4">Your data is stored securely on servers located in Amsterdam, Netherlands. I implement appropriate technical and organizational measures to protect your personal data against unauthorized or unlawful processing, accidental loss, destruction, or damage.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">5. Data Retention</h2>
+            <p class="mb-4">I will retain your personal data only for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">6. Your Rights</h2>
+            <p class="mb-4">Under the GDPR, you have the following rights:</p>
+            <ul class="list-disc list-inside mb-4 ml-4">
+                <li>The right to access your personal data</li>
+                <li>The right to rectification of inaccurate personal data</li>
+                <li>The right to erasure of your personal data</li>
+                <li>The right to restrict processing of your personal data</li>
+                <li>The right to data portability</li>
+                <li>The right to object to processing of your personal data</li>
+            </ul>
+            <p class="mb-4">To exercise these rights, please contact me using the information provided in the "Contact Me" section below.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">7. Changes to This Privacy Policy</h2>
+            <p class="mb-4">I may update this Privacy Policy from time to time. I will notify you of any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top of this Privacy Policy.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">8. Contact Me</h2>
+            <p class="mb-4">If you have any questions about this Privacy Policy or my data practices, please <a href="/contact" class="text-blue-400 hover:underline">contact me</a>.</p>
+        </section>
+    </main>
+
+    <footer class="bg-[#1e1e1e] text-center py-4 mt-8">
+        <p>Ghost - Duel with Words &copy; 2024</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="superghosty" content="app-id=6517354718">
+    <title>superghost - hannesnagel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: transparent;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            box-sizing: border-box;
+            flex: 1;
+        }
+        footer {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 1rem;
+        }
+        .main {
+            padding: 20px;
+            margin-top: 10px;
+        }
+        .main p {
+            color: #e0e0e0;
+            line-height: 1.6;
+            text-align: left;
+        }
+        .app {
+            margin-top: 20px;
+        }
+        .links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .links a {
+            color: #4a90e2;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #4a90e2;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+        .links a:hover {
+            background-color: #4a90e2;
+            color: #fff;
+        }
+        a:link, a:visited {
+        	color: white;
+    	}
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+            }
+        }
+        .title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title-container h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.title-container a {
+    flex-shrink: 0; /* Ensures the button doesn’t shrink */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>superghost</h1>
+        <nav>
+            <ul>
+                <li><a href="/home">home</a></li>
+                <li><a href="/blog">blog</a></li>
+                <li><a href="/apps">apps</a></li>
+                <li><a href="/about">about</a></li>
+                <li><a href="/contact">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="main">
+            <div class="app">
+                <div class="title-container">
+    <h2>Ghost - Duel with Words</h2>
+    <a href="https://apps.apple.com/app/apple-store/id6517354718?pt=126452706&ct=website&mt=8" target="_blank" rel="noopener noreferrer">
+        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1684800000" alt="Download on the App Store" class="app-store-badge">
+    </a>
+</div>
+                <p>Inspired by a game played on the chalk board, superghost is a word game where you have to add letters so that:</p>
+                <p>- It doesn't make an entire word</p>
+                <p>- It could become a word when adding more letters</p>
+                <p>Players take turns and when you think a player is lying you can challenge the move.</p>
+                <p>With ghost you can append letters to a word, with superghost you can also add them before the letters.</p>
+                <p>Every time you lose, you collect a letter of the word GHOST or SUPERGHOST. When the word is full you can't play for this day any longer.</p>
+                <p>Get a winning streak of 5 online matches to earn a free day of superghost.</p>
+				<a href="/ghost">Learn more</a>
+            </div>
+            <div class="links">
+                <a href="/contact">Contact Me</a>
+                <a href="/blog">Visit My Blog</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>hannesnagel &copy; 2024</p>
+    </footer>
+</body>
+</html>

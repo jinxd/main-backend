@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about - hannesnagel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Changed body background color */
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: transparent; /* Removed header background color */
+            color: #e0e0e0;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+        }
+        .container {
+            width: 90%; /* Set width to 90% */
+            max-width: 800px; /* Optional: Limit maximum width */
+            margin: auto;
+            overflow: hidden;
+            padding: 20px; /* Added padding */
+            box-sizing: border-box; /* Ensure padding is included in width */
+            flex: 1;
+        }
+        footer {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .main {
+            padding: 20px; /* Added padding */
+            margin-top: 10px;
+            background-color: transparent; /* Removed gray background color */
+        }
+        .main h1,
+        .main p {
+            color: #e0e0e0;
+        }
+        .main p {
+            line-height: 1.6;
+            text-align: left; /* Align paragraphs left */
+        }
+        .links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            background-color: transparent; /* Removed gray background color */
+        }
+        .links a {
+            color: #4a90e2;
+            text-decoration: none;
+            display: inline-block; /* Display links as inline-block for easy styling */
+            padding: 10px 20px; /* Padding for links */
+            border: 1px solid #4a90e2; /* Border around links */
+            border-radius: 25px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition for background color */
+        }
+        .links a:hover {
+            background-color: #4a90e2; /* Background color on hover */
+            color: #fff; /* Text color on hover */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                width: 100%; /* Full width on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>about me</h1>
+        <nav>
+            <ul>
+                <li><a href="/home">home</a></li>
+                <li><a href="/blog">blog</a></li>
+                <li><a href="/apps">apps</a></li>
+                <li><a href="/about">about</a></li>
+                <li><a href="/contact">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="main">
+            <p>I am a student and software developer since 2020 in germany. I released my first app when I was 15. It's called ear2brain. I am employed at codeunity and made for them a complete rewrite of the frontend of zettl - die Zeiterfassung which is only available in the German AppStore. Another app, superghost, is in development and coming soon.</p>
+            <div class="links">
+                <a href="/apps">View My Apps</a>
+                <a href="/contact">Contact Me</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>hannesnagel &copy; 2024</p>
+    </footer>
+</body>
+</html>
