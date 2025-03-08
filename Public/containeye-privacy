@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - ContainEye</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="text-center py-4">
+        <h1 class="text-3xl font-bold">ContainEye</h1>
+        <nav class="mt-4">
+            <ul class="flex justify-center space-x-4">
+                <li><a href="/home" class="hover:text-blue-400">home</a></li>
+                <li><a href="/blog" class="hover:text-blue-400">blog</a></li>
+                <li><a href="/apps" class="hover:text-blue-400">apps</a></li>
+                <li><a href="/about" class="hover:text-blue-400">about</a></li>
+                <li><a href="/contact" class="hover:text-blue-400">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 max-w-3xl flex-grow">
+        <section class="mt-8">
+            <h1 class="text-4xl font-bold mb-6">Privacy Policy</h1>
+            <p class="mb-6">Effective Date: 8. March 2025</p>
+            
+            <h2 class="text-2xl font-bold mt-8 mb-4">1. Introduction</h2>
+            <p class="mb-4">Welcome to ContainEye ("I," "my," or "me"). Your privacy is important, and I am committed to transparency about how ContainEye handles data. This Privacy Policy outlines what information is collected and how it is used.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">2. Data Collection</h2>
+            <p class="mb-4">ContainEye does not collect any personal data or information that can be linked to your identity.</p>
+            <p class="mb-4">The app only collects anonymous product interaction data, such as:</p>
+            <ul class="list-disc list-inside mb-4 ml-4">
+                <li>App launches</li>
+                <li>Features used</li>
+                <li>Performance metrics</li>
+                <li>Error reports</li>
+            </ul>
+            <p class="mb-4">This data is collected solely to improve the app's performance and functionality.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">3. Purpose of Data Collection</h2>
+            <p class="mb-4">The collected data is used for:</p>
+            <ul class="list-disc list-inside mb-4 ml-4">
+                <li>Improving app performance</li>
+                <li>Identifying and fixing bugs</li>
+                <li>Enhancing user experience</li>
+                <li>Understanding feature usage</li>
+            </ul>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">4. Data Storage and Security</h2>
+            <p class="mb-4">All collected data is stored securely and is not shared with third parties. ContainEye employs industry-standard security measures to prevent unauthorized access, alteration, or misuse.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">5. Data Retention</h2>
+            <p class="mb-4">Anonymous analytics data is retained only as long as necessary to analyze and improve the app. No personally identifiable information is ever stored or retained.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">6. Your Rights</h2>
+            <p class="mb-4">Since no personal data is collected, there is no personally identifiable information to access, modify, or delete. If you have concerns, you may reach out using the contact details below.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">7. Changes to This Privacy Policy</h2>
+            <p class="mb-4">This Privacy Policy may be updated from time to time. Any changes will be reflected on this page with an updated "Effective Date." Continued use of ContainEye indicates acceptance of any modifications.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">8. Contact</h2>
+            <p class="mb-4">If you have any questions about this Privacy Policy, please contact me through the app or website.</p>
+        </section>
+    </main>
+
+    <footer class="bg-[#1e1e1e] text-center py-4 mt-8">
+        <p>ContainEye &copy; 2025</p>
+    </footer>
+</body>
+</html>
