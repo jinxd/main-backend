@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Ghost - Duel with Words</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="text-center py-4">
+        <h1 class="text-3xl font-bold">Ghost - Duel with Words</h1>
+        <nav class="mt-4">
+            <ul class="flex justify-center space-x-4">
+                <li><a href="/home" class="hover:text-blue-400">home</a></li>
+                <li><a href="/apps" class="hover:text-blue-400">apps</a></li>
+                <li><a href="/about" class="hover:text-blue-400">about</a></li>
+                <li><a href="/contact" class="hover:text-blue-400">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 max-w-3xl flex-grow">
+        <section class="mt-8">
+            <h1 class="text-4xl font-bold mb-6">Terms of Service</h1>
+            <p class="mb-6">Welcome to Ghost - Duel with Words! These Terms of Service ("TOS") govern your use of our in-app purchase options, including lifetime unlocks and subscription services. By subscribing or making an in-app purchase, you agree to these terms.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">Acceptance of Terms</h2>
+            <p class="mb-4">By using Ghost - Duel with Words and subscribing to our services, you agree to comply with and be bound by these TOS.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">Subscription Terms</h2>
+            <p class="mb-4">We offer the following in-app purchase options:</p>
+            <ul class="list-disc list-inside mb-4 ml-4">
+                <li>Lifetime Unlock: One-time payment for permanent access to premium features.</li>
+                <li>Monthly Subscription: Recurring payment for access to premium features.</li>
+                <li>Annual Subscription: Recurring payment for access to premium features.</li>
+            </ul>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">Billing and Payment</h2>
+            <p class="mb-4">Subscriptions are billed automatically based on your chosen billing cycle (monthly or yearly) through your Apple ID account. Prices may vary by region and are displayed in the app at the time of purchase. Payment will be charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. You can manage and cancel your subscriptions by going to your account settings on the App Store after purchase.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">Cancellation and Refunds</h2>
+            <p class="mb-4">You can cancel your subscription anytime through your Apple ID account settings. No refunds are provided for unused portions of the subscription period. Upon cancellation, access to premium features will continue until the end of the current billing period.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">Changes to Subscription Terms</h2>
+            <p class="mb-4">We reserve the right to modify subscription terms, including pricing. Continued use of the service constitutes acceptance of the new terms.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">Termination of Service</h2>
+            <p class="mb-4">We may terminate your access to premium features for violating these TOS or for other reasons. You may terminate your subscription or lifetime access at any time through your account settings.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">User Responsibilities</h2>
+            <p class="mb-4">Users must comply with all applicable laws and regulations. Do not share your account credentials with others.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">Privacy Policy</h2>
+            <p class="mb-4">Our <a href="/ghost/privacy" class="text-blue-400 hover:underline">Privacy Policy</a> explains how we collect, use, and protect your data.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">Dispute Resolution</h2>
+            <p class="mb-4">Any disputes arising out of or related to these TOS and the use of the app shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association. These terms are governed by the laws of Baden-Württemberg, Germany.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">Limitation of Liability</h2>
+            <p class="mb-4">We are not liable for service outages, data loss, or other issues beyond our control. Additionally, we reserve the right to remove the app from the App Store at any time, for any reason, without notice. In the event that the app stops working or is removed from the App Store, we are not liable for any consequences or losses resulting from such actions.</p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">Contact Information</h2>
+            <p class="mb-4">For support or questions about these TOS, <a href="/contact" class="text-blue-400 hover:underline">contact</a> me.</p>
+        </section>
+    </main>
+
+    <footer class="bg-[#1e1e1e] text-center py-4 mt-8">
+        <p>hannesnagel &copy; 2024</p>
+    </footer>
+</body>
+</html> 

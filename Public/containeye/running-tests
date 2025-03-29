@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContainEye - Running Tests - hannesnagel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #000000;
+            color: #e0e0e0;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .feature-list {
+            list-style-type: none;
+            padding-left: 1.5rem;
+        }
+        .feature-list li {
+            margin-bottom: 0.5rem;
+        }
+        .feature-list li::before {
+            content: "•";
+            color: #4a90e2;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .nav-links a {
+            color: #4a90e2;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid #4a90e2;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        .nav-links a:hover {
+            background-color: #4a90e2;
+            color: white;
+        }
+        .screenshot {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .screenshot img {
+            width: 50%;
+            height: auto;
+            display: inline-block;
+        }
+        .steps {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .steps li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="text-center py-4">
+        <h1 class="text-3xl font-bold">ContainEye Documentation</h1>
+        <nav class="mt-4">
+            <ul class="flex justify-center space-x-4">
+                <li><a href="/home" class="hover:text-blue-400">home</a></li>
+                <li><a href="/apps" class="hover:text-blue-400">apps</a></li>
+                <li><a href="/about" class="hover:text-blue-400">about</a></li>
+                <li><a href="/contact" class="hover:text-blue-400">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 max-w-3xl flex-grow">
+        <section class="mt-8">
+            <div class="section">
+                <h2 class="text-2xl font-bold mb-4">Running Tests</h2>
+                
+                <p class="mb-4">ContainEye provides several ways to run your tests, giving you flexibility in how you monitor your servers. Tests can be run manually on demand or automated through Apple Shortcuts.</p>
+                
+                <h3 class="text-xl font-bold mb-2">Option 1: Quick Run from Test List</h3>
+                
+                <ol class="steps">
+                    <li>Go to the Tests tab in the bottom navigation.</li>
+                    <li>Tap and hold down on the test you want to run.</li>
+                    <li>Select "Execute" from the popup menu.</li>
+                    <li>The test will run immediately and update with the latest results.</li>
+                </ol>
+                
+                <h3 class="text-xl font-bold mb-2">Option 2: Run from Test Details</h3>
+                
+                <ol class="steps">
+                    <li>Go to the Tests tab in the bottom navigation.</li>
+                    <li>Tap on the test you want to run to open its details.</li>
+                    <li>Scroll down to the bottom of the test details.</li>
+                    <li>Tap the "Test Now" button.</li>
+                    <li>The test will run and update the results on the same screen.</li>
+                </ol>
+                
+                <div class="screenshot">
+                    <img src="/images/containeye-framed/test-details-title-host-command-last-run-expected-output-actual-output-test-now-edit-delete.png" alt="Test details with Test Now button">
+                </div>
+                
+                <h3 class="text-xl font-bold mb-2">Option 3: Apple Shortcuts Integration</h3>
+                
+                <p class="mb-2">Use Apple Shortcuts to automate test execution:</p>
+                
+                <ol class="steps">
+                    <li>Open the Apple Shortcuts app on your device.</li>
+                    <li>Create a new shortcut.</li>
+                    <li>Add a "ContainEye" action (search for ContainEye in the actions list).</li>
+                    <li>Choose one of the available actions:</li>
+                    <ul class="feature-list">
+                        <li>"Run Test" - Execute a specific test</li>
+                        <li>"Run All Tests" - Execute all tests</li>
+                        <li>"Find ContainEye Test" - Search and filter for specific tests</li>
+                    </ul>
+                    <li>Configure any required parameters (such as selecting which test to run).</li>
+                    <li>You can add filters to the "Find ContainEye Test" action to select tests based on name, server, or status.</li>
+                    <li>Save your shortcut.</li>
+                </ol>
+                
+                <h3 class="text-xl font-bold mb-2">Advanced Automation with Shortcuts</h3>
+                
+                <p class="mb-4">Here are some useful ways to automate your tests with Apple Shortcuts:</p>
+                
+                <ul class="feature-list">
+                    <li><strong>Scheduled Tests:</strong> Set up a shortcut to run at specific times using the Automation feature.</li>
+                    <li><strong>Conditional Tests:</strong> Run tests only under certain conditions (e.g., when connected to specific networks).</li>
+                    <li><strong>Custom Workflows:</strong> Create a workflow to run only failed tests by using "Find ContainEye Test" with a status filter set to "Failed".</li>
+                    <li><strong>Batch Processing:</strong> Run multiple tests in sequence and process their results.</li>
+                </ul>
+                
+                <h3 class="text-xl font-bold mb-2">Automatic Test Execution</h3>
+                
+                <p class="mb-4">Tests in ContainEye run automatically in the background, with frequency varying from once every few minutes to every few hours, optimized based on your device's power usage. You'll always receive a notification when a test fails, helping you stay informed of any issues. The last run time is visible in the test details.</p>
+            </div>
+
+            <div class="nav-links">
+                <a href="/containeye/adding-new-test">← Previous: Adding a New Test</a>
+                <a href="/containeye/features-3">Next: SFTP & Shortcuts →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#1e1e1e] text-center py-4 mt-8">
+        <p>hannesnagel &copy; 2024</p>
+    </footer>
+</body>
+</html> 

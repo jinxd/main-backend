@@ -97,7 +97,6 @@
         <nav>
             <ul>
                 <li><a href="/home">home</a></li>
-                <li><a href="/blog">blog</a></li>
                 <li><a href="/apps">apps</a></li>
                 <li><a href="/about">about</a></li>
                 <li><a href="/contact">contact</a></li>
@@ -107,7 +106,7 @@
 
     <div class="container">
         <section class="main">
-            <p>I am a student and software developer since 2020 in germany. I released my first app when I was 15. It's called ear2brain. I am employed at codeunity and made for them a complete rewrite of the frontend of zettl - die Zeiterfassung which is only available in the German AppStore. Another app, superghost, is in development and coming soon.</p>
+            <p>I am a student and software developer since 2020 in germany. I released my first app when I was 15. It's called ear2brain. I am employed at codeunity and made for them a complete rewrite of the frontend of zettl - die Zeiterfassung which is only available in the German AppStore. I've released superghost, a word game where you duel other players by prepending or appending letters. Currently, I'm working on ContainEye, a container management app that helps you organize and track your containers.</p>
             <div class="links">
                 <a href="/apps">View My Apps</a>
                 <a href="/contact">Contact Me</a>

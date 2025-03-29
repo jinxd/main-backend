@@ -101,7 +101,7 @@
 }
 
 .title-container a {
-    flex-shrink: 0; /* Ensures the button doesn’t shrink */
+    flex-shrink: 0; /* Ensures the button doesn't shrink */
 }
     </style>
 </head>
@@ -111,7 +111,6 @@
         <nav>
             <ul>
                 <li><a href="/home">home</a></li>
-                <li><a href="/blog">blog</a></li>
                 <li><a href="/apps">apps</a></li>
                 <li><a href="/about">about</a></li>
                 <li><a href="/contact">contact</a></li>
@@ -124,7 +123,7 @@
             <div class="app">
                 <div class="title-container">
     <h2>superghost private game</h2>
-    <a href="https://apps.apple.com/app/apple-store/id6517354718?pt=126452706&ct=website&mt=8" target="_blank" rel="noopener noreferrer">
+    <a href="https://apps.apple.com/app/apple-store/id6517354718?pt=126452706&ct=website&mt=8" rel="noopener noreferrer">
         <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1684800000" alt="Download on the App Store" class="app-store-badge">
     </a>
 </div>
@@ -141,7 +140,6 @@
             </div>
             <div class="links">
                 <a href="/contact">Contact Me</a>
-                <a href="/blog">Visit My Blog</a>
             </div>
         </section>
     </div>

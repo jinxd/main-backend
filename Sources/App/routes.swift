@@ -28,19 +28,9 @@ extension URLSession{
 
 
 @SuperGameService
-func routes(_ app: Application) throws { 
-    app.get("") { req -> Response in
-        return req.redirect(to: "/home")
-    }
+func routes(_ app: Application) throws {
     app.get("open", "*", "*") {req async throws in
         try await req.fileio.asyncStreamFile(at: app.directory.publicDirectory.appending("openapp"))
     }
-    //MARK: superghost routes
-    
-    try apiV1(app)
-    
-    try apiV2(app)
-    
-    try apiV3(app)
 }
 

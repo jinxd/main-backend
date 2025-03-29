@@ -18,7 +18,6 @@
         <nav class="mt-4">
             <ul class="flex justify-center space-x-4">
                 <li><a href="/home" class="hover:text-blue-400">home</a></li>
-                <li><a href="/blog" class="hover:text-blue-400">blog</a></li>
                 <li><a href="/apps" class="hover:text-blue-400">apps</a></li>
                 <li><a href="/about" class="hover:text-blue-400">about</a></li>
                 <li><a href="/contact" class="hover:text-blue-400">contact</a></li>
