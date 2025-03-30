@@ -55,30 +55,206 @@
             height: auto;
             display: inline-block;
         }
-        .steps {
-            list-style-type: decimal;
-            padding-left: 1.5rem;
-            margin-bottom: 1rem;
+        .screenshots-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
         }
-        .steps li {
-            margin-bottom: 0.5rem;
+        .screenshots-container .screenshot {
+            margin: 0;
+            flex: 0 1 auto;
+        }
+        .screenshots-container .screenshot img {
+            width: 100%;
+            max-width: 300px;
+        }
+        @media (max-width: 768px) {
+            .screenshots-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .screenshots-container .screenshot {
+                width: 100%;
+            }
+        }
+        
+        /* Enhanced navigation styles */
+        header {
+            background-color: transparent;
+            z-index: 5;
+        }
+        
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            position: relative;
+        }
+        
+        .nav-item {
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-link {
+            color: #e0e0e0;
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: #4a90e2;
+            background-color: rgba(74, 144, 226, 0.1);
+        }
+        
+        .nav-link.active {
+            font-weight: 600;
+        }
+        
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 180px;
+            background-color: rgba(20, 20, 20, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            z-index: 100;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            margin-top: 0.5rem;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .dropdown-item {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            text-align: center;
+            border-bottom: 1px solid rgba(100, 100, 100, 0.2);
+        }
+        
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+        
+        .dropdown-item:hover {
+            background-color: rgba(74, 144, 226, 0.2);
+        }
+        
+        .dropdown-item.active {
+            background-color: rgba(74, 144, 226, 0.3);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .app-icon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+        
+        /* ContainEye subnav */
+        .subnav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            padding: 0.5rem;
+            background-color: rgba(30, 30, 30, 0.7);
+            border-radius: 25px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .subnav-link {
+            color: #d0d0d0;
+            text-decoration: none;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+        
+        .subnav-link:hover, .subnav-link.active {
+            background-color: rgba(74, 144, 226, 0.2);
+            color: #4a90e2;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px) translateX(-50%); }
+            to { opacity: 1; transform: translateY(0) translateX(-50%); }
         }
     </style>
 </head>
 <body class="flex flex-col min-h-screen">
-    <header class="text-center py-4">
-        <h1 class="text-3xl font-bold">ContainEye Documentation</h1>
+    <header class="text-center py-4 relative z-10">
+        <h1 class="text-3xl font-bold">ContainEye</h1>
         <nav class="mt-4">
-            <ul class="flex justify-center space-x-4">
-                <li><a href="/home" class="hover:text-blue-400">home</a></li>
-                <li><a href="/apps" class="hover:text-blue-400">apps</a></li>
-                <li><a href="/about" class="hover:text-blue-400">about</a></li>
-                <li><a href="/contact" class="hover:text-blue-400">contact</a></li>
+            <ul class="main-nav">
+                <li class="nav-item">
+                    <a href="/home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="/apps" class="nav-link active">Apps</a>
+                    <div class="dropdown-content">
+                        <a href="/containeye/index" class="dropdown-item active">
+                            <span class="app-icon">👁️</span>ContainEye
+                        </a>
+                        <a href="/superghost" class="dropdown-item">
+                            <span class="app-icon">👻</span>SuperGhost
+                        </a>
+                        <a href="/zettl" class="dropdown-item">
+                            <span class="app-icon">📝</span>Zettl
+                        </a>
+                        <a href="/ear2brain" class="dropdown-item">
+                            <span class="app-icon">🎧</span>Ear2Brain
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact" class="nav-link">Contact</a>
+                </li>
             </ul>
+            
+            <!-- ContainEye Subnav -->
+            <div class="subnav">
+                <a href="/containeye/index" class="subnav-link">Overview</a>
+                <a href="/containeye/features" class="subnav-link">Features</a>
+                <a href="/containeye/ssh-terminal" class="subnav-link">SSH Terminal</a>
+                <a href="/containeye/servers-management" class="subnav-link">Servers</a>
+                <a href="/containeye/automated-tests" class="subnav-link active">Tests</a>
+                <a href="/containeye/faq" class="subnav-link">FAQ</a>
+                <a href="/containeye/support" class="subnav-link">Support</a>
+            </div>
         </nav>
     </header>
 
-    <main class="container mx-auto px-4 max-w-3xl flex-grow">
+    <main class="container mx-auto px-4 max-w-3xl flex-grow relative z-10">
         <section class="mt-8">
             <div class="section">
                 <h2 class="text-2xl font-bold mb-4">Automated Tests</h2>
