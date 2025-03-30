@@ -14,7 +14,6 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
 
         header {
@@ -22,39 +21,21 @@
             color: #e0e0e0;
             text-align: center;
             padding: 1rem;
-            z-index: 5;
         }
 
-        .main-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            position: relative;
+        nav ul {
             list-style-type: none;
             padding: 0;
         }
 
-        .nav-item {
-            position: relative;
-            padding: 0.5rem 0;
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
         }
 
-        .nav-link {
+        nav ul li a {
             color: #e0e0e0;
             text-decoration: none;
-            padding: 0.5rem 0.75rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .nav-link:hover, .nav-link.active {
-            color: #4a90e2;
-            background-color: rgba(74, 144, 226, 0.1);
-        }
-
-        .nav-link.active {
-            font-weight: 600;
         }
 
         .container {
@@ -102,21 +83,11 @@
             padding: 10px 20px;
             border: 1px solid #4a90e2;
             border-radius: 25px;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease;
         }
 
         .links a:hover {
             background-color: #4a90e2;
-            color: #fff;
-        }
-
-        footer a {
-            color: #4a90e2;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
             color: #fff;
         }
 
@@ -132,23 +103,19 @@
     <header>
         <h1>hannesnagel</h1>
         <nav>
-            <ul class="main-nav">
-                <li class="nav-item"><a href="/home" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="/apps" class="nav-link">Apps</a></li>
-                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+            <ul>
+                <li><a href="/home">home</a></li>
+                <li><a href="/apps">apps</a></li>
+                <li><a href="/about">about</a></li>
+                <li><a href="/contact">contact</a></li>
             </ul>
         </nav>
     </header>
     <div class="container">
         <section class="main">
-            👋 Hello there!
+            I started developing for Apple Platforms in 2022, working there since 2023 and am soon going to release the second and third app I made.
             <br>
-            I am Hannes.
-            <br>
-            I make apps.
-            <br>
-            ear2brain was my first app. The code is messy so it's closed source, I made it to learn Swift. It's also about a new way to learn. It's a vocabulary app!
+            ear2brain was my first app. The code is now a bit messy especially because back when I was 14 and made this app in 2022 it was mostly to learn. It's also about a new way to learn. It's a vocabulary app!
             <div class="links">
                 <a href="/about">About Me</a>
                 <a href="/apps">My Apps</a>

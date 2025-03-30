@@ -653,6 +653,12 @@
                     <p class="text-xl text-center">ContainEye is an all-in-one tool for managing your servers, Docker containers, and automated tests. With built-in SSH support, AI-powered test suggestions, and Apple Shortcuts integration, ContainEye makes server management easy and efficient.</p>
                 </div>
                 
+                <div class="text-center app-store-button" style="position: relative; z-index: 15; margin-top: -30vh; margin-bottom: 30vh;">
+                    <a href="https://apps.apple.com/us/app/containeye-terminal-docker/id6741063706" class="inline-block">
+                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1684800000" alt="Download on the App Store" style="height: 60px;">
+                    </a>
+                </div>
+                
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                     <div class="p-4 border border-blue-500 rounded-lg card-container">
                         <h3 class="text-xl font-bold mb-2">SSH Terminal</h3>

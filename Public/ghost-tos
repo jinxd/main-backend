@@ -2,20 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Superghost Terms of Service - hannesnagel</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #e0e0e0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        }
-    </style>
+    <meta http-equiv="refresh" content="0;url=/ghost/tos">
+    <title>Redirecting...</title>
 </head>
 <body>
     <p>Redirecting to Terms of Service...</p>

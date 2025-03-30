@@ -1,148 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact - hannesnagel</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #e0e0e0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta 
+    name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>hannesnagel</title> <style>
+        body { margin: 0; padding: 0; background-color: #121212; color: 
+            #e0e0e0;
+            display: flex; flex-direction: column; min-height: 100vh;
         }
-        header {
-            background-color: transparent;
-            color: #e0e0e0;
-            text-align: center;
-            padding: 1rem;
-            z-index: 5;
+        header { background-color: transparent; /* Removed background 
+            color */ color: #e0e0e0; text-align: center; padding: 1rem;
         }
-        header h1 {
-            font-size: 1.875rem;
-            font-weight: bold;
-            margin: 0.5rem 0 1rem;
+        nav ul { list-style-type: none; padding: 0;
         }
-        .main-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            position: relative;
-            list-style-type: none;
-            padding: 0;
+        nav ul li { display: inline; margin: 0 10px;
         }
-        .nav-item {
-            position: relative;
-            padding: 0.5rem 0;
-        }
-        .nav-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            padding: 0.5rem 0.75rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: #4a90e2;
-            background-color: rgba(74, 144, 226, 0.1);
-        }
-        .nav-link.active {
-            font-weight: 600;
+        nav ul li a { color: #e0e0e0; text-decoration: none;
         }
         .container {
-            width: 90%;
-            max-width: 800px;
-            margin: auto;
+        width: 90%;
+        max-width: 800px;
+            margin: auto; 
             padding: 20px;
-            box-sizing: border-box;
+            box-sizing: border-box; 
             flex: 1;
         }
-        footer {
-            background-color: #1e1e1e;
-            color: #e0e0e0;
-            text-align: center;
-            padding: 1rem;
+        footer { background-color: #1e1e1e; color: #e0e0e0; text-align: 
+            center; padding: 1rem;
         }
-        .main {
-            padding: 20px;
-            margin-top: 10px;
+        .main { padding: 20px; margin-top: 10px;
         }
-        .main p {
-            color: #e0e0e0;
-            line-height: 1.6;
-            text-align: left;
+        .main p { color: #e0e0e0; line-height: 1.6; text-align: left; /* 
+            Align paragraphs left */
+        }
+        .app { margin-top: 20px;
         }
         .links {
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-between;
+        margin-top: 20px;
+        display: flex;
+        justify-content: 
+            space-between;
             padding: 10px;
         }
-        .links a {
-            color: #4a90e2;
-            text-decoration: none;
-            display: inline-block;
+        .links a { color: #4a90e2; text-decoration: none; display: 
+            inline-block;
             padding: 10px 20px;
             border: 1px solid #4a90e2;
             border-radius: 25px;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease;
         }
-        .links a:hover {
-            background-color: #4a90e2;
-            color: #fff;
+        .links a:hover { background-color: #4a90e2;
+        color: #fff;
         }
-        .contact-link {
-            color: #4a90e2;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .contact-link:hover {
-            color: #fff;
-        }
-        footer a {
-            color: #4a90e2;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        footer a:hover {
-            color: #fff;
-        }
-        @media (max-width: 600px) {
+        a:link, a:visited {
+        	color: white;
+    	}
+    	@media (max-width: 600px) { 
             .container {
                 width: 100%;
             }
         }
     </style>
-</head>
-<body>
+    </head>
+    <body>
     <header>
-        <h1>contact</h1>
-        <nav>
-            <ul class="main-nav">
-                <li class="nav-item"><a href="/home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="/apps" class="nav-link">Apps</a></li>
-                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="/contact" class="nav-link active">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section class="main">
-            Just send me a mail to <a href="mailto:contact@hannesnagel.com" class="contact-link">contact@hannesnagel.com</a>.
-            Or toot to <a href="https://mastodon.social/@hannesmnagel" class="contact-link">hannesmnagel</a>
-            <div class="links">
-                <a href="/about">About Me</a>
-                <a href="/apps">My Apps</a>
-            </div>
-        </section>
-    </div>
-    <footer>
-        <p>hannesnagel &copy; 2024</p>
-    </footer>
-</body>
+    <h1>contact</h1> <nav> <ul>
+                <li><a href="/home">home</a></li>
+                <li><a href="/apps">apps</a></li>
+                <li><a href="/about">about</a></li>
+                <li><a href="/contact">contact</a></li>
+            </ul> </nav> </header> <div class="container"> <section 
+        class="main">
+            Just send me a mail to <a href="mailto:contact@hannesnagel.com"> contact@hannesnagel.com</a>.
+            Or toot to <a href="https://mastodon.social/@hannesmnagel"> hannesmnagel</a>
+            <div class="links"> <a 
+                href="/about">About Me</a> <a href="/apps">My Apps</a>
+            </div> </section> </div> <footer> <p>hannesnagel &copy; 
+        2024</p>
+    </footer> </body>
 </html>
