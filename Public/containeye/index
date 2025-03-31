@@ -289,57 +289,6 @@
             font-weight: 600;
         }
         
-        /* Dropdown styles */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            min-width: 180px;
-            background-color: rgba(20, 20, 20, 0.95);
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-            z-index: 100;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-            margin-top: 0.5rem;
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-            animation: fadeIn 0.3s ease;
-        }
-        
-        .dropdown-item {
-            display: block;
-            padding: 0.75rem 1rem;
-            color: #e0e0e0;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            text-align: center;
-            border-bottom: 1px solid rgba(100, 100, 100, 0.2);
-        }
-        
-        .dropdown-item:last-child {
-            border-bottom: none;
-        }
-        
-        .dropdown-item:hover {
-            background-color: rgba(74, 144, 226, 0.2);
-        }
-        
-        .dropdown-item.active {
-            background-color: rgba(74, 144, 226, 0.3);
-            color: white;
-            font-weight: 600;
-        }
-        
         .app-icon {
             width: 16px;
             height: 16px;
@@ -374,11 +323,6 @@
             background-color: rgba(74, 144, 226, 0.2);
             color: #4a90e2;
         }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px) translateX(-50%); }
-            to { opacity: 1; transform: translateY(0) translateX(-50%); }
-        }
     </style>
 </head>
 <body class="flex flex-col min-h-screen">
@@ -395,22 +339,8 @@
                 <li class="nav-item">
                     <a href="/home" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
                     <a href="/apps" class="nav-link active">Apps</a>
-                    <div class="dropdown-content">
-                        <a href="/containeye/index" class="dropdown-item active">
-                            <span class="app-icon">👁️</span>ContainEye
-                        </a>
-                        <a href="/superghost" class="dropdown-item">
-                            <span class="app-icon">👻</span>SuperGhost
-                        </a>
-                        <a href="/zettl" class="dropdown-item">
-                            <span class="app-icon">📝</span>Zettl
-                        </a>
-                        <a href="/ear2brain" class="dropdown-item">
-                            <span class="app-icon">🎧</span>Ear2Brain
-                        </a>
-                    </div>
                 </li>
                 <li class="nav-item">
                     <a href="/about" class="nav-link">About</a>
@@ -644,6 +574,15 @@
                     blink();
                     lastBlinkTime = Date.now();
                 }, 2500);
+                
+                // Animate App Store button after main intro appears
+                setTimeout(() => {
+                    const appStoreButton = document.querySelector('.main-intro + div');
+                    if (appStoreButton) {
+                        appStoreButton.style.opacity = "1";
+                        appStoreButton.style.transform = "translateY(0)";
+                    }
+                }, 1300); // Slightly after main intro appears
             });
         </script>
         
@@ -653,9 +592,9 @@
                     <p class="text-xl text-center">ContainEye is an all-in-one tool for managing your servers, Docker containers, and automated tests. With built-in SSH support, AI-powered test suggestions, and Apple Shortcuts integration, ContainEye makes server management easy and efficient.</p>
                 </div>
                 
-                <div class="text-center app-store-button" style="position: relative; z-index: 15; margin-top: -30vh; margin-bottom: 30vh;">
+                <div class="text-center" style="position: relative; z-index: 15; margin-top: -20vh; margin-bottom: 20vh; opacity: 0; transform: translateY(50px); transition: all 1.2s ease 0.3s;">
                     <a href="https://apps.apple.com/us/app/containeye-terminal-docker/id6741063706" class="inline-block">
-                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1684800000" alt="Download on the App Store" style="height: 60px;">
+                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1684800000" alt="Download on the App Store" style="height: 60px; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));">
                     </a>
                 </div>
                 

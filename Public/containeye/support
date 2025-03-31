@@ -116,66 +116,6 @@
             font-weight: 600;
         }
         
-        /* Dropdown styles */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            min-width: 180px;
-            background-color: rgba(20, 20, 20, 0.95);
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-            z-index: 100;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-            margin-top: 0.5rem;
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-            animation: fadeIn 0.3s ease;
-        }
-        
-        .dropdown-item {
-            display: block;
-            padding: 0.75rem 1rem;
-            color: #e0e0e0;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            text-align: center;
-            border-bottom: 1px solid rgba(100, 100, 100, 0.2);
-        }
-        
-        .dropdown-item:last-child {
-            border-bottom: none;
-        }
-        
-        .dropdown-item:hover {
-            background-color: rgba(74, 144, 226, 0.2);
-        }
-        
-        .dropdown-item.active {
-            background-color: rgba(74, 144, 226, 0.3);
-            color: white;
-            font-weight: 600;
-        }
-        
-        .app-icon {
-            width: 16px;
-            height: 16px;
-            display: inline-block;
-            margin-right: 6px;
-            vertical-align: middle;
-        }
-        
-        /* ContainEye subnav */
         .subnav {
             display: flex;
             justify-content: center;
@@ -202,8 +142,6 @@
             color: #4a90e2;
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px) translateX(-50%); }
             to { opacity: 1; transform: translateY(0) translateX(-50%); }
         }
     </style>
@@ -216,22 +154,8 @@
                 <li class="nav-item">
                     <a href="/home" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
                     <a href="/apps" class="nav-link active">Apps</a>
-                    <div class="dropdown-content">
-                        <a href="/containeye/index" class="dropdown-item active">
-                            <span class="app-icon">👁️</span>ContainEye
-                        </a>
-                        <a href="/superghost" class="dropdown-item">
-                            <span class="app-icon">👻</span>SuperGhost
-                        </a>
-                        <a href="/zettl" class="dropdown-item">
-                            <span class="app-icon">📝</span>Zettl
-                        </a>
-                        <a href="/ear2brain" class="dropdown-item">
-                            <span class="app-icon">🎧</span>Ear2Brain
-                        </a>
-                    </div>
                 </li>
                 <li class="nav-item">
                     <a href="/about" class="nav-link">About</a>
@@ -261,19 +185,12 @@
                 <p>If you have suggestions, find bugs, or something doesn't work, please reach out!</p>
                 <ul class="feature-list">
                     <li>Email me directly from the app (More → Contact).</li>
-                    <li>Open an issue on GitHub if you encounter a bug.</li>
+                    <li>Open an issue on <a href="https://github.com/hannesmnagel/ContainEye/issues/new" class="text-blue-400 hover:underline">GitHub</a> if you encounter a bug.</li>
                     <li>Your feedback helps improve ContainEye!</li>
                 </ul>
-                <div class="screenshot">
-                    <img src="/images/containeye-framed/test-details-editing-title-host-adapt-this-test-command-last-run.png" alt="Test editing interface">
+                <div class="nav-links">
+                    <a href="/containeye/privacy">← Previous: Privacy & Data Usage</a>
                 </div>
-                <div class="screenshot">
-                    <img src="/images/containeye-framed/add-a-test.png" alt="Add a test interface">
-                </div>
-            </div>
-
-            <div class="nav-links">
-                <a href="/containeye/privacy">← Previous: Privacy & Data Usage</a>
             </div>
         </section>
     </main>
