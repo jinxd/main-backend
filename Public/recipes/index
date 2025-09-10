@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes App - hannesnagel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            margin: 0 auto 2rem;
+            display: block;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background-color: #357abd;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: #4a90e2;
+            border: 2px solid #4a90e2;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #4a90e2;
+            color: white;
+        }
+        
+        .app-store-badge {
+            height: 50px;
+        }
+        
+        .section {
+            margin-bottom: 4rem;
+        }
+        
+        .section h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            border-left: 4px solid #4a90e2;
+            padding-left: 1rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background-color: #1e1e1e;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #333;
+        }
+        
+        .feature-card h3 {
+            color: #4a90e2;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4a90e2;
+            font-weight: bold;
+        }
+        
+        .screenshot-section {
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .screenshot-placeholder {
+            background-color: #1e1e1e;
+            border: 2px dashed #333;
+            border-radius: 12px;
+            padding: 3rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+        
+        .nav-links a {
+            color: #4a90e2;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid #4a90e2;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background-color: #4a90e2;
+            color: white;
+        }
+        
+        .footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            text-align: center;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.25rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="/images/recipes" alt="Recipes app icon" class="app-icon">
+            <h1>Recipes</h1>
+            <p class="subtitle">Your personal recipe collection, everywhere you cook</p>
+            
+            <div class="cta-buttons">
+                <a href="https://recipes.hannesnagel.com" class="btn btn-primary">
+                    🌐 Launch Web App
+                </a>
+                <a href="https://apps.apple.com/app/recipes/id123456789" class="btn btn-secondary">
+                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83&releaseDate=1684800000" alt="Download on the App Store" class="app-store-badge">
+                </a>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>📝 Recipe Collection</h3>
+                    <ul class="feature-list">
+                        <li>Create and edit recipes with ingredients, steps, and notes</li>
+                        <li>Add photos to your recipes</li>
+                        <li>Organize recipes in custom lists</li>
+                        <li>Search and filter your collection</li>
+                        <li>Import recipes from websites</li>
+                        <li>AI-powered recipe creation from photos</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🛒 Shopping Lists</h3>
+                    <ul class="feature-list">
+                        <li>Create shopping lists for your recipes</li>
+                        <li>Check off items while shopping</li>
+                        <li>Share lists with family and friends</li>
+                        <li>Organize items by store sections</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>👨‍🍳 Cooking Mode</h3>
+                    <ul class="feature-list">
+                        <li>Step-by-step cooking instructions</li>
+                        <li>Built-in timers for each cooking step</li>
+                        <li>Ingredients checklist while cooking</li>
+                        <li>Keep screen on during cooking</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🔄 Sync Everywhere</h3>
+                    <ul class="feature-list">
+                        <li>Access recipes on iPhone, iPad, and Apple Watch</li>
+                        <li>Web app for any browser</li>
+                        <li>Real-time sync across all devices</li>
+                        <li>Works offline, syncs when connected</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🤖 Smart Recipe Tools</h3>
+                    <ul class="feature-list">
+                        <li>Extract recipes from photos using AI</li>
+                        <li>Share recipes with others easily</li>
+                        <li>Import from popular recipe websites</li>
+                        <li>Smart ingredient recognition</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Screenshots</h2>
+            <div class="screenshot-section">
+                <div class="screenshot-placeholder">
+                    App screenshots coming soon
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Getting Started</h2>
+            <p>Start organizing your recipes today! You can use Recipes on all your devices:</p>
+            <ul class="feature-list">
+                <li><strong>iOS App:</strong> Download from the App Store for the full native experience</li>
+                <li><strong>Web App:</strong> Visit <a href="https://recipes.hannesnagel.com" style="color: #4a90e2;">recipes.hannesnagel.com</a> in any browser</li>
+                <li><strong>Sync Everything:</strong> Sign in with the same account to keep your recipes synchronized</li>
+            </ul>
+        </div>
+        
+        <div class="nav-links">
+            <a href="/recipes-privacy">Privacy Policy</a>
+            <a href="/contact">Support</a>
+            <a href="/apps">All Apps</a>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 Hannes Nagel. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -230,6 +230,32 @@
             </div>
 
             <div class="app-item">
+                <img src="/images/recipes" alt="Recipes app icon" class="app-icon">
+                <div class="app-content">
+                    <h2 class="app-title">Recipes</h2>
+                    <p class="app-description">A comprehensive recipe management app that helps you organize, create, and share your favorite recipes. Features shopping list integration, recipe synchronization across devices, and an intuitive interface for cooking enthusiasts.</p>
+                    <p class="app-description">Key features include:</p>
+                    <ul class="feature-list">
+                        <li>Recipe creation with image support</li>
+                        <li>Smart shopping lists with ingredient tracking</li>
+                        <li>Cross-device synchronization via iCloud and web</li>
+                        <li>Recipe sharing and import from web</li>
+                        <li>AI-powered recipe extraction from photos</li>
+                        <li>Timer integration for cooking steps</li>
+                    </ul>
+                    <div class="app-links">
+                        <a href="/recipes/" class="learn-more">Learn more</a>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <a href="https://recipes.hannesnagel.com" class="learn-more" style="background-color: #4a90e2; color: white;">Web App</a>
+                            <a href="https://apps.apple.com/app/recipes/id123456789">
+                                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1684800000" alt="Download on the App Store" class="app-store-badge">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-item">
                 <img src="/images/ear2brain" alt="ear2brain app icon" class="app-icon">
                 <div class="app-content">
                     <h2 class="app-title">ear2brain</h2>
