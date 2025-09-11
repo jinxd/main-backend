@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use - Recipes App</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        ul, ol {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+        }
+        
+        strong {
+            color: #2c3e50;
+        }
+        
+        .divider {
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            color: #bdc3c7;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            font-style: italic;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Terms of Use</h1>
+    
+    <p>These Terms of Use ("Terms") govern your access to and use of the Recipes mobile application and related services (the "App"). By accessing, using, or downloading the App, you agree to be bound by these Terms, including our Privacy Policy. If you do not agree, you must not use the App.</p>
+    
+    <p>We may update these Terms from time to time. The most current version will be available in the App. Continued use of the App after changes are published means you accept the updated Terms.</p>
+    
+    <p>The App is not intended for and is not designed to attract children under 13 years of age. By using the App, you confirm that you are at least 13 years old and legally able to enter into a binding agreement.</p>
+    
+    <div class="divider">⸻</div>
+    
+    <h2>Modifications to the App</h2>
+    
+    <p>We reserve the right to modify, suspend, or discontinue the App or any part of it at any time, temporarily or permanently, without notice. We shall not be liable to you or any third party for such changes.</p>
+    
+    <div class="divider">⸻</div>
+    
+    <h2>Account Registration</h2>
+    
+    <p>Some features require an account. Accounts may be created anonymously, but you are responsible for all activity under your account. You agree that you are of legal age to form a binding contract and are not prohibited from using the App under applicable law.</p>
+    
+    <p>We may suspend or terminate accounts at our discretion, including in cases of misuse or violation of these Terms.</p>
+    
+    <div class="divider">⸻</div>
+    
+    <h2>Subscriptions and Payments</h2>
+    
+    <p>Recipes offers paid subscriptions ("Premium") available for purchase through the Apple App Store.</p>
+    <ul>
+        <li>Payment will be charged to your Apple ID at confirmation of purchase.</li>
+        <li>Subscriptions automatically renew unless canceled at least 24 hours before the end of the current billing period.</li>
+        <li>Your Apple ID account will be charged for renewal within 24 hours before the period ends.</li>
+        <li>You can manage or cancel subscriptions in your App Store account settings after purchase.</li>
+        <li>All purchases are final. Refunds are not provided.</li>
+    </ul>
+    
+    <div class="divider">⸻</div>
+    
+    <h2>User Conduct</h2>
+    
+    <p>You are responsible for maintaining the confidentiality of your account credentials. You are also responsible for all activities carried out under your account.</p>
+    
+    <p>You agree not to use the App to:</p>
+    <ul>
+        <li>Upload or share unlawful, harmful, abusive, defamatory, obscene, or otherwise objectionable content.</li>
+        <li>Infringe the intellectual property rights or privacy rights of others.</li>
+        <li>Transmit spam, advertisements, or malicious software.</li>
+        <li>Interfere with or disrupt the App, its servers, or networks.</li>
+        <li>Access the App through automated means such as bots, crawlers, or scrapers.</li>
+    </ul>
+    
+    <p>We reserve the right (but not the obligation) to monitor, remove, or block any content that violates these Terms or is otherwise inappropriate.</p>
+    
+    <div class="divider">⸻</div>
+    
+    <h2>Proprietary Rights</h2>
+    
+    <p>The App and all related software, features, and content are owned by the creator of Recipes and are protected by intellectual property laws.</p>
+    
+    <p>You are granted a personal, limited, non-exclusive, non-transferable license to use the App for personal and non-commercial purposes. You may not copy, modify, distribute, reverse-engineer, or create derivative works from the App.</p>
+    
+    <div class="divider">⸻</div>
+    
+    <h2>Disclaimer of Warranties</h2>
+    
+    <p>The App is provided "as is" and "as available." No guarantees are made regarding availability, reliability, or fitness for a particular purpose. We do not warrant that the App will be error-free or uninterrupted.</p>
+    
+    <div class="divider">⸻</div>
+    
+    <h2>Limitation of Liability</h2>
+    
+    <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or for loss of data, profits, or goodwill, arising from your use of the App.</p>
+    
+    <div class="divider">⸻</div>
+    
+    <h2>Indemnity</h2>
+    
+    <p>You agree to indemnify and hold harmless the creator of Recipes from any claims, damages, liabilities, or expenses (including legal fees) arising from your use of the App or your violation of these Terms.</p>
+    
+    <div class="divider">⸻</div>
+    
+    <h2>Termination</h2>
+    
+    <p>We may suspend or terminate your account and access to the App at any time, without notice, for conduct that violates these Terms or is otherwise harmful to the App or other users.</p>
+    
+    <div class="divider">⸻</div>
+    
+    <h2>Applicable Law and Jurisdiction</h2>
+    
+    <p>These Terms are governed by the laws of Germany. You agree that any disputes shall be resolved exclusively in the competent courts of Germany.</p>
+    
+    <div class="divider">⸻</div>
+    
+    <h2>General</h2>
+    
+    <p>These Terms are the entire agreement between you and the creator of Recipes regarding your use of the App. If any provision is held invalid, the remaining provisions remain in effect. Failure to enforce any provision shall not be considered a waiver.</p>
+    
+    <div class="footer">
+        Contact: contact@hannesnagel.com
+    </div>
+</body>
+</html>

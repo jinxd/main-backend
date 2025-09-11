@@ -301,7 +301,8 @@
         </div>
         
         <div class="nav-links">
-            <a href="/recipes-privacy">Privacy Policy</a>
+            <a href="/recipes/privacy">Privacy Policy</a>
+            <a href="/recipes/terms">Terms of Use</a>
             <a href="/contact">Support</a>
             <a href="/apps">All Apps</a>
         </div>
