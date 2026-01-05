@@ -3,675 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ContainEye - hannesnagel</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>ContainEye - Overview - hannesnagel</title>
+    <link rel="stylesheet" href="/css/main.css">
     <style>
-        body {
-            background-color: #000000;
-            color: #e0e0e0;
-        }
-        .section {
-            margin-bottom: 2rem;
-            padding-bottom: 50vh; /* Add extra space at the bottom */
-        }
-        .feature-list {
-            list-style-type: none;
-            padding-left: 1.5rem;
-        }
-        .feature-list li {
-            margin-bottom: 0.5rem;
-        }
-        .feature-list li::before {
-            content: "•";
-            color: #4a90e2;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        .nav-links a {
-            color: #4a90e2;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border: 1px solid #4a90e2;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-        .nav-links a:hover {
-            background-color: #4a90e2;
-            color: white;
-        }
-        .screenshot {
-            margin: 1rem 0;
-            text-align: center;
-        }
-        .screenshot img {
-            width: 50%;
-            height: auto;
-            display: inline-block;
-        }
-        /* Eye animation styles */
-        .eye-container {
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100vh;
-            width: 100vw;
-            background-color: transparent;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            pointer-events: none;
-        }
-        .eye-image {
-            max-width: none;
-            width: 100vw;
-            min-width: 1200px;
-            position: relative;
-            transition: opacity 0.8s ease-in-out;
-        }
-        #eye-closed {
-            opacity: 0;
-            z-index: 2;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        #eye-opened {
-            opacity: 1;
-            z-index: 1;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        /* Make all backgrounds transparent to see the eye */
-        header {
-            background-color: transparent;
-            z-index: 5;
-        }
-        main {
-            background-color: transparent;
-            z-index: 5;
-            position: relative;
-        }
-        .p-4 {
-            background-color: rgba(255, 255, 255, 0.92);
-            color: #000000;
-            backdrop-filter: blur(3px);
-            border-radius: 30px;
-            position: relative;
-            border-color: #000000 !important;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .p-4:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-            background-color: rgba(255, 255, 255, 0.97);
-        }
-        .p-4 h3 {
-            color: #000000;
-            text-align: center;
-        }
-        .p-4 p {
-            color: #333333;
-            text-align: center;
-        }
-        .p-4 a {
-            color: #0066cc;
-            border-color: #0066cc;
-            transition: all 0.3s ease;
-            display: block;
-            margin: 0 auto;
-            width: fit-content;
-        }
-        .p-4 a:hover {
-            background-color: #0066cc;
-            color: white;
-            transform: scale(1.05);
-        }
-        html {
-            background-color: #000000;
-            scroll-behavior: smooth;
-        }
-        
-        /* Scroll hijacking and card visibility control */
-        .card-container {
-            opacity: 0.3;
-            transform: scale(0.9);
-            transition: all 0.6s ease;
-            filter: blur(2px);
-            margin-bottom: 30px;
-        }
-        
-        .card-container.active {
-            opacity: 1;
-            transform: scale(1);
-            filter: blur(0);
-        }
-        
-        /* Section title and intro text animations */
-        .section-title, .section-intro {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-            filter: blur(2px);
-        }
-        
-        .section-title.visible, .section-intro.visible {
-            opacity: 1;
-            transform: translateY(0);
-            filter: blur(0);
-        }
-        
-        /* Intro animation for main intro text */
-        .main-intro {
-            position: relative;
-            opacity: 0;
-            transform: translateY(100px);
-            transition: all 1.2s ease;
-            margin-top: 35vh;
-            margin-bottom: 35vh;
-            padding: 2rem;
-            border-radius: 30px;
-            background-color: rgba(255, 255, 255, 0.98);
-            color: #000000;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            z-index: 10;
-        }
-        
-        .main-intro.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .main-intro p {
-            color: #000000;
-            font-weight: 500;
-        }
-        
-        /* Scroll indicator arrow */
-        .scroll-arrow {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 40px;
-            z-index: 50;
-            animation: bounce 2s infinite;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-        }
-        
-        .scroll-arrow svg {
-            fill: white;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .scroll-arrow.hidden {
-            opacity: 0;
-        }
-        
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0) translateX(-50%);
-            }
-            40% {
-                transform: translateY(-20px) translateX(-50%);
-            }
-            60% {
-                transform: translateY(-10px) translateX(-50%);
-            }
-        }
-        
-        /* Enhance background blur when scrolling */
-        .scrolling .eye-container {
-            filter: blur(8px);
-            transition: filter 0.4s ease;
-        }
-        
-        .eye-container {
-            transition: transform 1.2s ease, opacity 1.2s ease, filter 0.8s ease;
-            filter: blur(0);
-            opacity: 0;
-            transform: translateY(50px);
-        }
-        
-        .eye-container.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Enhanced navigation styles */
-        .main-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            position: relative;
-        }
-        
-        .nav-item {
-            position: relative;
-            padding: 0.5rem 0;
-        }
-        
-        .nav-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            padding: 0.5rem 0.75rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:hover, .nav-link.active {
-            color: #4a90e2;
-            background-color: rgba(74, 144, 226, 0.1);
-        }
-        
-        .nav-link.active {
-            font-weight: 600;
-        }
-        
-        .app-icon {
-            width: 16px;
-            height: 16px;
-            display: inline-block;
-            margin-right: 6px;
-            vertical-align: middle;
-        }
-        
-        /* ContainEye subnav */
         .subnav {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-top: 1rem;
-            padding: 0.5rem;
-            background-color: rgba(30, 30, 30, 0.7);
-            border-radius: 25px;
-            backdrop-filter: blur(5px);
+            gap: 1rem;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 100px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
-        
         .subnav-link {
-            color: #d0d0d0;
+            color: var(--secondary-color);
             text-decoration: none;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
             font-size: 0.9rem;
-            transition: all 0.2s ease;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
         }
-        
         .subnav-link:hover, .subnav-link.active {
-            background-color: rgba(74, 144, 226, 0.2);
-            color: #4a90e2;
+            color: var(--accent-color);
+            background: rgba(74, 144, 226, 0.1);
+        }
+        .doc-content {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .doc-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+        .doc-content p {
+            text-align: left;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            max-width: none;
+        }
+        .doc-content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+        .doc-content li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--secondary-color);
+        }
+        .doc-content li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        .doc-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            gap: 2rem;
         }
     </style>
 </head>
-<body class="flex flex-col min-h-screen">
-    <!-- Eye animation container as fixed background -->
-    <div class="eye-container">
-        <img src="/images/eye-opened.jpeg" alt="Eye opened" id="eye-opened" class="eye-image">
-        <img src="/images/eye-closed.jpeg" alt="Eye closed" id="eye-closed" class="eye-image">
-    </div>
+<body>
+    <nav class="nav-container">
+        <a href="/home" class="nav-link">Home</a>
+        <a href="/apps" class="nav-link active">Apps</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+    </nav>
 
-    <header class="text-center py-4 relative z-10">
-        <h1 class="text-3xl font-bold">ContainEye</h1>
-        <nav class="mt-4">
-            <ul class="main-nav">
-                <li class="nav-item">
-                    <a href="/home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/apps" class="nav-link active">Apps</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            
-            <!-- ContainEye Subnav -->
-            <div class="subnav">
-                <a href="/containeye/index" class="subnav-link active">Overview</a>
-                <a href="/containeye/features" class="subnav-link">Features</a>
-                <a href="/containeye/ssh-terminal" class="subnav-link">SSH Terminal</a>
-                <a href="/containeye/servers-management" class="subnav-link">Servers</a>
-                <a href="/containeye/automated-tests" class="subnav-link">Tests</a>
-                <a href="/containeye/faq" class="subnav-link">FAQ</a>
-                <a href="/containeye/support" class="subnav-link">Support</a>
+    <main>
+        <section id="hero" style="min-height: 60vh;">
+            <div class="parallax-target" style="position: absolute; width: 110%; height: 110%; top: -5%; left: -5%; z-index: -1; opacity: 0.2;">
+                <img src="/images/containeye_promo.png" alt="ContainEye" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6);">
             </div>
-        </nav>
-    </header>
+            <div class="reveal">
+                <span class="sub-header">Documentation</span>
+                <h1>ContainEye</h1>
+                <p>Server & Docker management, refined.</p>
+            </div>
+        </section>
 
-    <main class="container mx-auto px-4 max-w-3xl flex-grow relative z-10">
-        <script>
-            // Add blinking effect
-            document.addEventListener('DOMContentLoaded', function() {
-                const eyeClosed = document.getElementById('eye-closed');
-                const eyeOpened = document.getElementById('eye-opened');
-                
-                // Initial state - eye open
-                eyeClosed.style.opacity = "0";
-                eyeOpened.style.opacity = "1";
-                
-                // Set up blinking function
-                function blink() {
-                    // Close eye (fade in closed eye over open eye)
-                    eyeClosed.style.opacity = "1";
-                    
-                    // Open eye after 0.7 seconds (fade out closed eye to reveal open eye)
-                    setTimeout(function() {
-                        eyeClosed.style.opacity = "0";
-                    }, 700);
-                }
-                
-                // Variables to control scroll-based blinking
-                let lastScrollY = window.scrollY;
-                let scrollThreshold = 50; // How much scroll needed to trigger a blink
-                let canBlink = true; // Flag to prevent multiple blinks in quick succession
-                let blinkTimeout;
-                let lastBlinkTime = 0;
-                const minBlinkInterval = 1500; // Minimum time between blinks in ms
-                
-                // Scroll hijacking and card visibility
-                const cardContainers = document.querySelectorAll('.card-container');
-                let scrolling = false;
-                let scrollTimeout;
-                
-                // Mark the first two cards as active initially
-                if (cardContainers.length >= 2) {
-                    cardContainers[0].classList.add('active');
-                    cardContainers[1].classList.add('active');
-                }
-                
-                // Update visible cards based on scroll position
-                function updateVisibleCards() {
-                    const viewportHeight = window.innerHeight;
-                    const viewportCenter = window.scrollY + (viewportHeight / 2);
-                    
-                    let closestCardIndex = 0;
-                    let closestDistance = Infinity;
-                    
-                    // Find the card closest to the center
-                    cardContainers.forEach((card, index) => {
-                        const rect = card.getBoundingClientRect();
-                        const cardCenter = window.scrollY + rect.top + (rect.height / 2);
-                        const distance = Math.abs(viewportCenter - cardCenter);
-                        
-                        if (distance < closestDistance) {
-                            closestDistance = distance;
-                            closestCardIndex = index;
-                        }
-                    });
-                    
-                    // Special case for the last card
-                    if (closestCardIndex === cardContainers.length - 1) {
-                        cardContainers[closestCardIndex].classList.add('active');
-                        if (closestCardIndex > 0) {
-                            cardContainers[closestCardIndex - 1].classList.add('active');
-                        }
-                    } else {
-                        // Show only the closest card and the next one
-                        cardContainers.forEach((card, index) => {
-                            if (index === closestCardIndex || index === closestCardIndex + 1) {
-                                card.classList.add('active');
-                            } else {
-                                card.classList.remove('active');
-                            }
-                        });
-                    }
-                }
-                
-                // Handle scroll event
-                window.addEventListener('scroll', function() {
-                    document.body.classList.add('scrolling');
-                    scrolling = true;
-                    
-                    clearTimeout(scrollTimeout);
-                    scrollTimeout = setTimeout(function() {
-                        scrolling = false;
-                        document.body.classList.remove('scrolling');
-                    }, 200);
-                    
-                    updateVisibleCards();
-                    
-                    // Hide scroll arrow after scrolling a bit
-                    if (window.scrollY > 100) {
-                        document.querySelector('.scroll-arrow').classList.add('hidden');
-                    } else {
-                        document.querySelector('.scroll-arrow').classList.remove('hidden');
-                    }
-                    
-                    // Trigger eye blink based on scrolling
-                    const currentTime = Date.now();
-                    const scrollDifference = Math.abs(window.scrollY - lastScrollY);
-                    
-                    if (scrollDifference > scrollThreshold && 
-                        canBlink && 
-                        currentTime - lastBlinkTime > minBlinkInterval) {
-                        
-                        // Blink the eye
-                        blink();
-                        
-                        // Update last blink time
-                        lastBlinkTime = currentTime;
-                        
-                        // Prevent multiple blinks in quick succession
-                        canBlink = false;
-                        clearTimeout(blinkTimeout);
-                        blinkTimeout = setTimeout(() => {
-                            canBlink = true;
-                        }, minBlinkInterval);
-                    }
-                    
-                    // Update last scroll position
-                    lastScrollY = window.scrollY;
-                });
-                
-                // Initial update of visible cards
-                updateVisibleCards();
-                
-                // Handle section title and intro text animations
-                const sectionTitles = document.querySelectorAll('.section-title');
-                const sectionIntros = document.querySelectorAll('.section-intro');
-                const mainIntro = document.querySelector('.main-intro');
-                
-                function checkVisibility() {
-                    const elements = [mainIntro, ...sectionTitles, ...sectionIntros];
-                    
-                    elements.forEach(element => {
-                        if (element) {
-                            const rect = element.getBoundingClientRect();
-                            const windowHeight = window.innerHeight;
-                            
-                            // Element is in viewport (or partly in viewport)
-                            if (rect.top < windowHeight * 0.9) {
-                                element.classList.add('visible');
-                            } else {
-                                element.classList.remove('visible');
-                            }
-                        }
-                    });
-                }
-                
-                // Add scroll arrow
-                const scrollArrow = document.createElement('div');
-                scrollArrow.className = 'scroll-arrow';
-                scrollArrow.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>';
-                document.body.appendChild(scrollArrow);
-                
-                // Run on scroll and on initial load
-                window.addEventListener('scroll', checkVisibility);
-                checkVisibility();
-                
-                // Make main intro and eye visible initially with coordinated animation
-                setTimeout(() => {
-                    // First make eye visible
-                    document.querySelector('.eye-container').classList.add('visible');
-                    
-                    // Then make intro text visible
-                    setTimeout(() => {
-                        mainIntro.classList.add('visible');
-                    }, 200); // Slight delay for eye to start appearing first
-                }, 500);
-                
-                // Ensure eye remains visible and doesn't fade out when scrolling
-                window.addEventListener('scroll', function() {
-                    const eyeContainer = document.querySelector('.eye-container');
-                    
-                    // Keep eye visible always
-                    eyeContainer.classList.add('visible');
-                    
-                    // If we've scrolled past the intro, make sure eye is fully visible
-                    if (window.scrollY > 100) {
-                        eyeContainer.style.opacity = "1";
-                    }
-                });
-                
-                // Add random occasional blinks for when user isn't scrolling
-                function randomBlink() {
-                    // Random time between 4-8 seconds
-                    const randomTime = Math.floor(Math.random() * 4000) + 4000;
-                    
-                    setTimeout(() => {
-                        // Only blink if we haven't blinked recently due to scrolling
-                        const currentTime = Date.now();
-                        if (currentTime - lastBlinkTime > minBlinkInterval) {
-                            blink();
-                            lastBlinkTime = currentTime;
-                        }
-                        
-                        // Set up next random blink
-                        randomBlink();
-                    }, randomTime);
-                }
-                
-                // Start occasional random blinking
-                randomBlink();
-                
-                // Trigger a blink on page load after a short delay
-                setTimeout(() => {
-                    blink();
-                    lastBlinkTime = Date.now();
-                }, 2500);
-                
-                // Animate App Store button after main intro appears
-                setTimeout(() => {
-                    const appStoreButton = document.querySelector('.main-intro + div');
-                    if (appStoreButton) {
-                        appStoreButton.style.opacity = "1";
-                        appStoreButton.style.transform = "translateY(0)";
-                    }
-                }, 1300); // Slightly after main intro appears
-            });
-        </script>
-        
-        <section class="mt-8">
-            <div class="section">
-                <div class="main-intro">
-                    <p class="text-xl text-center">ContainEye is an all-in-one tool for managing your servers, Docker containers, and automated tests. With built-in SSH support, AI-powered test suggestions, and Apple Shortcuts integration, ContainEye makes server management easy and efficient.</p>
+        <section style="height: auto; padding-bottom: 8rem;">
+            <div class="reveal" style="width: 100%; max-width: 1000px; padding: 0 2rem;">
+                <!-- Subnav -->
+                <div class="subnav">
+                    <a href="/containeye/index" class="subnav-link active">Overview</a>
+                    <a href="/containeye/features" class="subnav-link">Features</a>
+                    <a href="/containeye/ssh-terminal" class="subnav-link">SSH Terminal</a>
+                    <a href="/containeye/servers-management" class="subnav-link">Servers</a>
+                    <a href="/containeye/automated-tests" class="subnav-link">Tests</a>
+                    <a href="/containeye/faq" class="subnav-link">FAQ</a>
+                    <a href="/containeye/support" class="subnav-link">Support</a>
                 </div>
-                
-                <div class="text-center" style="position: relative; z-index: 15; margin-top: -20vh; margin-bottom: 20vh; opacity: 0; transform: translateY(50px); transition: all 1.2s ease 0.3s;">
-                    <a href="https://apps.apple.com/us/app/containeye-terminal-docker/id6741063706" class="inline-block">
-                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1684800000" alt="Download on the App Store" style="height: 60px; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));">
-                    </a>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                    <div class="p-4 border border-blue-500 rounded-lg card-container">
-                        <h3 class="text-xl font-bold mb-2">SSH Terminal</h3>
-                        <p class="mb-4">Connect to your servers with a powerful SSH terminal interface.</p>
-                        <div class="text-center">
-                            <a href="/containeye/ssh-terminal" class="inline-block px-4 py-2 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition-colors">Read More →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="p-4 border border-blue-500 rounded-lg card-container">
-                        <h3 class="text-xl font-bold mb-2">Servers Management</h3>
-                        <p class="mb-4">Monitor and control your servers and Docker containers.</p>
-                        <div class="text-center">
-                            <a href="/containeye/servers-management" class="inline-block px-4 py-2 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition-colors">Read More →</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                    <div class="p-4 border border-blue-500 rounded-lg card-container">
-                        <h3 class="text-xl font-bold mb-2">Automated Tests Overview</h3>
-                        <p class="mb-4">Learn about ContainEye's test capabilities and management.</p>
-                        <div class="text-center">
-                            <a href="/containeye/automated-tests" class="inline-block px-4 py-2 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition-colors">Read More →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="p-4 border border-blue-500 rounded-lg card-container">
-                        <h3 class="text-xl font-bold mb-2">Adding a Test from Suggestion</h3>
-                        <p class="mb-4">Use built-in test suggestions to quickly set up monitoring.</p>
-                        <div class="text-center">
-                            <a href="/containeye/adding-test-suggestion" class="inline-block px-4 py-2 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition-colors">Read More →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="p-4 border border-blue-500 rounded-lg card-container">
-                        <h3 class="text-xl font-bold mb-2">Adding a New Test</h3>
-                        <p class="mb-4">Create custom tests with AI assistance.</p>
-                        <div class="text-center">
-                            <a href="/containeye/adding-new-test" class="inline-block px-4 py-2 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition-colors">Read More →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="p-4 border border-blue-500 rounded-lg card-container">
-                        <h3 class="text-xl font-bold mb-2">Running Tests</h3>
-                        <p class="mb-4">Different ways to execute and automate your tests.</p>
-                        <div class="text-center">
-                            <a href="/containeye/running-tests" class="inline-block px-4 py-2 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition-colors">Read More →</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="p-4 border border-blue-500 rounded-lg card-container">
-                        <h3 class="text-xl font-bold mb-2">Common Questions</h3>
-                        <p class="mb-4">Frequently asked questions and explanations about ContainEye.</p>
-                        <div class="text-center">
-                            <a href="/containeye/faq" class="inline-block px-4 py-2 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition-colors">Read More →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="p-4 border border-blue-500 rounded-lg card-container">
-                        <h3 class="text-xl font-bold mb-2">Privacy & Data Usage</h3>
-                        <p class="mb-4">Information about data collection and privacy in ContainEye.</p>
-                        <div class="text-center">
-                            <a href="/containeye/privacy" class="inline-block px-4 py-2 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition-colors">Read More →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="p-4 border border-blue-500 rounded-lg card-container">
-                        <h3 class="text-xl font-bold mb-2">Need Help?</h3>
-                        <p class="mb-4">Get support and contact information for ContainEye.</p>
-                        <div class="text-center">
-                            <a href="/containeye/support" class="inline-block px-4 py-2 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition-colors">Read More →</a>
+
+                <div class="doc-content">
+                    <div style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 40px; padding: 3rem; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);">
+                        <h2>Master your servers</h2>
+                        <p>
+                            ContainEye is an all-in-one tool for developers and sysadmins who need to manage their infrastructure from anywhere. Built with a focus on speed, security, and a touch of whimsy.
+                        </p>
+                        <ul>
+                            <li>Native SSH terminal with custom command suggestions.</li>
+                            <li>Real-time Docker container management (Start, Stop, Restart, Logs).</li>
+                            <li>Automated health checks and server monitoring.</li>
+                            <li>iCloud sync and secure credential storage.</li>
+                            <li>Deep Apple Shortcuts integration for advanced workflows.</li>
+                        </ul>
+                        <div style="display: flex; gap: 2rem; margin-top: 3rem;">
+                            <a href="https://apps.apple.com/us/app/containeye-terminal-docker/id6741063706" class="nav-link squishy" style="background: var(--accent-color); color: white; padding: 1rem 2rem; border-radius: 50px;">Get it on App Store</a>
+                            <a href="/containeye/features" class="nav-link squishy" style="border: 1px solid var(--glass-border); padding: 1rem 2rem; border-radius: 50px;">Exploration Features →</a>
                         </div>
                     </div>
                 </div>
@@ -679,8 +130,6 @@
         </section>
     </main>
 
-    <footer class="bg-[#1e1e1e] text-center py-4 mt-8">
-        <p>hannesnagel &copy; 2024</p>
-    </footer>
+    <script src="/js/whimsy.js"></script>
 </body>
-</html> 
+</html>

@@ -3,273 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Recipes App</title>
+    <title>Privacy Policy - Recipes - hannesnagel</title>
+    <link rel="stylesheet" href="/css/main.css">
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: #333;
+        .doc-content {
+            text-align: left;
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
         }
-        
-        h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
+        .doc-content h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .doc-content h2 { color: var(--text-color); margin-top: 3rem; margin-bottom: 1.5rem; font-size: 1.8rem; }
+        .doc-content h3 { color: var(--text-color); margin-top: 2rem; margin-bottom: 1rem; }
+        .doc-content p, .doc-content li {
+            color: var(--secondary-color);
+            line-height: 1.8;
+            margin-bottom: 1rem;
         }
-        
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-            border-left: 4px solid #3498db;
-            padding-left: 15px;
-        }
-        
-        h3 {
-            color: #2c3e50;
-            margin-top: 25px;
-        }
-        
-        ul, ol {
-            padding-left: 20px;
-        }
-        
-        li {
-            margin-bottom: 5px;
-        }
-        
-        strong {
-            color: #2c3e50;
-        }
-        
-        .contact-info {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        
-        .highlight {
-            background-color: #fff3cd;
-            padding: 15px;
-            border-left: 4px solid #ffc107;
-            margin: 15px 0;
-        }
-        
-        .footer {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            font-style: italic;
-            text-align: center;
-            color: #666;
+        .doc-content ul { padding-left: 1.5rem; margin-bottom: 2rem; }
+        .legal-box {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 40px;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
         }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy for Recipes App</h1>
-    
-    <p><strong>Last updated:</strong> September 10, 2025</p>
-    
-    <h2>Controller</h2>
-    <p>This app is provided by Hannes Nagel, located in Germany.<br>
-    Contact: contact@hannesnagel.com</p>
-    
-    <h2>Data Collected</h2>
-    <p>We collect and process the following types of personal data:</p>
-    
-    <h3>Account Information</h3>
-    <ul>
-        <li>Username (optional)</li>
-        <li>Email address (optional, for account recovery and notifications)</li>
-        <li>Encrypted password hash</li>
-    </ul>
-    
-    <h3>Recipe and Content Data</h3>
-    <ul>
-        <li>Recipes you create (titles, ingredients, instructions, notes)</li>
-        <li>Recipe images you upload</li>
-        <li>Shopping lists and shopping list items</li>
-        <li>Recipe lists and organizational data</li>
-        <li>Timestamps for data synchronization (created, modified, deleted dates)</li>
-    </ul>
-    
-    <h3>Device and Technical Information</h3>
-    <ul>
-        <li>Device identifier (for synchronization across devices)</li>
-        <li>Device model and type (iPhone, iPad, Mac, Apple Watch, Web)</li>
-        <li>Operating system version</li>
-        <li>App version</li>
-        <li>Push notification tokens (APNS tokens for notifications)</li>
-        <li>App usage timestamps (last launch, last seen)</li>
-        <li>Technical logs required to operate the service</li>
-    </ul>
-    
-    <h3>Communication Preferences</h3>
-    <ul>
-        <li>Push notification preferences</li>
-        <li>Email notification preferences and frequency settings</li>
-        <li>Unsubscribe tokens for email communications</li>
-    </ul>
-    
-    <h2>Use of Data</h2>
-    <p>Your data is used exclusively to:</p>
-    <ul>
-        <li>Provide and maintain the recipe management service</li>
-        <li>Synchronize your data across your devices</li>
-        <li>Send notifications based on your preferences</li>
-        <li>Provide customer support</li>
-        <li>Improve the app's functionality</li>
-    </ul>
-    
-    <div class="highlight">
-        <strong>We never sell your data to third parties.</strong>
-    </div>
-    
-    <h2>Legal Basis (GDPR)</h2>
-    <p>We process your data based on:</p>
-    <ul>
-        <li><strong>Contract performance</strong> - to provide the app services you've requested</li>
-        <li><strong>Legitimate interests</strong> - to improve our services and provide technical support</li>
-        <li><strong>Consent</strong> - for optional features like notifications and marketing emails</li>
-    </ul>
-    
-    <h2>Storage and Security</h2>
-    <h3>Data Storage</h3>
-    <ul>
-        <li>Recipe and account data is stored securely on a private server</li>
-        <li>Images are stored in Backblaze B2 cloud storage within the EU zone</li>
-        <li>All images are stored in private, non-public buckets</li>
-    </ul>
-    
-    <h3>Security Measures</h3>
-    <ul>
-        <li>All data transmissions are encrypted using HTTPS/TLS</li>
-        <li>Passwords are securely hashed using industry-standard encryption</li>
-        <li>Database access is restricted and monitored</li>
-        <li>Regular security updates and monitoring</li>
-    </ul>
-    
-    <h2>Data Sharing</h2>
-    <p>Your data may be processed by the following service providers necessary for app functionality:</p>
-    <ul>
-        <li><strong>Backblaze B2</strong> - for secure image storage (EU data centers)</li>
-        <li><strong>Email service providers</strong> - for sending notification emails (when enabled)</li>
-    </ul>
-    
-    <p>These processors are bound by data protection agreements and only process data as instructed.</p>
-    
-    <div class="highlight">
-        <strong>We do not share your data with advertising companies or other third parties for marketing purposes.</strong>
-    </div>
-    
-    <h2>International Transfers</h2>
-    <p>Data processing occurs within the European Union. If any data transfers outside the EU become necessary, they will be protected by appropriate safeguards such as Standard Contractual Clauses.</p>
-    
-    <h2>Data Retention</h2>
-    <ul>
-        <li>Your recipe and account data is retained while your account is active</li>
-        <li>After account deletion, all personal data is permanently removed within 30 days</li>
-        <li>Technical logs are retained for up to 12 months for security and debugging purposes</li>
-        <li>Deleted recipes are permanently removed and cannot be recovered</li>
-    </ul>
-    
-    <h2>Your Rights</h2>
-    <p>Under GDPR and other applicable privacy laws, you have the right to:</p>
-    
-    <h3>Access and Portability</h3>
-    <ul>
-        <li>Request a copy of all personal data we hold about you</li>
-        <li>Export your recipes and data in a machine-readable format</li>
-    </ul>
-    
-    <h3>Rectification and Erasure</h3>
-    <ul>
-        <li>Correct any inaccurate personal information</li>
-        <li>Delete your account and all associated data through the app settings</li>
-        <li>Request deletion of specific data items</li>
-    </ul>
-    
-    <h3>Control and Objection</h3>
-    <ul>
-        <li>Withdraw consent for notifications at any time</li>
-        <li>Object to data processing for legitimate interests</li>
-        <li>Restrict processing of your data in certain circumstances</li>
-    </ul>
-    
-    <h3>How to Exercise Rights</h3>
-    <ul>
-        <li><strong>In-app:</strong> Use the account deletion and data export features in Settings</li>
-        <li><strong>By email:</strong> Contact contact@hannesnagel.com with your request</li>
-        <li><strong>Response time:</strong> We respond to requests within 30 days</li>
-    </ul>
-    
-    <h2>Cookies and Tracking</h2>
-    <p>The app uses minimal technical cookies/local storage for:</p>
-    <ul>
-        <li>Maintaining your login session</li>
-        <li>Storing app preferences locally</li>
-        <li>Synchronization tokens</li>
-    </ul>
-    
-    <p>We do not use tracking cookies or third-party analytics services that collect personal data.</p>
-    
-    <h2>Children's Privacy</h2>
-    <p>This app is not directed at children under 13 years of age (or 16 in the EU). We do not knowingly collect personal information from children. If we discover that a child has provided us with personal information, we will delete it immediately.</p>
-    
-    <h2>Data Breach Notification</h2>
-    <p>In the unlikely event of a data breach that poses a risk to your rights and freedoms, we will:</p>
-    <ul>
-        <li>Notify the relevant supervisory authority within 72 hours</li>
-        <li>Inform affected users without undue delay</li>
-        <li>Provide clear information about the breach and protective measures</li>
-    </ul>
-    
-    <h2>Changes to This Policy</h2>
-    <p>We may update this privacy policy periodically to reflect changes in our practices or legal requirements. Significant changes will be communicated through:</p>
-    <ul>
-        <li>In-app notifications</li>
-        <li>Updates posted on our website</li>
-    </ul>
-    
-    <h2>Your Data Protection Rights by Region</h2>
-    
-    <h3>European Union/EEA Users</h3>
-    <p>You may lodge a complaint with your local Data Protection Authority if you believe your privacy rights have been violated.</p>
-    
-    <h3>California Residents (CCPA)</h3>
-    <p>You have additional rights to:</p>
-    <ul>
-        <li>Request disclosure of personal information collected</li>
-        <li>Request deletion of personal information</li>
-        <li>Opt-out of the sale of personal information (note: we do not sell personal information)</li>
-    </ul>
-    
-    <h3>Other Jurisdictions</h3>
-    <p>Users in other jurisdictions may have similar rights under local privacy laws. Contact us for information about your specific rights.</p>
-    
-    <div class="contact-info">
-        <h2>Contact Information</h2>
-        <p>For privacy-related questions, data requests, or concerns:</p>
-        <p><strong>Email:</strong> contact@hannesnagel.com<br>
-        <strong>Response time:</strong> Within 30 days for most requests<br>
-        <strong>Data Protection Officer:</strong> Hannes Nagel (for EU inquiries)</p>
-    </div>
-    
-    <h2>Compliance</h2>
-    <p>This privacy policy complies with:</p>
-    <ul>
-        <li>EU General Data Protection Regulation (GDPR)</li>
-        <li>California Consumer Privacy Act (CCPA)</li>
-        <li>Other applicable data protection laws</li>
-    </ul>
-    
-    <div class="footer">
-        This privacy policy ensures transparency about how your data is handled while providing you with full control over your personal information.
-    </div>
+    <nav class="nav-container">
+        <a href="/home" class="nav-link">Home</a>
+        <a href="/apps" class="nav-link active">Apps</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+    </nav>
+
+    <main>
+        <section style="height: auto; padding-top: 8rem; padding-bottom: 8rem;">
+            <div class="reveal" style="width: 100%; max-width: 900px; padding: 0 2rem;">
+                <div class="doc-content legal-box">
+                    <h1>Privacy Policy</h1>
+                    <p><strong>Last updated:</strong> September 10, 2025</p>
+
+                    <h2>Controller</h2>
+                    <p>This app is provided by Hannes Nagel, located in Germany.<br>
+                    Contact: contact@hannesnagel.com</p>
+
+                    <h2>Data Collected</h2>
+                    <h3>Account Information</h3>
+                    <ul>
+                        <li>Username (optional)</li>
+                        <li>Email address (optional)</li>
+                        <li>Encrypted password hash</li>
+                    </ul>
+
+                    <h3>Content Data</h3>
+                    <p>We store the recipes you create, images you upload, and your shopping lists to provide synchronization across your devices.</p>
+
+                    <h2>Security</h2>
+                    <p>All data transmissions are encrypted using HTTPS/TLS. Passwords are securely hashed using industry-standard encryption.</p>
+
+                    <h2>Your Rights</h2>
+                    <p>Under GDPR, you have the right to access, rectify, or delete your data at any time through the app settings or by contacting me.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/whimsy.js"></script>
 </body>
 </html>

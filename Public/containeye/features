@@ -4,289 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContainEye - Features - hannesnagel</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/main.css">
     <style>
-        body {
-            background-color: #000000;
-            color: #e0e0e0;
-        }
-        .section {
-            margin-bottom: 2rem;
-        }
-        .feature-list {
-            list-style-type: none;
-            padding-left: 1.5rem;
-        }
-        .feature-list li {
-            margin-bottom: 0.5rem;
-        }
-        .feature-list li::before {
-            content: "•";
-            color: #4a90e2;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        .nav-links a {
-            color: #4a90e2;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border: 1px solid #4a90e2;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-        .nav-links a:hover {
-            background-color: #4a90e2;
-            color: white;
-        }
-        .screenshot {
-            margin: 1rem 0;
-            text-align: center;
-        }
-        .screenshot img {
-            width: 50%;
-            height: auto;
-            display: inline-block;
-        }
-        .screenshots-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-        .screenshots-container .screenshot {
-            margin: 0;
-            flex: 0 1 auto;
-        }
-        .screenshots-container .screenshot img {
-            width: 100%;
-            max-width: 300px;
-        }
-        @media (max-width: 768px) {
-            .screenshots-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .screenshots-container .screenshot {
-                width: 100%;
-            }
-        }
-        
-        /* Enhanced navigation styles */
-        header {
-            background-color: transparent;
-            z-index: 5;
-        }
-        
-        .main-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            position: relative;
-        }
-        
-        .nav-item {
-            position: relative;
-            padding: 0.5rem 0;
-        }
-        
-        .nav-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            padding: 0.5rem 0.75rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:hover, .nav-link.active {
-            color: #4a90e2;
-            background-color: rgba(74, 144, 226, 0.1);
-        }
-        
-        .nav-link.active {
-            font-weight: 600;
-        }
-        
         .subnav {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-top: 1rem;
-            padding: 0.5rem;
-            background-color: rgba(30, 30, 30, 0.7);
-            border-radius: 25px;
-            backdrop-filter: blur(5px);
+            gap: 1rem;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 100px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
-        
         .subnav-link {
-            color: #d0d0d0;
+            color: var(--secondary-color);
             text-decoration: none;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
             font-size: 0.9rem;
-            transition: all 0.2s ease;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
         }
-        
         .subnav-link:hover, .subnav-link.active {
-            background-color: rgba(74, 144, 226, 0.2);
-            color: #4a90e2;
+            color: var(--accent-color);
+            background: rgba(74, 144, 226, 0.1);
         }
-        
-            to { opacity: 1; transform: translateY(0) translateX(-50%); }
+        .doc-content {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
         }
+        .doc-item {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 40px;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            margin-bottom: 3rem;
+        }
+        .doc-content h2, .doc-content h3 { color: var(--text-color); margin-bottom: 1.5rem; }
+        .doc-content h2 { font-size: 2rem; }
+        .doc-content h3 { font-size: 1.5rem; margin-top: 2rem; }
+        .doc-content p, .doc-content li { color: var(--secondary-color); line-height: 1.8; margin-bottom: 1.5rem; }
+        .feature-icon { color: var(--accent-color); font-weight: bold; margin-right: 0.5rem; }
     </style>
 </head>
-<body class="flex flex-col min-h-screen">
-    <header class="text-center py-4 relative z-10">
-        <h1 class="text-3xl font-bold">ContainEye</h1>
-        <nav class="mt-4">
-            <ul class="main-nav">
-                <li class="nav-item">
-                    <a href="/home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/apps" class="nav-link active">Apps</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            
-            <!-- ContainEye Subnav -->
-            <div class="subnav">
-                <a href="/containeye/index" class="subnav-link">Overview</a>
-                <a href="/containeye/features" class="subnav-link active">Features</a>
-                <a href="/containeye/ssh-terminal" class="subnav-link">SSH Terminal</a>
-                <a href="/containeye/servers-management" class="subnav-link">Servers</a>
-                <a href="/containeye/automated-tests" class="subnav-link">Tests</a>
-                <a href="/containeye/faq" class="subnav-link">FAQ</a>
-                <a href="/containeye/support" class="subnav-link">Support</a>
+<body>
+    <nav class="nav-container">
+        <a href="/home" class="nav-link">Home</a>
+        <a href="/apps" class="nav-link active">Apps</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+    </nav>
+
+    <main>
+        <section id="hero" style="min-height: 40vh;">
+            <div class="reveal">
+                <span class="sub-header">Capabilities</span>
+                <h1>Features Overview</h1>
             </div>
-        </nav>
-    </header>
+        </section>
 
-    <main class="container mx-auto px-4 max-w-3xl flex-grow">
-        <section class="mt-8">
-            <div class="section">
-                <h2 class="text-2xl font-bold mb-4">Features Overview</h2>
-                
-                <h3 class="text-xl font-bold mb-2">🔹 SSH Terminal</h3>
-                <ul class="feature-list mb-4">
-                    <li>Connect to your servers via SSH in a full-screen terminal.</li>
-                    <li>Select a server from a scrollable picker to connect.</li>
-                    <li>Use keyboard shortcuts, including CTRL-C for canceling commands.</li>
-                    <li>Toggle volume buttons as arrow keys using the ± button. (Blue = ON, Outline = OFF)</li>
-                    <li>Get bash/zsh history suggestions above the keyboard for quick command entry.</li>
-                </ul>
-                <div class="screenshots-container">
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/terminal-select-server.png" alt="Select a server to connect via SSH">
-                    </div>
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/in-terminal-with-suggestions.png" alt="Terminal with command suggestions">
-                    </div>
+        <section style="height: auto; padding-bottom: 8rem;">
+            <div class="reveal" style="width: 100%; max-width: 1000px; padding: 0 2rem;">
+                <div class="subnav">
+                    <a href="/containeye/index" class="subnav-link">Overview</a>
+                    <a href="/containeye/features" class="subnav-link active">Features</a>
+                    <a href="/containeye/ssh-terminal" class="subnav-link">SSH Terminal</a>
+                    <a href="/containeye/servers-management" class="subnav-link">Servers</a>
+                    <a href="/containeye/automated-tests" class="subnav-link">Tests</a>
+                    <a href="/containeye/faq" class="subnav-link">FAQ</a>
+                    <a href="/containeye/support" class="subnav-link">Support</a>
                 </div>
 
-                <h3 class="text-xl font-bold mb-2">🔹 Servers Management</h3>
-                <ul class="feature-list mb-4">
-                    <li>View all your servers with live stats: CPU usage, memory usage, disk usage, uptime, network traffic, and I/O wait.</li>
-                    <li>Tap a server to view detailed information and manage its Docker containers.</li>
-                    <li>Containers display: Name, CPU usage, memory usage, current status (e.g., "Up 4 hours").</li>
-                    <li>Start/stop controls and the command it was started with.</li>
-                    <li>Add a server by tapping ➕ and entering: Label, host (IP or domain), port (default: 22), username, and password.</li>
-                </ul>
-                <div class="screenshots-container">
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/servers-overview.png" alt="Servers overview with live stats">
-                    </div>
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/server-details-with-processes-and-containers.png" alt="Server details showing processes and containers">
-                    </div>
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/container-details-with-logs.png" alt="Container details with logs">
+                <div class="doc-content">
+                    <div class="doc-item">
+                        <h3><span class="feature-icon">🔹</span> SSH Terminal</h3>
+                        <p>Connect securely with a full-screen terminal, keyboard shortcuts, and smart command history suggestions.</p>
+
+                        <h3><span class="feature-icon">🔹</span> Servers Management</h3>
+                        <p>Live stats for CPU, memory, and disk usage. Manage Docker containers with start/stop controls and real-time logs.</p>
+
+                        <h3><span class="feature-icon">🔹</span> Automated Tests</h3>
+                        <p>Run health checks and automated tests. Use AI to generate validations and get instant alerts via home screen widgets.</p>
+
+                        <h3><span class="feature-icon">🔹</span> SFTP & Shortcuts</h3>
+                        <p>Manage files via SFTP and automate your infrastructure with deep Apple Shortcuts support.</p>
                     </div>
                 </div>
-
-                <h3 class="text-xl font-bold mb-2">🔹 Automated Tests</h3>
-                <ul class="feature-list mb-4">
-                    <li>Create and run automated tests on your servers.</li>
-                    <li>Use AI to suggest or modify tests before saving them.</li>
-                    <li>Tests run automatically without confirmation once set up.</li>
-                    <li>View test results: Green = Last run succeeded, Red = Last run failed, Gray = Not yet run.</li>
-                    <li>Test Widget on the home screen shows: Last failed test, Oldest test not run, Test that ran the farthest in the past.</li>
-                    <li>Tap the retry arrow to re-run a test or view details.</li>
-                    <li>Delete a test by holding down on it and selecting Delete.</li>
-                </ul>
-                <div class="screenshots-container">
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/active-tests.png" alt="Active tests overview">
-                    </div>
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/test-details-title-host-command-last-run-expected-output-actual-output-test-now-edit-delete.png" alt="Test details with results">
-                    </div>
-                </div>
-
-                <h3 class="text-xl font-bold mb-2">🔹 AI-Powered Test Creation</h3>
-                <ul class="feature-list mb-4">
-                    <li>Describe what you want to test in natural language.</li>
-                    <li>AI suggests appropriate commands and validations.</li>
-                    <li>Review and modify AI suggestions before saving.</li>
-                    <li>Get help with command syntax and regular expressions.</li>
-                </ul>
-                <div class="screenshots-container">
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/describe-what-to-test.png" alt="Describe what to test">
-                    </div>
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/configure-suggested-test.png" alt="Configure AI-suggested test">
-                    </div>
-                </div>
-
-                <h3 class="text-xl font-bold mb-2">🔹 SFTP File Management</h3>
-                <ul class="feature-list mb-4">
-                    <li>Browse and manage files on your servers.</li>
-                    <li>Upload and download files easily.</li>
-                    <li>View and edit text files directly.</li>
-                    <li>Show hidden files and navigate directories.</li>
-                </ul>
-                <div class="screenshots-container">
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/sftp-connected.png" alt="SFTP file browser">
-                    </div>
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/sftp-connected-show-hidden-files.png" alt="SFTP with hidden files shown">
-                    </div>
-                </div>
-
-                <h3 class="text-xl font-bold mb-2">🔹 Apple Shortcuts Integration</h3>
-                <ul class="feature-list mb-4">
-                    <li>Automate testing by scheduling or manually triggering tests.</li>
-                    <li>Available actions: Query tests (see which succeeded/failed), Run individual or multiple tests at once.</li>
-                </ul>
-            </div>
-
-            <div class="nav-links">
-                <a href="/containeye/index">← Home</a>
-                <a href="/containeye/faq">Next: Common Questions →</a>
             </div>
         </section>
     </main>
 
-    <footer class="bg-[#1e1e1e] text-center py-4 mt-8">
-        <p>hannesnagel &copy; 2024</p>
-    </footer>
+    <script src="/js/whimsy.js"></script>
 </body>
-</html> 
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open App - hannesnagel</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        .redirect-box {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 40px;
+            padding: 4rem 2rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .redirect-box h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .redirect-box p {
+            color: var(--secondary-color);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .btn {
+            display: block;
+            padding: 1rem 2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--glass-border);
+            color: var(--text-color);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="whimsy-blob"></div>
+
+    <nav class="nav-container">
+        <a href="/home" class="nav-link">Home</a>
+        <a href="/apps" class="nav-link">Apps</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+    </nav>
+
+    <main>
+        <section class="parallax-target">
+            <div class="reveal">
+                <div class="redirect-box">
+                    <span class="sub-header">Redirecting</span>
+                    <h2>One moment...</h2>
+                    <p>Looking for an app link? Check your browser's smart app banner or use the links below.</p>
+
+                    <div class="links-grid">
+                        <a href="/apps" class="btn btn-primary">My Apps</a>
+                        <a href="/home" class="btn btn-secondary">Go Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/whimsy.js"></script>
+</body>
+
+</html>

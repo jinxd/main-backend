@@ -1,0 +1,173 @@
+:root {
+    --bg-color: #050505;
+    --text-color: #f0f0f0;
+    --accent-color: #4a90e2;
+    --secondary-color: #888;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --font-main: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --snap-align: start;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: var(--snap-align);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+}
+
+/* Glassmorphism Nav */
+.nav-container {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--text-color);
+}
+
+/* Whimsy Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Whimsy Hover effect */
+.squishy {
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.squishy:hover {
+    transform: scale(1.05);
+}
+
+.squishy:active {
+    transform: scale(0.95);
+}
+
+/* Whimsical Blob */
+.whimsy-blob {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(74, 144, 226, 0.2) 0%, rgba(138, 43, 226, 0.1) 50%, transparent 100%);
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: -1;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Typography Refinement */
+h1 {
+    font-size: clamp(3rem, 10vw, 7rem);
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    background: linear-gradient(to bottom, #fff 40%, #888 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sub-header {
+    font-size: 1.1rem;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+/* Custom indicator for scroll */
+.scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--accent-color), transparent);
+    animation: scroll-anim 2s infinite ease-in-out;
+}
+
+@keyframes scroll-anim {
+    0% {
+        transform: translateX(-50%) scaleY(0);
+        transform-origin: top;
+    }
+
+    50% {
+        transform: translateX(-50%) scaleY(1);
+        transform-origin: top;
+    }
+
+    51% {
+        transform: translateX(-50%) scaleY(1);
+        transform-origin: bottom;
+    }
+
+    100% {
+        transform: translateX(-50%) scaleY(0);
+        transform-origin: bottom;
+    }
+}

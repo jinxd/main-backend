@@ -4,244 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContainEye - FAQ - hannesnagel</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/main.css">
     <style>
-        body {
-            background-color: #000000;
-            color: #e0e0e0;
-        }
-        .section {
-            margin-bottom: 2rem;
-        }
-        .feature-list {
-            list-style-type: none;
-            padding-left: 1.5rem;
-        }
-        .feature-list li {
-            margin-bottom: 0.5rem;
-        }
-        .feature-list li::before {
-            content: "•";
-            color: #4a90e2;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        .nav-links a {
-            color: #4a90e2;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border: 1px solid #4a90e2;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-        .nav-links a:hover {
-            background-color: #4a90e2;
-            color: white;
-        }
-        .screenshot {
-            margin: 1rem 0;
-            text-align: center;
-        }
-        .screenshot img {
-            width: 50%;
-            height: auto;
-            display: inline-block;
-        }
-        .screenshots-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-        .screenshots-container .screenshot {
-            margin: 0;
-            flex: 0 1 auto;
-        }
-        .screenshots-container .screenshot img {
-            width: 100%;
-            max-width: 300px;
-        }
-        @media (max-width: 768px) {
-            .screenshots-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .screenshots-container .screenshot {
-                width: 100%;
-            }
-        }
-        
-        /* Enhanced navigation styles */
-        header {
-            background-color: transparent;
-            z-index: 5;
-        }
-        
-        .main-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            position: relative;
-        }
-        
-        .nav-item {
-            position: relative;
-            padding: 0.5rem 0;
-        }
-        
-        .nav-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            padding: 0.5rem 0.75rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:hover, .nav-link.active {
-            color: #4a90e2;
-            background-color: rgba(74, 144, 226, 0.1);
-        }
-        
-        .nav-link.active {
-            font-weight: 600;
-        }
-        
         .subnav {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-top: 1rem;
-            padding: 0.5rem;
-            background-color: rgba(30, 30, 30, 0.7);
-            border-radius: 25px;
-            backdrop-filter: blur(5px);
+            gap: 1rem;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 100px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
-        
         .subnav-link {
-            color: #d0d0d0;
+            color: var(--secondary-color);
             text-decoration: none;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
             font-size: 0.9rem;
-            transition: all 0.2s ease;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
         }
-        
         .subnav-link:hover, .subnav-link.active {
-            background-color: rgba(74, 144, 226, 0.2);
-            color: #4a90e2;
+            color: var(--accent-color);
+            background: rgba(74, 144, 226, 0.1);
         }
-        
-            to { opacity: 1; transform: translateY(0) translateX(-50%); }
+        .doc-content {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
         }
+        .doc-content h2, .doc-content h3 {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+        .doc-content h2 { font-size: 2rem; margin-top: 3rem; }
+        .doc-content h3 { font-size: 1.5rem; margin-top: 2rem; }
+        .doc-content p {
+            text-align: left;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            max-width: none;
+        }
+        .doc-content ul, .doc-content ol {
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+        .doc-content li {
+            margin-bottom: 0.75rem;
+        }
+        .doc-item {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 40px;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            margin-bottom: 3rem;
+        }
+        .accent-link {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .accent-link:hover { text-decoration: underline; }
     </style>
 </head>
-<body class="flex flex-col min-h-screen">
-    <header class="text-center py-4 relative z-10">
-        <h1 class="text-3xl font-bold">ContainEye</h1>
-        <nav class="mt-4">
-            <ul class="main-nav">
-                <li class="nav-item">
-                    <a href="/home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/apps" class="nav-link active">Apps</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            
-            <!-- ContainEye Subnav -->
-            <div class="subnav">
-                <a href="/containeye/index" class="subnav-link">Overview</a>
-                <a href="/containeye/features" class="subnav-link">Features</a>
-                <a href="/containeye/ssh-terminal" class="subnav-link">SSH Terminal</a>
-                <a href="/containeye/servers-management" class="subnav-link">Servers</a>
-                <a href="/containeye/automated-tests" class="subnav-link">Tests</a>
-                <a href="/containeye/faq" class="subnav-link active">FAQ</a>
-                <a href="/containeye/support" class="subnav-link">Support</a>
+<body>
+    <nav class="nav-container">
+        <a href="/home" class="nav-link">Home</a>
+        <a href="/apps" class="nav-link active">Apps</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+    </nav>
+
+    <main>
+        <section id="hero" style="min-height: 40vh;">
+            <div class="reveal">
+                <span class="sub-header">Help & FAQ</span>
+                <h1>ContainEye</h1>
             </div>
-        </nav>
-    </header>
+        </section>
 
-    <main class="container mx-auto px-4 max-w-3xl flex-grow relative z-10">
-        <section class="mt-8">
-            <div class="section">
-                <h2 class="text-2xl font-bold mb-4">Common Questions & Explanations</h2>
-                
-                <h3 class="text-xl font-bold mb-2">What is SSH?</h3>
-                <p class="mb-4">SSH (Secure Shell) is a protocol for securely connecting to remote servers. It encrypts communication, allowing you to run commands on another machine safely. <a href="https://en.wikipedia.org/wiki/Secure_Shell" class="text-blue-400 hover:underline">Learn more about SSH on Wikipedia</a>.</p>
-
-                <h3 class="text-xl font-bold mb-2">What is a host and which port should I use?</h3>
-                <ul class="feature-list mb-4">
-                    <li>Host: The IP address or domain name of your server (e.g., 192.168.1.10 or example.com).</li>
-                    <li>Port: The network port used to connect via SSH. The default SSH port is 22.</li>
-                    <li>Many system administrators change the default SSH port to a non-standard number (like 2222 or 2202) to improve security by reducing automated attacks that target the default port 22.</li>
-                    <li>If you're unsure which port to use, check with your server administrator or hosting provider.</li>
-                </ul>
-
-                <h3 class="text-xl font-bold mb-2">What are shell commands?</h3>
-                <p class="mb-4">Shell commands are text-based instructions you run in the terminal to interact with your server, such as:</p>
-                <ul class="feature-list mb-4">
-                    <li>ls → List files</li>
-                    <li>cd /path/to/folder → Change directory</li>
-                    <li>docker ps → Show running Docker containers</li>
-                </ul>
-                <div class="screenshot">
-                    <img src="/images/containeye-framed/in-terminal-with-suggestions.png" alt="Terminal with command suggestions">
+        <section style="height: auto; padding-bottom: 8rem;">
+            <div class="reveal" style="width: 100%; max-width: 1000px; padding: 0 2rem;">
+                <div class="subnav">
+                    <a href="/containeye/index" class="subnav-link">Overview</a>
+                    <a href="/containeye/features" class="subnav-link">Features</a>
+                    <a href="/containeye/ssh-terminal" class="subnav-link">SSH Terminal</a>
+                    <a href="/containeye/servers-management" class="subnav-link">Servers</a>
+                    <a href="/containeye/automated-tests" class="subnav-link">Tests</a>
+                    <a href="/containeye/faq" class="subnav-link active">FAQ</a>
+                    <a href="/containeye/support" class="subnav-link">Support</a>
                 </div>
 
-                <h3 class="text-xl font-bold mb-2">What is a regular expression (regex)?</h3>
-                <p class="mb-4">A regular expression is a pattern used to match text. In ContainEye, regex is used in test validations, such as:</p>
-                <ul class="feature-list mb-4">
-                    <li>^Success$ → Only matches "Success" exactly.</li>
-                    <li>\d+ → Matches any number.</li>
-                </ul>
-                <div class="screenshots-container">
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/test-details-adapt-this-test-command-last-run-expected-output-last-output.png" alt="Test validation with regex">
+                <div class="doc-content">
+                    <div class="doc-item">
+                        <h2>Common Questions</h2>
+                        
+                        <h3>What is SSH?</h3>
+                        <p>SSH (Secure Shell) is a protocol for securely connecting to remote servers. It encrypts communication, allowing you to run commands safely. <a href="https://en.wikipedia.org/wiki/Secure_Shell" class="accent-link">Learn more</a>.</p>
+
+                        <h3>What host and port should I use?</h3>
+                        <ul>
+                            <li><strong>Host:</strong> The IP address or domain name (e.g., 192.168.1.10).</li>
+                            <li><strong>Port:</strong> The default is 22, but many administrators change it for security.</li>
+                        </ul>
+
+                        <h3>What is a regular expression (regex)?</h3>
+                        <p>A pattern used to match text. In ContainEye, regex is used in test validations to ensure your server output matches expected patterns.</p>
+
+                        <h3>How do I delete a server or test?</h3>
+                        <p>Simply long-press (or hold down) on any server or test in the list and select <strong>Delete</strong> from the menu.</p>
                     </div>
                 </div>
-
-                <h3 class="text-xl font-bold mb-2">How do I delete a server or test?</h3>
-                <p class="mb-4">Hold down on a server or test and select Delete.</p>
-                <div class="screenshots-container">
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/test-detail-title-dropdownmenu-edit-delete.png" alt="Delete option in dropdown menu">
-                    </div>
-                </div>
-
-                <h3 class="text-xl font-bold mb-2">How do I add the ContainEye home screen widget?</h3>
-                <ol class="list-decimal list-inside mb-4">
-                    <li>Long-press on your home screen and tap ➕ (Add Widget).</li>
-                    <li>Search for ContainEye.</li>
-                    <li>Select the Test Widget and tap Add Widget.</li>
-                </ol>
-            </div>
-
-            <div class="nav-links">
-                <a href="/containeye/features-3">← Previous: SFTP & Shortcuts</a>
-                <a href="/containeye/privacy">Next: Privacy & Data Usage →</a>
             </div>
         </section>
     </main>
 
-    <footer class="bg-[#1e1e1e] text-center py-4 mt-8">
-        <p>hannesnagel &copy; 2024</p>
-    </footer>
+    <script src="/js/whimsy.js"></script>
 </body>
-</html> 
+</html>

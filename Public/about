@@ -1,138 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about - hannesnagel</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #121212; /* Changed body background color */
-            color: #e0e0e0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        }
-        header {
-            background-color: transparent; /* Removed header background color */
-            color: #e0e0e0;
-            text-align: center;
-            padding: 1rem;
-            z-index: 5;
-        }
-        .main-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            position: relative;
-            list-style-type: none;
-            padding: 0;
-        }
-        .nav-item {
-            position: relative;
-            padding: 0.5rem 0;
-        }
-        .nav-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            padding: 0.5rem 0.75rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: #4a90e2;
-            background-color: rgba(74, 144, 226, 0.1);
-        }
-        .nav-link.active {
-            font-weight: 600;
-        }
-        .container {
-            width: 90%; /* Set width to 90% */
-            max-width: 800px; /* Optional: Limit maximum width */
-            margin: auto;
-            overflow: hidden;
-            padding: 20px; /* Added padding */
-            box-sizing: border-box; /* Ensure padding is included in width */
-            flex: 1;
-        }
-        footer {
-            background-color: #1e1e1e;
-            color: #e0e0e0;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .main {
-            padding: 20px; /* Added padding */
-            margin-top: 10px;
-            background-color: transparent; /* Removed gray background color */
-        }
-        .main h1,
-        .main p {
-            color: #e0e0e0;
-        }
-        .main p {
-            line-height: 1.6;
-            text-align: left; /* Align paragraphs left */
-        }
-        .links {
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-between;
-            background-color: transparent; /* Removed gray background color */
-        }
-        .links a {
-            color: #4a90e2;
-            text-decoration: none;
-            display: inline-block; /* Display links as inline-block for easy styling */
-            padding: 10px 20px; /* Padding for links */
-            border: 1px solid #4a90e2; /* Border around links */
-            border-radius: 25px; /* Rounded corners */
-            transition: all 0.3s ease; /* Smooth transition for background color */
-        }
-        .links a:hover {
-            background-color: #4a90e2; /* Background color on hover */
-            color: #fff; /* Text color on hover */
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            .container {
-                width: 100%; /* Full width on small screens */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/css/main.css">
 </head>
-<body>
-    <header>
-        <h1>about me</h1>
-        <nav>
-            <ul class="main-nav">
-                <li class="nav-item"><a href="/home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="/apps" class="nav-link">Apps</a></li>
-                <li class="nav-item"><a href="/about" class="nav-link active">About</a></li>
-                <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <div class="container">
-        <section class="main">
-            <p>I am a student and software developer since 2020 in germany. I released my first app when I was 15. It's called ear2brain. I am employed at codeunity and made for them a complete rewrite of the frontend of zettl - die Zeiterfassung which is only available in the German AppStore. I've released superghost, a word game where you duel other players by prepending or appending letters. Currently, I'm working on ContainEye, a container management app that helps you organize and track your containers.</p>
-            <div class="links">
-                <a href="/apps">View My Apps</a>
-                <a href="/contact">Contact Me</a>
+<body>
+    <nav class="nav-container">
+        <a href="/home" class="nav-link">Home</a>
+        <a href="/apps" class="nav-link">Apps</a>
+        <a href="/about" class="nav-link active">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+    </nav>
+
+    <main>
+        <section>
+            <h1 class="reveal">About Me</h1>
+            <div class="reveal" style="max-width: 600px; text-align: center;">
+                <p>I'm Hannes Nagel, a software developer and student from Germany. Since starting my journey in 2020,
+                    I've been obsessed with creating native experiences that feel just right.</p>
             </div>
         </section>
-    </div>
 
-    <footer>
-        <p>hannesnagel &copy; 2024</p>
-    </footer>
+        <section>
+            <div class="reveal"
+                style="max-width: 700px; padding: 3rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 40px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);">
+                <p style="text-align: left; margin-bottom: 2rem; color: var(--text-color);">
+                    I released my first app, <strong>ear2brain</strong>, when I was 15. Since then, I've joined
+                    <strong>codeunity</strong>, where I worked on a complete rewrite of <em>Zettl - Die
+                        Zeiterfassung</em> using SwiftUI.
+                </p>
+                <p style="text-align: left; margin-bottom: 2rem; color: var(--text-color);">
+                    I just love making things. Sometimes that's a silly word game like <strong>Ghost - Duel with Words</strong>, other times it's a tool like <strong>ContainEye</strong> to help manage servers. I'm always learning, and I try to make everything I build feel as native and smooth as possible.
+                </p>
+                <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 2rem;">
+                    <a href="/apps" class="nav-link squishy"
+                        style="border: 1px solid var(--glass-border); padding: 1rem 2rem; border-radius: 50px;">View My
+                        Apps</a>
+                    <a href="/contact" class="nav-link squishy" style="padding: 1rem 2rem;">Work with Me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/whimsy.js"></script>
 </body>
+
 </html>

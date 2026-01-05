@@ -3,149 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ContainEye - Features Part 1 - hannesnagel</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>ContainEye - Features Walkthrough - hannesnagel</title>
+    <link rel="stylesheet" href="/css/main.css">
     <style>
-        body {
-            background-color: #000000;
-            color: #e0e0e0;
-        }
-        .section {
-            margin-bottom: 2rem;
-        }
-        .feature-list {
-            list-style-type: none;
-            padding-left: 1.5rem;
-        }
-        .feature-list li {
-            margin-bottom: 0.5rem;
-        }
-        .feature-list li::before {
-            content: "•";
-            color: #4a90e2;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-        .nav-links {
+        .subnav {
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
             gap: 1rem;
-            margin-top: 2rem;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 100px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
-        .nav-links a {
-            color: #4a90e2;
+        .subnav-link {
+            color: var(--secondary-color);
             text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
             padding: 0.5rem 1rem;
-            border: 1px solid #4a90e2;
-            border-radius: 25px;
+            border-radius: 20px;
             transition: all 0.3s ease;
         }
-        .nav-links a:hover {
-            background-color: #4a90e2;
-            color: white;
+        .subnav-link:hover, .subnav-link.active {
+            color: var(--accent-color);
+            background: rgba(74, 144, 226, 0.1);
         }
-        .screenshot {
-            margin: 1rem 0;
+        .doc-content {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .doc-item {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 40px;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            margin-bottom: 3rem;
+        }
+        .doc-content h2, .doc-content h3 { color: var(--text-color); margin-bottom: 1.5rem; }
+        .doc-content h2 { font-size: 2rem; }
+        .doc-content h3 { font-size: 1.5rem; margin-top: 2rem; }
+        .doc-content p, .doc-content li { color: var(--secondary-color); line-height: 1.8; margin-bottom: 1.5rem; }
+        .screenshot-box {
             text-align: center;
+            margin: 2rem 0;
+            background: rgba(0,0,0,0.3);
+            border-radius: 20px;
+            padding: 1rem;
         }
-        .screenshot img {
-            width: 50%;
+        .screenshot-box img {
+            max-width: 100%;
             height: auto;
-            display: inline-block;
-        }
-        .screenshots-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-        .screenshots-container .screenshot {
-            margin: 0;
-            flex: 0 1 auto;
-        }
-        .screenshots-container .screenshot img {
-            width: 100%;
-            max-width: 300px;
-        }
-        @media (max-width: 768px) {
-            .screenshots-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .screenshots-container .screenshot {
-                width: 100%;
-            }
+            border-radius: 10px;
         }
     </style>
 </head>
-<body class="flex flex-col min-h-screen">
-    <header class="text-center py-4">
-        <h1 class="text-3xl font-bold">ContainEye Documentation</h1>
-        <nav class="mt-4">
-            <ul class="flex justify-center space-x-4">
-                <li><a href="/home" class="hover:text-blue-400">home</a></li>
-                <li><a href="/apps" class="hover:text-blue-400">apps</a></li>
-                <li><a href="/about" class="hover:text-blue-400">about</a></li>
-                <li><a href="/contact" class="hover:text-blue-400">contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body>
+    <nav class="nav-container">
+        <a href="/home" class="nav-link">Home</a>
+        <a href="/apps" class="nav-link active">Apps</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+    </nav>
 
-    <main class="container mx-auto px-4 max-w-3xl flex-grow">
-        <section class="mt-8">
-            <div class="section">
-                <h2 class="text-2xl font-bold mb-4">Features Overview - Part 1</h2>
-                
-                <h3 class="text-xl font-bold mb-2">🔹 SSH Terminal</h3>
-                <ul class="feature-list mb-4">
-                    <li>Connect to your servers via SSH in a full-screen terminal.</li>
-                    <li>Select a server from a scrollable picker to connect.</li>
-                    <li>Use keyboard shortcuts, including CTRL-C for canceling commands.</li>
-                    <li>Toggle volume buttons as arrow keys using the ± button. (Blue = ON, Outline = OFF)</li>
-                    <li>Get bash/zsh history suggestions above the keyboard for quick command entry.</li>
-                </ul>
-                <div class="screenshots-container">
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/terminal-select-server.png" alt="Select a server to connect via SSH">
-                    </div>
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/in-terminal-with-suggestions.png" alt="Terminal with command suggestions">
-                    </div>
-                </div>
-
-                <h3 class="text-xl font-bold mb-2">🔹 Servers Management</h3>
-                <ul class="feature-list mb-4">
-                    <li>View all your servers with live stats: CPU usage, memory usage, disk usage, uptime, network traffic, and I/O wait.</li>
-                    <li>Tap a server to view detailed information and manage its Docker containers.</li>
-                    <li>Containers display: Name, CPU usage, memory usage, current status (e.g., "Up 4 hours").</li>
-                    <li>Start/stop controls and the command it was started with.</li>
-                    <li>Add a server by tapping ➕ and entering: Label, host (IP or domain), port (default: 22), username, and password.</li>
-                </ul>
-                <div class="screenshots-container">
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/servers-overview.png" alt="Servers overview with live stats">
-                    </div>
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/server-details-with-processes-and-containers.png" alt="Server details showing processes and containers">
-                    </div>
-                    <div class="screenshot">
-                        <img src="/images/containeye-framed/container-details-with-logs.png" alt="Container details with logs">
-                    </div>
-                </div>
+    <main>
+        <section id="hero" style="min-height: 40vh;">
+            <div class="reveal">
+                <span class="sub-header">In-Depth Walkthrough</span>
+                <h1>Features - Part 1</h1>
             </div>
+        </section>
 
-            <div class="nav-links">
-                <a href="/containeye/index">← Home</a>
-                <a href="/containeye/features-2">Next: Automated Tests →</a>
+        <section style="height: auto; padding-bottom: 8rem;">
+            <div class="reveal" style="width: 100%; max-width: 1000px; padding: 0 2rem;">
+                <div class="subnav">
+                    <a href="/containeye/index" class="subnav-link">Overview</a>
+                    <a href="/containeye/features" class="subnav-link active">Features</a>
+                    <a href="/containeye/ssh-terminal" class="subnav-link">SSH Terminal</a>
+                    <a href="/containeye/servers-management" class="subnav-link">Servers</a>
+                    <a href="/containeye/automated-tests" class="subnav-link">Tests</a>
+                    <a href="/containeye/faq" class="subnav-link">FAQ</a>
+                    <a href="/containeye/support" class="subnav-link">Support</a>
+                </div>
+
+                <div class="doc-content">
+                    <div class="doc-item">
+                        <h2>Infrastructure Mastery</h2>
+                        <p>ContainEye offers a unified interface for all your server needs. From a robust SSH terminal to detailed Docker management.</p>
+                        
+                        <div class="screenshot-box">
+                            <img src="/images/containeye-framed/servers-overview.png" alt="Servers overview">
+                        </div>
+
+                        <h3>Interactive Terminal</h3>
+                        <p>A full-featured terminal with smart history and volume-button arrow keys ensures you're productive even on the go.</p>
+                        
+                        <div class="screenshot-box">
+                            <img src="/images/containeye-framed/in-terminal-with-suggestions.png" alt="Terminal suggestions">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-[#1e1e1e] text-center py-4 mt-8">
-        <p>hannesnagel &copy; 2024</p>
-    </footer>
+    <script src="/js/whimsy.js"></script>
 </body>
-</html> 
+</html>

@@ -4,262 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContainEye - Automated Tests - hannesnagel</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/main.css">
     <style>
-        body {
-            background-color: #000000;
-            color: #e0e0e0;
-        }
-        .section {
-            margin-bottom: 2rem;
-        }
-        .feature-list {
-            list-style-type: none;
-            padding-left: 1.5rem;
-        }
-        .feature-list li {
-            margin-bottom: 0.5rem;
-        }
-        .feature-list li::before {
-            content: "•";
-            color: #4a90e2;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        .nav-links a {
-            color: #4a90e2;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border: 1px solid #4a90e2;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-        .nav-links a:hover {
-            background-color: #4a90e2;
-            color: white;
-        }
-        .screenshot {
-            margin: 1rem 0;
-            text-align: center;
-        }
-        .screenshot img {
-            width: 50%;
-            height: auto;
-            display: inline-block;
-        }
-        .screenshots-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-        .screenshots-container .screenshot {
-            margin: 0;
-            flex: 0 1 auto;
-        }
-        .screenshots-container .screenshot img {
-            width: 100%;
-            max-width: 300px;
-        }
-        @media (max-width: 768px) {
-            .screenshots-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .screenshots-container .screenshot {
-                width: 100%;
-            }
-        }
-        
-        /* Enhanced navigation styles */
-        header {
-            background-color: transparent;
-            z-index: 5;
-        }
-        
-        .main-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            position: relative;
-        }
-        
-        .nav-item {
-            position: relative;
-            padding: 0.5rem 0;
-        }
-        
-        .nav-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            padding: 0.5rem 0.75rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:hover, .nav-link.active {
-            color: #4a90e2;
-            background-color: rgba(74, 144, 226, 0.1);
-        }
-        
-        .nav-link.active {
-            font-weight: 600;
-        }
-        
         .subnav {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-top: 1rem;
-            padding: 0.5rem;
-            background-color: rgba(30, 30, 30, 0.7);
-            border-radius: 25px;
-            backdrop-filter: blur(5px);
+            gap: 1rem;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 100px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
-        
         .subnav-link {
-            color: #d0d0d0;
+            color: var(--secondary-color);
             text-decoration: none;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
             font-size: 0.9rem;
-            transition: all 0.2s ease;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
         }
-        
         .subnav-link:hover, .subnav-link.active {
-            background-color: rgba(74, 144, 226, 0.2);
-            color: #4a90e2;
+            color: var(--accent-color);
+            background: rgba(74, 144, 226, 0.1);
         }
-        
-            to { opacity: 1; transform: translateY(0) translateX(-50%); }
+        .doc-content {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
         }
+        .doc-item {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 40px;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            margin-bottom: 3rem;
+        }
+        .doc-content h2, .doc-content h3 { color: var(--text-color); margin-bottom: 1.5rem; }
+        .doc-content h2 { font-size: 2rem; }
+        .doc-content h3 { font-size: 1.5rem; margin-top: 2rem; }
+        .doc-content p, .doc-content li { color: var(--secondary-color); line-height: 1.8; margin-bottom: 1.5rem; }
     </style>
 </head>
-<body class="flex flex-col min-h-screen">
-    <header class="text-center py-4 relative z-10">
-        <h1 class="text-3xl font-bold">ContainEye</h1>
-        <nav class="mt-4">
-            <ul class="main-nav">
-                <li class="nav-item">
-                    <a href="/home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/apps" class="nav-link active">Apps</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            
-            <!-- ContainEye Subnav -->
-            <div class="subnav">
-                <a href="/containeye/index" class="subnav-link">Overview</a>
-                <a href="/containeye/features" class="subnav-link">Features</a>
-                <a href="/containeye/ssh-terminal" class="subnav-link">SSH Terminal</a>
-                <a href="/containeye/servers-management" class="subnav-link">Servers</a>
-                <a href="/containeye/automated-tests" class="subnav-link active">Tests</a>
-                <a href="/containeye/faq" class="subnav-link">FAQ</a>
-                <a href="/containeye/support" class="subnav-link">Support</a>
-            </div>
-        </nav>
-    </header>
+<body>
+    <nav class="nav-container">
+        <a href="/home" class="nav-link">Home</a>
+        <a href="/apps" class="nav-link active">Apps</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+    </nav>
 
-    <main class="container mx-auto px-4 max-w-3xl flex-grow relative z-10">
-        <section class="mt-8">
-            <div class="section">
-                <h2 class="text-2xl font-bold mb-4">Automated Tests</h2>
-                
-                <p class="mb-4">ContainEye's automated tests feature helps you monitor your servers by running regular checks and alerting you when issues are detected.</p>
-                
-                <h3 class="text-xl font-bold mb-2">Test Overview</h3>
-                <p class="mb-2">The Tests tab displays all your configured tests with their current status:</p>
-                <ul class="feature-list mb-4">
-                    <li><strong>Green:</strong> Last run succeeded</li>
-                    <li><strong>Red:</strong> Last run failed</li>
-                </ul>
-                
-                <div class="screenshot">
-                    <img src="/images/containeye-framed/active-tests.png" alt="Active tests overview">
-                </div>
-                
-                <h3 class="text-xl font-bold mb-2">Running Tests</h3>
-                <p class="mb-2">You have several options to run a test:</p>
-                <ol class="steps">
-                    <li><strong>Quick Run:</strong> Tap and hold on a test, then select "Execute" from the menu.</li>
-                    <li><strong>From Test Details:</strong> Tap on a test, scroll down, and select "Test Now".</li>
-                    <li><strong>Using Apple Shortcuts:</strong> Open Apple Shortcuts, create a new shortcut, and select ContainEye test actions.</li>
-                </ol>
-                
-                <h3 class="text-xl font-bold mb-2">Test Details</h3>
-                <ol class="steps">
-                    <li>Tap on a test in the list to view its details.</li>
-                    <li>The test details screen shows:</li>
-                    <ul class="feature-list">
-                        <li>Test title and description</li>
-                        <li>Target server host</li>
-                        <li>Command that will be executed</li>
-                        <li>Last run timestamp</li>
-                        <li>Expected output (the pattern to match)</li>
-                        <li>Actual output from the last run</li>
-                    </ul>
-                </ol>
-                
-                <div class="screenshot">
-                    <img src="/images/containeye-framed/test-details-title-host-command-last-run-expected-output-actual-output-test-now-edit-delete.png" alt="Test details with results">
-                </div>
-                
-                <h3 class="text-xl font-bold mb-2">Home Screen Widget</h3>
-                <p class="mb-2">The ContainEye Test Widget on your home screen shows:</p>
-                <ul class="feature-list mb-4">
-                    <li>Last failed test</li>
-                    <li>Oldest test not yet run</li>
-                    <li>Test that ran the farthest in the past</li>
-                </ul>
-                <p class="mb-4">This helps you quickly identify tests that need attention.</p>
-                
-                <h3 class="text-xl font-bold mb-2">Managing Tests</h3>
-                <h4 class="text-lg font-bold mb-1">Editing a Test</h4>
-                <ol class="steps">
-                    <li>Tap on a test to view its details.</li>
-                    <li>Tap "Edit" to modify the test.</li>
-                    <li>Make your changes and tap "Save".</li>
-                </ol>
-                
-                <h4 class="text-lg font-bold mb-1">Deleting a Test</h4>
-                <ol class="steps">
-                    <li>Method 1: Tap and hold on a test in the list, then select "Delete".</li>
-                    <li>Method 2: Open test details, scroll down, and tap "Delete".</li>
-                    <li>Confirm the deletion when prompted.</li>
-                </ol>
-                
-                <div class="screenshot">
-                    <img src="/images/containeye-framed/test-detail-title-dropdownmenu-edit-delete.png" alt="Delete option in dropdown menu">
-                </div>
+    <main>
+        <section id="hero" style="min-height: 40vh;">
+            <div class="reveal">
+                <span class="sub-header">Peace of Mind</span>
+                <h1>Automated Tests</h1>
             </div>
+        </section>
 
-            <div class="nav-links">
-                <a href="/containeye/servers-management">← Previous: Servers Management</a>
-                <a href="/containeye/adding-test-suggestion">Next: Adding a Test from Suggestion →</a>
+        <section style="height: auto; padding-bottom: 8rem;">
+            <div class="reveal" style="width: 100%; max-width: 1000px; padding: 0 2rem;">
+                <div class="subnav">
+                    <a href="/containeye/index" class="subnav-link">Overview</a>
+                    <a href="/containeye/features" class="subnav-link">Features</a>
+                    <a href="/containeye/ssh-terminal" class="subnav-link">SSH Terminal</a>
+                    <a href="/containeye/servers-management" class="subnav-link">Servers</a>
+                    <a href="/containeye/automated-tests" class="subnav-link active">Tests</a>
+                    <a href="/containeye/faq" class="subnav-link">FAQ</a>
+                    <a href="/containeye/support" class="subnav-link">Support</a>
+                </div>
+
+                <div class="doc-content">
+                    <div class="doc-item">
+                        <h2>Continuous Monitoring</h2>
+                        <p>Create tests that run automatically to ensure your services are healthy. ContainEye supports custom commands and regex-based output validation.</p>
+                        
+                        <h3>AI Suggestions</h3>
+                        <p>Not sure what to test? Describe your goal in natural language and let the integrated AI suggest the perfect command and validation pattern.</p>
+                        
+                        <h3>Home Screen Widgets</h3>
+                        <p>Keep an eye on your infrastructure with beautiful widgets that show the current status of your most important tests.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-[#1e1e1e] text-center py-4 mt-8">
-        <p>hannesnagel &copy; 2024</p>
-    </footer>
+    <script src="/js/whimsy.js"></script>
 </body>
-</html> 
+</html>

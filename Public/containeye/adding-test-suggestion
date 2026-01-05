@@ -4,242 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContainEye - Adding a Test from Suggestion - hannesnagel</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/main.css">
     <style>
-        body {
-            background-color: #000000;
-            color: #e0e0e0;
-        }
-        .section {
-            margin-bottom: 2rem;
-        }
-        .feature-list {
-            list-style-type: none;
-            padding-left: 1.5rem;
-        }
-        .feature-list li {
-            margin-bottom: 0.5rem;
-        }
-        .feature-list li::before {
-            content: "•";
-            color: #4a90e2;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        .nav-links a {
-            color: #4a90e2;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border: 1px solid #4a90e2;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-        .nav-links a:hover {
-            background-color: #4a90e2;
-            color: white;
-        }
-        .screenshot {
-            margin: 1rem 0;
-            text-align: center;
-        }
-        .screenshot img {
-            width: 50%;
-            height: auto;
-            display: inline-block;
-        }
-        .screenshots-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-        .screenshots-container .screenshot {
-            margin: 0;
-            flex: 0 1 auto;
-        }
-        .screenshots-container .screenshot img {
-            width: 100%;
-            max-width: 300px;
-        }
-        @media (max-width: 768px) {
-            .screenshots-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .screenshots-container .screenshot {
-                width: 100%;
-            }
-        }
-        
-        /* Enhanced navigation styles */
-        header {
-            background-color: transparent;
-            z-index: 5;
-        }
-        
-        .main-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            position: relative;
-        }
-        
-        .nav-item {
-            position: relative;
-            padding: 0.5rem 0;
-        }
-        
-        .nav-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            padding: 0.5rem 0.75rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:hover, .nav-link.active {
-            color: #4a90e2;
-            background-color: rgba(74, 144, 226, 0.1);
-        }
-        
-        .nav-link.active {
-            font-weight: 600;
-        }
-        
         .subnav {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-top: 1rem;
-            padding: 0.5rem;
-            background-color: rgba(30, 30, 30, 0.7);
-            border-radius: 25px;
-            backdrop-filter: blur(5px);
+            gap: 1rem;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 100px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
-        
         .subnav-link {
-            color: #d0d0d0;
+            color: var(--secondary-color);
             text-decoration: none;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
             font-size: 0.9rem;
-            transition: all 0.2s ease;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
         }
-        
         .subnav-link:hover, .subnav-link.active {
-            background-color: rgba(74, 144, 226, 0.2);
-            color: #4a90e2;
+            color: var(--accent-color);
+            background: rgba(74, 144, 226, 0.1);
         }
-        
-            to { opacity: 1; transform: translateY(0) translateX(-50%); }
+        .doc-content {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .doc-item {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 40px;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            margin-bottom: 3rem;
+        }
+        .doc-content h2, .doc-content h3 { color: var(--text-color); margin-bottom: 1.5rem; }
+        .doc-content h2 { font-size: 2rem; }
+        .doc-content h3 { font-size: 1.5rem; margin-top: 2rem; }
+        .doc-content p, .doc-content li { color: var(--secondary-color); line-height: 1.8; margin-bottom: 1.5rem; }
+        .screenshot-box {
+            text-align: center;
+            margin: 2rem 0;
+            background: rgba(0,0,0,0.3);
+            border-radius: 20px;
+            padding: 1rem;
+        }
+        .screenshot-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
     </style>
 </head>
-<body class="flex flex-col min-h-screen">
-    <header class="text-center py-4 relative z-10">
-        <h1 class="text-3xl font-bold">ContainEye</h1>
-        <nav class="mt-4">
-            <ul class="main-nav">
-                <li class="nav-item">
-                    <a href="/home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/apps" class="nav-link active">Apps</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            
-            <!-- ContainEye Subnav -->
-            <div class="subnav">
-                <a href="/containeye/index" class="subnav-link">Overview</a>
-                <a href="/containeye/features" class="subnav-link">Features</a>
-                <a href="/containeye/ssh-terminal" class="subnav-link">SSH Terminal</a>
-                <a href="/containeye/servers-management" class="subnav-link">Servers</a>
-                <a href="/containeye/automated-tests" class="subnav-link active">Tests</a>
-                <a href="/containeye/faq" class="subnav-link">FAQ</a>
-                <a href="/containeye/support" class="subnav-link">Support</a>
-            </div>
-        </nav>
-    </header>
+<body>
+    <nav class="nav-container">
+        <a href="/home" class="nav-link">Home</a>
+        <a href="/apps" class="nav-link active">Apps</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+    </nav>
 
-    <main class="container mx-auto px-4 max-w-3xl flex-grow relative z-10">
-        <section class="mt-8">
-            <div class="section">
-                <h2 class="text-2xl font-bold mb-4">Adding a Test from Suggestion</h2>
-                
-                <p class="mb-4">ContainEye can suggest tests based on your server configurations. This is a quick way to set up monitoring for common scenarios.</p>
-                
-                <h3 class="text-xl font-bold mb-2">Step-by-Step Guide</h3>
-                
-                <ol class="steps">
-                    <li>Go to the Tests tab in the bottom navigation.</li>
-                    <li>Tap on a suggested test from the "Suggested Tests" section.</li>
-                    <li>Review the test description and details.</li>
-                </ol>
-                
-                <div class="screenshot">
-                    <img src="/images/containeye-framed/configure-suggested-test.png" alt="Configure a suggested test">
-                </div>
-                
-                <ol class="steps" start="4">
-                    <li>Tap the arrow button to adapt the test for your needs.</li>
-                    <li>You can modify:</li>
-                    <ul class="feature-list">
-                        <li>Test title</li>
-                        <li>Command to execute</li>
-                        <li>Expected output pattern</li>
-                    </ul>
-                </ol>
-                
-                <div class="screenshot">
-                    <img src="/images/containeye-framed/test-details-adapt-this-test-command-last-run-expected-output-last-output.png" alt="Adapting a test">
-                </div>
-                
-                <ol class="steps" start="6">
-                    <li>Make any desired changes to customize the test.</li>
-                    <li>Hit "Save" once you are satisfied with the configuration.</li>
-                    <li>Select the server this test should run on.</li>
-                    <li>The test will be added to your active tests and will run automatically according to schedule.</li>
-                </ol>
-                
-                <div class="screenshot">
-                    <img src="/images/containeye-framed/test-details-editing-title-host-adapt-this-test-command-last-run.png" alt="Finalizing test configuration">
-                </div>
-                
-                <h3 class="text-xl font-bold mb-2">Tips for Adapting Tests</h3>
-                <ul class="feature-list">
-                    <li><strong>Command Modification:</strong> Adjust the command to match your specific server setup (paths, service names, etc.).</li>
-                    <li><strong>Expected Output:</strong> Update the expected output pattern to match what you consider a successful result.</li>
-                    <li><strong>Regular Expressions:</strong> Use regex for flexible matching (e.g., \d+ for any number).</li>
-                    <li><strong>Test Frequency:</strong> Consider how often the test should run based on the importance of the service.</li>
-                </ul>
+    <main>
+        <section id="hero" style="min-height: 40vh;">
+            <div class="reveal">
+                <span class="sub-header">Quick Setup</span>
+                <h1>Adding a Test from Suggestion</h1>
             </div>
+        </section>
 
-            <div class="nav-links">
-                <a href="/containeye/automated-tests">← Previous: Automated Tests</a>
-                <a href="/containeye/adding-new-test">Next: Adding a New Test →</a>
+        <section style="height: auto; padding-bottom: 8rem;">
+            <div class="reveal" style="width: 100%; max-width: 1000px; padding: 0 2rem;">
+                <div class="subnav">
+                    <a href="/containeye/index" class="subnav-link">Overview</a>
+                    <a href="/containeye/features" class="subnav-link">Features</a>
+                    <a href="/containeye/ssh-terminal" class="subnav-link">SSH Terminal</a>
+                    <a href="/containeye/servers-management" class="subnav-link">Servers</a>
+                    <a href="/containeye/automated-tests" class="subnav-link active">Tests</a>
+                    <a href="/containeye/faq" class="subnav-link">FAQ</a>
+                    <a href="/containeye/support" class="subnav-link">Support</a>
+                </div>
+
+                <div class="doc-content">
+                    <div class="doc-item">
+                        <h2>Speed up with Suggestions</h2>
+                        <p>ContainEye provides pre-made test suggestions for common server environments. Simply adapt them to your needs.</p>
+                        
+                        <div class="screenshot-box">
+                            <img src="/images/containeye-framed/configure-suggested-test.png" alt="Select a suggestion">
+                        </div>
+
+                        <h3>Adapting Existing Tests</h3>
+                        <p>Change the command, expected output, or target server to fit your specific infrastructure perfectly.</p>
+                        
+                        <div class="screenshot-box">
+                            <img src="/images/containeye-framed/test-details-adapt-this-test-command-last-run-expected-output-last-output.png" alt="Adapt test configuration">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-[#1e1e1e] text-center py-4 mt-8">
-        <p>hannesnagel &copy; 2024</p>
-    </footer>
+    <script src="/js/whimsy.js"></script>
 </body>
-</html> 
+</html>
