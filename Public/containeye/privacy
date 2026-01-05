@@ -4,229 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContainEye - Privacy - hannesnagel</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            background-color: #000000;
-            color: #e0e0e0;
-        }
-        .section {
-            margin-bottom: 2rem;
-        }
-        .feature-list {
-            list-style-type: none;
-            padding-left: 1.5rem;
-        }
-        .feature-list li {
-            margin-bottom: 0.5rem;
-        }
-        .feature-list li::before {
-            content: "•";
-            color: #4a90e2;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        .nav-links a {
-            color: #4a90e2;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border: 1px solid #4a90e2;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-        .nav-links a:hover {
-            background-color: #4a90e2;
-            color: white;
-        }
-        .screenshot {
-            margin: 1rem 0;
-            text-align: center;
-        }
-        .screenshot img {
-            width: 50%;
-            height: auto;
-            display: inline-block;
-        }
-        .screenshots-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-        .screenshots-container .screenshot {
-            margin: 0;
-            flex: 0 1 auto;
-        }
-        .screenshots-container .screenshot img {
-            width: 100%;
-            max-width: 300px;
-        }
-        @media (max-width: 768px) {
-            .screenshots-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .screenshots-container .screenshot {
-                width: 100%;
-            }
-        }
-        
-        /* Enhanced navigation styles */
-        header {
-            background-color: transparent;
-            z-index: 5;
-        }
-        
-        .main-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            position: relative;
-        }
-        
-        .nav-item {
-            position: relative;
-            padding: 0.5rem 0;
-        }
-        
-        .nav-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            padding: 0.5rem 0.75rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:hover, .nav-link.active {
-            color: #4a90e2;
-            background-color: rgba(74, 144, 226, 0.1);
-        }
-        
-        .nav-link.active {
-            font-weight: 600;
-        }
-        
-        .subnav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-top: 1rem;
-            padding: 0.5rem;
-            background-color: rgba(30, 30, 30, 0.7);
-            border-radius: 25px;
-            backdrop-filter: blur(5px);
-        }
-        
-        .subnav-link {
-            color: #d0d0d0;
-            text-decoration: none;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
-        }
-        
-        .subnav-link:hover, .subnav-link.active {
-            background-color: rgba(74, 144, 226, 0.2);
-            color: #4a90e2;
-        }
-        
-            to { opacity: 1; transform: translateY(0) translateX(-50%); }
-        }
-    </style>
+    <link rel="stylesheet" href="/style.css">
 </head>
-<body class="flex flex-col min-h-screen">
-    <header class="text-center py-4 relative z-10">
-        <h1 class="text-3xl font-bold">ContainEye</h1>
-        <nav class="mt-4">
-            <ul class="main-nav">
-                <li class="nav-item">
-                    <a href="/home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/apps" class="nav-link active">Apps</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/contact" class="nav-link">Contact</a>
-                </li>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/apps" class="nav-link active">Apps</a></li>
+                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
             </ul>
-            
-            <!-- ContainEye Subnav -->
-            <div class="subnav">
-                <a href="/containeye/index" class="subnav-link">Overview</a>
-                <a href="/containeye/features" class="subnav-link">Features</a>
-                <a href="/containeye/ssh-terminal" class="subnav-link">SSH Terminal</a>
-                <a href="/containeye/servers-management" class="subnav-link">Servers</a>
-                <a href="/containeye/automated-tests" class="subnav-link">Tests</a>
-                <a href="/containeye/faq" class="subnav-link">FAQ</a>
-                <a href="/containeye/support" class="subnav-link">Support</a>
-            </div>
         </nav>
+        <div class="sub-nav">
+            <a href="/containeye/index">Overview</a>
+            <a href="/containeye/features">Features</a>
+            <a href="/containeye/ssh-terminal">SSH Terminal</a>
+            <a href="/containeye/servers-management">Servers</a>
+            <a href="/containeye/automated-tests">Tests</a>
+            <a href="/containeye/faq">FAQ</a>
+            <a href="/containeye/support">Support</a>
+        </div>
     </header>
 
-    <main class="container mx-auto px-4 max-w-3xl flex-grow relative z-10">
-        <section class="mt-8">
-            <div class="section">
-                <h2 class="text-2xl font-bold mb-4">Privacy & Data Usage</h2>
-                
-                <h3 class="text-xl font-bold mb-2">What data is sent to my servers?</h3>
-                <p class="mb-4">ContainEye does not send any of your commands to my servers.</p>
-                <ul class="feature-list mb-4">
-                    <li>SSH and test commands are only sent to your own servers.</li>
-                    <li>No logs or session data are transmitted elsewhere.</li>
-                </ul>
-                <div class="screenshot">
-                    <img src="/images/containeye-framed/ai-wants-to-execute.png" alt="AI command execution confirmation">
-                </div>
+    <main class="main">
+        <section class="hero">
+            <h1>Privacy & Data Usage</h1>
+        </section>
 
-                <h3 class="text-xl font-bold mb-2">How does the AI work?</h3>
-                <ul class="feature-list mb-4">
-                    <li>AI is used only to suggest and modify tests, but it does not execute them.</li>
-                    <li>Tests are stored in ContainEye and run automatically when triggered.</li>
-                    <li>AI cannot execute commands without your confirmation during test creation.</li>
-                </ul>
-                <div class="screenshot">
-                    <img src="/images/containeye-framed/ai-has-question.png" alt="AI test suggestions">
-                </div>
-                <div class="screenshot">
-                    <img src="/images/containeye-framed/submit-command-result-to-ai.png" alt="AI test configuration">
-                </div>
-
-                <h3 class="text-xl font-bold mb-2">What data does ContainEye collect?</h3>
-                <ul class="feature-list mb-4">
-                    <li>ContainEye collects anonymous, GDPR-compliant statistics about feature usage (e.g., most-used tabs).</li>
-                    <li>This data is fully anonymized, meaning no consent is required under GDPR.</li>
-                    <li>If you have concerns, you can contact me directly.</li>
-                    <li>No personal data, server credentials, or command history is ever collected.</li>
-                </ul>
-                <div class="screenshot">
-                    <img src="/images/containeye-framed/test-details-last-run-expected-output-last-output-fetch-current-output-done-delete.png" alt="Local test data storage">
-                </div>
+        <section class="app-segment dark">
+            <div class="container">
+                <h2>What data is sent to my servers?</h2>
+                <p class="app-description">ContainEye does not send any of your commands to my servers. SSH and test commands are only sent to your own servers, and no logs or session data are transmitted elsewhere.</p>
+                <img src="/images/containeye-framed/ai-wants-to-execute.png" alt="AI command execution confirmation" class="showcase-img">
             </div>
+        </section>
 
-            <div class="nav-links">
-                <a href="/containeye/faq">← Previous: Common Questions</a>
-                <a href="/containeye/support">Next: Need Help? →</a>
+        <section class="app-segment light">
+            <div class="container">
+                <h2>How does the AI work?</h2>
+                <p class="app-description">AI is used only to suggest and modify tests, but it does not execute them. AI cannot execute commands without your confirmation during test creation.</p>
+                <img src="/images/containeye-framed/ai-has-question.png" alt="AI test suggestions" class="showcase-img">
+            </div>
+        </section>
+
+        <section class="app-segment dark">
+            <div class="container">
+                <h2>What data does ContainEye collect?</h2>
+                <p class="app-description">ContainEye collects anonymous, GDPR-compliant statistics about feature usage. This data is fully anonymized, and no personal data, server credentials, or command history is ever collected.</p>
+                <img src="/images/containeye-framed/test-details-last-run-expected-output-last-output-fetch-current-output-done-delete.png" alt="Local test data storage" class="showcase-img">
             </div>
         </section>
     </main>
 
-    <footer class="bg-[#1e1e1e] text-center py-4 mt-8">
+    <footer>
         <p>hannesnagel &copy; 2024</p>
+        <div>
+            <a rel="me" href="https://mastodon.social/@hannesmnagel">Mastodon</a>
+        </div>
     </footer>
 </body>
-</html> 
+</html>

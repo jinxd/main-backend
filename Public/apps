@@ -3,165 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>apps - hannesnagel</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #e0e0e0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        }
-        header {
-            background-color: transparent;
-            color: #e0e0e0;
-            text-align: center;
-            padding: 1rem;
-            z-index: 5;
-        }
-        header h1 {
-            font-size: 1.875rem;
-            font-weight: bold;
-            margin: 0.5rem 0 1rem;
-        }
-        .main-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            position: relative;
-            list-style-type: none;
-            padding: 0;
-        }
-        .nav-item {
-            position: relative;
-            padding: 0.5rem 0;
-        }
-        .nav-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            padding: 0.5rem 0.75rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: #4a90e2;
-            background-color: rgba(74, 144, 226, 0.1);
-        }
-        .nav-link.active {
-            font-weight: 600;
-        }
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            box-sizing: border-box;
-            flex: 1;
-        }
-        .app-icon {
-            width: 120px;
-            height: 120px;
-            border-radius: 24px;
-            object-fit: cover;
-        }
-        .app-store-badge {
-            height: 40px;
-        }
-        .app-list {
-            margin-top: 2rem;
-        }
-        .app-item {
-            margin-bottom: 3rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        @media (min-width: 640px) {
-            .app-item {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-            .app-icon {
-                width: 180px;
-                height: 180px;
-                border-radius: 36px;
-                margin-right: 1.5rem;
-            }
-        }
-        .app-content {
-            flex: 1;
-        }
-        .app-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            text-align: center;
-        }
-        @media (min-width: 640px) {
-            .app-title {
-                text-align: left;
-            }
-        }
-        .app-description {
-            margin-bottom: 0.5rem;
-            line-height: 1.6;
-        }
-        .feature-list {
-            list-style-type: disc;
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .app-links {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 1rem;
-        }
-        .learn-more {
-            color: #4a90e2;
-            text-decoration: none;
-            display: inline-block;
-            padding: 10px 20px;
-            border: 1px solid #4a90e2;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-        .learn-more:hover {
-            background-color: #4a90e2;
-            color: #fff;
-        }
-        footer {
-            background-color: #1e1e1e;
-            color: #e0e0e0;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-        footer a {
-            color: #4a90e2;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        footer a:hover {
-            color: #fff;
-        }
-        @media (max-width: 600px) {
-            .container {
-                width: 100%;
-            }
-        }
-    </style>
+    <title>Apps - hannesnagel</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <header>
-        <h1>apps</h1>
         <nav>
-            <ul class="main-nav">
-                <li class="nav-item"><a href="/home" class="nav-link">Home</a></li>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="/apps" class="nav-link active">Apps</a></li>
                 <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
@@ -169,114 +18,77 @@
         </nav>
     </header>
 
-    <div class="container">
-        <div class="app-list">
-            <div class="app-item">
-                <img src="/images/containeye" alt="ContainEye app icon" class="app-icon">
-                <div class="app-content">
-                    <h2 class="app-title">ContainEye</h2>
-                    <p class="app-description">An all-in-one tool for managing your servers, Docker containers, and automated tests. With built-in SSH support, AI-powered test suggestions, and Apple Shortcuts integration, ContainEye makes server management easy and efficient.</p>
-                    <p class="app-description">Features include:</p>
-                    <ul class="feature-list">
-                        <li>Full-screen SSH terminal with keyboard shortcuts</li>
-                        <li>Live server stats and Docker container management</li>
-                        <li>AI-powered automated testing</li>
-                        <li>Apple Shortcuts integration</li>
-                        <li>Home screen widget for test monitoring</li>
-                    </ul>
-                    <div class="app-links">
-                        <a href="/containeye/" class="learn-more">Learn more</a>
-                        <a href="https://apps.apple.com/us/app/containeye-terminal-docker/id6741063706">
-                            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1684800000" alt="Download on the App Store" class="app-store-badge">
-                        </a>
-                    </div>
+    <main class="main">
+        <section class="hero">
+            <h1>My Apps</h1>
+        </section>
+
+        <section class="app-segment dark" id="containeye">
+            <div class="container">
+                <img src="/images/containeye.png" alt="ContainEye app icon" class="app-icon">
+                <h2>ContainEye</h2>
+                <p class="app-description">An all-in-one tool for managing your servers, Docker containers, and automated tests. With built-in SSH support, AI-powered test suggestions, and Apple Shortcuts integration, ContainEye makes server management easy and efficient.</p>
+                <div class="app-links">
+                    <a href="/containeye/">Learn More</a>
+                    <a href="https://apps.apple.com/us/app/containeye-terminal-docker/id6741063706">View on App Store</a>
                 </div>
             </div>
+        </section>
 
-            <div class="app-item">
-                <img src="/images/superghost" alt="Superghost app icon" class="app-icon">
-                <div class="app-content">
-                    <h2 class="app-title">superghost</h2>
-                    <p class="app-description">Inspired by a game played on the chalk board, superghost is a word game where you duel other players by prepending or appending letters.</p>
-                    <p class="app-description">Superghost is open source! You can find the code on <a href="https://github.com/hannesmnagel/superghost" style="color: #4a90e2; text-decoration: none;">GitHub</a>.</p>
-                    <p class="app-description">The server is entirely written in Swift using the Vapor framework. Why? Because swift is great!</p>
-                    <div class="app-links">
-                        <a href="/ghost/" class="learn-more">Learn more</a>
-                        <a href="https://apps.apple.com/app/apple-store/id6517354718?pt=126452706&ct=website&mt=8">
-                            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1684800000" alt="Download on the App Store" class="app-store-badge">
-                        </a>
-                    </div>
+        <section class="app-segment light" id="ghost">
+            <div class="container">
+                <img src="/images/superghost.png" alt="Superghost app icon" class="app-icon">
+                <h2>superghost</h2>
+                <p class="app-description">Inspired by a game played on the chalk board, superghost is a word game where you duel other players by prepending or appending letters. The server is entirely written in Swift using the Vapor framework.</p>
+                <div class="app-links">
+                    <a href="/ghost/">Learn More</a>
+                    <a href="https://github.com/hannesmnagel/superghost">View on GitHub</a>
                 </div>
             </div>
+        </section>
 
-            <div class="app-item">
-                <img src="/images/zettl" alt="Zettl app icon" class="app-icon">
-                <div class="app-content">
-                    <h2 class="app-title">Zettl - Die Zeiterfassung</h2>
-                    <p class="app-description">I am working at codeunity and rewrite their app Zettl</p>
-                    <ul class="feature-list">
-                        <li>Converted the existing React Native codebase to Swift</li>
-                        <li>Implemented most of the user interface using SwiftUI</li>
-                        <li>Focused on creating a native iOS experience while maintaining the app's functionality</li>
-                    </ul>
-                    <p class="app-description">This transformation resulted in a more performant, native iOS app while leveraging the existing backend infrastructure.</p>
-                    <div class="app-links">
-                        <a href="https://zettl.app" class="learn-more">Learn more</a>
-                        <a href="https://apps.apple.com/de/app/zettl-die-zeiterfassung/id1528015686">
-                            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1684800000" alt="Download on the App Store" class="app-store-badge">
-                        </a>
-                    </div>
+        <section class="app-segment dark" id="zettl">
+            <div class="container">
+                <img src="/images/zettl.png" alt="Zettl app icon" class="app-icon">
+                <h2>Zettl - Die Zeiterfassung</h2>
+                <p class="app-description">I am working at codeunity and rewrote their app Zettl from React Native to a native Swift and SwiftUI app. This transformation resulted in a more performant, native iOS app while leveraging the existing backend infrastructure.</p>
+                <div class="app-links">
+                    <a href="https://zettl.app">Learn More</a>
+                    <a href="https://apps.apple.com/de/app/zettl-die-zeiterfassung/id1528015686">View on App Store</a>
                 </div>
             </div>
+        </section>
 
-            <div class="app-item">
-                <img src="/images/recipes" alt="Recipes app icon" class="app-icon">
-                <div class="app-content">
-                    <h2 class="app-title">Recipes</h2>
-                    <p class="app-description">A comprehensive recipe management app that helps you organize, create, and share your favorite recipes. Features shopping list integration, recipe synchronization across devices, and an intuitive interface for cooking enthusiasts.</p>
-                    <p class="app-description">Key features include:</p>
-                    <ul class="feature-list">
-                        <li>Recipe creation with image support</li>
-                        <li>Smart shopping lists with ingredient tracking</li>
-                        <li>Cross-device synchronization via iCloud and web</li>
-                        <li>Recipe sharing and import from web</li>
-                        <li>AI-powered recipe extraction from photos</li>
-                        <li>Timer integration for cooking steps</li>
-                    </ul>
-                    <div class="app-links">
-                        <a href="/recipes/" class="learn-more">Learn more</a>
-                        <div style="display: flex; gap: 10px; align-items: center;">
-                            <a href="https://recipes.hannesnagel.com" class="learn-more" style="background-color: #4a90e2; color: white;">Web App</a>
-                            <a href="https://apps.apple.com/de/app/the-recipes-app/id6745904570">
-                                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1684800000" alt="Download on the App Store" class="app-store-badge">
-                            </a>
-                        </div>
-                    </div>
+        <section class="app-segment light" id="recipes">
+            <div class="container">
+                <img src="/images/recipes.png" alt="Recipes app icon" class="app-icon">
+                <h2>The Recipes App</h2>
+                <p class="app-description">A comprehensive recipe management app that helps you organize, create, and share your favorite recipes. Features shopping list integration, recipe synchronization across devices, and an intuitive interface for cooking enthusiasts.</p>
+                <div class="app-links">
+                    <a href="/recipes/">Learn More</a>
+                    <a href="https://apps.apple.com/de/app/the-recipes-app/id6745904570">View on App Store</a>
                 </div>
             </div>
+        </section>
 
-            <div class="app-item">
-                <img src="/images/ear2brain" alt="ear2brain app icon" class="app-icon">
-                <div class="app-content">
-                    <h2 class="app-title">ear2brain</h2>
-                    <p class="app-description">This is to learn vocab faster. A vocabulary app to learn vocabs without thinking. You simply listen to the vocab and burn them in your brain.</p>
-                    <div class="app-links">
-                        <a href="https://www.ear2brain.app" class="learn-more">Learn more</a>
-                        <a href="https://apps.apple.com/de/app/ear2brain-thinking-optional/id6450898603?l=en-GB">
-                            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1684800000" alt="Download on the App Store" class="app-store-badge">
-                        </a>
-                    </div>
+        <section class="app-segment dark" id="ear2brain">
+            <div class="container">
+                <img src="/images/ear2brain.png" alt="ear2brain app icon" class="app-icon">
+                <h2>ear2brain</h2>
+                <p class="app-description">This is to learn vocab faster. A vocabulary app to learn vocabs without thinking. You simply listen to the vocab and burn them in your brain.</p>
+                <div class="app-links">
+                    <a href="https://www.ear2brain.app">Learn More</a>
+                    <a href="https://apps.apple.com/de/app/ear2brain-thinking-optional/id6450898603?l=en-GB">View on App Store</a>
                 </div>
             </div>
-        </div>
-
-        <div style="margin-top: 2rem;">
-            <a href="/contact" class="learn-more">Contact Me</a>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <footer>
         <p>hannesnagel &copy; 2024</p>
+        <div>
+            <a rel="me" href="https://mastodon.social/@hannesmnagel">Mastodon</a>
+        </div>
     </footer>
 </body>
 </html>

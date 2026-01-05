@@ -1,0 +1,202 @@
+/* General Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #000;
+    color: #f5f5f7;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #f5f5f7;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #f5f5f7;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #2997ff;
+}
+
+/* Main Content & Sections */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 6rem 1rem;
+    margin-bottom: 4rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #86868b;
+}
+
+.app-segment {
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.app-segment h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.app-segment .app-description {
+    font-size: 1.2rem;
+    color: #d2d2d7;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+}
+
+.app-media {
+    margin: 2rem 0;
+}
+
+.app-media img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.app-links a, .cta-button {
+    display: inline-block;
+    background-color: #2997ff;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.app-links a:hover, .cta-button:hover {
+    background-color: #57abff;
+}
+
+/* Specific Section Colors */
+#containeye { background-color: #1a2a3a; }
+#ear2brain { background-color: #3a1a2a; }
+#recipes { background-color: #2a3a1a; }
+#zettl { background-color: #1a3a31; }
+#ghost { background-color: #311a3a; }
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid #333;
+    color: #86868b;
+}
+
+footer a {
+    color: #f5f5f7;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Sub-navigation for app pages */
+.sub-nav {
+    background-color: #1a1a1a;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    margin-bottom: 2rem;
+}
+
+.sub-nav a {
+    color: #f5f5f7;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+}
+
+.sub-nav a:hover {
+    background-color: #333;
+}
+
+.sub-nav a.active {
+    background-color: #2997ff;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    .app-segment {
+        padding: 2rem;
+    }
+    .app-segment h2 {
+        font-size: 2rem;
+    }
+    .nav-links {
+        display: none; /* Simplification for mobile, could be a hamburger menu */
+    }
+}

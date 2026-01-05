@@ -4,118 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - Ghost - Duel with Words</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #e0e0e0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        }
-        header {
-            background-color: transparent;
-            color: #e0e0e0;
-            text-align: center;
-            padding: 1rem;
-            z-index: 5;
-        }
-        header h1 {
-            font-size: 1.875rem;
-            font-weight: bold;
-            margin: 0.5rem 0 1rem;
-        }
-        .main-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            position: relative;
-            list-style-type: none;
-            padding: 0;
-        }
-        .nav-item {
-            position: relative;
-            padding: 0.5rem 0;
-        }
-        .nav-link {
-            color: #e0e0e0;
-            text-decoration: none;
-            padding: 0.5rem 0.75rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: #4a90e2;
-            background-color: rgba(74, 144, 226, 0.1);
-        }
-        .nav-link.active {
-            font-weight: 600;
-        }
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            box-sizing: border-box;
-            flex: 1;
-        }
-        footer {
-            background-color: #1e1e1e;
-            color: #e0e0e0;
-            text-align: center;
-            padding: 1rem;
-        }
-        main {
-            flex-grow: 1;
-        }
-        section {
-            margin-top: 2rem;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-        h2 {
-            font-size: 1.5rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-        p {
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-        ul {
-            list-style-type: disc;
-            margin-left: 2rem;
-            margin-bottom: 1rem;
-        }
-        li {
-            margin-bottom: 0.5rem;
-        }
-        a {
-            color: #4a90e2;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        a:hover {
-            color: #fff;
-        }
-        @media (max-width: 600px) {
-            .container {
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <header>
-        <h1>Ghost - Duel with Words</h1>
         <nav>
-            <ul class="main-nav">
-                <li class="nav-item"><a href="/home" class="nav-link">Home</a></li>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="/apps" class="nav-link active">Apps</a></li>
                 <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
@@ -123,53 +18,61 @@
         </nav>
     </header>
 
-    <div class="container">
-        <section>
+    <main class="main">
+        <section class="hero">
             <h1>Terms of Service</h1>
-            <p>Welcome to Ghost - Duel with Words! These Terms of Service ("TOS") govern your use of our in-app purchase options, including lifetime unlocks and subscription services. By subscribing or making an in-app purchase, you agree to these terms.</p>
-
-            <h2>Acceptance of Terms</h2>
-            <p>By using Ghost - Duel with Words and subscribing to our services, you agree to comply with and be bound by these TOS.</p>
-
-            <h2>Subscription Terms</h2>
-            <p>We offer the following in-app purchase options:</p>
-            <ul>
-                <li>Lifetime Unlock: One-time payment for permanent access to premium features.</li>
-                <li>Monthly Subscription: Recurring payment for access to premium features.</li>
-                <li>Annual Subscription: Recurring payment for access to premium features.</li>
-            </ul>
-
-            <h2>Billing and Payment</h2>
-            <p>Subscriptions are billed automatically based on your chosen billing cycle (monthly or yearly) through your Apple ID account. Prices may vary by region and are displayed in the app at the time of purchase. Payment will be charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. You can manage and cancel your subscriptions by going to your account settings on the App Store after purchase.</p>
-
-            <h2>Cancellation and Refunds</h2>
-            <p>You can cancel your subscription anytime through your Apple ID account settings. No refunds are provided for unused portions of the subscription period. Upon cancellation, access to premium features will continue until the end of the current billing period.</p>
-
-            <h2>Changes to Subscription Terms</h2>
-            <p>We reserve the right to modify subscription terms, including pricing. Continued use of the service constitutes acceptance of the new terms.</p>
-
-            <h2>Termination of Service</h2>
-            <p>We may terminate your access to premium features for violating these TOS or for other reasons. You may terminate your subscription or lifetime access at any time through your account settings.</p>
-
-            <h2>User Responsibilities</h2>
-            <p>Users must comply with all applicable laws and regulations. Do not share your account credentials with others.</p>
-
-            <h2>Privacy Policy</h2>
-            <p>Our <a href="/ghost/privacy">Privacy Policy</a> explains how we collect, use, and protect your data.</p>
-
-            <h2>Dispute Resolution</h2>
-            <p>Any disputes arising out of or related to these TOS and the use of the app shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association. These terms are governed by the laws of Baden-Württemberg, Germany.</p>
-
-            <h2>Limitation of Liability</h2>
-            <p>We are not liable for service outages, data loss, or other issues beyond our control. Additionally, we reserve the right to remove the app from the App Store at any time, for any reason, without notice. In the event that the app stops working or is removed from the App Store, we are not liable for any consequences or losses resulting from such actions.</p>
-
-            <h2>Contact Information</h2>
-            <p>For support or questions about these TOS, <a href="/contact">contact</a> me.</p>
         </section>
-    </div>
+
+        <section class="app-segment dark">
+            <div class="container" style="text-align: left; max-width: 800px; margin: 0 auto;">
+                <p>Welcome to Ghost - Duel with Words! These Terms of Service ("TOS") govern your use of our in-app purchase options, including lifetime unlocks and subscription services. By subscribing or making an in-app purchase, you agree to these terms.</p>
+
+                <h2>Acceptance of Terms</h2>
+                <p>By using Ghost - Duel with Words and subscribing to our services, you agree to comply with and be bound by these TOS.</p>
+
+                <h2>Subscription Terms</h2>
+                <p>We offer the following in-app purchase options:</p>
+                <ul>
+                    <li>Lifetime Unlock: One-time payment for permanent access to premium features.</li>
+                    <li>Monthly Subscription: Recurring payment for access to premium features.</li>
+                    <li>Annual Subscription: Recurring payment for access to premium features.</li>
+                </ul>
+
+                <h2>Billing and Payment</h2>
+                <p>Subscriptions are billed automatically based on your chosen billing cycle (monthly or yearly) through your Apple ID account. Prices may vary by region and are displayed in the app at the time of purchase. Payment will be charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. You can manage and cancel your subscriptions by going to your account settings on the App Store after purchase.</p>
+
+                <h2>Cancellation and Refunds</h2>
+                <p>You can cancel your subscription anytime through your Apple ID account settings. No refunds are provided for unused portions of the subscription period. Upon cancellation, access to premium features will continue until the end of the current billing period.</p>
+
+                <h2>Changes to Subscription Terms</h2>
+                <p>We reserve the right to modify subscription terms, including pricing. Continued use of the service constitutes acceptance of the new terms.</p>
+
+                <h2>Termination of Service</h2>
+                <p>We may terminate your access to premium features for violating these TOS or for other reasons. You may terminate your subscription or lifetime access at any time through your account settings.</p>
+
+                <h2>User Responsibilities</h2>
+                <p>Users must comply with all applicable laws and regulations. Do not share your account credentials with others.</p>
+
+                <h2>Privacy Policy</h2>
+                <p>Our <a href="/ghost/privacy">Privacy Policy</a> explains how we collect, use, and protect your data.</p>
+
+                <h2>Dispute Resolution</h2>
+                <p>Any disputes arising out of or related to these TOS and the use of the app shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association. These terms are governed by the laws of Baden-Württemberg, Germany.</p>
+
+                <h2>Limitation of Liability</h2>
+                <p>We are not liable for service outages, data loss, or other issues beyond our control. Additionally, we reserve the right to remove the app from the App Store at any time, for any reason, without notice. In the event that the app stops working or is removed from the App Store, we are not liable for any consequences or losses resulting from such actions.</p>
+
+                <h2>Contact Information</h2>
+                <p>For support or questions about these TOS, <a href="/contact">contact</a> me.</p>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>hannesnagel &copy; 2024</p>
+        <div>
+            <a rel="me" href="https://mastodon.social/@hannesmnagel">Mastodon</a>
+        </div>
     </footer>
 </body>
-</html> 
+</html>
