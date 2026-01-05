@@ -30,7 +30,7 @@ extension URLSession{
 @SuperGameService
 func routes(_ app: Application) throws {
     app.get("open", "*", "*") {req async throws in
-        try await req.fileio.asyncStreamFile(at: app.directory.publicDirectory.appending("openapp"))
+        try await req.fileio.asyncStreamFile(at: app.directory.publicDirectory.appending("openapp.html"))
     }
 }
 
