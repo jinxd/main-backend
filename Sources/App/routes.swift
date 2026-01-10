@@ -8,6 +8,7 @@ func routes(_ app: Application) throws {
 
     // Helper to serve files with text/html content type and cache busting
     @Sendable func serveHTML(at path: String, req: Request) async throws -> Response {
+        print("[Route] serveHTML called for path: \(path)")
         guard let htmlString = await htmlCache.get(filePath: path, cssPath: publicDir + "css/main.css") else {
              throw Abort(.notFound)
         }
