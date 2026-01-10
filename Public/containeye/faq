@@ -5,73 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContainEye - FAQ - hannesnagel</title>
     <link rel="stylesheet" href="/css/main.css">
-    <style>
-        .subnav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            padding: 1rem;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 100px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        .subnav-link {
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-        .subnav-link:hover, .subnav-link.active {
-            color: var(--accent-color);
-            background: rgba(74, 144, 226, 0.1);
-        }
-        .doc-content {
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .doc-content h2, .doc-content h3 {
-            color: var(--text-color);
-            margin-bottom: 1rem;
-        }
-        .doc-content h2 { font-size: 2rem; margin-top: 3rem; }
-        .doc-content h3 { font-size: 1.5rem; margin-top: 2rem; }
-        .doc-content p {
-            text-align: left;
-            margin-bottom: 1.5rem;
-            color: var(--secondary-color);
-            max-width: none;
-        }
-        .doc-content ul, .doc-content ol {
-            padding-left: 1.5rem;
-            margin-bottom: 2rem;
-            color: var(--secondary-color);
-        }
-        .doc-content li {
-            margin-bottom: 0.75rem;
-        }
-        .doc-item {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 40px;
-            padding: 3rem;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            margin-bottom: 3rem;
-        }
-        .accent-link {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-        .accent-link:hover { text-decoration: underline; }
-    </style>
 </head>
 <body>
     <nav class="nav-container">
@@ -102,7 +35,7 @@
                 </div>
 
                 <div class="doc-content">
-                    <div class="doc-item">
+                    <div class="content-box">
                         <h2>Common Questions</h2>
                         
                         <h3>What is SSH?</h3>

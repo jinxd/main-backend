@@ -24,7 +24,7 @@
         </section>
 
         <section>
-            <div class="reveal" style="max-width: 700px; padding: 3rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 40px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);">
+            <div class="reveal content-box" style="max-width: 700px;">
                 <h2 style="margin-bottom: 2rem;">Duel with Words</h2>
                 <p style="text-align: left; margin-bottom: 1.5rem; color: var(--text-color);">
                     Inspired by a game played on the chalk board, Ghost is a word game where you have to add letters so that it doesn't make an entire word, but could become one.
@@ -32,7 +32,7 @@
                 <p style="text-align: left; margin-bottom: 2rem; color: var(--text-color);">
                     Ghost is entirely open source. The server is written in Swift using the Vapor framework.
                 </p>
-                <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 2rem;">
+                <div class="cta-buttons">
                     <a href="https://github.com/hannesmnagel/superghost" class="nav-link squishy" style="border: 1px solid var(--glass-border); padding: 1rem 2rem; border-radius: 50px;">Source Code</a>
                     <a href="/ghost/privacy" class="nav-link squishy" style="padding: 1rem 2rem;">Privacy</a>
                     <a href="/ghost/tos" class="nav-link squishy" style="padding: 1rem 2rem;">Terms</a>

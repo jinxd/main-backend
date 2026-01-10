@@ -5,53 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContainEye - Features - hannesnagel</title>
     <link rel="stylesheet" href="/css/main.css">
-    <style>
-        .subnav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            padding: 1rem;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 100px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        .subnav-link {
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-        .subnav-link:hover, .subnav-link.active {
-            color: var(--accent-color);
-            background: rgba(74, 144, 226, 0.1);
-        }
-        .doc-content {
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .doc-item {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 40px;
-            padding: 3rem;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            margin-bottom: 3rem;
-        }
-        .doc-content h2, .doc-content h3 { color: var(--text-color); margin-bottom: 1.5rem; }
-        .doc-content h2 { font-size: 2rem; }
-        .doc-content h3 { font-size: 1.5rem; margin-top: 2rem; }
-        .doc-content p, .doc-content li { color: var(--secondary-color); line-height: 1.8; margin-bottom: 1.5rem; }
-        .feature-icon { color: var(--accent-color); font-weight: bold; margin-right: 0.5rem; }
-    </style>
 </head>
 <body>
     <nav class="nav-container">
@@ -82,17 +35,17 @@
                 </div>
 
                 <div class="doc-content">
-                    <div class="doc-item">
-                        <h3><span class="feature-icon">🔹</span> SSH Terminal</h3>
+                    <div class="content-box">
+                        <h3>SSH Terminal</h3>
                         <p>Connect securely with a full-screen terminal, keyboard shortcuts, and smart command history suggestions.</p>
 
-                        <h3><span class="feature-icon">🔹</span> Servers Management</h3>
+                        <h3>Servers Management</h3>
                         <p>Live stats for CPU, memory, and disk usage. Manage Docker containers with start/stop controls and real-time logs.</p>
 
-                        <h3><span class="feature-icon">🔹</span> Automated Tests</h3>
+                        <h3>Automated Tests</h3>
                         <p>Run health checks and automated tests. Use AI to generate validations and get instant alerts via home screen widgets.</p>
 
-                        <h3><span class="feature-icon">🔹</span> SFTP & Shortcuts</h3>
+                        <h3>SFTP & Shortcuts</h3>
                         <p>Manage files via SFTP and automate your infrastructure with deep Apple Shortcuts support.</p>
                     </div>
                 </div>

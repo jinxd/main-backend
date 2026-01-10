@@ -5,74 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContainEye - Overview - hannesnagel</title>
     <link rel="stylesheet" href="/css/main.css">
-    <style>
-        .subnav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            padding: 1rem;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 100px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        .subnav-link {
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-        .subnav-link:hover, .subnav-link.active {
-            color: var(--accent-color);
-            background: rgba(74, 144, 226, 0.1);
-        }
-        .doc-content {
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .doc-content h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-color);
-        }
-        .doc-content p {
-            text-align: left;
-            margin-bottom: 1.5rem;
-            color: var(--secondary-color);
-            max-width: none;
-        }
-        .doc-content ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 2rem;
-        }
-        .doc-content li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: var(--secondary-color);
-        }
-        .doc-content li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-        .doc-nav-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 4rem;
-            gap: 2rem;
-        }
-    </style>
 </head>
 <body>
     <nav class="nav-container">
@@ -108,7 +40,7 @@
                 </div>
 
                 <div class="doc-content">
-                    <div style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 40px; padding: 3rem; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);">
+                    <div class="content-box">
                         <h2>Master your servers</h2>
                         <p>
                             ContainEye is an all-in-one tool for developers and sysadmins who need to manage their infrastructure from anywhere. Built with a focus on speed, security, and a touch of whimsy.
@@ -120,9 +52,9 @@
                             <li>iCloud sync and secure credential storage.</li>
                             <li>Deep Apple Shortcuts integration for advanced workflows.</li>
                         </ul>
-                        <div style="display: flex; gap: 2rem; margin-top: 3rem;">
+                        <div class="cta-buttons">
                             <a href="https://apps.apple.com/us/app/containeye-terminal-docker/id6741063706" class="nav-link squishy" style="background: var(--accent-color); color: white; padding: 1rem 2rem; border-radius: 50px;">Get it on App Store</a>
-                            <a href="/containeye/features" class="nav-link squishy" style="border: 1px solid var(--glass-border); padding: 1rem 2rem; border-radius: 50px;">Exploration Features →</a>
+                            <a href="/containeye/features" class="nav-link squishy" style="border: 1px solid var(--glass-border); padding: 1rem 2rem; border-radius: 50px;">Explore Features →</a>
                         </div>
                     </div>
                 </div>
