@@ -81,7 +81,7 @@
         </section>
 
         <section style="height: auto; padding-bottom: 8rem;">
-            <div class="reveal" style="width: 100%; max-width: 1000px; padding: 0 2rem;">
+            <div class="reveal container-wrapper">
                 <div class="subnav">
                     <a href="/containeye/index" class="subnav-link">Overview</a>
                     <a href="/containeye/features" class="subnav-link active">Features</a>

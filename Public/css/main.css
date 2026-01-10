@@ -46,10 +46,22 @@ section {
 
 @media (max-width: 768px) {
     section {
-        padding: 6rem 1.5rem 2rem;
+        padding: 6rem 1rem 2rem;
         /* Add top padding for nav */
         height: auto;
         /* Allow content to dictate height on mobile */
+    }
+}
+
+.container-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+    .container-wrapper {
+        padding: 0;
     }
 }
 
