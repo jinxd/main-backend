@@ -3,14 +3,19 @@ import Foundation
 
 @SuperGameService
 func routes(_ app: Application) throws {
-    // Helper to serve files with text/html content type
-    func serveHTML(at path: String, req: Request) async throws -> Response {
-        let response = try await req.fileio.asyncStreamFile(at: path)
+    let publicDir = app.directory.publicDirectory
+    let htmlCache = HTMLCache()
+
+    // Helper to serve files with text/html content type and cache busting
+    @Sendable func serveHTML(at path: String, req: Request) async throws -> Response {
+        guard let htmlString = await htmlCache.get(filePath: path, cssPath: publicDir + "css/main.css") else {
+             throw Abort(.notFound)
+        }
+        
+        let response = Response(body: .init(string: htmlString))
         response.headers.replaceOrAdd(name: .contentType, value: "text/html; charset=utf-8")
         return response
     }
-
-    let publicDir = app.directory.publicDirectory
 
     // Handle root
     app.get { req in
