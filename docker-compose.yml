@@ -12,6 +12,17 @@ services:
       context: .
     ports:
       - '8000:80'
+    develop:
+      watch:
+        - action: rebuild
+          path: ./Public
+        - action: sync+restart
+          path: ./nginx.conf
+          target: /etc/nginx/conf.d/default.conf
+        - action: rebuild
+          path: ./Dockerfile
+        - action: rebuild
+          path: ./bake_assets.sh
     # Nginx image has its own default command, no need to override 
     # unless you want to debug.
     # command: ...

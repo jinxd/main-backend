@@ -13,6 +13,7 @@
             <p class="reveal">If you are not redirected, <a href="/containeye/privacy" class="accent-text">click here</a>.</p>
         </section>
     </main>
+    <script src="/js/components.js"></script>
     <script src="/js/whimsy.js"></script>
 </body>
 </html>

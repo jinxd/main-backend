@@ -9,12 +9,7 @@
 </head>
 
 <body>
-    <nav class="nav-container">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/apps" class="nav-link">Apps</a>
-        <a href="/about" class="nav-link">About</a>
-        <a href="/contact" class="nav-link active">Contact</a>
-    </nav>
+        <div id="site-nav"></div>
 
     <main>
         <section>
@@ -46,6 +41,7 @@
         </section>
     </main>
 
+    <script src="/js/components.js"></script>
     <script src="/js/whimsy.js"></script>
 </body>
 

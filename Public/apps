@@ -116,12 +116,7 @@
 </head>
 
 <body>
-    <nav class="nav-container">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/apps" class="nav-link active">Apps</a>
-        <a href="/about" class="nav-link">About</a>
-        <a href="/contact" class="nav-link">Contact</a>
-    </nav>
+        <div id="site-nav"></div>
 
     <main>
         <!-- ContainEye -->
@@ -227,6 +222,7 @@
         </section>
     </main>
 
+    <script src="/js/components.js"></script>
     <script src="/js/whimsy.js"></script>
 </body>
 
