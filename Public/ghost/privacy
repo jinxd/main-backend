@@ -9,8 +9,8 @@
 <body>
         <div id="site-nav"></div>
 
-    <main>
-        <section style="height: auto; padding-top: 8rem; padding-bottom: 4rem;">
+    <main class="page">
+        <section>
             <div class="reveal" style="max-width: 800px; padding: 3rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 40px;">
                 <h1 style="font-size: 3rem;">Privacy Policy</h1>
                 <p style="margin-bottom: 2rem;">Effective Date: August 3, 2024</p>
@@ -37,6 +37,5 @@
     </main>
 
     <script src="/js/components.js"></script>
-    <script src="/js/whimsy.js"></script>
 </body>
 </html>

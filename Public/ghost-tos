@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <main>
+    <main class="page">
         <section>
             <h1 class="reveal">Redirecting...</h1>
-            <p class="reveal">If you are not redirected, <a href="/ghost/tos" class="accent-text">click here</a>.</p>
+            <p class="reveal">If you are not redirected, <a href="/ghost/tos" class="accent-link">click here</a>.</p>
         </section>
     </main>
     <script src="/js/components.js"></script>
-    <script src="/js/whimsy.js"></script>
 </body>
 </html>

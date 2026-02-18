@@ -7,36 +7,41 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-        <div id="site-nav"></div>
+    <div id="site-nav"></div>
 
-    <main>
+    <main class="page">
         <section>
-            <div class="parallax-target" style="position: absolute; width: 100%; height: 100%; z-index: -1; opacity: 0.2;">
-                <img src="/images/superghost_promo.png" alt="Ghost" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="doc-content reveal">
+                <p class="sub-header">Game</p>
+                <h1>Ghost / Superghost</h1>
+                <p>A multiplayer word game where players add letters without completing a valid word too early.</p>
             </div>
-            <h1 class="reveal">Ghost</h1>
-            <p class="reveal">Duel with words.</p>
         </section>
 
         <section>
-            <div class="reveal content-box" style="max-width: 700px;">
-                <h2 style="margin-bottom: 2rem;">Duel with Words</h2>
-                <p style="text-align: left; margin-bottom: 1.5rem; color: var(--text-color);">
-                    Inspired by a game played on the chalk board, Ghost is a word game where you have to add letters so that it doesn't make an entire word, but could become one.
-                </p>
-                <p style="text-align: left; margin-bottom: 2rem; color: var(--text-color);">
-                    Ghost is entirely open source. The server is written in Swift using the Vapor framework.
-                </p>
+            <div class="doc-content reveal" style="max-width: 760px;">
+                <h2>How it works</h2>
+                <p>The idea comes from a classroom game: one letter is added each turn, and the goal is to avoid completing a full word yourself.</p>
+                <p>In this version, players can prepend or append letters, which keeps rounds fast and a bit unpredictable.</p>
+                <p>Matches are multiplayer and built for short sessions with friends.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="doc-content reveal" style="max-width: 760px;">
+                <h2>Project details</h2>
+                <p>Ghost (also called Superghost in some places on this site) is open source.</p>
+                <p>The backend is written in Swift using Vapor.</p>
+                <p>This project started as a small side game and is currently not actively maintained.</p>
                 <div class="cta-buttons">
-                    <a href="https://github.com/hannesmnagel/superghost" class="nav-link squishy" style="border: 1px solid var(--glass-border); padding: 1rem 2rem; border-radius: 50px;">Source Code</a>
-                    <a href="/ghost/privacy" class="nav-link squishy" style="padding: 1rem 2rem;">Privacy</a>
-                    <a href="/ghost/tos" class="nav-link squishy" style="padding: 1rem 2rem;">Terms</a>
+                    <a href="https://github.com/hannesmnagel/superghost" class="nav-link">Source code</a>
+                    <a href="/ghost/privacy" class="nav-link">Privacy</a>
+                    <a href="/ghost/tos" class="nav-link">Terms</a>
                 </div>
             </div>
         </section>
     </main>
 
     <script src="/js/components.js"></script>
-    <script src="/js/whimsy.js"></script>
 </body>
 </html>

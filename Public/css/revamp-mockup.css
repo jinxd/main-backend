@@ -1,0 +1,337 @@
+:root {
+    --bg: #f3f0e9;
+    --bg-soft: #eae4d8;
+    --ink: #1f2423;
+    --muted: #3f4743;
+    --line: #c3bbaa;
+    --accent: #0f6a57;
+    --accent-soft: #d5ebe4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: radial-gradient(circle at 80% -10%, #ffffff 0%, transparent 40%),
+        radial-gradient(circle at -10% 40%, #dfd7c7 0%, transparent 35%),
+        linear-gradient(180deg, #f7f4ed 0%, var(--bg) 100%);
+    min-height: 100vh;
+    font-size: 18px;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(to right, rgba(195, 187, 170, 0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(195, 187, 170, 0.2) 1px, transparent 1px);
+    background-size: 36px 36px;
+    pointer-events: none;
+    z-index: -2;
+}
+
+.nav-container {
+    position: sticky;
+    top: 1rem;
+    z-index: 30;
+    width: fit-content;
+    margin: 1rem auto 0;
+    background: rgba(247, 244, 237, 0.85);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.6rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+    backdrop-filter: blur(6px);
+}
+
+.nav-link {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--ink);
+    background: #ffffff;
+}
+
+.page {
+    width: min(1080px, calc(100% - 2.4rem));
+    margin: 2.5rem auto 5rem;
+    display: grid;
+    gap: 2.5rem;
+}
+
+section {
+    border: 1px solid var(--line);
+    background: rgba(250, 248, 244, 0.8);
+    box-shadow: 0 14px 34px rgba(38, 30, 10, 0.07);
+}
+
+.hero {
+    border-radius: 28px;
+    padding: 4rem clamp(1.25rem, 4vw, 4rem);
+    display: grid;
+    gap: 1rem;
+}
+
+.eyebrow {
+    margin: 0;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.76rem;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    line-height: 1.05;
+}
+
+h1,
+h2 {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 6vw, 4.8rem);
+    max-width: 16ch;
+}
+
+.lead {
+    margin: 0;
+    max-width: 56ch;
+    color: var(--muted);
+    font-size: 1.08rem;
+    line-height: 1.55;
+}
+
+.proof-grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.8rem;
+}
+
+.proof-grid article {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 0.9rem;
+}
+
+.label {
+    margin: 0 0 0.2rem;
+    font-size: 0.78rem;
+    color: var(--muted);
+}
+
+.work {
+    border-radius: 28px;
+    padding: clamp(1.2rem, 3vw, 2.4rem);
+}
+
+.section-head {
+    margin-bottom: 1.2rem;
+    display: grid;
+    gap: 0.6rem;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
+    max-width: 20ch;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.9rem;
+}
+
+.card {
+    margin: 0;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    isolation: isolate;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.card:link,
+.card:visited,
+.card:hover,
+.card:active {
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(31, 36, 35, 0.1);
+    border-color: #a59c8c;
+}
+
+.card:focus-visible {
+    outline: 3px solid #2e8b74;
+    outline-offset: 2px;
+}
+
+.card-media {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+    aspect-ratio: 1 / 1;
+    background: #0f141c;
+    padding: 0.6rem;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.card-body {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+}
+
+.card-body {
+    padding: 1rem;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    line-height: 1.15;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.98rem;
+    line-height: 1.45;
+    text-decoration: none;
+}
+
+.card-cta {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.notes {
+    border-radius: 22px;
+    padding: clamp(1.1rem, 3vw, 2rem);
+    background: linear-gradient(135deg, var(--bg-soft), #f8f5ee);
+}
+
+.notes ol {
+    margin: 0.9rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.8rem;
+}
+
+.notes li {
+    border: 1px dashed #8d9a95;
+    border-radius: 12px;
+    padding: 0.8rem;
+    display: grid;
+    grid-template-columns: 2.6rem 1fr;
+    gap: 0.5rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.notes span {
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.footer-cta {
+    border-radius: 24px;
+    padding: clamp(1.4rem, 3vw, 2.6rem);
+    background: #1f2423;
+    color: #f3f0e9;
+}
+
+.footer-cta h2 {
+    max-width: 18ch;
+}
+
+.footer-cta .links a {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.links {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.links a {
+    display: inline-block;
+    text-decoration: none;
+    color: #f3f0e9;
+    border: 1px solid rgba(243, 240, 233, 0.5);
+    border-radius: 999px;
+    padding: 0.5rem 0.85rem;
+    font-size: 0.86rem;
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .page {
+        margin-top: 1.2rem;
+        width: min(1080px, calc(100% - 1rem));
+    }
+
+    .proof-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-container {
+        max-width: calc(100% - 1rem);
+        overflow-x: auto;
+        margin-top: 0.5rem;
+    }
+}

@@ -9,15 +9,15 @@
 <body>
         <div id="site-nav"></div>
 
-    <main>
-        <section id="hero" style="min-height: 40vh;">
+    <main class="page">
+        <section id="hero">
             <div class="reveal">
                 <span class="sub-header">Capabilities</span>
                 <h1>Features Overview</h1>
             </div>
         </section>
 
-        <section style="height: auto; padding-bottom: 8rem;">
+        <section>
             <div class="reveal container-wrapper">
                 <div class="subnav">
                     <a href="/containeye/index" class="subnav-link">Overview</a>
@@ -49,6 +49,5 @@
     </main>
 
     <script src="/js/components.js"></script>
-    <script src="/js/whimsy.js"></script>
 </body>
 </html>

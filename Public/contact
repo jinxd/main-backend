@@ -9,40 +9,34 @@
 </head>
 
 <body>
-        <div id="site-nav"></div>
+    <div id="site-nav"></div>
 
-    <main>
+    <main class="page">
         <section>
-            <h1 class="reveal">Get in touch</h1>
-            <div class="reveal" style="text-align: center; width: 100%; max-width: 100%;">
-                <p style="padding: 0 1rem;">Have a question or want to collaborate? I'd love to hear from you.</p>
-                <div
-                    style="margin-top: 4rem; display: flex; flex-direction: column; gap: 2rem; align-items: center; width: 100%;">
-                    <a href="mailto:contact@hannesnagel.com" class="reveal squishy"
-                        style="font-size: clamp(1.2rem, 5vw, 2rem); color: var(--accent-color); text-decoration: none; font-weight: 700; word-break: break-all; padding: 0 1rem;">contact@hannesnagel.com</a>
-                    <a href="https://mastodon.social/@hannesmnagel" class="reveal squishy"
-                        style="font-size: 1.5rem; color: var(--secondary-color); text-decoration: none;">Follow on
-                        Mastodon</a>
+            <div class="doc-content reveal" style="text-align: center;">
+                <p class="sub-header">Contact</p>
+                <h1>Get in touch</h1>
+                <p>If you want to ask something about an app, report a bug, or just say hello, send a mail.</p>
+                <div class="cta-buttons" style="justify-content: center; margin-top: 1.5rem;">
+                    <a href="mailto:contact@hannesnagel.com" class="nav-link" style="font-size: 1.1rem;">contact@hannesnagel.com</a>
+                    <a href="https://mastodon.social/@hannesmnagel" class="nav-link">Mastodon</a>
                 </div>
             </div>
         </section>
 
         <section>
-            <div class="reveal" style="text-align: center;">
-                <p style="font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase;">Back to beginnings</p>
-                <div style="margin-top: 2rem; display: flex; gap: 2rem; justify-content: center;">
-                    <a href="/" class="nav-link squishy">Home</a>
-                    <a href="/apps" class="nav-link squishy">Apps</a>
+            <div class="doc-content reveal" style="text-align: center;">
+                <p>Or go back to the main pages:</p>
+                <div class="cta-buttons" style="justify-content: center;">
+                    <a href="/home" class="nav-link">Home</a>
+                    <a href="/apps" class="nav-link">Apps</a>
                 </div>
             </div>
-            <footer style="margin-top: 4rem; color: var(--secondary-color); font-size: 0.8rem; position: relative;">
-                hannesnagel &copy; 2026
-            </footer>
+            <footer style="margin-top: 2rem; color: var(--muted); font-size: 0.85rem;">hannesnagel &copy; 2026</footer>
         </section>
     </main>
 
     <script src="/js/components.js"></script>
-    <script src="/js/whimsy.js"></script>
 </body>
 
 </html>

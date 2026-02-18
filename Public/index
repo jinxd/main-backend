@@ -9,71 +9,88 @@
 </head>
 
 <body>
-        <div id="site-nav"></div>
+    <div id="site-nav"></div>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero">
-            <div class="parallax-target"
-                style="position: absolute; width: 110%; height: 110%; top: -5%; left: -5%; z-index: -1; opacity: 0.3;">
-                <img src="/images/hero.png" alt="Abstract Minimalist Visual"
-                    style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8);">
-            </div>
-            <div class="reveal">
-                <span class="sub-header">Student & Developer</span>
-                <h1>hannesnagel</h1>
-                <p>I build apps and manage servers from Germany.</p>
-            </div>
-            <div class="scroll-indicator"></div>
-        </section>
-
-        <!-- Intro Section -->
-        <section id="intro">
-            <h2 class="reveal" style="font-size: 3rem; margin-bottom: 2rem;">👋 Hello, I'm Hannes.</h2>
-            <div class="reveal" style="max-width: 600px; text-align: center;">
-                <p>I started learning to code in 2020. Since then, I've released a few apps and worked on some cool projects. I just like making things that work well and look clean.</p>
-                <div style="margin-top: 3rem; display: flex; gap: 2rem; justify-content: center;">
-                    <a href="/apps" class="nav-link squishy"
-                        style="border: 1px solid var(--glass-border); padding: 1rem 2rem; border-radius: 50px;">Explore
-                        My Apps</a>
-                    <a href="/about" class="nav-link squishy" style="padding: 1rem 2rem;">More About Me</a>
-                </div>
+    <main class="page">
+        <section class="hero">
+            <p class="sub-header">Personal site</p>
+            <h1>I build apps because I enjoy building useful things.</h1>
+            <p class="lead">I am Hannes, a student and developer from Germany. I work on iOS apps and backend projects, learn in public, and try to ship steadily.</p>
+            <div class="proof-grid">
+                <article>
+                    <p class="label">Current focus</p>
+                    <p>ContainEye</p>
+                </article>
+                <article>
+                    <p class="label">Background</p>
+                    <p>Student + indie developer</p>
+                </article>
+                <article>
+                    <p class="label">Based in</p>
+                    <p>Germany</p>
+                </article>
             </div>
         </section>
 
-        <!-- Featured App Section -->
-        <section id="featured">
-            <div class="reveal" style="text-align: center;">
-                <span class="sub-header">Latest Release</span>
-                <h2 style="font-size: 4rem; margin: 1rem 0;">ContainEye</h2>
-                <p>Master your servers and Docker containers with ease. Directly from your pocket.</p>
-                <a href="/apps" class="squishy" style="display: inline-block; margin-top: 2rem;">
-                    <div
-                        style="width: 180px; height: 180px; background: #000; border-radius: 40px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--glass-border); overflow: hidden;">
-                        <img src="/images/containeye" alt="ContainEye Icon"
-                            style="width: 100%; height: 100%; object-fit: contain;">
+        <section class="work">
+            <div class="section-head">
+                <p class="sub-header">Selected Work</p>
+                <h2>Some projects I have built so far.</h2>
+            </div>
+            <div class="cards">
+                <a class="card" href="/containeye/" aria-label="Open ContainEye details">
+                    <div class="card-media">
+                        <img src="/images/containeye_promo.png" alt="ContainEye promo artwork">
+                    </div>
+                    <div class="card-body">
+                        <h3>ContainEye</h3>
+                        <p>An iOS app for checking servers and Docker containers from your phone.</p>
+                        <span class="card-cta">Open details</span>
+                    </div>
+                </a>
+                <a class="card" href="/ghost/" aria-label="Open Superghost details">
+                    <div class="card-media">
+                        <img src="/images/superghost_promo.png" alt="Superghost promo artwork">
+                    </div>
+                    <div class="card-body">
+                        <h3>Superghost</h3>
+                        <p>A small multiplayer word game I made for quick rounds with friends.</p>
+                        <span class="card-cta">Open details</span>
+                    </div>
+                </a>
+                <a class="card" href="/recipes/" aria-label="Open Recipes details">
+                    <div class="card-media">
+                        <img src="/images/recipes_promo.png" alt="Recipes promo artwork">
+                    </div>
+                    <div class="card-body">
+                        <h3>Recipes</h3>
+                        <p>A clean recipe app focused on simple organization and everyday use.</p>
+                        <span class="card-cta">Open details</span>
                     </div>
                 </a>
             </div>
         </section>
 
-        <!-- Connect Section -->
-        <section id="connect">
-            <h2 class="reveal">Let's build something.</h2>
-            <div class="reveal" style="margin-top: 2rem;">
-                <a href="https://mastodon.social/@hannesmnagel" class="nav-link squishy"
-                    style="font-size: 1.5rem;">Mastodon</a>
-                <span style="margin: 0 1rem; color: var(--glass-border);">/</span>
-                <a href="/contact" class="nav-link squishy" style="font-size: 1.5rem;">Contact</a>
+        <section class="notes">
+            <p class="sub-header">Where I am right now</p>
+            <ol>
+                <li><span>01</span>I am still early in this journey and learning every month.</li>
+                <li><span>02</span>I do not have massive user numbers. I focus on improving product quality.</li>
+                <li><span>03</span>Most features start from problems I had myself, then get improved step by step.</li>
+            </ol>
+        </section>
+
+        <section class="footer-cta">
+            <h2>If you want to talk about apps, code, or ideas, write me.</h2>
+            <div class="links">
+                <a href="/contact">Contact</a>
+                <a href="/thoughts/">Thoughts</a>
+                <a href="https://mastodon.social/@hannesmnagel">Mastodon</a>
             </div>
-            <footer style="position: absolute; bottom: 2rem; color: var(--secondary-color); font-size: 0.8rem;">
-                hannesnagel &copy; 2026
-            </footer>
         </section>
     </main>
 
     <script src="/js/components.js"></script>
-    <script src="/js/whimsy.js"></script>
 </body>
 
 </html>

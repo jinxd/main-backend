@@ -32,8 +32,8 @@
 <body>
         <div id="site-nav"></div>
 
-    <main>
-        <section style="height: auto; padding-top: 8rem; padding-bottom: 8rem;">
+    <main class="page">
+        <section>
             <div class="reveal" style="width: 100%; max-width: 900px; padding: 0 2rem;">
                 <div class="doc-content legal-box">
                     <h1>Terms of Use</h1>
@@ -55,6 +55,5 @@
     </main>
 
     <script src="/js/components.js"></script>
-    <script src="/js/whimsy.js"></script>
 </body>
 </html>

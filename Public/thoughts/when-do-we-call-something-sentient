@@ -11,9 +11,9 @@
 <body>
         <div id="site-nav"></div>
 
-    <main>
-        <section style="min-height: auto; padding-top: 8rem; padding-bottom: 4rem;">
-            <article class="content-box doc-content" style="max-width: 900px;">
+    <main class="page">
+        <section>
+            <article class="doc-content" style="max-width: 900px;">
                 <p style="margin-bottom: 1rem;"><a href="/thoughts/" class="accent-link">Back to thoughts</a></p>
                 <h1 style="text-align: left; margin-bottom: 2rem; font-size: clamp(2.2rem, 6vw, 4rem);">When Do We
                     Call Something Sentient?</h1>
@@ -114,7 +114,6 @@
     </main>
 
     <script src="/js/components.js"></script>
-    <script src="/js/whimsy.js"></script>
 </body>
 
 </html>

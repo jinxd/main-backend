@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hannesnagel</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <title>hannesnagel - Mockup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/revamp-mockup.css">
 </head>
 
 <body>
@@ -13,7 +16,7 @@
 
     <main class="page">
         <section class="hero">
-            <p class="sub-header">Personal site</p>
+            <p class="eyebrow">Personal site</p>
             <h1>I build apps because I enjoy building useful things.</h1>
             <p class="lead">I am Hannes, a student and developer from Germany. I work on iOS apps and backend projects, learn in public, and try to ship steadily.</p>
             <div class="proof-grid">
@@ -34,45 +37,45 @@
 
         <section class="work">
             <div class="section-head">
-                <p class="sub-header">Selected Work</p>
+                <p class="eyebrow">Selected Work</p>
                 <h2>Some projects I have built so far.</h2>
             </div>
             <div class="cards">
-                <a class="card" href="/containeye/" aria-label="Open ContainEye details">
+                <a class="card" href="/containeye/" aria-label="Open ContainEye app page">
                     <div class="card-media">
                         <img src="/images/containeye_promo.png" alt="ContainEye promo artwork">
                     </div>
                     <div class="card-body">
                         <h3>ContainEye</h3>
                         <p>An iOS app for checking servers and Docker containers from your phone.</p>
-                        <span class="card-cta">Open details</span>
+                        <span class="card-cta">See app page</span>
                     </div>
                 </a>
-                <a class="card" href="/ghost/" aria-label="Open Superghost details">
+                <a class="card" href="/ghost/" aria-label="Open Superghost app page">
                     <div class="card-media">
                         <img src="/images/superghost_promo.png" alt="Superghost promo artwork">
                     </div>
                     <div class="card-body">
                         <h3>Superghost</h3>
                         <p>A small multiplayer word game I made for quick rounds with friends.</p>
-                        <span class="card-cta">Open details</span>
+                        <span class="card-cta">See app page</span>
                     </div>
                 </a>
-                <a class="card" href="/recipes/" aria-label="Open Recipes details">
+                <a class="card" href="/recipes/" aria-label="Open Recipes app page">
                     <div class="card-media">
                         <img src="/images/recipes_promo.png" alt="Recipes promo artwork">
                     </div>
                     <div class="card-body">
                         <h3>Recipes</h3>
                         <p>A clean recipe app focused on simple organization and everyday use.</p>
-                        <span class="card-cta">Open details</span>
+                        <span class="card-cta">See app page</span>
                     </div>
                 </a>
             </div>
         </section>
 
         <section class="notes">
-            <p class="sub-header">Where I am right now</p>
+            <p class="eyebrow">Where I am right now</p>
             <ol>
                 <li><span>01</span>I am still early in this journey and learning every month.</li>
                 <li><span>02</span>I do not have massive user numbers. I focus on improving product quality.</li>

@@ -9,40 +9,30 @@
 </head>
 
 <body>
-        <div id="site-nav"></div>
+    <div id="site-nav"></div>
 
-    <main>
+    <main class="page">
         <section>
-            <h1 class="reveal">About Me</h1>
-            <div class="reveal" style="max-width: 600px; text-align: center;">
-                <p>I'm Hannes Nagel, a software developer and student from Germany. Since starting my journey in 2020,
-                    I've been obsessed with creating native experiences that feel just right.</p>
+            <div class="doc-content reveal">
+                <p class="sub-header">About</p>
+                <h1>Hannes Nagel</h1>
+                <p>I am a student and developer from Germany. I started coding in 2020 and mostly build native apps with Swift, plus backend services when needed.</p>
             </div>
         </section>
 
         <section>
-            <div class="reveal"
-                style="max-width: 700px; padding: 3rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 40px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);">
-                <p style="text-align: left; margin-bottom: 2rem; color: var(--text-color);">
-                    I released my first app, <strong>ear2brain</strong>, when I was 15. Since then, I've joined
-                    <strong>codeunity</strong>, where I worked on a complete rewrite of <em>Zettl - Die
-                        Zeiterfassung</em> using SwiftUI.
-                </p>
-                <p style="text-align: left; margin-bottom: 2rem; color: var(--text-color);">
-                    I just love making things. Sometimes that's a silly word game like <strong>Ghost - Duel with Words</strong>, other times it's a tool like <strong>ContainEye</strong> to help manage servers. I'm always learning, and I try to make everything I build feel as native and smooth as possible.
-                </p>
-                <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 2rem;">
-                    <a href="/apps" class="nav-link squishy"
-                        style="border: 1px solid var(--glass-border); padding: 1rem 2rem; border-radius: 50px;">View My
-                        Apps</a>
-                    <a href="/contact" class="nav-link squishy" style="padding: 1rem 2rem;">Work with Me</a>
+            <div class="content-box doc-content reveal">
+                <h2>Background</h2>
+                <p>I released my first app, <strong>ear2brain</strong>, when I was 15. Later I worked at <strong>codeunity</strong> on a SwiftUI rewrite of Zettl.</p>
+                <div class="cta-buttons">
+                    <a href="/apps" class="nav-link">View apps</a>
+                    <a href="/contact" class="nav-link">Contact</a>
                 </div>
             </div>
         </section>
     </main>
 
     <script src="/js/components.js"></script>
-    <script src="/js/whimsy.js"></script>
 </body>
 
 </html>

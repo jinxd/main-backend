@@ -1,41 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghost - Duel with Words - hannesnagel</title>
+    <title>Join Game - Superghost</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
+
 <body>
-        <div id="site-nav"></div>
+    <div id="site-nav"></div>
 
-    <main>
+    <main class="page">
         <section>
-            <div class="parallax-target" style="position: absolute; width: 100%; height: 100%; z-index: -1; opacity: 0.2;">
-                <img src="/images/superghost_promo.png" alt="Ghost" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h1 class="reveal">Ghost</h1>
-            <p class="reveal">Duel with words.</p>
-        </section>
-
-        <section>
-            <div class="reveal" style="max-width: 700px; padding: 3rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 40px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);">
-                <h2 style="margin-bottom: 2rem;">Private Game</h2>
-                <p style="text-align: left; margin-bottom: 1.5rem; color: var(--text-color);">
-                    Ghost - Duel with Words is a word game where you duel other players by prepending or appending letters.
-                </p>
-                <p style="text-align: left; margin-bottom: 2rem; color: var(--text-color);">
-                    The app is currently not available in the App Store, but the project remains open source and alive on GitHub.
-                </p>
-                <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 2rem;">
-                    <a href="https://github.com/hannesmnagel/superghost" class="nav-link squishy" style="border: 1px solid var(--glass-border); padding: 1rem 2rem; border-radius: 50px;">Source Code</a>
-                    <a href="/ghost" class="nav-link squishy" style="padding: 1rem 2rem;">Learn More</a>
+            <div class="content-box doc-content reveal" style="max-width: 640px; text-align: center;">
+                <p class="sub-header">Superghost</p>
+                <h1 style="max-width: none;">Join Game</h1>
+                <p>To join a match, open the Superghost app on your device.</p>
+                <div class="cta-buttons" style="justify-content: center;">
+                    <a href="/ghost/" class="nav-link">Game details</a>
+                    <a href="/apps" class="nav-link">All apps</a>
                 </div>
             </div>
         </section>
     </main>
 
     <script src="/js/components.js"></script>
-    <script src="/js/whimsy.js"></script>
 </body>
+
 </html>

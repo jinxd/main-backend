@@ -6,123 +6,75 @@
     <title>The Recipes App - hannesnagel</title>
     <link rel="stylesheet" href="/css/main.css">
     <style>
-        .doc-content {
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .doc-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-color);
-        }
-        .doc-content p {
-            text-align: left;
-            margin-bottom: 2rem;
-            color: var(--secondary-color);
-            line-height: 1.8;
-        }
         .feature-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 4rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.4rem 1.2rem;
+            margin-top: 1rem;
         }
+
         .feature-item {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 30px;
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease;
+            padding: 0.2rem 0;
         }
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
-        .feature-item span {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
+
         .feature-item h3 {
-            color: var(--text-color);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.2rem;
         }
+
         .feature-item p {
-            font-size: 0.9rem;
-            margin-bottom: 0;
-            color: var(--secondary-color);
+            margin: 0;
+            max-width: none;
+        }
+
+        @media (max-width: 760px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-        <div id="site-nav"></div>
+    <div id="site-nav"></div>
 
-    <main>
-        <section id="hero" style="min-height: 70vh;">
-            <div class="parallax-target" style="position: absolute; width: 110%; height: 110%; top: -5%; left: -5%; z-index: -1; opacity: 0.3;">
-                <img src="/images/recipes_promo.png" alt="The Recipes App" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6);">
-            </div>
-            <div class="reveal">
-                <span class="sub-header">Finden. Speichern. Teilen.</span>
+    <main class="page">
+        <section>
+            <div class="doc-content reveal">
+                <p class="sub-header">App</p>
                 <h1>The Recipes App</h1>
-                <p>Find, save, and share your culinary journey.</p>
+                <p>Collect recipes, organize them, and keep shopping lists in sync across devices.</p>
             </div>
         </section>
 
-        <section style="height: auto; padding-bottom: 8rem;">
-            <div class="reveal" style="width: 100%; max-width: 1000px; padding: 0 2rem;">
-                <div class="doc-content">
-                    <div style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 40px; padding: 3rem; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); margin-bottom: 3rem;">
-                        <h2 style="text-align: center;">Smart Cooking, Shared.</h2>
-                        <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto;">
-                            The Recipes App is more than just a digital cookbook. It's a collaborative space where finding, organizing, and preparing food becomes effortless and fun.
-                        </p>
-                        
-                        <div class="feature-grid">
-                            <div class="feature-item">
-                                <span>📸</span>
-                                <h3>Capture Magic</h3>
-                                <p>Take a picture of any printed recipe or dictate it aloud. Our AI intelligently finds images, formats steps, and cleans up notes.</p>
-                            </div>
-                            <div class="feature-item">
-                                <span>🤝</span>
-                                <h3>Collaboration</h3>
-                                <p>Share your favorite recipes with friends and family. Collaborate on lists and collections in real-time.</p>
-                            </div>
-                            <div class="feature-item">
-                                <span>🍏</span>
-                                <h3>Reminders Sync</h3>
-                                <p>Your shopping lists sync automatically with Apple's Reminders.app, so you always have your ingredients in your pocket.</p>
-                            </div>
-                            <div class="feature-item">
-                                <span>🔄</span>
-                                <h3>Ingredient Swap</h3>
-                                <p>Missing something? The app suggests clever replacements for ingredients you don't have on hand.</p>
-                            </div>
-                            <div class="feature-item">
-                                <span>🛒</span>
-                                <h3>One-Tap Shopping</h3>
-                                <p>Generate precise shopping lists from any recipe. Organized by category to get you through the aisles faster.</p>
-                            </div>
-                            <div class="feature-item">
-                                <span>☁️</span>
-                                <h3>Ubiquitous Sync</h3>
-                                <p>Your entire collection is synced across iPhone, iPad, and Web, secured by your Apple ID.</p>
-                            </div>
-                        </div>
+        <section>
+            <div class="doc-content reveal">
+                <h2>Core features</h2>
+                <div class="feature-grid">
+                    <article class="feature-item">
+                        <h3>Import recipes</h3>
+                        <p>Add recipes manually, from photos, or from text.</p>
+                    </article>
+                    <article class="feature-item">
+                        <h3>Share with others</h3>
+                        <p>Collaborate on recipe collections with family or friends.</p>
+                    </article>
+                    <article class="feature-item">
+                        <h3>Shopping lists</h3>
+                        <p>Build ingredient lists and keep them practical while shopping.</p>
+                    </article>
+                    <article class="feature-item">
+                        <h3>Cross-device access</h3>
+                        <p>Use it on iPhone and on the web.</p>
+                    </article>
+                </div>
 
-                        <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 2rem;">
-                             <a href="https://recipes.hannesnagel.com" class="nav-link squishy" style="background: var(--accent-color); color: white; padding: 1rem 2rem; border-radius: 50px;">Web App</a>
-                            <a href="https://apps.apple.com/de/app/the-recipes-app/id6745904570" class="nav-link squishy" style="border: 1px solid var(--glass-border); padding: 1rem 2rem; border-radius: 50px;">App Store</a>
-                        </div>
-                    </div>
+                <div class="cta-buttons">
+                    <a href="https://recipes.hannesnagel.com" class="nav-link">Web app</a>
+                    <a href="https://apps.apple.com/de/app/the-recipes-app/id6745904570" class="nav-link">App Store</a>
                 </div>
             </div>
         </section>
     </main>
 
     <script src="/js/components.js"></script>
-    <script src="/js/whimsy.js"></script>
 </body>
 </html>

@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-        <div id="site-nav"></div>
+    <div id="site-nav"></div>
 
-    <main>
-        <section id="hero" style="min-height: 40vh;">
+    <main class="page">
+        <section>
             <div class="reveal">
-                <span class="sub-header">Get in Touch</span>
+                <span class="sub-header">ContainEye Docs</span>
                 <h1>Support</h1>
+                <p>Contact options and links for bug reports or questions.</p>
             </div>
         </section>
 
-        <section style="height: auto; padding-bottom: 8rem;">
+        <section>
             <div class="reveal container-wrapper">
                 <div class="subnav">
                     <a href="/containeye/index" class="subnav-link">Overview</a>
@@ -31,14 +32,12 @@
 
                 <div class="doc-content">
                     <div class="content-box">
-                        <h2>Here for You</h2>
-                        <p>If you have suggestions, find bugs, or something doesn't work, please reach out! I'm always looking for ways to improve ContainEye.</p>
-                        
-                        <h3>Reporting Issues</h3>
-                        <p>You can email me directly from the app (More → Contact) or open an issue on <a href="https://github.com/hannesmnagel/ContainEye/issues/new" class="accent-link">GitHub</a>.</p>
-                        
-                        <h3>Feedback</h3>
-                        <p>Your feedback is invaluable. Whether it's a feature request or just a quick hello, I'd love to hear from you.</p>
+                        <h2>Need help?</h2>
+                        <p>If something is broken or unclear, send a message with steps and screenshots if possible.</p>
+                        <div class="cta-buttons">
+                            <a href="mailto:contact@hannesnagel.com" class="nav-link">contact@hannesnagel.com</a>
+                            <a href="https://apps.apple.com/us/app/containeye-terminal-docker/id6741063706" class="nav-link">App Store page</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -46,6 +45,5 @@
     </main>
 
     <script src="/js/components.js"></script>
-    <script src="/js/whimsy.js"></script>
 </body>
 </html>

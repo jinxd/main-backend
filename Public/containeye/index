@@ -7,23 +7,19 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-        <div id="site-nav"></div>
+    <div id="site-nav"></div>
 
-    <main>
-        <section id="hero" style="min-height: 60vh;">
-            <div class="parallax-target" style="position: absolute; width: 110%; height: 110%; top: -5%; left: -5%; z-index: -1; opacity: 0.2;">
-                <img src="/images/containeye_promo.png" alt="ContainEye" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6);">
-            </div>
+    <main class="page">
+        <section id="hero">
             <div class="reveal">
-                <span class="sub-header">Documentation</span>
-                <h1>ContainEye</h1>
-                <p>Server & Docker management, refined.</p>
+                <span class="sub-header">ContainEye</span>
+                <h1>Server and Docker checks from your phone.</h1>
+                <p>Built for practical maintenance work when you are away from your desk.</p>
             </div>
         </section>
 
-        <section style="height: auto; padding-bottom: 8rem;">
+        <section>
             <div class="reveal container-wrapper">
-                <!-- Subnav -->
                 <div class="subnav">
                     <a href="/containeye/index" class="subnav-link active">Overview</a>
                     <a href="/containeye/features" class="subnav-link">Features</a>
@@ -35,22 +31,18 @@
                 </div>
 
                 <div class="doc-content">
-                    <div class="content-box">
-                        <h2>Master your servers</h2>
-                        <p>
-                            ContainEye is an all-in-one tool for developers and sysadmins who need to manage their infrastructure from anywhere. Built with a focus on speed, security, and a touch of whimsy.
-                        </p>
-                        <ul>
-                            <li>Native SSH terminal with custom command suggestions.</li>
-                            <li>Real-time Docker container management (Start, Stop, Restart, Logs).</li>
-                            <li>Automated health checks and server monitoring.</li>
-                            <li>iCloud sync and secure credential storage.</li>
-                            <li>Deep Apple Shortcuts integration for advanced workflows.</li>
-                        </ul>
-                        <div class="cta-buttons">
-                            <a href="https://apps.apple.com/us/app/containeye-terminal-docker/id6741063706" class="nav-link squishy" style="background: var(--accent-color); color: white; padding: 1rem 2rem; border-radius: 50px;">Get it on App Store</a>
-                            <a href="/containeye/features" class="nav-link squishy" style="border: 1px solid var(--glass-border); padding: 1rem 2rem; border-radius: 50px;">Explore Features →</a>
-                        </div>
+                    <h2>What you can do</h2>
+                    <p>ContainEye helps with day-to-day server tasks: connect quickly, run commands, check containers, and keep recurring checks visible.</p>
+                    <ul>
+                        <li>Native SSH terminal with command suggestions.</li>
+                        <li>Docker container actions: start, stop, restart, logs.</li>
+                        <li>Automated checks with saved expectations.</li>
+                        <li>iCloud sync and secure credential storage.</li>
+                        <li>Apple Shortcuts integration.</li>
+                    </ul>
+                    <div class="cta-buttons">
+                        <a href="https://apps.apple.com/us/app/containeye-terminal-docker/id6741063706" class="nav-link">Get it on App Store</a>
+                        <a href="/containeye/features" class="nav-link">Open feature docs</a>
                     </div>
                 </div>
             </div>
@@ -58,6 +50,5 @@
     </main>
 
     <script src="/js/components.js"></script>
-    <script src="/js/whimsy.js"></script>
 </body>
 </html>
