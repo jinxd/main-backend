@@ -6,7 +6,7 @@
     --surface: #faf8f3;
     --surface-strong: #ffffff;
     --ink: #202625;
-    --muted: #4a5450;
+    --muted: #3d4642;
     --line: #c5bdab;
     --accent: #0f6a57;
 
@@ -470,6 +470,11 @@ a {
 
 .footer-cta h2 {
     max-width: 18ch;
+    color: #f3f0e9;
+}
+
+.footer-cta p {
+    color: #d8dedb;
 }
 
 .links {
@@ -546,5 +551,38 @@ a {
 
     .card img {
         border-radius: 8px;
+    }
+
+    .card p {
+        color: #2e3532;
+        font-size: 1rem;
+    }
+
+    .notes li {
+        border-color: #7e8d87;
+        background: rgba(255, 255, 255, 0.88);
+    }
+
+    .notes li,
+    .notes li * {
+        color: #202724;
+    }
+
+    .notes span {
+        color: #0f6a57;
+    }
+
+    .footer-cta {
+        background: #171c1b;
+    }
+
+    .footer-cta h2 {
+        color: #f3f0e9;
+    }
+
+    .links a {
+        color: #f3f0e9;
+        border-color: rgba(243, 240, 233, 0.75);
+        background: rgba(255, 255, 255, 0.1);
     }
 }
