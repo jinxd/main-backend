@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Codex Rebuilt the ContainEye Terminal - thoughts</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <div id="site-nav"></div>
+
+    <main class="page">
+        <section>
+            <article class="doc-content" style="max-width: 1080px;">
+                <p style="margin-bottom: 1rem;"><a href="/thoughts/" class="accent-link">Back to thoughts</a></p>
+                <h1 style="text-align: left; margin-bottom: 1rem; font-size: clamp(2.2rem, 6vw, 4rem);">How Codex Rebuilt the ContainEye Terminal (and Why I Let It)</h1>
+                <p style="color: var(--secondary-color); margin-bottom: 1.5rem;">A story about frustration, reverse-engineering what worked, and shipping a better terminal + agentic workflow with far less manual coding than I expected.</p>
+
+                <div class="cta-buttons" style="margin-bottom: 2rem;">
+                    <a href="https://apps.apple.com/us/app/containeye-terminal-docker/id6741063706" class="nav-link">Download ContainEye</a>
+                    <a href="/containeye/index" class="nav-link">Open ContainEye docs</a>
+                </div>
+
+                <h3>The turning point</h3>
+                <p>I've been using agentic AI for about a year. With every new model release, it gets a little scarier what these systems can build when you point them at a real problem.</p>
+                <p>For me, that problem was the terminal experience in ContainEye. The SwiftTerm-based implementation had become a pile of hacks. Selection felt bad (often all-or-nothing), copy/paste was awkward, and trying to offer completions meant manually inferring too much state.</p>
+
+                <h3>Stealing the right idea</h3>
+                <p>I compared terminal apps and kept coming back to Termius as the benchmark for interaction quality. I still wanted the terminal deeply integrated in ContainEye, so instead of switching apps, I asked a direct question: <em>what are they doing differently?</em></p>
+                <p>Codex pointed me to xterm.js. That unlocked the whole rewrite direction: move from the old native stack to a WebView-powered xterm.js terminal where behavior is more controllable and standards-based.</p>
+
+                <h3>What changed technically</h3>
+                <ul>
+                    <li>SwiftTerm stack replaced with a WebView + xterm.js terminal core.</li>
+                    <li>Selection now behaves like users expect, including partial/word-level selection.</li>
+                    <li>Copy/paste handling is more reliable.</li>
+                    <li>Terminal context uses proper signals (including OSC-style metadata) rather than brittle guessing.</li>
+                    <li>The app can track command input, working directory, subdirectories, and history to provide smarter completions.</li>
+                </ul>
+
+                <h3>Beyond the terminal: agentic workflows</h3>
+                <p>At the same time, I expanded the agentic tab so AI can work with concrete app features instead of vague context. It can create, read, and update snippets; work with tasks that run on your servers and notify you when they fail; and read the project documentation inside the repository.</p>
+                <p>The command model is explicit: with approval, the AI can run arbitrary commands on your behalf on the server. Known safe reads (like listing and reading files) stay fast, while anything outside that set still requires explicit approval.</p>
+
+                <h3>Daily usability wins</h3>
+                <ul>
+                    <li>Multiple terminal tabs.</li>
+                    <li>Split-panel views on larger devices.</li>
+                    <li>Shortcut-specific startup scripts.</li>
+                    <li>Per-shortcut themes (including custom themes) so each server is visually distinct.</li>
+                </ul>
+
+                <h3>Why this release feels different</h3>
+                <p>I started by trying to patch a frustrating terminal. I ended up with a cleaner architecture, better UX, and an agentic workflow that actually feels trustworthy enough to use every day.</p>
+                <p>Codex didn't just generate snippets here—it accelerated a full product pivot that I likely would have delayed for months.</p>
+            </article>
+        </section>
+    </main>
+
+    <script src="/js/components.js"></script>
+</body>
+
+</html>
