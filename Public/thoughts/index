@@ -17,6 +17,15 @@
                 <span class="sub-header">Thoughts</span>
                 <h2 style="margin-bottom: 1rem;">Thoughts</h2>
 
+
+                <article style="border: 1px solid var(--line); border-radius: 14px; padding: 0.9rem; margin-bottom: 1rem;">
+                    <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">
+                        <a href="/thoughts/containeye-codex-update" class="accent-link">How Codex Rebuilt the ContainEye Terminal (and Why I Let It)</a>
+                    </h3>
+                    <p style="color: var(--secondary-color);">
+                        A behind-the-scenes story of replacing a hacky SwiftTerm stack with xterm.js, then building smarter agentic workflows around it.
+                    </p>
+                </article>
                 <article style="border: 1px solid var(--line); border-radius: 14px; padding: 0.9rem;">
                     <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">
                         <a href="/thoughts/when-do-we-call-something-sentient" class="accent-link">When Do We Call Something Sentient?</a>
