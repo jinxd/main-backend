@@ -10,8 +10,6 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  PREVIEW_HOST: hannesnagel.com
-  PREVIEW_PATH: /root/main-backend-preview
 
 jobs:
   build:
@@ -35,7 +33,7 @@ jobs:
         uses: docker/setup-buildx-action@v3.0.0
 
       - name: Log into registry ${{ env.REGISTRY }}
-        if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)
+        if: github.event_name != 'pull_request'
         uses: docker/login-action@v3.0.0
         with:
           registry: ${{ env.REGISTRY }}
@@ -48,67 +46,22 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
-      - name: Build and push production Docker image
+      - name: Build and push Docker image
         id: build-and-push
-        if: github.event_name == 'push'
         uses: docker/build-push-action@v5.0.0
         with:
           context: .
-          push: true
+          push: ${{ github.event_name != 'pull_request' }}
           tags: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:preview-main
-          labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-      - name: Build and push preview Docker image
-        if: github.event_name == 'pull_request' && github.event.pull_request.merged != true && github.event.pull_request.head.repo.full_name == github.repository
-        uses: docker/build-push-action@v5.0.0
-        with:
-          context: .
-          push: true
-          tags: |
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:preview-main
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:preview-pr-${{ github.event.pull_request.number }}-${{ github.sha }}
-          labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-      - name: Build PR Docker image (no push for forks)
-        if: github.event_name == 'pull_request' && github.event.pull_request.merged != true && github.event.pull_request.head.repo.full_name != github.repository
-        uses: docker/build-push-action@v5.0.0
-        with:
-          context: .
-          push: false
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:pr-check-${{ github.sha }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
       - name: Sign the published Docker image
-        if: ${{ github.event_name == 'push' }}
+        if: ${{ github.event_name != 'pull_request' }}
         env:
           TAGS: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
           DIGEST: ${{ steps.build-and-push.outputs.digest }}
         run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
-
-  deploy-preview:
-    runs-on: ubuntu-latest
-    needs: build
-    if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'pull_request' && github.event.pull_request.merged != true && github.event.pull_request.head.repo.full_name == github.repository)
-    permissions:
-      contents: read
-
-    steps:
-      - name: Configure SSH key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -H "${{ env.PREVIEW_HOST }}" >> ~/.ssh/known_hosts
-
-      - name: Deploy preview-main image
-        run: |
-          ssh root@"${{ env.PREVIEW_HOST }}" "cd '${{ env.PREVIEW_PATH }}' && IMAGE_TAG=preview-main docker compose pull && IMAGE_TAG=preview-main docker compose up -d"
