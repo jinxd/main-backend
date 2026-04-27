@@ -133,6 +133,23 @@
             </div>
             <div class="apps-grid reveal">
                 <article class="app-card">
+                    <div class="app-media light">
+                        <img src="/images/i-told-you-so_receipt.png?v=2" alt="I Told You So">
+                    </div>
+                    <div class="app-body">
+                        <h2>I Told You So</h2>
+                        <p>Record predictions and friendly bets, settle them later, and share a clean receipt.</p>
+                        <div class="badge-list">
+                            <a href="https://apps.apple.com/app/id6763559466">
+                                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" class="app-store-badge">
+                            </a>
+                            <a href="/i-told-you-so/" class="chip-link">Open details</a>
+                            <a href="/i-told-you-so/privacy" class="chip-link">Privacy</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="app-card">
                     <div class="app-media">
                         <img src="/images/containeye_promo.png" alt="ContainEye">
                     </div>
@@ -144,20 +161,6 @@
                                 <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" class="app-store-badge">
                             </a>
                             <a href="/containeye/" class="chip-link">Open details</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="app-card">
-                    <div class="app-media">
-                        <img src="/images/superghost_promo.png" alt="Superghost">
-                    </div>
-                    <div class="app-body">
-                        <h2>Ghost / Superghost</h2>
-                        <p>A multiplayer word game. Open source backend in Swift and Vapor.</p>
-                        <div class="badge-list">
-                            <a href="https://github.com/hannesmnagel/superghost" class="chip-link">Source code</a>
-                            <a href="/ghost/" class="chip-link">Open details</a>
                         </div>
                     </div>
                 </article>
@@ -180,18 +183,15 @@
                 </article>
 
                 <article class="app-card">
-                    <div class="app-media light">
-                        <img src="/images/i-told-you-so_receipt.png?v=2" alt="I Told You So">
+                    <div class="app-media">
+                        <img src="/images/superghost_promo.png" alt="Superghost">
                     </div>
                     <div class="app-body">
-                        <h2>I Told You So</h2>
-                        <p>Record predictions and friendly bets, settle them later, and share a clean receipt.</p>
+                        <h2>Ghost / Superghost</h2>
+                        <p>A multiplayer word game. Open source backend in Swift and Vapor.</p>
                         <div class="badge-list">
-                            <a href="https://apps.apple.com/app/id6763559466">
-                                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" class="app-store-badge">
-                            </a>
-                            <a href="/i-told-you-so/" class="chip-link">Open details</a>
-                            <a href="/i-told-you-so/privacy" class="chip-link">Privacy</a>
+                            <a href="https://github.com/hannesmnagel/superghost" class="chip-link">Source code</a>
+                            <a href="/ghost/" class="chip-link">Open details</a>
                         </div>
                     </div>
                 </article>

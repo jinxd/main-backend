@@ -38,6 +38,16 @@
                 <h2>Some projects I have built so far.</h2>
             </div>
             <div class="cards">
+                <a class="card" href="/i-told-you-so/" aria-label="Open I Told You So details">
+                    <div class="card-media">
+                        <img src="/images/i-told-you-so_receipt.png?v=2" alt="I Told You So promo artwork">
+                    </div>
+                    <div class="card-body">
+                        <h3>I Told You So</h3>
+                        <p>A tiny receipts app for predictions, friendly bets, and “you said this would happen” moments.</p>
+                        <span class="card-cta">Open details</span>
+                    </div>
+                </a>
                 <a class="card" href="/containeye/" aria-label="Open ContainEye details">
                     <div class="card-media">
                         <img src="/images/containeye_promo.png" alt="ContainEye promo artwork">
@@ -45,16 +55,6 @@
                     <div class="card-body">
                         <h3>ContainEye</h3>
                         <p>An iOS app for checking servers and Docker containers from your phone.</p>
-                        <span class="card-cta">Open details</span>
-                    </div>
-                </a>
-                <a class="card" href="/ghost/" aria-label="Open Superghost details">
-                    <div class="card-media">
-                        <img src="/images/superghost_promo.png" alt="Superghost promo artwork">
-                    </div>
-                    <div class="card-body">
-                        <h3>Superghost</h3>
-                        <p>A small multiplayer word game I made for quick rounds with friends.</p>
                         <span class="card-cta">Open details</span>
                     </div>
                 </a>
@@ -68,13 +68,13 @@
                         <span class="card-cta">Open details</span>
                     </div>
                 </a>
-                <a class="card" href="/i-told-you-so/" aria-label="Open I Told You So details">
+                <a class="card" href="/ghost/" aria-label="Open Superghost details">
                     <div class="card-media">
-                        <img src="/images/i-told-you-so_receipt.png?v=2" alt="I Told You So promo artwork">
+                        <img src="/images/superghost_promo.png" alt="Superghost promo artwork">
                     </div>
                     <div class="card-body">
-                        <h3>I Told You So</h3>
-                        <p>A tiny receipts app for predictions, friendly bets, and “you said this would happen” moments.</p>
+                        <h3>Superghost</h3>
+                        <p>A small multiplayer word game I made for quick rounds with friends.</p>
                         <span class="card-cta">Open details</span>
                     </div>
                 </a>
