@@ -174,6 +174,23 @@
                         </div>
                     </div>
                 </article>
+
+                <article class="app-card">
+                    <div class="app-media">
+                        <img src="/images/i-told-you-so_promo.png" alt="I Told You So">
+                    </div>
+                    <div class="app-body">
+                        <h2>I Told You So</h2>
+                        <p>Record predictions and friendly bets, settle them later, and share a clean receipt.</p>
+                        <div class="badge-list">
+                            <a href="https://apps.apple.com/app/id6763559466">
+                                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" class="app-store-badge">
+                            </a>
+                            <a href="/i-told-you-so/" class="chip-link">Open details</a>
+                            <a href="/i-told-you-so/privacy" class="chip-link">Privacy</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 

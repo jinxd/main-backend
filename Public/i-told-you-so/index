@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Told You So - hannesnagel</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <div id="site-nav"></div>
+
+    <main class="page">
+        <section class="hero">
+            <p class="sub-header">iOS App</p>
+            <h1>I Told You So</h1>
+            <p class="lead">Capture predictions, friendly bets, and bold claims before everyone changes their story. Settle the outcome later and keep the receipt.</p>
+            <div class="cta-buttons">
+                <a class="nav-link" href="https://apps.apple.com/app/id6763559466">App Store</a>
+                <a class="nav-link" href="/i-told-you-so/privacy">Privacy Policy</a>
+                <a class="nav-link" href="/contact">Support</a>
+            </div>
+        </section>
+
+        <section class="work">
+            <div class="section-head">
+                <p class="sub-header">What it does</p>
+                <h2>Receipts for the moments people forget.</h2>
+            </div>
+            <div class="cards">
+                <article class="card">
+                    <div class="card-body">
+                        <h3>Record it fast</h3>
+                        <p>Write down who said what, what they predicted, and what is at stake.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <h3>Settle it later</h3>
+                        <p>Come back when reality catches up and mark who was right.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <h3>Share the receipt</h3>
+                        <p>Create a clean proof card for the group chat.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="footer-cta">
+            <h2>Questions or support?</h2>
+            <div class="links">
+                <a href="/contact">Contact</a>
+                <a href="/i-told-you-so/privacy">Privacy Policy</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/components.js"></script>
+</body>
+
+</html>
