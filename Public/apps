@@ -36,6 +36,10 @@
             border-right: 1px solid var(--line);
         }
 
+        .app-media.light {
+            background: #f6f1e6;
+        }
+
         .app-media img {
             width: 100%;
             aspect-ratio: 1 / 1;
@@ -176,7 +180,7 @@
                 </article>
 
                 <article class="app-card">
-                    <div class="app-media">
+                    <div class="app-media light">
                         <img src="/images/i-told-you-so_promo.png" alt="I Told You So">
                     </div>
                     <div class="app-body">
