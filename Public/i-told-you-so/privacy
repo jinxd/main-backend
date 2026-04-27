@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Told You So Privacy Policy</title>
+  <link rel="stylesheet" href="/css/main.css?v=1777034116">
+</head>
+<body>
+  <div id="site-nav"></div>
+  <main class="page">
+    <section class="hero">
+      <p class="sub-header">Privacy Policy</p>
+      <h1>I Told You So</h1>
+      <p class="lead">I Told You So helps you record predictions, settle outcomes, and share receipts. The app is designed to keep your prediction history on your device.</p>
+      <p class="label">Last updated: April 27, 2026</p>
+    </section>
+
+    <section class="work">
+      <div class="section-head">
+        <p class="sub-header">Data Collection</p>
+        <h2>No personal data is collected by the developer.</h2>
+      </div>
+      <p>I Told You So does not require an account and does not send your prediction content to a developer-operated server.</p>
+      <p>The app may store predictions, history, verdicts, and generated receipt content locally on your device so the app can function.</p>
+      <p>If you choose to share a receipt or screenshot, that content is shared only through the iOS share sheet and only with the people or services you select.</p>
+    </section>
+
+    <section class="work">
+      <div class="section-head">
+        <p class="sub-header">Third Parties</p>
+        <h2>Apple system services may apply.</h2>
+      </div>
+      <p>Apple may process limited technical information as part of iOS, App Store, crash diagnostics, or other system services, depending on your device settings. This is governed by Apple’s own policies.</p>
+    </section>
+
+    <section class="work">
+      <div class="section-head">
+        <p class="sub-header">Contact</p>
+        <h2>Questions?</h2>
+      </div>
+      <p>Contact the developer at <a href="/contact">hannesnagel.com/contact</a>.</p>
+    </section>
+  </main>
+  <script src="/js/components.js?v=1777034116"></script>
+</body>
+</html>
