@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Blue-Red Button Problem - thoughts</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+        <div id="site-nav"></div>
+
+    <main class="page">
+        <section>
+            <article class="doc-content" style="max-width: 900px;">
+                <p style="margin-bottom: 1rem;"><a href="/thoughts/" class="accent-link">Back to thoughts</a></p>
+                <h1 style="text-align: left; margin-bottom: 2rem; font-size: clamp(2.2rem, 6vw, 4rem);">The Blue-Red Button Problem</h1>
+
+                <p>The blue-red button problem looks, at first, like a test of nerve.</p>
+                <p>Everyone privately chooses a button. If more than half choose blue, everyone lives. If not, the blue voters die and the red voters survive.</p>
+                <p>So red looks like the safe choice. It guarantees your own survival. Blue looks like a beautiful but reckless vote of trust.</p>
+                <p>I think that framing is wrong.</p>
+                <p>The problem is not mainly about courage, altruism, or whether strangers deserve your faith. It is a problem about scale. Once you look at it that way, blue stops being the sentimental answer and starts being the mathematically sane one.</p>
+
+                <h3>The three-person version</h3>
+                <p>Start with only three people: you and two others. Assume the other two each choose red or blue with equal probability.</p>
+                <p>If you press red, there are four equally likely worlds:</p>
+                <ul>
+                    <li>RR: 0 blue voters, 3 red voters. Nobody dies.</li>
+                    <li>RB: 1 blue voter, 2 red voters. 1 person dies.</li>
+                    <li>BR: 1 blue voter, 2 red voters. 1 person dies.</li>
+                    <li>BB: 2 blue voters, 1 red voter. Nobody dies.</li>
+                </ul>
+                <p>Expected deaths: 0.5.</p>
+                <p>If you press blue:</p>
+                <ul>
+                    <li>RR: 1 blue voter, 2 red voters. You die. 1 death.</li>
+                    <li>RB: 2 blue voters, 1 red voter. Nobody dies.</li>
+                    <li>BR: 2 blue voters, 1 red voter. Nobody dies.</li>
+                    <li>BB: 3 blue voters. Nobody dies.</li>
+                </ul>
+                <p>Expected deaths: 0.25.</p>
+                <p>Already, with only three people, blue produces fewer expected deaths. That is the tiny version of the whole story.</p>
+
+                <h3>The cost of blue is bounded</h3>
+                <p>The argument for red usually goes like this: if enough people choose red, blue voters die, so choosing blue risks your life.</p>
+                <p>True. But notice what the risk can cost.</p>
+                <p>In the worlds where red wins no matter what you do, pressing blue adds exactly one death: yours. That is bad, obviously. But it is bounded. It does not become ten deaths, or a million deaths, just because the group gets larger.</p>
+                <p>Under a neutral 50:50 prior, red wins without you in roughly half of all worlds. So the expected personal cost of choosing blue stays around 0.5 deaths. It does not scale with the size of the population.</p>
+
+                <h3>The benefit of blue scales</h3>
+                <p>Your vote matters only in the pivotal world: the world where everyone else is exactly tied.</p>
+                <p>That sounds rare, and it is. But when it happens, your vote does not save one person. It flips the majority. It turns a red-win world, where every blue voter dies, into a blue-win world, where everyone lives.</p>
+                <p>For N people, that means the benefit in the pivotal case is roughly N/2 lives.</p>
+                <p>The chance of being pivotal shrinks as N grows. For N-1 other voters choosing independently at 50:50, the probability that they are exactly tied is:</p>
+                <div style="overflow-x: auto; margin: 1.25rem 0;">
+                    <p style="display: inline-block; min-width: min(100%, 34rem); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
+                        P(pivotal) = C(N − 1, (N − 1) / 2) · (1 / 2)<sup>(N − 1)</sup>
+                    </p>
+                </div>
+                <p>By Stirling's approximation, this behaves like:</p>
+                <div style="overflow-x: auto; margin: 1.25rem 0;">
+                    <p style="display: inline-block; min-width: min(100%, 22rem); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
+                        √(2 / (πN))
+                    </p>
+                </div>
+                <p>That probability gets smaller, but only like 1/√N. The payoff in the pivotal case grows like N. Multiply them together and the expected gross benefit grows like √N.</p>
+                <p>That is the part our intuition hates. One vote feels powerless in a huge crowd. But the tiny chance of decisiveness is attached to an enormous consequence.</p>
+
+                <h3>The net calculation</h3>
+                <p>For odd N, the expected advantage of pressing blue instead of red is approximately:</p>
+                <div style="overflow-x: auto; margin: 1.25rem 0;">
+                    <p style="display: inline-block; min-width: min(100%, 24rem); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
+                        (N / 2) · P(pivotal) − 0.5
+                    </p>
+                </div>
+                <p>The first term is the chance that your vote flips the outcome, multiplied by the number of lives saved when it does. The -0.5 term is the bounded expected cost of joining the losing side.</p>
+                <p>Some concrete exact values:</p>
+                <ul>
+                    <li>N = 3: blue saves 0.25 expected lives.</li>
+                    <li>N = 5: blue saves 0.44 expected lives.</li>
+                    <li>N = 11: blue saves 0.85 expected lives.</li>
+                    <li>N = 101: blue saves about 3.5 expected lives.</li>
+                    <li>N = 10,001: blue saves about 40 expected lives.</li>
+                </ul>
+                <p>The cost stays roughly constant. The benefit keeps growing.</p>
+
+                <h3>Why red feels more rational than it is</h3>
+                <p>Red feels rational because it is individually safe. It gives you a clean guarantee: no matter what happens, you survive.</p>
+                <p>But guarantees are not the same thing as good decisions. A guaranteed personal survival strategy can still be a bad expected-value strategy when it predictably increases the number of deaths.</p>
+                <p>The red argument also quietly treats your vote as causally irrelevant. If the crowd chooses blue, you live anyway. If the crowd chooses red, you would have died by choosing blue. So why not free-ride?</p>
+                <p>Because sometimes the crowd is not already decided. Sometimes the margin is exactly where you stand. In that world, red is not harmless self-protection. It is the vote that makes everyone who trusted blue die.</p>
+
+                <h3>What if we do not know the distribution?</h3>
+                <p>The 50:50 assumption is clean, but it is also generous to the symmetry of the problem. What if we think people are somewhat biased toward red?</p>
+                <p>Let p be the probability that any other person chooses blue. For N = 2r + 1 total people, there are 2r other voters. If p is known, the expected advantage of blue over red is:</p>
+                <div style="overflow-x: auto; margin: 1.25rem 0;">
+                    <p style="display: inline-block; min-width: min(100%, 34rem); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
+                        r · P(K = r) − P(K &lt; r)
+                    </p>
+                </div>
+                <p>where K is the number of blue voters among the other 2r people.</p>
+                <p>If p itself is uncertain, we average that expression over our prior:</p>
+                <div style="overflow-x: auto; margin: 1.25rem 0;">
+                    <p style="display: inline-block; min-width: min(100%, 36rem); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
+                        E<sub>p</sub>[r · P(K = r | p) − P(K &lt; r | p)]
+                    </p>
+                </div>
+                <p>Now suppose we are pessimistic and assume p is uniformly distributed between 0.4 and 0.5. In other words: we give red an advantage in almost every possible world, and merely allow that blue might be close to tied.</p>
+                <p>Blue still wins in expected lives:</p>
+                <ul>
+                    <li>N = 3: blue saves about 0.19 expected lives.</li>
+                    <li>N = 5: blue saves about 0.34 expected lives.</li>
+                    <li>N = 11: blue saves about 0.65 expected lives.</li>
+                    <li>N = 101: blue saves about 1.59 expected lives.</li>
+                    <li>N = 10,001: blue saves about 1.52 expected lives.</li>
+                </ul>
+                <p>The key is that the prior still puts real probability mass near the tied case. Red can be favored overall, but the rare worlds near 50:50 are exactly where your vote has enormous leverage.</p>
+                <p>Even with a wider pessimistic prior, p uniformly distributed between 0.3 and 0.5, blue remains positive in the same calculation: about 0.11, 0.20, 0.33, 0.35, and 0.26 expected lives saved for N = 3, 5, 11, 101, and 10,001.</p>
+                <p>This does not mean blue wins under every imaginable prior. If you are almost certain that hardly anyone will press blue, red can become the expected-value choice. But that is a much stronger claim than "people might be selfish." You need a prior that pushes substantial probability far away from the pivotal region.</p>
+                <p>If your uncertainty includes serious probability near a tie, even while favoring red, blue is still the logical choice.</p>
+
+                <h3>The moral intuition</h3>
+                <p>The math does not say you are a monster if you press red. Fear is real. Wanting to live is not irrational.</p>
+                <p>But it does say that the slogan "red is the only logical choice" is false. Red is the dominant choice only if you care exclusively about your own survival and treat everyone else's death as zero cost.</p>
+                <p>If deaths count as deaths, regardless of whose they are, blue wins very quickly.</p>
+                <p>That is why the problem is interesting. It exposes the gap between personal safety and collective rationality. Red is safe in the narrowest possible sense. Blue is risky for you, but it is the choice that makes the system survivable.</p>
+
+                <h3>The real lesson</h3>
+                <p>The blue-red button problem is not asking whether humans are nice.</p>
+                <p>It is asking whether we can reason correctly when our individual incentive points one way and the collective expected value points the other.</p>
+                <p>In small groups, blue already has the edge. In large groups, the case becomes overwhelming. The probability that you are pivotal shrinks, but the stakes when you are pivotal grow faster.</p>
+                <p>So yes, pressing blue requires trust. But it is not blind trust.</p>
+                <p>It is trust backed by arithmetic.</p>
+            </article>
+        </section>
+    </main>
+
+    <script src="/js/components.js"></script>
+</body>
+
+</html>
