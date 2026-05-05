@@ -92,6 +92,35 @@
                 <p>The red argument also quietly treats your vote as causally irrelevant. If the crowd chooses blue, you live anyway. If the crowd chooses red, you would have died by choosing blue. So why not free-ride?</p>
                 <p>Because sometimes the crowd is not already decided. Sometimes the margin is exactly where you stand. In that world, red is not harmless self-protection. It is the vote that makes everyone who trusted blue die.</p>
 
+                <h3>What if we do not know the distribution?</h3>
+                <p>The 50:50 assumption is clean, but it is also generous to the symmetry of the problem. What if we think people are somewhat biased toward red?</p>
+                <p>Let p be the probability that any other person chooses blue. For N = 2r + 1 total people, there are 2r other voters. If p is known, the expected advantage of blue over red is:</p>
+                <div style="overflow-x: auto; margin: 1.25rem 0;">
+                    <p style="display: inline-block; min-width: min(100%, 34rem); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
+                        r · P(K = r) − P(K &lt; r)
+                    </p>
+                </div>
+                <p>where K is the number of blue voters among the other 2r people.</p>
+                <p>If p itself is uncertain, we average that expression over our prior:</p>
+                <div style="overflow-x: auto; margin: 1.25rem 0;">
+                    <p style="display: inline-block; min-width: min(100%, 36rem); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
+                        E<sub>p</sub>[r · P(K = r | p) − P(K &lt; r | p)]
+                    </p>
+                </div>
+                <p>Now suppose we are pessimistic and assume p is uniformly distributed between 0.4 and 0.5. In other words: we give red an advantage in almost every possible world, and merely allow that blue might be close to tied.</p>
+                <p>Blue still wins in expected lives:</p>
+                <ul>
+                    <li>N = 3: blue saves about 0.19 expected lives.</li>
+                    <li>N = 5: blue saves about 0.34 expected lives.</li>
+                    <li>N = 11: blue saves about 0.65 expected lives.</li>
+                    <li>N = 101: blue saves about 1.59 expected lives.</li>
+                    <li>N = 10,001: blue saves about 1.52 expected lives.</li>
+                </ul>
+                <p>The key is that the prior still puts real probability mass near the tied case. Red can be favored overall, but the rare worlds near 50:50 are exactly where your vote has enormous leverage.</p>
+                <p>Even with a wider pessimistic prior, p uniformly distributed between 0.3 and 0.5, blue remains positive in the same calculation: about 0.11, 0.20, 0.33, 0.35, and 0.26 expected lives saved for N = 3, 5, 11, 101, and 10,001.</p>
+                <p>This does not mean blue wins under every imaginable prior. If you are almost certain that hardly anyone will press blue, red can become the expected-value choice. But that is a much stronger claim than "people might be selfish." You need a prior that pushes substantial probability far away from the pivotal region.</p>
+                <p>If your uncertainty includes serious probability near a tie, even while favoring red, blue is still the logical choice.</p>
+
                 <h3>The moral intuition</h3>
                 <p>The math does not say you are a monster if you press red. Fear is real. Wanting to live is not irrational.</p>
                 <p>But it does say that the slogan "red is the only logical choice" is false. Red is the dominant choice only if you care exclusively about your own survival and treat everyone else's death as zero cost.</p>
