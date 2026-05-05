@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Blue-Red Button Problem - thoughts</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+        <div id="site-nav"></div>
+
+    <main class="page">
+        <section>
+            <article class="doc-content" style="max-width: 900px;">
+                <p style="margin-bottom: 1rem;"><a href="/thoughts/" class="accent-link">Back to thoughts</a></p>
+                <h1 style="text-align: left; margin-bottom: 2rem; font-size: clamp(2.2rem, 6vw, 4rem);">The Blue-Red Button Problem</h1>
+
+                <p>The blue-red button problem looks, at first, like a test of nerve.</p>
+                <p>Everyone privately chooses a button. If more than half choose blue, everyone lives. If not, the blue voters die and the red voters survive.</p>
+                <p>So red looks like the safe choice. It guarantees your own survival. Blue looks like a beautiful but reckless vote of trust.</p>
+                <p>I think that framing is wrong.</p>
+                <p>The problem is not mainly about courage, altruism, or whether strangers deserve your faith. It is a problem about scale. Once you look at it that way, blue stops being the sentimental answer and starts being the mathematically sane one.</p>
+
+                <h3>The three-person version</h3>
+                <p>Start with only three people: you and two others. Assume the other two each choose red or blue with equal probability.</p>
+                <p>If you press red, there are four equally likely worlds:</p>
+                <ul>
+                    <li>RR: 0 blue voters, 3 red voters. Nobody dies.</li>
+                    <li>RB: 1 blue voter, 2 red voters. 1 person dies.</li>
+                    <li>BR: 1 blue voter, 2 red voters. 1 person dies.</li>
+                    <li>BB: 2 blue voters, 1 red voter. Nobody dies.</li>
+                </ul>
+                <p>Expected deaths: 0.5.</p>
+                <p>If you press blue:</p>
+                <ul>
+                    <li>RR: 1 blue voter, 2 red voters. You die. 1 death.</li>
+                    <li>RB: 2 blue voters, 1 red voter. Nobody dies.</li>
+                    <li>BR: 2 blue voters, 1 red voter. Nobody dies.</li>
+                    <li>BB: 3 blue voters. Nobody dies.</li>
+                </ul>
+                <p>Expected deaths: 0.25.</p>
+                <p>Already, with only three people, blue produces fewer expected deaths. That is the tiny version of the whole story.</p>
+
+                <h3>The cost of blue is bounded</h3>
+                <p>The argument for red usually goes like this: if enough people choose red, blue voters die, so choosing blue risks your life.</p>
+                <p>True. But notice what the risk can cost.</p>
+                <p>In the worlds where red wins no matter what you do, pressing blue adds exactly one death: yours. That is bad, obviously. But it is bounded. It does not become ten deaths, or a million deaths, just because the group gets larger.</p>
+                <p>Under a neutral 50:50 prior, red wins without you in roughly half of all worlds. So the expected personal cost of choosing blue stays around 0.5 deaths. It does not scale with the size of the population.</p>
+
+                <h3>The benefit of blue scales</h3>
+                <p>Your vote matters only in the pivotal world: the world where everyone else is exactly tied.</p>
+                <p>That sounds rare, and it is. But when it happens, your vote does not save one person. It flips the majority. It turns a red-win world, where every blue voter dies, into a blue-win world, where everyone lives.</p>
+                <p>For N people, that means the benefit in the pivotal case is roughly N/2 lives.</p>
+                <p>The chance of being pivotal shrinks as N grows. For N-1 other voters choosing independently at 50:50, the probability that they are exactly tied is:</p>
+                <p style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">P(pivotal) = C(N-1, (N-1)/2) · (1/2)<sup>N-1</sup></p>
+                <p>By Stirling's approximation, this behaves like:</p>
+                <p style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">sqrt(2 / (πN))</p>
+                <p>That probability gets smaller, but only like 1/sqrt(N). The payoff in the pivotal case grows like N. Multiply them together and the expected gross benefit grows like sqrt(N).</p>
+                <p>That is the part our intuition hates. One vote feels powerless in a huge crowd. But the tiny chance of decisiveness is attached to an enormous consequence.</p>
+
+                <h3>The net calculation</h3>
+                <p>For odd N, the expected advantage of pressing blue instead of red is approximately:</p>
+                <p style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">(N/2) · P(pivotal) - 0.5</p>
+                <p>The first term is the chance that your vote flips the outcome, multiplied by the number of lives saved when it does. The -0.5 term is the bounded expected cost of joining the losing side.</p>
+                <p>Some concrete exact values:</p>
+                <ul>
+                    <li>N = 3: blue saves 0.25 expected lives.</li>
+                    <li>N = 5: blue saves 0.44 expected lives.</li>
+                    <li>N = 11: blue saves 0.85 expected lives.</li>
+                    <li>N = 101: blue saves about 3.5 expected lives.</li>
+                    <li>N = 10,001: blue saves about 40 expected lives.</li>
+                </ul>
+                <p>The cost stays roughly constant. The benefit keeps growing.</p>
+
+                <h3>Why red feels more rational than it is</h3>
+                <p>Red feels rational because it is individually safe. It gives you a clean guarantee: no matter what happens, you survive.</p>
+                <p>But guarantees are not the same thing as good decisions. A guaranteed personal survival strategy can still be a bad expected-value strategy when it predictably increases the number of deaths.</p>
+                <p>The red argument also quietly treats your vote as causally irrelevant. If the crowd chooses blue, you live anyway. If the crowd chooses red, you would have died by choosing blue. So why not free-ride?</p>
+                <p>Because sometimes the crowd is not already decided. Sometimes the margin is exactly where you stand. In that world, red is not harmless self-protection. It is the vote that makes everyone who trusted blue die.</p>
+
+                <h3>The moral intuition</h3>
+                <p>The math does not say you are a monster if you press red. Fear is real. Wanting to live is not irrational.</p>
+                <p>But it does say that the slogan "red is the only logical choice" is false. Red is the dominant choice only if you care exclusively about your own survival and treat everyone else's death as zero cost.</p>
+                <p>If deaths count as deaths, regardless of whose they are, blue wins very quickly.</p>
+                <p>That is why the problem is interesting. It exposes the gap between personal safety and collective rationality. Red is safe in the narrowest possible sense. Blue is risky for you, but it is the choice that makes the system survivable.</p>
+
+                <h3>The real lesson</h3>
+                <p>The blue-red button problem is not asking whether humans are nice.</p>
+                <p>It is asking whether we can reason correctly when our individual incentive points one way and the collective expected value points the other.</p>
+                <p>In small groups, blue already has the edge. In large groups, the case becomes overwhelming. The probability that you are pivotal shrinks, but the stakes when you are pivotal grow faster.</p>
+                <p>So yes, pressing blue requires trust. But it is not blind trust.</p>
+                <p>It is trust backed by arithmetic.</p>
+            </article>
+        </section>
+    </main>
+
+    <script src="/js/components.js"></script>
+</body>
+
+</html>
