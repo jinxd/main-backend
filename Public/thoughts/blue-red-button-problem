@@ -54,15 +54,27 @@
                 <p>That sounds rare, and it is. But when it happens, your vote does not save one person. It flips the majority. It turns a red-win world, where every blue voter dies, into a blue-win world, where everyone lives.</p>
                 <p>For N people, that means the benefit in the pivotal case is roughly N/2 lives.</p>
                 <p>The chance of being pivotal shrinks as N grows. For N-1 other voters choosing independently at 50:50, the probability that they are exactly tied is:</p>
-                <p style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">P(pivotal) = C(N-1, (N-1)/2) · (1/2)<sup>N-1</sup></p>
+                <div style="overflow-x: auto; margin: 1.25rem 0;">
+                    <p style="display: inline-block; min-width: min(100%, 34rem); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
+                        P(pivotal) = C(N − 1, (N − 1) / 2) · (1 / 2)<sup>(N − 1)</sup>
+                    </p>
+                </div>
                 <p>By Stirling's approximation, this behaves like:</p>
-                <p style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">sqrt(2 / (πN))</p>
-                <p>That probability gets smaller, but only like 1/sqrt(N). The payoff in the pivotal case grows like N. Multiply them together and the expected gross benefit grows like sqrt(N).</p>
+                <div style="overflow-x: auto; margin: 1.25rem 0;">
+                    <p style="display: inline-block; min-width: min(100%, 22rem); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
+                        √(2 / (πN))
+                    </p>
+                </div>
+                <p>That probability gets smaller, but only like 1/√N. The payoff in the pivotal case grows like N. Multiply them together and the expected gross benefit grows like √N.</p>
                 <p>That is the part our intuition hates. One vote feels powerless in a huge crowd. But the tiny chance of decisiveness is attached to an enormous consequence.</p>
 
                 <h3>The net calculation</h3>
                 <p>For odd N, the expected advantage of pressing blue instead of red is approximately:</p>
-                <p style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">(N/2) · P(pivotal) - 0.5</p>
+                <div style="overflow-x: auto; margin: 1.25rem 0;">
+                    <p style="display: inline-block; min-width: min(100%, 24rem); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
+                        (N / 2) · P(pivotal) − 0.5
+                    </p>
+                </div>
                 <p>The first term is the chance that your vote flips the outcome, multiplied by the number of lives saved when it does. The -0.5 term is the bounded expected cost of joining the losing side.</p>
                 <p>Some concrete exact values:</p>
                 <ul>
