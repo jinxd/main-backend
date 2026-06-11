@@ -4,45 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>thoughts - hannesnagel</title>
+    <title>Thoughts — Hannes Nagel</title>
+    <meta name="description" content="Occasional writing by Hannes Nagel on building apps, tools, and other things on my mind.">
     <link rel="stylesheet" href="/css/main.css">
+    <style>
+        .post-list {
+            display: grid;
+            gap: 0.9rem;
+            width: 100%;
+            margin-top: 0.4rem;
+        }
+
+        .post {
+            border: 1px solid var(--line);
+            border-radius: var(--radius-sm);
+            padding: 1.2rem 1.3rem;
+            background: var(--surface-strong);
+            display: grid;
+            gap: 0.45rem;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.22s var(--ease-out), box-shadow 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+        }
+
+        .post:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-soft);
+            border-color: #b3a890;
+        }
+
+        .post h3 {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: clamp(1.4rem, 2.6vw, 1.8rem);
+            color: var(--ink);
+        }
+
+        .post p {
+            color: var(--muted);
+            max-width: none;
+            line-height: 1.6;
+        }
+
+        .post .read-more {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .post:hover .read-more::after {
+            transform: translateX(4px);
+        }
+
+        .post .read-more::after {
+            content: " →";
+            display: inline-block;
+            transition: transform 0.22s var(--ease-out);
+        }
+    </style>
 </head>
 
 <body>
-        <div id="site-nav"></div>
+    <div id="site-nav"></div>
 
     <main class="page">
-        <section>
-            <div class="doc-content reveal">
-                <span class="sub-header">Thoughts</span>
-                <h2 style="margin-bottom: 1rem;">Thoughts</h2>
+        <section class="hero">
+            <p class="sub-header">Thoughts</p>
+            <h1>Things on my <em>mind</em>.</h1>
+            <p class="lead">Occasional writing about building apps, the tools I use, and ideas I cannot let go of. No schedule, no fluff.</p>
+        </section>
 
-
-                <article style="border: 1px solid var(--line); border-radius: 14px; padding: 0.9rem; margin-bottom: 1rem;">
-                    <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">
-                        <a href="/thoughts/blue-red-button-problem" class="accent-link">The Blue-Red Button Problem</a>
-                    </h3>
-                    <p style="color: var(--secondary-color);">
-                        Why pressing blue is not just sentimental trust, but the mathematically sane choice once the group gets large.
-                    </p>
-                </article>
-
-                <article style="border: 1px solid var(--line); border-radius: 14px; padding: 0.9rem; margin-bottom: 1rem;">
-                    <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">
-                        <a href="/thoughts/containeye-codex-update" class="accent-link">How Codex Rebuilt the ContainEye Terminal (and Why I Let It)</a>
-                    </h3>
-                    <p style="color: var(--secondary-color);">
-                        A behind-the-scenes story of replacing SwiftTerm with xterm.js and shipping agentic workflows for snippets, tasks, docs reading, and approval-gated server commands.
-                    </p>
-                </article>
-                <article style="border: 1px solid var(--line); border-radius: 14px; padding: 0.9rem;">
-                    <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">
-                        <a href="/thoughts/when-do-we-call-something-sentient" class="accent-link">When Do We Call Something Sentient?</a>
-                    </h3>
-                    <p style="color: var(--secondary-color);">
-                        A short argument for why dismissing AI sentience with "just a machine" does not hold up.
-                    </p>
-                </article>
+        <section style="align-items: flex-start;">
+            <div class="post-list">
+                <a class="post" href="/thoughts/blue-red-button-problem">
+                    <h3>The Blue-Red Button Problem</h3>
+                    <p>Why pressing blue is not just sentimental trust, but the mathematically sane choice once the group gets large.</p>
+                    <span class="read-more">Read</span>
+                </a>
+                <a class="post" href="/thoughts/containeye-codex-update">
+                    <h3>How Codex Rebuilt the ContainEye Terminal (and Why I Let It)</h3>
+                    <p>A behind-the-scenes story of replacing SwiftTerm with xterm.js and shipping agentic workflows for snippets, tasks, docs reading, and approval-gated server commands.</p>
+                    <span class="read-more">Read</span>
+                </a>
+                <a class="post" href="/thoughts/when-do-we-call-something-sentient">
+                    <h3>When Do We Call Something Sentient?</h3>
+                    <p>A short argument for why dismissing AI sentience with "just a machine" does not hold up.</p>
+                    <span class="read-more">Read</span>
+                </a>
             </div>
         </section>
     </main>

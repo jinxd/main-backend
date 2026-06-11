@@ -28,6 +28,38 @@
             border-radius: 16px;
             background: #fff;
             overflow: hidden;
+            position: relative;
+            transition: transform 0.25s var(--spring), box-shadow 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+        }
+
+        .app-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+            border-color: #b3a890;
+        }
+
+        /* whole card opens the details page; inner links stay clickable above */
+        .card-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .card-link::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+
+        .card-link:focus-visible::after {
+            outline: 3px solid var(--accent);
+            outline-offset: -3px;
+            border-radius: 16px;
+        }
+
+        .app-card .badge-list {
+            position: relative;
+            z-index: 2;
         }
 
         .app-media {
@@ -96,6 +128,20 @@
             display: grid;
             gap: 0.7rem;
             justify-items: start;
+            position: relative;
+            transition: transform 0.25s var(--spring), box-shadow 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+        }
+
+        .small-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+            border-color: #b3a890;
+        }
+
+        .small-card .chip-link::after {
+            content: "";
+            position: absolute;
+            inset: 0;
         }
 
         .small-card img {
@@ -103,6 +149,57 @@
             height: 72px;
             border-radius: 14px;
             object-fit: cover;
+        }
+
+        .app-media.pod-art {
+            display: grid;
+            place-items: center;
+            background: linear-gradient(160deg, #2a1d4d, #14102b);
+        }
+
+        .pod-eq {
+            display: flex;
+            align-items: flex-end;
+            gap: 6px;
+            height: 46%;
+            width: 62%;
+        }
+
+        .pod-eq i {
+            flex: 1;
+            border-radius: 4px;
+            background: linear-gradient(180deg, #a78bfa, #6d3fc4);
+            transform-origin: bottom;
+            animation: pod-eq 0.9s ease-in-out infinite alternate;
+            height: var(--h);
+            animation-delay: var(--dl);
+        }
+
+        @keyframes pod-eq {
+            from { transform: scaleY(0.3); }
+            to { transform: scaleY(1); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .pod-eq i {
+                animation: none;
+                transform: scaleY(0.7);
+            }
+        }
+
+        .wip-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            border: 1px solid #6d3fc4;
+            color: #6d3fc4;
+            border-radius: 999px;
+            padding: 0.3rem 0.7rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            width: fit-content;
         }
 
         @media (max-width: 880px) {
@@ -133,11 +230,28 @@
             </div>
             <div class="apps-grid reveal">
                 <article class="app-card">
+                    <div class="app-media pod-art" aria-hidden="true">
+                        <div class="pod-eq">
+                            <i style="--h:55%;--dl:0s"></i><i style="--h:85%;--dl:-.2s"></i><i style="--h:65%;--dl:-.5s"></i><i style="--h:100%;--dl:-.3s"></i><i style="--h:75%;--dl:-.7s"></i><i style="--h:90%;--dl:-.1s"></i><i style="--h:60%;--dl:-.4s"></i>
+                        </div>
+                    </div>
+                    <div class="app-body">
+                        <span class="wip-chip">● In development</span>
+                        <h2><a class="card-link" href="/podcatcher/">The Podcatcher</a></h2>
+                        <p>The podcast app I am building right now: iCloud sync, iPhone + iPad + Mac, up to 5× speed, transcripts, automatic AI chapters, and chapter skip rules.</p>
+                        <div class="badge-list">
+                            <a href="/podcatcher/" class="chip-link">Open details</a>
+                            <a href="/contact" class="chip-link">Get notified</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="app-card">
                     <div class="app-media light">
                         <img src="/images/i-told-you-so_receipt.png?v=2" alt="I Told You So">
                     </div>
                     <div class="app-body">
-                        <h2>I Told You So</h2>
+                        <h2><a class="card-link" href="/i-told-you-so/">I Told You So</a></h2>
                         <p>Record predictions and friendly bets, settle them later, and share a clean receipt.</p>
                         <div class="badge-list">
                             <a href="https://apps.apple.com/app/id6763559466">
@@ -154,7 +268,7 @@
                         <img src="/images/containeye_promo.png" alt="ContainEye">
                     </div>
                     <div class="app-body">
-                        <h2>ContainEye</h2>
+                        <h2><a class="card-link" href="/containeye/">ContainEye</a></h2>
                         <p>Monitor servers and Docker containers from iPhone. Includes SSH terminal, checks, and shortcuts support.</p>
                         <div class="badge-list">
                             <a href="https://apps.apple.com/us/app/containeye-terminal-docker/id6741063706">
@@ -170,7 +284,7 @@
                         <img src="/images/recipes_promo.png" alt="Recipes">
                     </div>
                     <div class="app-body">
-                        <h2>The Recipes App</h2>
+                        <h2><a class="card-link" href="/recipes/">The Recipes App</a></h2>
                         <p>Recipe collection with shopping list support and web access.</p>
                         <div class="badge-list">
                             <a href="https://apps.apple.com/de/app/the-recipes-app/id6745904570">
@@ -187,7 +301,7 @@
                         <img src="/images/superghost_promo.png" alt="Superghost">
                     </div>
                     <div class="app-body">
-                        <h2>Ghost / Superghost</h2>
+                        <h2><a class="card-link" href="/ghost/">Ghost / Superghost</a></h2>
                         <p>A multiplayer word game. Open source backend in Swift and Vapor.</p>
                         <div class="badge-list">
                             <a href="https://github.com/hannesmnagel/superghost" class="chip-link">Source code</a>
