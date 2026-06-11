@@ -1,38 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghost - Duel with Words - hannesnagel</title>
+    <title>Ghost / Superghost — a multiplayer word game</title>
+    <meta name="description" content="Ghost (Superghost) is a multiplayer word game: add letters without completing a valid word too early. Open source, built with Swift and Vapor.">
     <link rel="stylesheet" href="/css/main.css">
+    <style>
+        :root {
+            --gh: #7a4dd6;
+            --gh-deep: #5a35a8;
+        }
+
+        .gh-hero .sub-header,
+        .gh-hero h1 em {
+            color: var(--gh);
+        }
+
+        .gh-hero .sub-header::before {
+            background: var(--gh);
+        }
+
+        .gh-hero h1 em::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 18' preserveAspectRatio='none'%3E%3Cpath d='M2 12 C 12 4, 22 16, 32 9 S 52 4, 62 10 S 82 16, 98 6' fill='none' stroke='%237a4dd6' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E");
+        }
+
+        /* ---- letter tiles ---- */
+
+        .tiles {
+            display: flex;
+            gap: 0.55rem;
+            margin-top: 1.4rem;
+            flex-wrap: wrap;
+        }
+
+        .tile {
+            width: clamp(52px, 8vw, 72px);
+            aspect-ratio: 1;
+            display: grid;
+            place-items: center;
+            font-family: var(--serif);
+            font-weight: 700;
+            font-size: clamp(1.6rem, 3.4vw, 2.3rem);
+            color: #fff;
+            background: linear-gradient(160deg, var(--gh), var(--gh-deep));
+            border-radius: 14px;
+            box-shadow: 0 6px 0 var(--gh-deep), var(--shadow-soft);
+            cursor: pointer;
+            user-select: none;
+            transition: transform 0.25s var(--spring), box-shadow 0.25s var(--spring);
+            animation: tile-in 0.6s var(--spring) backwards;
+            animation-delay: calc(var(--i) * 90ms + 200ms);
+        }
+
+        @keyframes tile-in {
+            from {
+                opacity: 0;
+                transform: translateY(24px) rotate(8deg) scale(0.7);
+            }
+        }
+
+        .tile:hover {
+            transform: translateY(-6px) rotate(-3deg);
+        }
+
+        .tile:active,
+        .tile.pressed {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 var(--gh-deep), var(--shadow-soft);
+        }
+
+        .tile.ghosted {
+            background: linear-gradient(160deg, #c9bfe6, #b3a7d6);
+            box-shadow: 0 6px 0 #a193cc, var(--shadow-soft);
+            color: rgba(255, 255, 255, 0.85);
+            animation: tile-float 2.6s ease-in-out infinite alternate;
+        }
+
+        @keyframes tile-float {
+            from { translate: 0 -3px; rotate: -2deg; }
+            to { translate: 0 5px; rotate: 2deg; }
+        }
+
+        .tiles-hint {
+            font-size: 0.82rem;
+            color: var(--faint);
+            font-style: italic;
+            margin-top: 0.6rem;
+        }
+
+        /* ---- rules walk-through ---- */
+
+        .round {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+            margin: 0.9rem 0;
+        }
+
+        .round .word {
+            font-family: ui-monospace, "SF Mono", Menlo, monospace;
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 0.22em;
+            background: var(--surface-strong);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 0.45rem 0.8rem;
+            color: var(--ink);
+        }
+
+        .round .word .new {
+            color: var(--gh);
+        }
+
+        .round .who {
+            font-size: 0.82rem;
+            color: var(--faint);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .tile,
+            .tile.ghosted {
+                animation: none;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div id="site-nav"></div>
 
     <main class="page">
-        <section>
-            <div class="doc-content reveal">
-                <p class="sub-header">Game</p>
-                <h1>Ghost / Superghost</h1>
-                <p>A multiplayer word game where players add letters without completing a valid word too early.</p>
+        <section class="hero gh-hero">
+            <p class="sub-header">Game · Open Source</p>
+            <h1>Spell carefully. Don't get <em>ghosted</em>.</h1>
+            <p class="lead">Ghost (a.k.a. Superghost) is a multiplayer word game: players take turns adding letters without completing a valid word too early. Lose a round, gain a letter of G-H-O-S-T.</p>
+
+            <div>
+                <div class="tiles" id="tiles" aria-label="The letters G H O S T">
+                    <span class="tile" style="--i:0">G</span>
+                    <span class="tile" style="--i:1">H</span>
+                    <span class="tile" style="--i:2">O</span>
+                    <span class="tile" style="--i:3">S</span>
+                    <span class="tile" style="--i:4">T</span>
+                </div>
+                <p class="tiles-hint">Click the tiles — five losses and you are a ghost.</p>
             </div>
         </section>
 
         <section>
-            <div class="doc-content reveal" style="max-width: 760px;">
-                <h2>How it works</h2>
-                <p>The idea comes from a classroom game: one letter is added each turn, and the goal is to avoid completing a full word yourself.</p>
-                <p>In this version, players can prepend or append letters, which keeps rounds fast and a bit unpredictable.</p>
+            <div class="doc-content">
+                <h2>How a round goes</h2>
+                <p>The idea comes from a classroom game: one letter is added each turn, and the goal is to avoid completing a full word yourself. In this version players can <strong>prepend or append</strong>, which keeps rounds fast and a bit unpredictable.</p>
+                <div class="round"><span class="who">You:</span><span class="word">PLA<span class="new">N</span></span><span class="who">— hmm, "plan" is a word… but wait:</span></div>
+                <div class="round"><span class="who">Friend:</span><span class="word"><span class="new">A</span>PLAN</span><span class="who">— heading toward "airplane", clever.</span></div>
+                <div class="round"><span class="who">You:</span><span class="word">APLAN<span class="new">E</span></span><span class="who">— oops. That spells trouble (and a word).</span></div>
                 <p>Matches are multiplayer and built for short sessions with friends.</p>
             </div>
         </section>
 
         <section>
-            <div class="doc-content reveal" style="max-width: 760px;">
+            <div class="doc-content">
                 <h2>Project details</h2>
-                <p>Ghost (also called Superghost in some places on this site) is open source.</p>
-                <p>The backend is written in Swift using Vapor.</p>
-                <p>This project started as a small side game and is currently not actively maintained.</p>
+                <p>Ghost is open source — the backend is written in Swift using Vapor. The project started as a small side game and is currently not actively maintained, but everything still works and the code is public.</p>
                 <div class="cta-buttons">
                     <a href="https://github.com/hannesmnagel/superghost" class="nav-link">Source code</a>
                     <a href="/ghost/privacy" class="nav-link">Privacy</a>
@@ -43,5 +176,27 @@
     </main>
 
     <script src="/js/components.js"></script>
+    <script>
+        (function () {
+            var tiles = document.querySelectorAll('#tiles .tile');
+            if (!tiles.length) { return; }
+            var ghosted = 0;
+            tiles.forEach(function (tile) {
+                tile.addEventListener('click', function (e) {
+                    if (tile.classList.contains('ghosted')) {
+                        tile.classList.remove('ghosted');
+                        ghosted--;
+                        return;
+                    }
+                    tile.classList.add('ghosted');
+                    ghosted++;
+                    if (ghosted === tiles.length && window.hnConfetti) {
+                        window.hnConfetti(e.clientX, e.clientY, 80);
+                    }
+                });
+            });
+        })();
+    </script>
 </body>
+
 </html>

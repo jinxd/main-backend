@@ -1,4 +1,12 @@
 (function () {
+    // mark JS availability early so reveal styles only apply when they can complete
+    document.documentElement.classList.add('js');
+
+    var reducedMotion = window.matchMedia &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ---------------- nav + footer ---------------- */
+
     function currentPath() {
         var p = window.location.pathname || '/';
         return p.endsWith('/') && p.length > 1 ? p.slice(0, -1) : p;
@@ -13,6 +21,8 @@
             path.startsWith('/containeye') ||
             path.startsWith('/ghost') ||
             path.startsWith('/recipes') ||
+            path.startsWith('/i-told-you-so') ||
+            path.startsWith('/podcatcher') ||
             path === '/superghost' ||
             path === '/joinGameInSuperghostApp' ||
             path === '/openapp'
@@ -54,12 +64,374 @@
             makeLink('/contact', 'Contact', active === 'contact')
         ];
 
-        mount.innerHTML = '<nav class="nav-container">' + links.join('') + '</nav>';
+        mount.innerHTML = '<nav class="nav-container" aria-label="Main">' +
+            '<a href="' + homeHref + '" class="nav-brand" aria-label="hannesnagel home">hn.</a>' +
+            links.join('') +
+            '</nav>';
+
+        var brand = mount.querySelector('.nav-brand');
+        if (brand) {
+            brand.addEventListener('click', function (e) {
+                if (reducedMotion) {
+                    return;
+                }
+                brand.classList.remove('spinny');
+                void brand.offsetWidth;
+                brand.classList.add('spinny');
+                confettiBurst(e.clientX || 40, e.clientY || 30, 26);
+            });
+        }
+    }
+
+    function renderFooter() {
+        if (document.querySelector('.site-footer')) {
+            return;
+        }
+        var footer = document.createElement('footer');
+        footer.className = 'site-footer';
+        footer.innerHTML =
+            '<span class="footer-name">Hannes Nagel</span>' +
+            '<nav aria-label="Footer">' +
+            '<a href="/apps">Apps</a>' +
+            '<a href="/thoughts/">Thoughts</a>' +
+            '<a href="/about">About</a>' +
+            '<a href="/contact">Contact</a>' +
+            '<a href="https://mastodon.social/@hannesmnagel" rel="me">Mastodon</a>' +
+            '<a href="https://github.com/hannesmnagel">GitHub</a>' +
+            '</nav>' +
+            '<span>&copy; ' + new Date().getFullYear() + ' &middot; Made in Germany, by hand</span>';
+        document.body.appendChild(footer);
+    }
+
+    /* ---------------- reveal on scroll ---------------- */
+
+    function setupReveals() {
+        var main = document.querySelector('main');
+        if (main) {
+            var sections = main.querySelectorAll(':scope > section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.add('reveal');
+            }
+        }
+
+        var targets = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window)) {
+            for (var j = 0; j < targets.length; j++) {
+                targets[j].classList.add('visible');
+            }
+            return;
+        }
+
+        var pending = 0;
+        var observer = new IntersectionObserver(function (entries) {
+            for (var k = 0; k < entries.length; k++) {
+                if (entries[k].isIntersecting) {
+                    var el = entries[k].target;
+                    el.style.setProperty('--reveal-delay', Math.min(pending * 70, 280) + 'ms');
+                    pending++;
+                    el.classList.add('visible');
+                    observer.unobserve(el);
+                }
+            }
+            setTimeout(function () { pending = 0; }, 120);
+        }, { threshold: 0.08, rootMargin: '0px 0px -4% 0px' });
+
+        for (var m = 0; m < targets.length; m++) {
+            observer.observe(targets[m]);
+        }
+    }
+
+    /* ---------------- hero word pop-in ---------------- */
+
+    function splitWords() {
+        if (reducedMotion) {
+            return;
+        }
+        var h1 = document.querySelector('.hero h1');
+        if (!h1 || h1.classList.contains('splitty')) {
+            return;
+        }
+
+        var index = 0;
+
+        function wrapNode(node, container) {
+            if (node.nodeType === Node.TEXT_NODE) {
+                var parts = node.textContent.split(/(\s+)/);
+                for (var i = 0; i < parts.length; i++) {
+                    if (parts[i] === '') {
+                        continue;
+                    }
+                    if (/^\s+$/.test(parts[i])) {
+                        container.appendChild(document.createTextNode(' '));
+                    } else {
+                        var w = document.createElement('span');
+                        w.className = 'w';
+                        w.style.setProperty('--i', index++);
+                        w.textContent = parts[i];
+                        container.appendChild(w);
+                    }
+                }
+            } else if (node.nodeType === Node.ELEMENT_NODE) {
+                var holder = document.createElement('span');
+                holder.className = 'w';
+                holder.style.setProperty('--i', index++);
+                holder.appendChild(node.cloneNode(true));
+                container.appendChild(holder);
+            }
+        }
+
+        var frag = document.createDocumentFragment();
+        var nodes = Array.prototype.slice.call(h1.childNodes);
+        for (var n = 0; n < nodes.length; n++) {
+            wrapNode(nodes[n], frag);
+        }
+        h1.textContent = '';
+        h1.appendChild(frag);
+        h1.classList.add('splitty');
+
+        // let the squiggle draw itself after the words land
+        setTimeout(function () {
+            h1.closest('section') && h1.closest('section').classList.add('squiggle-go');
+        }, 400);
+    }
+
+    /* ---------------- tilt cards ---------------- */
+
+    function setupTilt() {
+        if (reducedMotion || !window.matchMedia('(hover: hover)').matches) {
+            return;
+        }
+        var cards = document.querySelectorAll('.card');
+        for (var i = 0; i < cards.length; i++) {
+            (function (card) {
+                var glare = document.createElement('span');
+                glare.className = 'glare';
+                card.appendChild(glare);
+
+                card.addEventListener('pointermove', function (e) {
+                    var r = card.getBoundingClientRect();
+                    var px = (e.clientX - r.left) / r.width;
+                    var py = (e.clientY - r.top) / r.height;
+                    var rx = (0.5 - py) * 7;
+                    var ry = (px - 0.5) * 7;
+                    card.classList.add('tilting');
+                    card.style.transform =
+                        'perspective(900px) translateY(-4px) rotateX(' + rx.toFixed(2) +
+                        'deg) rotateY(' + ry.toFixed(2) + 'deg)';
+                    card.style.setProperty('--gx', (px * 100).toFixed(1) + '%');
+                    card.style.setProperty('--gy', (py * 100).toFixed(1) + '%');
+                });
+
+                card.addEventListener('pointerleave', function () {
+                    card.classList.remove('tilting');
+                    card.style.transform = '';
+                });
+            })(cards[i]);
+        }
+    }
+
+    /* ---------------- confetti ---------------- */
+
+    var confettiColors = ['#0e6b54', '#bf5b34', '#e0b14c', '#7fc0ab', '#1d2421', '#fffdf8'];
+
+    function confettiBurst(x, y, count) {
+        if (reducedMotion) {
+            return;
+        }
+        var canvas = document.createElement('canvas');
+        canvas.style.cssText =
+            'position:fixed;inset:0;pointer-events:none;z-index:9999;';
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        document.body.appendChild(canvas);
+        var ctx = canvas.getContext('2d');
+
+        var parts = [];
+        for (var i = 0; i < (count || 60); i++) {
+            var angle = Math.random() * Math.PI * 2;
+            var speed = 4 + Math.random() * 7;
+            parts.push({
+                x: x,
+                y: y,
+                vx: Math.cos(angle) * speed,
+                vy: Math.sin(angle) * speed - 4,
+                rot: Math.random() * Math.PI,
+                vr: (Math.random() - 0.5) * 0.3,
+                size: 5 + Math.random() * 6,
+                color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
+                shape: Math.random() < 0.3 ? 'circle' : 'rect',
+                life: 1
+            });
+        }
+
+        var start = performance.now();
+        function frame(now) {
+            var t = (now - start) / 1000;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            var alive = false;
+            for (var i = 0; i < parts.length; i++) {
+                var p = parts[i];
+                p.vy += 0.22;
+                p.vx *= 0.99;
+                p.x += p.vx;
+                p.y += p.vy;
+                p.rot += p.vr;
+                p.life = Math.max(0, 1 - t / 1.6);
+                if (p.life > 0 && p.y < canvas.height + 20) {
+                    alive = true;
+                    ctx.save();
+                    ctx.globalAlpha = p.life;
+                    ctx.translate(p.x, p.y);
+                    ctx.rotate(p.rot);
+                    ctx.fillStyle = p.color;
+                    if (p.shape === 'circle') {
+                        ctx.beginPath();
+                        ctx.arc(0, 0, p.size / 2, 0, Math.PI * 2);
+                        ctx.fill();
+                    } else {
+                        ctx.fillRect(-p.size / 2, -p.size / 4, p.size, p.size / 2);
+                    }
+                    ctx.restore();
+                }
+            }
+            if (alive) {
+                requestAnimationFrame(frame);
+            } else {
+                canvas.remove();
+            }
+        }
+        requestAnimationFrame(frame);
+    }
+
+    // let page-specific scripts throw confetti too
+    window.hnConfetti = confettiBurst;
+
+    function setupConfettiTriggers() {
+        var pill = document.querySelector('.status-pill');
+        if (pill) {
+            pill.addEventListener('click', function (e) {
+                confettiBurst(e.clientX, e.clientY, 70);
+            });
+        }
+    }
+
+    /* ---------------- doodle parallax ---------------- */
+
+    function setupParallax() {
+        if (reducedMotion || !window.matchMedia('(hover: hover)').matches) {
+            return;
+        }
+        var doodles = document.querySelectorAll('.doodle');
+        if (!doodles.length) {
+            return;
+        }
+        var raf = null;
+        window.addEventListener('pointermove', function (e) {
+            if (raf) {
+                return;
+            }
+            raf = requestAnimationFrame(function () {
+                var cx = e.clientX / window.innerWidth - 0.5;
+                var cy = e.clientY / window.innerHeight - 0.5;
+                for (var i = 0; i < doodles.length; i++) {
+                    var depth = parseFloat(doodles[i].getAttribute('data-depth') || '12');
+                    doodles[i].style.transform =
+                        'translate(' + (-cx * depth).toFixed(1) + 'px,' + (-cy * depth).toFixed(1) + 'px)';
+                }
+                raf = null;
+            });
+        }, { passive: true });
+    }
+
+    /* ---------------- ghost buddy ---------------- */
+
+    function setupGhost() {
+        var home = document.querySelector('.footer-cta');
+        if (!home) {
+            return;
+        }
+        var btn = document.createElement('button');
+        btn.className = 'ghost-buddy';
+        btn.type = 'button';
+        btn.setAttribute('aria-label', 'A friendly ghost. Click it!');
+        btn.innerHTML =
+            '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">' +
+            '<path d="M32 5C18.7 5 10 16 10 29.5V52c0 3.1 3.8 4.3 5.9 2.2l3.6-3.6 4.6 4.6c1.6 1.6 4.2 1.6 5.8 0l2.1-2.1 2.1 2.1c1.6 1.6 4.2 1.6 5.8 0l4.6-4.6 3.6 3.6c2.1 2.1 5.9 0.9 5.9-2.2V29.5C54 16 45.3 5 32 5z" fill="#fffdf8"/>' +
+            '<g class="eye"><circle cx="24.5" cy="28" r="4.6" fill="#fff"/><circle class="pupil" cx="24.5" cy="28" r="2.6" fill="#1d2421"/></g>' +
+            '<g class="eye"><circle cx="39.5" cy="28" r="4.6" fill="#fff"/><circle class="pupil" cx="39.5" cy="28" r="2.6" fill="#1d2421"/></g>' +
+            '<circle cx="20" cy="35" r="2.6" fill="#e8a8a0" opacity="0.7"/>' +
+            '<circle cx="44" cy="35" r="2.6" fill="#e8a8a0" opacity="0.7"/>' +
+            '<path d="M28.5 38.5c2 2.2 5 2.2 7 0" stroke="#1d2421" stroke-width="2" stroke-linecap="round" fill="none"/>' +
+            '</svg>';
+        home.appendChild(btn);
+
+        btn.addEventListener('click', function (e) {
+            btn.classList.remove('boo');
+            void btn.offsetWidth;
+            btn.classList.add('boo');
+            var r = btn.getBoundingClientRect();
+            confettiBurst(r.left + r.width / 2, r.top + r.height / 2, 50);
+        });
+
+        if (reducedMotion || !window.matchMedia('(hover: hover)').matches) {
+            return;
+        }
+        // pupils follow the cursor
+        var pupils = btn.querySelectorAll('.pupil');
+        var raf = null;
+        window.addEventListener('pointermove', function (e) {
+            if (raf) {
+                return;
+            }
+            raf = requestAnimationFrame(function () {
+                var r = btn.getBoundingClientRect();
+                var cx = r.left + r.width / 2;
+                var cy = r.top + r.height / 2;
+                var dx = e.clientX - cx;
+                var dy = e.clientY - cy;
+                var d = Math.sqrt(dx * dx + dy * dy) || 1;
+                var m = Math.min(d / 40, 1) * 2.4;
+                var tx = (dx / d) * m;
+                var ty = (dy / d) * m;
+                for (var i = 0; i < pupils.length; i++) {
+                    pupils[i].style.transform = 'translate(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px)';
+                }
+                raf = null;
+            });
+        }, { passive: true });
+    }
+
+    /* ---------------- tab title easter egg ---------------- */
+
+    function setupTabWink() {
+        var original = null;
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) {
+                original = document.title;
+                document.title = 'pssst… come back';
+            } else if (original) {
+                document.title = original;
+            }
+        });
+    }
+
+    /* ---------------- init ---------------- */
+
+    function init() {
+        renderNav();
+        renderFooter();
+        setupReveals();
+        splitWords();
+        setupTilt();
+        setupConfettiTriggers();
+        setupParallax();
+        setupGhost();
+        setupTabWink();
     }
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', renderNav);
+        document.addEventListener('DOMContentLoaded', init);
     } else {
-        renderNav();
+        init();
     }
 })();

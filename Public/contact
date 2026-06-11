@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact - hannesnagel</title>
+    <title>Contact — Hannes Nagel</title>
+    <meta name="description" content="Get in touch with Hannes Nagel — questions about an app, bug reports, or just to say hello.">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
@@ -12,27 +13,16 @@
     <div id="site-nav"></div>
 
     <main class="page">
-        <section>
-            <div class="doc-content reveal" style="text-align: center;">
-                <p class="sub-header">Contact</p>
-                <h1>Get in touch</h1>
-                <p>If you want to ask something about an app, report a bug, or just say hello, send a mail.</p>
-                <div class="cta-buttons" style="justify-content: center; margin-top: 1.5rem;">
-                    <a href="mailto:contact@hannesnagel.com" class="nav-link" style="font-size: 1.1rem;">contact@hannesnagel.com</a>
+        <section class="hero">
+            <div class="doc-content" style="text-align: center; margin: 0 auto;">
+                <p class="sub-header" style="justify-content: center;">Contact</p>
+                <h1 style="margin: 0 auto;">Get in <em>touch</em></h1>
+                <p style="margin: 1rem auto 0; text-align: center;">If you want to ask something about an app, report a bug, or just say hello, send a mail. I read everything myself.</p>
+                <div class="cta-buttons" style="justify-content: center; margin-top: 1.6rem;">
+                    <a href="mailto:contact@hannesnagel.com" class="nav-link" style="font-size: 1.05rem;">contact@hannesnagel.com</a>
                     <a href="https://mastodon.social/@hannesmnagel" class="nav-link">Mastodon</a>
                 </div>
             </div>
-        </section>
-
-        <section>
-            <div class="doc-content reveal" style="text-align: center;">
-                <p>Or go back to the main pages:</p>
-                <div class="cta-buttons" style="justify-content: center;">
-                    <a href="/home" class="nav-link">Home</a>
-                    <a href="/apps" class="nav-link">Apps</a>
-                </div>
-            </div>
-            <footer style="margin-top: 2rem; color: var(--muted); font-size: 0.85rem;">hannesnagel &copy; 2026</footer>
         </section>
     </main>
 

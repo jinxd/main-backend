@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "static-public",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-c", "import http.server, os\nclass H(http.server.SimpleHTTPRequestHandler):\n    def guess_type(self, path):\n        t = super().guess_type(path)\n        if t in ('application/octet-stream', None) and not os.path.splitext(path)[1]:\n            return 'text/html'\n        return t\n    def send_head(self):\n        p = self.translate_path(self.path)\n        if self.path.endswith('/') and os.path.isdir(p):\n            self.path += 'index'\n        return super().send_head()\nos.chdir('Public')\nhttp.server.HTTPServer(('127.0.0.1', 8742), H).serve_forever()"],
+      "port": 8742
+    }
+  ]
+}
