@@ -33,11 +33,24 @@
                 <div class="doc-content">
                     <div class="content-box">
                         <h2>Need help?</h2>
-                        <p>If something is broken or unclear, send a message with steps and screenshots if possible.</p>
+                        <p>If something is broken or unclear, send a message with steps and screenshots if possible. The app's feedback sheet (category picker + "Submit Feedback") is the quickest way; you can also reach out directly:</p>
                         <div class="cta-buttons">
                             <a href="mailto:contact@hannesnagel.com" class="nav-link">contact@hannesnagel.com</a>
                             <a href="https://apps.apple.com/us/app/containeye-terminal-docker/id6741063706" class="nav-link">App Store page</a>
+                            <a href="https://github.com/hannesmnagel/ContainEye" class="nav-link">GitHub repo &amp; issues</a>
                         </div>
+
+                        <h3>Useful links</h3>
+                        <ul>
+                            <li><a href="/containeye/index" class="accent-link">Overview</a> and <a href="/containeye/features" class="accent-link">Features</a></li>
+                            <li><a href="/containeye/ssh-terminal" class="accent-link">SSH Terminal</a></li>
+                            <li><a href="/containeye/servers-management" class="accent-link">Servers Management</a></li>
+                            <li><a href="/containeye/automated-tests" class="accent-link">Automated Tests</a></li>
+                            <li><a href="/containeye/faq" class="accent-link">FAQ</a></li>
+                        </ul>
+
+                        <h3>Support the app</h3>
+                        <p>ContainEye is free with no paywalled features. If you find it useful, consider the optional donation subscriptions ("Become a Supporter") or a rating on the App Store — it goes a long way.</p>
                     </div>
                 </div>
             </div>

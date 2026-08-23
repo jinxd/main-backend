@@ -91,25 +91,28 @@
 
                 <div class="doc-content">
                     <div class="doc-item">
-                        <h2>Step-by-Step Guide</h2>
-                        <ol class="steps">
-                            <li>Describe what you want to test in natural language (e.g., "Check if nginx is running").</li>
-                            <li>The AI will interpret your request and suggest a command.</li>
-                            <li>Review and approve the command execution.</li>
-                            <li>The AI analyzes the output and suggests a success pattern.</li>
-                            <li>Save the test to your active monitoring list.</li>
-                        </ol>
+                        <h2>Create a Test with the AI</h2>
+                        <p>There is no blank "new test" form — tests are created with the help of the Agentic assistant. Tap <strong>Create Test</strong> in the Code tab's <strong>+</strong> menu (or <strong>Create Your First Test</strong> on the empty state) and describe what you want to check in plain language, e.g. <em>"Check if nginx is running."</em></p>
+                        <p>ContainEye switches to the <strong>Agentic</strong> tab with a pre-filled draft instructing the assistant to create a server test for you.</p>
 
                         <div class="screenshot-box">
                             <img src="/images/containeye-framed/describe-what-to-test.png" alt="Test description screen">
                         </div>
 
-                        <h3>Interactive AI Flow</h3>
-                        <p>The AI might ask clarifying questions to ensure the test is accurate. Answer these questions to refine your monitoring logic.</p>
-                        
+                        <h3>Step-by-Step</h3>
+                        <ol class="steps">
+                            <li>The assistant may list your servers to confirm labels, and may probe the server first by running a command — if it does, you get an <strong>"Allow command execution?"</strong> dialog (<strong>Allow Once</strong>, <strong>Always Allow "…" Commands</strong>, <strong>Always Allow All Commands</strong>, <strong>Deny</strong>, <strong>Cancel</strong>).</li>
+                            <li>It analyzes the output and proposes the test's command and expected output.</li>
+                            <li>It creates the test with <code>create_test</code> and <strong>runs it immediately</strong> so you see the result right away.</li>
+                            <li>The test appears in <strong>Active Tests</strong> on the Code tab.</li>
+                        </ol>
+
                         <div class="screenshot-box">
                             <img src="/images/containeye-framed/ai-has-question.png" alt="AI clarification">
                         </div>
+
+                        <h3>Interactive AI Flow</h3>
+                        <p>The assistant can ask clarifying questions to make sure the test is accurate — answer them in the chat to refine the command or expected output. You can also fine-tune a test afterwards by editing its name, command, expected output, notes, or target server.</p>
                     </div>
                 </div>
             </div>

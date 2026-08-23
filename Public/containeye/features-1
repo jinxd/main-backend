@@ -90,15 +90,18 @@
                 <div class="doc-content">
                     <div class="doc-item">
                         <h2>Infrastructure Mastery</h2>
-                        <p>ContainEye offers a unified interface for all your server needs. From a robust SSH terminal to detailed Docker management.</p>
-                        
+                        <p>ContainEye offers a unified interface for all your server needs — from a robust SSH terminal to live server monitoring and Docker management, all on your iPhone or iPad.</p>
+
                         <div class="screenshot-box">
                             <img src="/images/containeye-framed/servers-overview.png" alt="Servers overview">
                         </div>
 
+                        <h3>Server Monitoring at a Glance</h3>
+                        <p>The Servers tab shows every server as a card with its online status, cores/memory/disk/uptime, and live CPU, RAM, and disk rings — plus network up/down on Linux hosts. Open a server for processes (searchable and sortable, with kill controls), containers (start/stop with CPU and memory usage), and discovered Docker Compose stacks.</p>
+
                         <h3>Interactive Terminal</h3>
-                        <p>A full-featured terminal with smart history and volume-button arrow keys ensures you're productive even on the go.</p>
-                        
+                        <p>A full-featured terminal with a multi-tab workspace (up to 24 tabs), per-tab tmux sessions, four themes plus custom themes, and command suggestions drawn from your remote shell history, common commands, and snippets. Volume buttons and shake can be mapped to arrow keys and other shortcuts so you're productive even on the go — and you can select any output and ask the AI to explain it.</p>
+
                         <div class="screenshot-box">
                             <img src="/images/containeye-framed/in-terminal-with-suggestions.png" alt="Terminal suggestions">
                         </div>

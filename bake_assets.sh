@@ -29,6 +29,8 @@ process_file() {
     # Inject cache busting
     # strict replacement of /css/main.css with /css/main.css?v=TIMESTAMP
     sed -i "s|/css/main.css|/css/main.css?v=$TIMESTAMP|g" "$file"
+    # strict replacement of /js/components.js with /js/components.js?v=TIMESTAMP
+    sed -i "s|/js/components.js|/js/components.js?v=$TIMESTAMP|g" "$file"
 
     # Rename extensionless files to .html if they are likely HTML
     # We assume file is HTML if it doesn't have an extension

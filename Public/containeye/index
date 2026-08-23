@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContainEye — Server &amp; Docker checks from your phone</title>
-    <meta name="description" content="ContainEye is an iOS app for monitoring servers and Docker containers: SSH terminal, container actions, automated checks, iCloud sync, and Shortcuts support.">
+    <meta name="description" content="ContainEye is an iPhone &amp; iPad app for working with your servers: SSH terminal, SFTP files, live monitoring, Docker &amp; Compose controls, automated tests, and an AI assistant.">
     <link rel="stylesheet" href="/css/main.css">
     <style>
         :root {
@@ -150,8 +150,8 @@
             <div class="checks" aria-hidden="true">
                 <span class="check"><i></i>web-01 · healthy</span>
                 <span class="check"><i></i>db-01 · healthy</span>
+                <span class="check"><i></i>4 tests passing</span>
                 <span class="check"><i></i>12 containers running</span>
-                <span class="check"><i></i>backups · on schedule</span>
             </div>
         </section>
 
@@ -169,13 +169,15 @@
 
                 <div class="doc-content">
                     <h2>What you can do</h2>
-                    <p>ContainEye helps with day-to-day server tasks: connect quickly, run commands, check containers, and keep recurring checks visible.</p>
+                    <p>ContainEye helps with day-to-day server tasks: connect quickly, run commands, browse files, watch your servers, and keep repeatable checks visible. It's organised into five tabs: <strong>SFTP</strong>, <strong>Terminal</strong>, <strong>Servers</strong>, <strong>Code</strong> (tests and snippets), and <strong>Agentic</strong> (an AI assistant).</p>
                     <ul>
-                        <li>Native SSH terminal with command suggestions.</li>
-                        <li>Docker container actions: start, stop, restart, logs.</li>
-                        <li>Automated checks with saved expectations.</li>
-                        <li>iCloud sync and secure credential storage.</li>
-                        <li>Apple Shortcuts integration.</li>
+                        <li>Full SSH terminal with a multi-tab workspace, themes, and command suggestions.</li>
+                        <li>SFTP file browser with upload, download, rename, and a built-in text editor.</li>
+                        <li>Live server monitoring: CPU, memory, disk, network, and processes.</li>
+                        <li>Docker and Docker Compose controls: start, stop, restart, pull images.</li>
+                        <li>Automated tests — from 13 built-in suggestions or drafted by the AI.</li>
+                        <li>Agentic AI assistant that operates your servers through approved commands.</li>
+                        <li>Shortcuts actions and a home-screen widget for your tests.</li>
                     </ul>
                     <div class="cta-buttons">
                         <a href="https://apps.apple.com/us/app/containeye-terminal-docker/id6741063706" class="nav-link">Get it on App Store</a>
@@ -202,7 +204,7 @@
                 { t: '\napi: Up 6 days', cls: 'dim', pause: 300 },
                 { t: '\npostgres: Up 6 days (healthy)', cls: 'dim' },
                 { t: '\ncaddy: Up 6 days', cls: 'dim' },
-                { t: '\n✓ all 12 checks passing', cls: 'ok', pause: 400 },
+                { t: '\n✓ all tests passing', cls: 'ok', pause: 400 },
                 { t: '\n$ ', cls: 'prompt', instant: true }
             ];
 

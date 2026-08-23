@@ -31,14 +31,41 @@
 
                 <div class="doc-content">
                     <div class="content-box">
-                        <h2>Continuous Monitoring</h2>
-                        <p>Create tests that run automatically to ensure your services are healthy. ContainEye supports custom commands and regex-based output validation.</p>
-                        
-                        <h3>AI Suggestions</h3>
-                        <p>Not sure what to test? Describe your goal in natural language and let the integrated AI suggest the perfect command and validation pattern.</p>
-                        
-                        <h3>Home Screen Widgets</h3>
-                        <p>Keep an eye on your infrastructure with beautiful widgets that show the current status of your most important tests.</p>
+                        <h2>What a Test Does</h2>
+                        <p>A test runs a <strong>command over SSH</strong> on one of your servers — or checks a <strong>URL</strong> if you pick "Local (URLs only)" — and compares the output against an <strong>expected output</strong>. The expected output is treated as a regular expression when it compiles, otherwise as an exact string match. If the output matches, the test <strong>Passes</strong>; otherwise it <strong>Fails</strong>.</p>
+
+                        <h3>Creating Tests</h3>
+                        <ul>
+                            <li><strong>With the AI:</strong> use <strong>Create Test</strong> in the Code tab's <strong>+</strong> menu (or <strong>Create Your First Test</strong>), describe what to check in plain language, and the Agentic assistant drafts, verifies, and creates the test in one chat session.</li>
+                            <li><strong>From suggestions:</strong> add one of 13 built-in templates (website status, disk space, CPU usage, Nginx, SSL expiry, MySQL, load average, pending updates, backups, failed logins, network latency, and more) with a single tap.</li>
+                            <li><strong>By editing:</strong> duplicate and adapt an existing test — change the name, command, expected output, notes, or target server.</li>
+                        </ul>
+
+                        <h3>Running Tests</h3>
+                        <ul>
+                            <li><strong>Manually:</strong> <strong>Run All</strong>, the per-test <strong>Run Test</strong>, or <strong>Run Test</strong> on the detail screen. Manual runs give haptic feedback — no notifications.</li>
+                            <li><strong>Shortcuts:</strong> the <strong>Test Servers</strong> and <strong>Run a single Test</strong> actions run tests in the background without opening the app.</li>
+                            <li><strong>Home-Screen Widget:</strong> the systemSmall <strong>Test Widget</strong> shows your most important test and re-runs it with one tap.</li>
+                            <li><strong>In the background:</strong> when iOS allows, ContainEye attempts background checks (roughly every few minutes via app refresh and silent push). Background runs are opportunistic, not guaranteed.</li>
+                        </ul>
+
+                        <h3>Results</h3>
+                        <p>Each test shows a status — <strong>Passed</strong> (green checkmark), <strong>Failed</strong> (red xmark), <strong>Running</strong>, or <strong>Not Run</strong> — plus the last run time and the <strong>Last Output</strong> (copyable). The detail screen also shows the configuration and a <strong>Delete Test</strong> action. The Code tab gives an overall <strong>Test Status</strong> with Passing / Failing / Running counts.</p>
+
+                        <h3>Good to Know</h3>
+                        <ul>
+                            <li>Tests have <strong>no per-test schedule or interval setting</strong> — background checks happen when iOS permits, and Shortcuts automations let you trigger runs by time, location, or other triggers.</li>
+                            <li>Only the <strong>last run</strong> is kept — there is no history of previous results or outputs.</li>
+                            <li>Tests are stored on your device only; they are never uploaded to a server-side scheduler.</li>
+                            <li>Disabled tests (<strong>Do not execute</strong>) never run and stay in the Suggested Tests pool.</li>
+                        </ul>
+
+                        <h3>Guides</h3>
+                        <ul>
+                            <li><a href="/containeye/adding-new-test" class="accent-link">Adding a New Test</a> — create a test with the AI assistant.</li>
+                            <li><a href="/containeye/adding-test-suggestion" class="accent-link">Adding a Test from Suggestion</a> — start from one of 13 built-in templates.</li>
+                            <li><a href="/containeye/running-tests" class="accent-link">Running Tests</a> — manual runs, Shortcuts, the widget, and background checks.</li>
+                        </ul>
                     </div>
                 </div>
             </div>

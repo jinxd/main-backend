@@ -31,17 +31,39 @@
 
                 <div class="doc-content">
                     <div class="content-box">
-                        <h3>SSH Terminal</h3>
-                        <p>Connect securely with a full-screen terminal, keyboard shortcuts, and smart command history suggestions.</p>
+                        <h2>Everything in ContainEye</h2>
+                        <p>ContainEye is a remote-server operations app for <strong>iPhone and iPad</strong> (it also runs on Apple silicon Macs via "Designed for iPad"). The app is built around five tabs: <strong>SFTP</strong>, <strong>Terminal</strong>, <strong>Servers</strong>, <strong>Code</strong> (tests and snippets), and <strong>Agentic</strong> (an AI assistant).</p>
 
-                        <h3>Servers Management</h3>
-                        <p>Live stats for CPU, memory, and disk usage. Manage Docker containers with start/stop controls and real-time logs.</p>
+                        <h3>SSH Terminal</h3>
+                        <p>A full interactive terminal (xterm-256color) with a Safari-style multi-tab workspace (up to 24 tabs), per-tab tmux sessions, four built-in themes plus custom themes, and command suggestions drawn from your remote shell history. Select any output and ask the AI to explain it, then continue in the Agentic tab. Volume-button and shake shortcuts let you move around without the keyboard.</p>
+
+                        <h3>SFTP Files</h3>
+                        <p>Browse, upload, download, rename, and delete files over SFTP using the same credentials as SSH, with a built-in text editor that saves changes straight back to the server.</p>
+
+                        <h3>Server Monitoring</h3>
+                        <p>Live CPU, memory, disk, and (on Linux hosts) network metrics per server, plus a searchable, sortable process list with kill controls.</p>
+
+                        <h3>Docker &amp; Docker Compose</h3>
+                        <p>See all containers with their CPU and memory usage and start or stop them. Discovered docker-compose stacks can be started, stopped, restarted, or pulled; compose file contents are viewable read-only.</p>
 
                         <h3>Automated Tests</h3>
-                        <p>Run health checks and automated tests. Use AI to generate validations and get instant alerts via home screen widgets.</p>
+                        <p>Run a command over SSH — or check a URL — and validate the output against an expected pattern (regex or exact). Create tests with the AI, or add one of 13 built-in suggestions. Run them manually, from the home-screen widget, or via Shortcuts; ContainEye also attempts background checks when iOS allows.</p>
 
-                        <h3>SFTP & Shortcuts</h3>
-                        <p>Manage files via SFTP and automate your infrastructure with deep Apple Shortcuts support.</p>
+                        <h3>Agentic AI Assistant</h3>
+                        <p>A conversational assistant that lists your servers, runs approved commands, reads and writes files, and creates or updates tests and snippets for you. Every server command goes through an approval dialog unless you allow it permanently.</p>
+
+                        <h3>Shortcuts &amp; Widgets</h3>
+                        <p>Two Shortcuts actions — <strong>Test Servers</strong> and <strong>Run a single Test</strong> — run your checks without opening the app. A single systemSmall <strong>Test Widget</strong> shows your most important test and can re-run it in one tap.</p>
+
+                        <h3>Privacy by Design</h3>
+                        <p>Credentials live in the iOS Keychain and sync through iCloud Keychain only if you have it enabled. SSH and SFTP traffic goes directly from your device to your server.</p>
+
+                        <h3>In-Depth Walkthroughs</h3>
+                        <ul>
+                            <li><a href="/containeye/features-1" class="accent-link">Part 1</a> — servers &amp; terminal</li>
+                            <li><a href="/containeye/features-2" class="accent-link">Part 2</a> — automated tests</li>
+                            <li><a href="/containeye/features-3" class="accent-link">Part 3</a> — SFTP, Agentic &amp; automations</li>
+                        </ul>
                     </div>
                 </div>
             </div>
