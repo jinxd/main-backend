@@ -1,0 +1,326 @@
+/* ============================================================
+   ContainEye — retro documentation styles
+   A plain, simple, old-school look. No gradients, no rounded
+   corners, no glass, no motion. Just text, borders, and links.
+   ============================================================ */
+
+:root {
+    --retro-bg: #f0eada;
+    --retro-panel: #fbf7ec;
+    --retro-ink: #1a1a1a;
+    --retro-line: #4a4a3a;
+    --retro-link: #0000ee;
+    --retro-visited: #551a8b;
+    --retro-term: #101010;
+    --retro-term-ink: #33ff66;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--retro-bg);
+    color: var(--retro-ink);
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+* { box-sizing: border-box; }
+
+a {
+    color: var(--retro-link);
+    text-decoration: underline;
+}
+a:visited { color: var(--retro-visited); }
+a:hover, a:focus { color: #cc0000; }
+
+h1, h2, h3 {
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-weight: bold;
+    color: var(--retro-ink);
+    margin: 1.2em 0 0.5em;
+}
+h1 { font-size: 1.7em; border-bottom: 2px solid var(--retro-line); padding-bottom: 0.25em; }
+h2 { font-size: 1.35em; }
+h3 { font-size: 1.1em; }
+
+p { margin: 0.6em 0; }
+ul, ol { margin: 0.5em 0 0.8em; padding-left: 1.6em; }
+li { margin: 0.25em 0; }
+strong { color: var(--retro-ink); }
+
+/* ---- layout ---- */
+
+.page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2.5rem;
+    background: transparent;
+}
+
+/* ---- navigation (rendered by components.js) ---- */
+
+.nav-container {
+    display: block;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0.6rem 0.4rem;
+    border-bottom: 2px solid var(--retro-line);
+    background: transparent;
+    text-align: left;
+}
+
+.nav-brand {
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-style: normal;
+    font-weight: bold;
+    color: var(--retro-ink);
+    text-decoration: none;
+    padding-right: 0.7rem;
+    margin-right: 0.5rem;
+    border-right: 1px solid var(--retro-line);
+    white-space: nowrap;
+}
+
+.nav-link {
+    color: var(--retro-link);
+    text-decoration: underline;
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-size: 1em;
+    padding: 0 0.4rem;
+    background: none;
+    border-radius: 0;
+    white-space: nowrap;
+}
+.nav-link:hover { color: #cc0000; background: none; }
+.nav-link.active { color: var(--retro-ink); font-weight: bold; text-decoration: none; }
+
+/* ---- subnav (section menu) ---- */
+
+.subnav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 0.4rem;
+    padding: 0.6rem 0;
+    margin: 1rem 0 1.4rem;
+    border-top: 1px solid var(--retro-line);
+    border-bottom: 1px solid var(--retro-line);
+    background: transparent;
+    border-radius: 0;
+}
+
+.subnav-link {
+    color: var(--retro-link);
+    text-decoration: underline;
+    font-size: 1em;
+    padding: 0.15rem 0.45rem;
+    background: none;
+    border-radius: 0;
+    white-space: nowrap;
+}
+.subnav-link:hover { color: #cc0000; background: none; }
+.subnav-link.active {
+    color: var(--retro-ink);
+    font-weight: bold;
+    text-decoration: none;
+    background: #d8d0b8;
+}
+
+/* ---- doc content ---- */
+
+.doc-content {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.doc-content h2, .doc-content h3 { color: var(--retro-ink); }
+.doc-content h2 { border-bottom: 1px solid var(--retro-line); padding-bottom: 0.2em; }
+.doc-content p, .doc-content li { color: var(--retro-ink); line-height: 1.55; }
+
+.content-box {
+    border: 1px solid var(--retro-line);
+    background: var(--retro-panel);
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 1.4rem;
+    border-radius: 0;
+}
+
+.doc-item {
+    border: 1px solid var(--retro-line);
+    background: var(--retro-panel);
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 1.4rem;
+    border-radius: 0;
+}
+
+.steps { padding-left: 1.8em; }
+.steps li { margin-bottom: 0.4rem; }
+
+.screenshot-box {
+    text-align: center;
+    margin: 1.4rem 0;
+    border: 1px solid var(--retro-line);
+    background: #ffffff;
+    padding: 0.6rem;
+}
+.screenshot-box img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--retro-line);
+    background: #ffffff;
+    border-radius: 0;
+}
+
+/* ---- hero / index page ---- */
+
+.hero {
+    margin: 0.8rem 0 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid var(--retro-line);
+}
+
+.sub-header {
+    display: block;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #6a6a55;
+    margin-bottom: 0.2rem;
+}
+.sub-header::before { content: none; }
+
+.lead {
+    font-size: 1.05em;
+    font-style: italic;
+    color: var(--retro-ink);
+}
+
+/* terminal mock: plain monospace box, no chrome */
+.term {
+    width: 100%;
+    max-width: 720px;
+    margin: 1.2rem 0;
+    border: 2px solid var(--retro-line);
+    background: var(--retro-term);
+    color: var(--retro-term-ink);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.term-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.6rem;
+    background: #202020;
+    border-bottom: 1px solid #3a3a3a;
+}
+.term-bar i { width: 10px; height: 10px; background: #888; }
+.term-bar span { color: #9a9a9a; font-family: "Courier New", Courier, monospace; font-size: 0.8rem; }
+
+.term-body {
+    padding: 0.7rem 0.8rem;
+    min-height: 120px;
+    color: var(--retro-term-ink);
+    font-family: "Courier New", Courier, monospace;
+}
+.term-body .line { white-space: pre-wrap; word-break: break-word; }
+.term-body .prompt { color: var(--retro-term-ink); font-weight: bold; }
+.term-body .ok { color: #66ff99; }
+.term-body .dim { color: #8a8a8a; }
+
+.cursor {
+    display: inline-block;
+    width: 0.6em;
+    height: 1.1em;
+    background: var(--retro-term-ink);
+    vertical-align: text-bottom;
+}
+
+/* live checks: simple bordered rows */
+.checks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.9rem;
+}
+.check {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border: 1px solid var(--retro-line);
+    background: var(--retro-panel);
+    padding: 0.25rem 0.6rem;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.85rem;
+    color: var(--retro-ink);
+    border-radius: 0;
+}
+.check i { width: 8px; height: 8px; background: #0a0; display: inline-block; }
+
+/* ---- CTA buttons: plain bordered links ---- */
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1rem 0;
+}
+.cta-buttons .nav-link {
+    display: inline-block;
+    border: 1px solid var(--retro-line);
+    background: var(--retro-panel);
+    color: var(--retro-ink);
+    text-decoration: none;
+    padding: 0.35rem 0.8rem;
+    border-radius: 0;
+}
+.cta-buttons .nav-link:hover { background: #e4dcc2; }
+.cta-buttons .nav-link:first-child { background: #d8d0b8; }
+.cta-buttons .nav-link:first-child:hover { background: #c8c0a8; }
+
+.accent-link { font-weight: bold; }
+
+/* ---- footer (rendered by components.js) ---- */
+
+.site-footer {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 1rem 1rem 2rem;
+    border-top: 2px solid var(--retro-line);
+    font-size: 0.9em;
+    color: #4a4a3a;
+    background: transparent;
+    text-align: left;
+}
+.site-footer nav { display: block; margin: 0.4rem 0; }
+.site-footer a { color: var(--retro-link); margin-right: 0.6rem; }
+.site-footer a:hover { color: #cc0000; }
+.site-footer .footer-name { font-weight: bold; }
+
+/* ---- neutralize modern motion / glass / doodles ---- */
+
+html.js .reveal,
+html.js .reveal.visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.reveal { opacity: 1 !important; transform: none !important; }
+
+.doodles, .status-pill, .ghost-buddy, .glare {
+    display: none !important;
+}
+
+/* ---- responsive: keep it simple ---- */
+
+@media (max-width: 640px) {
+    body { font-size: 16px; }
+    .page { padding: 1rem 0.75rem 2rem; }
+    .content-box, .doc-item { padding: 0.9rem 1rem; }
+}
