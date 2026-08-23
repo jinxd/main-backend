@@ -32,21 +32,42 @@
                 <div class="doc-content">
                     <div class="content-box">
                         <h2>Common Questions</h2>
-                        
+
                         <h3>What is SSH?</h3>
                         <p>SSH (Secure Shell) is a protocol for securely connecting to remote servers. It encrypts communication, allowing you to run commands safely. <a href="https://en.wikipedia.org/wiki/Secure_Shell" class="accent-link">Learn more</a>.</p>
 
                         <h3>What host and port should I use?</h3>
                         <ul>
                             <li><strong>Host:</strong> The IP address or domain name (e.g., 192.168.1.10).</li>
-                            <li><strong>Port:</strong> The default is 22, but many administrators change it for security.</li>
+                            <li><strong>Port:</strong> The default is 22, but many administrators change it for security — you set the port per server when adding or editing it.</li>
                         </ul>
 
+                        <h3>What authentication methods are supported?</h3>
+                        <p><strong>Password</strong>, <strong>SSH Key</strong>, and <strong>SSH Key + Passphrase</strong>. The add-server wizard includes an "SSH Key Tips" helper (ssh-keygen / ssh-copy-id).</p>
+
                         <h3>What is a regular expression (regex)?</h3>
-                        <p>A pattern used to match text. In ContainEye, regex is used in test validations to ensure your server output matches expected patterns.</p>
+                        <p>A pattern used to match text. In ContainEye, a test's expected output is treated as a regex when it compiles, otherwise as an exact string match. Regex is handy for validating server output that varies between runs.</p>
+
+                        <h3>Where are my credentials stored?</h3>
+                        <p>In the iOS <strong>Keychain</strong>. They ride on iCloud Keychain only if you have iCloud Keychain enabled. Servers, tests, and snippets are stored in a local database on your device — there is <strong>no CloudKit/iCloud sync</strong> of your data.</p>
+
+                        <h3>Can I schedule tests?</h3>
+                        <p>There is no per-test schedule or interval setting. Tests run manually, from the <strong>Test Widget</strong> or <strong>Shortcuts</strong> actions (which you can trigger by time, location, or other automations), and ContainEye attempts background checks when iOS allows — roughly every few minutes, but not guaranteed.</p>
+
+                        <h3>Will I get a notification when a test fails?</h3>
+                        <p>Tests that run in the background — via the <strong>Test Servers</strong> Shortcuts action, the widget, or an iOS background check — post a local notification titled with the test name when they fail. Manual runs only give haptic feedback. Notifications only appear if your device has granted notification permission; the app itself never asks for it, and there are no badge counts or notification actions.</p>
 
                         <h3>How do I delete a server or test?</h3>
-                        <p>Simply long-press (or hold down) on any server or test in the list and select <strong>Delete</strong> from the menu.</p>
+                        <ul>
+                            <li><strong>Server:</strong> open its card menu, choose <strong>Edit Server</strong>, then the nested <strong>Delete</strong>. Deleting a server also removes its Keychain credentials, cached containers, and snippets.</li>
+                            <li><strong>Test:</strong> open the test's menu on the Code tab and choose <strong>Delete Test</strong>.</li>
+                        </ul>
+
+                        <h3>Which devices does ContainEye run on?</h3>
+                        <p><strong>iPhone and iPad</strong> (iOS/iPadOS 26+). It also runs on Apple silicon Macs via "Designed for iPad", including standalone terminal windows. There is no macOS, visionOS, or watchOS build.</p>
+
+                        <h3>Can tests run without opening the app?</h3>
+                        <p>Yes. The <strong>Test Servers</strong> and <strong>Run a single Test</strong> Shortcuts actions and the Test Widget's run button all execute tests in the background without opening ContainEye.</p>
                     </div>
                 </div>
             </div>

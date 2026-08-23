@@ -89,19 +89,40 @@
 
                 <div class="doc-content">
                     <div class="doc-item">
-                        <h2>Speed up with Suggestions</h2>
-                        <p>ContainEye provides pre-made test suggestions for common server environments. Simply adapt them to your needs.</p>
-                        
+                        <h2>Speed Up with Suggestions</h2>
+                        <p>ContainEye ships with <strong>13 built-in test templates</strong>. The <strong>Suggested Tests</strong> section on the Code tab shows up to 6 cards at a time (with an "N available" count) whenever unassigned suggestions remain — even if you already have active tests. The templates:</p>
+                        <ul>
+                            <li>Check Website Status</li>
+                            <li>Check Disk Space Usage</li>
+                            <li>Check CPU Usage</li>
+                            <li>Verify Nginx is Running</li>
+                            <li>Check for Old Logs</li>
+                            <li>Check for Zombie Processes</li>
+                            <li>Check SSL Certificate Expiry</li>
+                            <li>Verify MySQL is Running</li>
+                            <li>Check System Load Average</li>
+                            <li>Check for Pending System Updates</li>
+                            <li>Verify Backup File Exists</li>
+                            <li>Check Failed Login Attempts (Last Hour)</li>
+                            <li>Check Network Latency (Packet Loss)</li>
+                        </ul>
+
+                        <h3>Add a Suggestion to a Server</h3>
+                        <p>Tap <strong>Add Test</strong> on a suggestion card, pick the server in the <strong>"Add Test to Server"</strong> sheet, and confirm. The template's command and expected output are copied verbatim and the test is saved as an active test for that server — it drops out of the suggestion pool.</p>
+
                         <div class="screenshot-box">
                             <img src="/images/containeye-framed/configure-suggested-test.png" alt="Select a suggestion">
                         </div>
 
                         <h3>Adapting Existing Tests</h3>
-                        <p>Change the command, expected output, or target server to fit your specific infrastructure perfectly.</p>
-                        
+                        <p>Change the command, expected output, or target server to fit your infrastructure. The test detail screen shows the <strong>Test Name</strong>, <strong>command</strong>, <strong>Last Run</strong>, <strong>Expected Output</strong>, and the actual <strong>Last Output</strong>, with buttons to run the test now, edit, or delete it.</p>
+
                         <div class="screenshot-box">
                             <img src="/images/containeye-framed/test-details-adapt-this-test-command-last-run-expected-output-last-output.png" alt="Adapt test configuration">
                         </div>
+
+                        <h3>Disabling a Test</h3>
+                        <p>In the Server picker, choose <strong>"Do not execute"</strong> to disable a test. Disabled tests never run, show "This test is currently disabled" with a description, and return to the Suggested Tests pool. You can re-enable one by assigning it to a server again (the picker also offers <strong>"Local (URLs only)"</strong> to turn the command field into a URL check).</p>
                     </div>
                 </div>
             </div>

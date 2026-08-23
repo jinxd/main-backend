@@ -5,6 +5,59 @@
     var reducedMotion = window.matchMedia &&
         window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    /* ---------------- host branding ---------------- */
+
+    // When served via chaaarlie.com, brand as "Charlie"; keep "Hannes" on hannesnagel.com.
+    function isCharlieHost() {
+        var h = window.location.hostname || '';
+        return h === 'chaaarlie.com' || h.slice(-('.chaaarlie.com'.length)) === '.chaaarlie.com';
+    }
+
+    var charlieHost = isCharlieHost();
+
+    function applyHostBranding() {
+        if (!charlieHost) {
+            return;
+        }
+        // document title + meta description / og tags (Hannes -> Charlie)
+        var rename = function (s) {
+            return s
+                .replace(/Hannes Nagel/g, 'Charlie Nagel')
+                .replace(/Hannes/g, 'Charlie')
+                .replace(/hannesnagel/g, 'chaaarlie');
+        };
+        if (document.title) {
+            document.title = rename(document.title);
+        }
+        var metas = document.querySelectorAll('meta[name="description"], meta[property="og:title"], meta[property="og:description"], meta[property="og:url"]');
+        for (var i = 0; i < metas.length; i++) {
+            var c = metas[i].getAttribute('content');
+            if (c) {
+                metas[i].setAttribute('content', rename(c));
+            }
+        }
+        // visible text: walk text nodes, skip script/style
+        var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+            acceptNode: function (n) {
+                var el = n.parentElement;
+                if (!el || el.tagName === 'SCRIPT' || el.tagName === 'STYLE') {
+                    return NodeFilter.FILTER_REJECT;
+                }
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        });
+        var nodes = [];
+        var node;
+        while ((node = walker.nextNode())) {
+            nodes.push(node);
+        }
+        for (var j = 0; j < nodes.length; j++) {
+            if (nodes[j].nodeValue.indexOf('Hannes') !== -1) {
+                nodes[j].nodeValue = rename(nodes[j].nodeValue);
+            }
+        }
+    }
+
     /* ---------------- nav + footer ---------------- */
 
     function currentPath() {
@@ -64,8 +117,10 @@
             makeLink('/contact', 'Contact', active === 'contact')
         ];
 
+        var brandMark = charlieHost ? 'cn.' : 'hn.';
+        var brandLabel = charlieHost ? 'chaaarlie home' : 'hannesnagel home';
         mount.innerHTML = '<nav class="nav-container" aria-label="Main">' +
-            '<a href="' + homeHref + '" class="nav-brand" aria-label="hannesnagel home">hn.</a>' +
+            '<a href="' + homeHref + '" class="nav-brand" aria-label="' + brandLabel + '">' + brandMark + '</a>' +
             links.join('') +
             '</nav>';
 
@@ -90,7 +145,7 @@
         var footer = document.createElement('footer');
         footer.className = 'site-footer';
         footer.innerHTML =
-            '<span class="footer-name">Hannes Nagel</span>' +
+            '<span class="footer-name">' + (charlieHost ? 'Charlie Nagel' : 'Hannes Nagel') + '</span>' +
             '<nav aria-label="Footer">' +
             '<a href="/apps">Apps</a>' +
             '<a href="/thoughts/">Thoughts</a>' +
@@ -418,6 +473,7 @@
     /* ---------------- init ---------------- */
 
     function init() {
+        applyHostBranding();
         renderNav();
         renderFooter();
         setupReveals();
