@@ -31,7 +31,7 @@
 
                 <div class="doc-content">
                     <div class="doc-item">
-                        <h2>Create a Test with the Assistant</h2>
+                        <h2>Create a Test with the AI</h2>
                         <p>There is no blank "new test" form, tests are created with the help of the Agentic assistant. Tap <strong>Create Test</strong> in the Code tab's <strong>+</strong> menu (or <strong>Create Your First Test</strong> on the empty state) and describe what you want to check in plain language, e.g. <em>"Check if nginx is running."</em></p>
                         <p>ContainEye switches to the <strong>Agentic</strong> tab with a pre-filled draft instructing the assistant to create a server test for you.</p>
 
@@ -51,7 +51,7 @@
                             <img src="/images/containeye-framed/assistant-has-question.png" alt="clarification">
                         </div>
 
-                        <h3>Interactive Assistant Flow</h3>
+                        <h3>Interactive AI Flow</h3>
                         <p>The assistant can ask clarifying questions to make sure the test is accurate, answer them in the chat to refine the command or expected output. You can also fine-tune a test afterwards by editing its name, command, expected output, notes, or target server.</p>
                     </div>
                 </div>

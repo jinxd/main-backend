@@ -42,7 +42,7 @@
                         <p>The Servers tab shows every server as a card with its online status, cores/memory/disk/uptime, and live CPU, RAM, and disk rings, plus network up/down on Linux hosts. Open a server for processes (searchable and sortable, with kill controls), containers (start/stop with CPU and memory usage), and discovered Docker Compose stacks.</p>
 
                         <h3>Interactive Terminal</h3>
-                        <p>A full-featured terminal with a multi-tab workspace (up to 24 tabs), per-tab tmux sessions, four themes plus custom themes, and command suggestions drawn from your remote shell history, common commands, and snippets. Volume buttons and shake can be mapped to arrow keys and other shortcuts so you're productive even on the go, and you can select any output and ask the assistant to explain it.</p>
+                        <p>A full-featured terminal with a multi-tab workspace (up to 24 tabs), per-tab tmux sessions, four themes plus custom themes, and command suggestions drawn from your remote shell history, common commands, and snippets. Volume buttons and shake can be mapped to arrow keys and other shortcuts so you're productive even on the go, and you can select any output and ask the AI to explain it.</p>
 
                         <div class="screenshot-box">
                             <img src="/images/containeye-framed/in-terminal-with-suggestions.png" alt="Terminal suggestions">
