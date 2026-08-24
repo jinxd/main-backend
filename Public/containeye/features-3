@@ -32,7 +32,7 @@
                 <div class="doc-content">
                     <div class="doc-item">
                         <h2>Advanced Integration</h2>
-                        <p>ContainEye bridges the gap between your server and your device ecosystem with SFTP files, the Agentic AI assistant, and Apple Shortcuts.</p>
+                        <p>ContainEye bridges the gap between your server and your device ecosystem with SFTP files, the Agentic assistant, and Apple Shortcuts.</p>
 
                         <div class="screenshot-box">
                             <img src="/images/containeye-framed/sftp-connected.png" alt="SFTP browser">
@@ -41,7 +41,7 @@
                         <h3>SFTP Files</h3>
                         <p>Browse your server's files over SFTP using the same credentials as SSH: go up and down directories, navigate to a path, toggle hidden files, upload (multi-select with progress), create folders and files, rename or delete, and export or open any file, including a full-screen text editor that saves changes straight back to the server. From the terminal, pressing Enter after <code>open</code>/<code>nano</code>/<code>vim</code>/<code>nvim &lt;file&gt;</code> can open the file right in this editor.</p>
 
-                        <h3>Agentic AI Assistant</h3>
+                        <h3>Agentic Assistant</h3>
                         <p>A conversational assistant that lists your servers, runs approved commands, reads and writes files, and creates or updates tests and snippets for you, with every server command going through an approval dialog (<strong>Allow Once</strong>, <strong>Always Allow "…" Commands</strong>, <strong>Always Allow All Commands</strong>, <strong>Deny</strong>, <strong>Cancel</strong>) unless you allow it permanently.</p>
 
                         <h3>Power Automations</h3>
