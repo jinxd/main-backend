@@ -42,8 +42,8 @@
                             <li>On iPad/Mac: <strong>Open in New Window</strong> from the tab menu; closing a window offers <strong>Move to Main Window</strong> or <strong>Close Tabs</strong>.</li>
                         </ul>
 
-                        <h3>Copy, Paste &amp; Ask AI</h3>
-                        <p>Long-press to select output, then use the native edit menu or the context menu (<strong>Copy</strong>, <strong>Paste</strong>, <strong>Select All</strong>, <strong>Ask AI</strong>). Cmd+C copies a selection. <strong>Ask AI</strong> explains the selected text, Summary, What It Means, What To Do Next, and Code Snippets, and a <strong>Continue In Agentic Tab</strong> button hands the context to the Agentic assistant, which starts running immediately.</p>
+                        <h3>Copy, Paste &amp; Ask Assistant</h3>
+                        <p>Long-press to select output, then use the native edit menu or the context menu (<strong>Copy</strong>, <strong>Paste</strong>, <strong>Select All</strong>, <strong>Ask Assistant</strong>). Cmd+C copies a selection. <strong>Ask Assistant</strong> explains the selected text, Summary, What It Means, What To Do Next, and Code Snippets, and a <strong>Continue In Agentic Tab</strong> button hands the context to the Agentic assistant, which starts running immediately.</p>
 
                         <h3>Command Suggestions</h3>
                         <p>On connect, ContainEye reads your remote <code>~/.bash_history</code> and <code>~/.zsh_history</code> (last 500 entries). Suggestions combine that history with path completion for common commands, a curated list of everyday commands (<code>docker ps</code>, <code>docker compose up -d</code>, <code>git status</code>, <code>systemctl status</code>, …), and your saved snippets. You get up to 3 suggestion chips above the keyboard, or a cursor-anchored completion overlay when the keyboard is hidden (use ↑/↓ to navigate, Tab or tap to apply).</p>
@@ -60,7 +60,7 @@
                         <ul>
                             <li>Scrollback exists (15,000 lines) but there is <strong>no touch gesture to scroll it</strong>, use <code>history</code>, Page Up, or Page Down instead.</li>
                             <li>Terminal settings (gear icon) let you pick a theme, <strong>Midnight</strong> (default), <strong>Solarized Dark</strong>, <strong>Dracula</strong>, <strong>Paper Light</strong>, or create your own, and adjust font size (10–24).</li>
-                            <li>Use the toolbar snippet button to <strong>Insert Snippet</strong> into the current input line, or <strong>Generate Snippet with AI</strong> from the Manage screen.</li>
+                            <li>Use the toolbar snippet button to <strong>Insert Snippet</strong> into the current input line, or <strong>Generate Snippet</strong> from the Manage screen.</li>
                         </ul>
                     </div>
                 </div>

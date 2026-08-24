@@ -27,7 +27,7 @@
                     <div class="app-body">
                         <span class="wip-chip">● In development</span>
                         <h2><a class="card-link" href="/podcatcher/">The Podcatcher</a></h2>
-                        <p>The podcast app I am building right now: iCloud sync, iPhone + iPad + Mac, up to 5× speed, transcripts, automatic AI chapters, and chapter skip rules.</p>
+                        <p>The podcast app I am building right now: iCloud sync, iPhone + iPad + Mac, up to 5× speed, transcripts, automatic chapters and chapter skip rules.</p>
                         <div class="badge-list">
                             <a href="/podcatcher/" class="chip-link">Open details</a>
                             <a href="/contact" class="chip-link">Get notified</a>

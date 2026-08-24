@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Podcatcher: Hannes Nagel</title>
-    <meta name="description" content="The Podcatcher is a podcast app for iPhone, iPad, and Mac with iCloud sync, up to 5x speed, transcripts, automatic AI chapters, and chapter skip rules. Currently in development.">
+    <meta name="description" content="The Podcatcher is a podcast app for iPhone, iPad, and Mac with iCloud sync, up to 5x speed, transcripts, automatic chapters, and chapter skip rules. Currently in development.">
     <link rel="stylesheet" href="/css/retro.css">
 </head>
 
@@ -73,7 +73,7 @@
                 <article class="card">
                     <div class="card-body">
                         <span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 13.8 9 19.5 11 13.8 13 12 18.5 10.2 13 4.5 11 10.2 9 12 3.5z"/><path d="M18.5 16.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7.7-1.8z"/></svg></span>
-                        <h3>Auto AI chapters</h3>
+                        <h3>Automatic chapters</h3>
                         <p>Episodes without chapters get them generated automatically, so long shows become navigable.</p>
                     </div>
                 </article>
