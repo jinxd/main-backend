@@ -6,62 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thoughts — Hannes Nagel</title>
     <meta name="description" content="Occasional writing by Hannes Nagel on building apps, tools, and other things on my mind.">
-    <link rel="stylesheet" href="/css/main.css">
-    <style>
-        .post-list {
-            display: grid;
-            gap: 0.9rem;
-            width: 100%;
-            margin-top: 0.4rem;
-        }
-
-        .post {
-            border: 1px solid var(--line);
-            border-radius: var(--radius-sm);
-            padding: 1.2rem 1.3rem;
-            background: var(--surface-strong);
-            display: grid;
-            gap: 0.45rem;
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.22s var(--ease-out), box-shadow 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
-        }
-
-        .post:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-soft);
-            border-color: #b3a890;
-        }
-
-        .post h3 {
-            font-family: var(--serif);
-            font-weight: 600;
-            font-size: clamp(1.4rem, 2.6vw, 1.8rem);
-            color: var(--ink);
-        }
-
-        .post p {
-            color: var(--muted);
-            max-width: none;
-            line-height: 1.6;
-        }
-
-        .post .read-more {
-            color: var(--accent);
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-
-        .post:hover .read-more::after {
-            transform: translateX(4px);
-        }
-
-        .post .read-more::after {
-            content: " →";
-            display: inline-block;
-            transition: transform 0.22s var(--ease-out);
-        }
-    </style>
+    <link rel="stylesheet" href="/css/retro.css">
 </head>
 
 <body>

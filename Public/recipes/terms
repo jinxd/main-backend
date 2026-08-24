@@ -4,30 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Use - Recipes - hannesnagel</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <style>
-        .doc-content {
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .doc-content h1 { font-size: 3rem; margin-bottom: 1rem; }
-        .doc-content h2 { color: var(--text-color); margin-top: 3rem; margin-bottom: 1.5rem; font-size: 1.8rem; }
-        .doc-content p, .doc-content li {
-            color: var(--secondary-color);
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-        .doc-content ul { padding-left: 1.5rem; margin-bottom: 2rem; }
-        .legal-box {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 40px;
-            padding: 3rem;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-    </style>
+    <link rel="stylesheet" href="/css/retro.css">
 </head>
 <body>
         <div id="site-nav"></div>
