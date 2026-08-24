@@ -41,8 +41,8 @@
                         <h3>Creating Tests Your Way</h3>
                         <p>Describe what to check in plain language and the Agentic assistant drafts, verifies, and creates the test in one chat session, or add one of 13 built-in suggestions (website status, disk space, SSL expiry, MySQL, pending updates, and more) with a single tap.</p>
 
-                        <h3>Automatic Validation</h3>
-                        <p>The assistant proposes the expected output pattern for your service's output, matched as a regex when it compiles, otherwise as an exact string. You can adapt the command, expected output, or target server any time.</p>
+                        <h3>AI-Assisted Validation</h3>
+                        <p>The AI proposes the expected output pattern for your service's output, matched as a regex when it compiles, otherwise as an exact string. You can adapt the command, expected output, or target server any time.</p>
 
                         <div class="screenshot-box">
                             <img src="/images/containeye-framed/configure-suggested-test.png" alt="test config">
