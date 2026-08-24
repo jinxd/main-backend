@@ -29,20 +29,20 @@
         if (document.title) {
             document.title = rename(document.title);
         }
-        var metas = document.querySelectorAll('meta[name="description"], meta[property="og:title"], meta[property="og:description"], meta[property="og:url"]');
+        var metas = document.querySelectorAll('meta[name="description"], meta[property="og:title"], meta[property="og:description"], meta[property="og:url"], meta[property="og:image"]');
         for (var i = 0; i < metas.length; i++) {
             var c = metas[i].getAttribute('content');
             if (c) {
                 metas[i].setAttribute('content', rename(c));
             }
         }
-        // mailto: links - rewrite the href too so the (already renamed) contact
-        // address actually mails to contact@chaaarlie.com
-        var mails = document.querySelectorAll('a[href^="mailto:"]');
-        for (var m = 0; m < mails.length; m++) {
-            var h = mails[m].getAttribute('href');
-            if (h) {
-                mails[m].setAttribute('href', rename(h));
+        // links - rewrite hrefs that point at the old domain (mailto: and any
+        // other hannesnagel.com URL) so nothing on chaaarlie.com reveals it
+        var links = document.querySelectorAll('a[href]');
+        for (var m = 0; m < links.length; m++) {
+            var h = links[m].getAttribute('href');
+            if (h && h.indexOf('hannesnagel') !== -1) {
+                links[m].setAttribute('href', rename(h));
             }
         }
         // visible text: walk text nodes, skip script/style
@@ -61,7 +61,7 @@
             nodes.push(node);
         }
         for (var j = 0; j < nodes.length; j++) {
-            if (nodes[j].nodeValue.indexOf('Hannes') !== -1) {
+            if (nodes[j].nodeValue.indexOf('Hannes') !== -1 || nodes[j].nodeValue.indexOf('hannesnagel') !== -1) {
                 nodes[j].nodeValue = rename(nodes[j].nodeValue);
             }
         }
