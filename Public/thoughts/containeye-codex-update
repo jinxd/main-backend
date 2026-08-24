@@ -54,7 +54,7 @@
 
                 <h3>Why this release feels different</h3>
                 <p>I started by trying to patch a frustrating terminal. I ended up with a cleaner architecture, better UX, and an agentic workflow that actually feels trustworthy enough to use every day.</p>
-                <p>Codex didn't just generate snippets here—it accelerated a full product pivot that I likely would have delayed for months.</p>
+                <p>Codex didn't just generate snippets here, it accelerated a full product pivot that I likely would have delayed for months.</p>
             </article>
         </section>
     </main>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ContainEye — Server &amp; Docker checks from your phone</title>
+    <title>ContainEye: Server &amp; Docker checks from your phone</title>
     <meta name="description" content="ContainEye is an iPhone &amp; iPad app for working with your servers: SSH terminal, SFTP files, live monitoring, Docker &amp; Compose controls, automated tests, and an AI assistant.">
     <link rel="stylesheet" href="/css/retro.css">
 </head>
@@ -16,10 +16,10 @@
         <section class="hero" id="hero">
             <p class="sub-header">ContainEye</p>
             <h1>Your servers, in your <em>pocket</em>.</h1>
-            <p class="lead">Server and Docker checks from your phone — built for practical maintenance work when you are away from your desk.</p>
+            <p class="lead">Server and Docker checks from your phone.</p>
 
             <div class="term" aria-hidden="true">
-                <div class="term-bar"><i></i><i></i><i></i><span>containeye — ssh</span></div>
+                <div class="term-bar"><i></i><i></i><i></i><span>containeye, ssh</span></div>
                 <div class="term-body" id="term-body"><span class="cursor"></span></div>
             </div>
 
@@ -51,7 +51,7 @@
                         <li>SFTP file browser with upload, download, rename, and a built-in text editor.</li>
                         <li>Live server monitoring: CPU, memory, disk, network, and processes.</li>
                         <li>Docker and Docker Compose controls: start, stop, restart, pull images.</li>
-                        <li>Automated tests — from 13 built-in suggestions or drafted by the AI.</li>
+                        <li>Automated tests, from 13 built-in suggestions or drafted by the AI.</li>
                         <li>Agentic AI assistant that operates your servers through approved commands.</li>
                         <li>Shortcuts actions and a home-screen widget for your tests.</li>
                     </ul>

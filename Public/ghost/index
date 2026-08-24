@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghost / Superghost — a multiplayer word game</title>
+    <title>Ghost / Superghost: a multiplayer word game</title>
     <meta name="description" content="Ghost (Superghost) is a multiplayer word game: add letters without completing a valid word too early. Open source, built with Swift and Vapor.">
     <link rel="stylesheet" href="/css/retro.css">
 </head>
@@ -26,7 +26,7 @@
                     <span class="tile" style="--i:3">S</span>
                     <span class="tile" style="--i:4">T</span>
                 </div>
-                <p class="tiles-hint">Click the tiles — five losses and you are a ghost.</p>
+                <p class="tiles-hint">Click the tiles. Five losses and you are a ghost.</p>
             </div>
         </section>
 
@@ -34,9 +34,9 @@
             <div class="doc-content">
                 <h2>How a round goes</h2>
                 <p>The idea comes from a classroom game: one letter is added each turn, and the goal is to avoid completing a full word yourself. In this version players can <strong>prepend or append</strong>, which keeps rounds fast and a bit unpredictable.</p>
-                <div class="round"><span class="who">You:</span><span class="word">PLA<span class="new">N</span></span><span class="who">— hmm, "plan" is a word… but wait:</span></div>
-                <div class="round"><span class="who">Friend:</span><span class="word"><span class="new">A</span>PLAN</span><span class="who">— heading toward "airplane", clever.</span></div>
-                <div class="round"><span class="who">You:</span><span class="word">APLAN<span class="new">E</span></span><span class="who">— oops. That spells trouble (and a word).</span></div>
+                <div class="round"><span class="who">You:</span><span class="word">PLA<span class="new">N</span></span><span class="who">: hmm, "plan" is a word, but wait.</span></div>
+                <div class="round"><span class="who">Friend:</span><span class="word">PLAN<span class="new">E</span></span><span class="who">: you can keep going toward "planet".</span></div>
+                <div class="round"><span class="who">You:</span><span class="word">PLANE<span class="new">T</span></span><span class="who">: that completes a word. Game over.</span></div>
                 <p>Matches are multiplayer and built for short sessions with friends.</p>
             </div>
         </section>
@@ -44,7 +44,7 @@
         <section>
             <div class="doc-content">
                 <h2>Project details</h2>
-                <p>Ghost is open source — the backend is written in Swift using Vapor. The project started as a small side game and is currently not actively maintained, but everything still works and the code is public.</p>
+                <p>Ghost is open source. The backend is written in Swift using Vapor. The project started as a small side game and is currently not actively maintained, but everything still works and the code is public.</p>
                 <div class="cta-buttons">
                     <a href="https://github.com/hannesmnagel/superghost" class="nav-link">Source code</a>
                     <a href="/ghost/privacy" class="nav-link">Privacy</a>

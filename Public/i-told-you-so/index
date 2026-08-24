@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Told You So — Hannes Nagel</title>
+    <title>I Told You So: Hannes Nagel</title>
     <meta name="description" content="I Told You So is a tiny iOS app for recording predictions and friendly bets, settling them later, and sharing a clean receipt.">
     <link rel="stylesheet" href="/css/retro.css">
 </head>
@@ -54,7 +54,7 @@
                     <div class="card-body">
                         <span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.2-4.2L16.4 4.6a2.05 2.05 0 0 1 2.9 2.9L8.2 18.8 4 20z"/><path d="M13.8 7.2l2.9 2.9"/></svg></span>
                         <h3>Record it fast</h3>
-                        <p>Write down who said what, what they predicted, and what is at stake — in seconds, mid-conversation.</p>
+                        <p>Write down who said what, what they predicted, and what is at stake, in seconds, mid-conversation.</p>
                     </div>
                 </article>
                 <article class="card">

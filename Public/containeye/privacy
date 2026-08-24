@@ -37,19 +37,19 @@
                         <p>ContainEye does not send your commands to my servers. SSH and SFTP traffic goes <strong>directly from your device to your server</strong>, and tests run over SSH straight from your device. Servers, tests, and snippets are stored in a local database; credentials (passwords, private keys, passphrases) live in the iOS <strong>Keychain</strong> and ride on iCloud Keychain only if you have it enabled. There is <strong>no CloudKit sync</strong> of your data.</p>
 
                         <h3>How the AI handles data</h3>
-                        <p>ContainEye's Agentic assistant needs network access — it fetches its model configuration from a small endpoint, then talks to the LLM provider (OpenRouter) directly from your device. What it sends depends on your use:</p>
+                        <p>ContainEye's Agentic assistant needs network access. It fetches its model configuration from a small endpoint, then talks to the LLM provider (OpenRouter) directly from your device. What it sends depends on your use:</p>
                         <ul>
                             <li><strong>Tests &amp; snippets:</strong> when you ask it to create a test or snippet, it works with test titles, commands, and server labels on your device.</li>
                             <li><strong>Terminal "Ask AI":</strong> it sends the text you selected (clipped to 8,000 characters) to the LLM provider.</li>
                             <li><strong>Command execution is gated:</strong> every server command the agent wants to run goes through an <strong>"Allow command execution?"</strong> approval dialog (<strong>Allow Once</strong>, <strong>Always Allow "…" Commands</strong>, <strong>Always Allow All Commands</strong>, <strong>Deny</strong>, <strong>Cancel</strong>) unless you have allowed it permanently.</li>
                         </ul>
-                        <p>Your credentials are never sent to the AI — SSH keys and passwords never leave the Keychain except for the connection to your own server.</p>
+                        <p>Your credentials are never sent to the AI, SSH keys and passwords never leave the Keychain except for the connection to your own server.</p>
 
                         <h3>Analytics</h3>
-                        <p>ContainEye uses TelemetryDeck for minimal, privacy-friendly usage analytics (aggregate counts — no personal data, no tracking of your servers or commands). You can disable analytics if your device allows app tracking.</p>
+                        <p>ContainEye uses TelemetryDeck for minimal, privacy-friendly usage analytics (aggregate counts, no personal data, no tracking of your servers or commands). You can disable analytics if your device allows app tracking.</p>
 
                         <h3>Donations</h3>
-                        <p>ContainEye is free and its features are not paywalled. Optional donation subscriptions ("Become a Supporter") simply support development — subscribing or not changes nothing about what the app can do. Purchases are handled by Apple and governed by the standard App Store terms; you can restore purchases at any time.</p>
+                        <p>ContainEye is free and its features are not paywalled. Optional donation subscriptions ("Become a Supporter") simply support development. Subscribing or not changes nothing about what the app can do. Purchases are handled by Apple and governed by the standard App Store terms; you can restore purchases at any time.</p>
                     </div>
                 </div>
             </div>

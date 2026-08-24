@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Podcatcher — Hannes Nagel</title>
+    <title>The Podcatcher: Hannes Nagel</title>
     <meta name="description" content="The Podcatcher is a podcast app for iPhone, iPad, and Mac with iCloud sync, up to 5x speed, transcripts, automatic AI chapters, and chapter skip rules. Currently in development.">
     <link rel="stylesheet" href="/css/retro.css">
 </head>
@@ -14,7 +14,7 @@
 
     <main class="page">
         <section class="hero pod-hero">
-            <span class="status-pill pod"><span class="dot"></span>In development — coming to the App Store</span>
+            <span class="status-pill pod"><span class="dot"></span>In development, coming to the App Store</span>
             <h1>Podcasts, the way <em>you</em> listen.</h1>
             <p class="lead">The Podcatcher is the podcast app I am building right now for iPhone, iPad, and Mac. Fast playback, transcripts, smart chapters, and rules that skip the parts you never listen to anyway.</p>
 
@@ -116,7 +116,7 @@
 
         <section class="footer-cta">
             <p class="sub-header">Honest status</p>
-            <h2>It is not out yet — I am building it <em>right now</em>.</h2>
+            <h2>It is not out yet, I am building it <em>right now</em>.</h2>
             <p style="margin-top: 0.6rem;">No release date promises. If you want to hear when it ships, or want to try early builds, just write me.</p>
             <div class="links">
                 <a href="/contact">Contact me</a>

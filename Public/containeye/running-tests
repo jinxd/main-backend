@@ -32,24 +32,24 @@
                 <div class="doc-content">
                     <div class="doc-item">
                         <h2>Running Tests Manually</h2>
-                        <p>From the Code tab you can <strong>Run All</strong> tests, use the per-test <strong>Run Test</strong> action, or open a test and tap <strong>Run Test</strong> on its detail screen. Manual runs give haptic feedback on success or failure — they do not post notifications. Each card shows its status (<strong>Passed</strong>, <strong>Failed</strong>, <strong>Running</strong>, <strong>Not Run</strong>) and when it last ran.</p>
+                        <p>From the Code tab you can <strong>Run All</strong> tests, use the per-test <strong>Run Test</strong> action, or open a test and tap <strong>Run Test</strong> on its detail screen. Manual runs give haptic feedback on success or failure. They do not post notifications. Each card shows its status (<strong>Passed</strong>, <strong>Failed</strong>, <strong>Running</strong>, <strong>Not Run</strong>) and when it last ran.</p>
 
                         <h3>Apple Shortcuts</h3>
                         <p>ContainEye exposes two Shortcuts actions that run tests in the background <strong>without opening the app</strong>:</p>
                         <ul>
-                            <li><strong>Test Servers</strong> — run all tests across your servers ("Test all servers", "Test servers in …", "… test servers").</li>
-                            <li><strong>Run a single Test</strong> — run one specific test ("Test ‹test› in …", "… test ‹test›", "Execute ‹test› in …").</li>
+                            <li><strong>Test Servers</strong>, run all tests across your servers ("Test all servers", "Test servers in …", "… test servers").</li>
+                            <li><strong>Run a single Test</strong>, run one specific test ("Test ‹test› in …", "… test ‹test›", "Execute ‹test› in …").</li>
                         </ul>
-                        <p>After a run you get a result dialog — "Finished N tests successfully." or "Finished N tests. X failed." — with a <strong>Retry (in background)</strong> button. Combine these actions with Shortcuts automations to trigger tests by time of day, location, or other triggers.</p>
+                        <p>After a run you get a result dialog, "Finished N tests successfully." or "Finished N tests. X failed.", with a <strong>Retry (in background)</strong> button. Combine these actions with Shortcuts automations to trigger tests by time of day, location, or other triggers.</p>
 
                         <h3>Home-Screen Widget</h3>
-                        <p>The systemSmall <strong>Test Widget</strong> (kind "TestsWidget") shows your highest-priority active test — failed before running before success before not-run — with its title, relative run time, and a color tint. The button on the widget re-runs that test via the Test Servers intent without opening the app; tapping the widget body opens the test's details.</p>
+                        <p>The systemSmall <strong>Test Widget</strong> (kind "TestsWidget") shows your highest-priority active test. Failed before running before success before not-run, with its title, relative run time, and a color tint. The button on the widget re-runs that test via the Test Servers intent without opening the app; tapping the widget body opens the test's details.</p>
 
                         <h3>Background Checks</h3>
-                        <p>ContainEye attempts background checks when iOS allows it — driven by app refresh and silent push, roughly every few minutes. Background runs are <strong>opportunistic, not guaranteed</strong>, and cover up to the 10 tests that haven't run most recently. There is no per-test schedule or interval setting.</p>
+                        <p>ContainEye attempts background checks when iOS allows it, driven by app refresh and silent push, roughly every few minutes. Background runs are <strong>opportunistic, not guaranteed</strong>, and cover up to the 10 tests that haven't run most recently. There is no per-test schedule or interval setting.</p>
 
                         <h3>Result Insights</h3>
-                        <p>Open a test to see its <strong>Configuration</strong> (server, command, expected output, notes) and <strong>Last Output</strong> — the actual output from the last run, monospaced and copyable. Only the last run is kept; there is no history of earlier results. On failure, the test shows a red <strong>Failed</strong> status in the app, and a local notification appears if you have granted notification permission.</p>
+                        <p>Open a test to see its <strong>Configuration</strong> (server, command, expected output, notes) and <strong>Last Output</strong>, the actual output from the last run, monospaced and copyable. Only the last run is kept; there is no history of earlier results. On failure, the test shows a red <strong>Failed</strong> status in the app, and a local notification appears if you have granted notification permission.</p>
                     </div>
                 </div>
             </div>

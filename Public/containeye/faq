@@ -39,7 +39,7 @@
                         <h3>What host and port should I use?</h3>
                         <ul>
                             <li><strong>Host:</strong> The IP address or domain name (e.g., 192.168.1.10).</li>
-                            <li><strong>Port:</strong> The default is 22, but many administrators change it for security — you set the port per server when adding or editing it.</li>
+                            <li><strong>Port:</strong> The default is 22, but many administrators change it for security. You set the port per server when adding or editing it.</li>
                         </ul>
 
                         <h3>What authentication methods are supported?</h3>
@@ -49,13 +49,13 @@
                         <p>A pattern used to match text. In ContainEye, a test's expected output is treated as a regex when it compiles, otherwise as an exact string match. Regex is handy for validating server output that varies between runs.</p>
 
                         <h3>Where are my credentials stored?</h3>
-                        <p>In the iOS <strong>Keychain</strong>. They ride on iCloud Keychain only if you have iCloud Keychain enabled. Servers, tests, and snippets are stored in a local database on your device — there is <strong>no CloudKit/iCloud sync</strong> of your data.</p>
+                        <p>In the iOS <strong>Keychain</strong>. They ride on iCloud Keychain only if you have iCloud Keychain enabled. Servers, tests, and snippets are stored in a local database on your device. There is <strong>no CloudKit/iCloud sync</strong> of your data.</p>
 
                         <h3>Can I schedule tests?</h3>
-                        <p>There is no per-test schedule or interval setting. Tests run manually, from the <strong>Test Widget</strong> or <strong>Shortcuts</strong> actions (which you can trigger by time, location, or other automations), and ContainEye attempts background checks when iOS allows — roughly every few minutes, but not guaranteed.</p>
+                        <p>There is no per-test schedule or interval setting. Tests run manually, from the <strong>Test Widget</strong> or <strong>Shortcuts</strong> actions (which you can trigger by time, location, or other automations), and ContainEye attempts background checks when iOS allows, roughly every few minutes, but not guaranteed.</p>
 
                         <h3>Will I get a notification when a test fails?</h3>
-                        <p>Tests that run in the background — via the <strong>Test Servers</strong> Shortcuts action, the widget, or an iOS background check — post a local notification titled with the test name when they fail. Manual runs only give haptic feedback. Notifications only appear if your device has granted notification permission; the app itself never asks for it, and there are no badge counts or notification actions.</p>
+                        <p>Tests that run in the background, via the <strong>Test Servers</strong> Shortcuts action, the widget, or an iOS background check, post a local notification titled with the test name when they fail. Manual runs only give haptic feedback. Notifications only appear if your device has granted notification permission; the app itself never asks for it, and there are no badge counts or notification actions.</p>
 
                         <h3>How do I delete a server or test?</h3>
                         <ul>
