@@ -74,15 +74,6 @@
             </div>
         </section>
 
-        <section class="notes">
-            <p class="eyebrow">Where I am right now</p>
-            <ol>
-                <li><span>01</span>I am still early in this journey and learning every month.</li>
-                <li><span>02</span>I do not have massive user numbers. I focus on improving product quality.</li>
-                <li><span>03</span>Most features start from problems I had myself, then get improved step by step.</li>
-            </ol>
-        </section>
-
         <section class="footer-cta">
             <h2>If you want to talk about apps, code, or ideas, write me.</h2>
             <div class="links">
