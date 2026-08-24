@@ -32,7 +32,7 @@
                 <div class="doc-content">
                     <div class="doc-item">
                         <h2>Speed Up with Suggestions</h2>
-                        <p>ContainEye ships with <strong>13 built-in test templates</strong>. The <strong>Suggested Tests</strong> section on the Code tab shows up to 6 cards at a time (with an "N available" count) whenever unassigned suggestions remain — even if you already have active tests. The templates:</p>
+                        <p>ContainEye ships with <strong>13 built-in test templates</strong>. The <strong>Suggested Tests</strong> section on the Code tab shows up to 6 cards at a time (with an "N available" count) whenever unassigned suggestions remain, even if you already have active tests. The templates:</p>
                         <ul>
                             <li>Check Website Status</li>
                             <li>Check Disk Space Usage</li>
@@ -50,7 +50,7 @@
                         </ul>
 
                         <h3>Add a Suggestion to a Server</h3>
-                        <p>Tap <strong>Add Test</strong> on a suggestion card, pick the server in the <strong>"Add Test to Server"</strong> sheet, and confirm. The template's command and expected output are copied verbatim and the test is saved as an active test for that server — it drops out of the suggestion pool.</p>
+                        <p>Tap <strong>Add Test</strong> on a suggestion card, pick the server in the <strong>"Add Test to Server"</strong> sheet, and confirm. The template's command and expected output are copied verbatim and the test is saved as an active test for that server. It drops out of the suggestion pool.</p>
 
                         <div class="screenshot-box">
                             <img src="/images/containeye-framed/configure-suggested-test.png" alt="Select a suggestion">
