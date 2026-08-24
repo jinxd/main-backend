@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContainEye - Introduction - hannesnagel</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/retro.css">
 </head>
 <body>
     <div id="site-nav"></div>
@@ -33,7 +33,7 @@
                 <div class="doc-content">
                     <div class="content-box">
                         <h2>Quick summary</h2>
-                        <p>ContainEye is a remote-server operations app for <strong>iPhone and iPad</strong> (it also runs on Apple silicon Macs through "Designed for iPad"). It combines an SSH terminal, an SFTP file browser, live server monitoring, Docker and Docker Compose management, automated tests, and an AI assistant — "Agentic" — that operates your servers through approved commands.</p>
+                        <p>ContainEye is a remote-server operations app for <strong>iPhone and iPad</strong> (it also runs on Apple silicon Macs through "Designed for iPad"). It combines an SSH terminal, an SFTP file browser, live server monitoring, Docker and Docker Compose management, automated tests, and an AI assistant, "Agentic", that operates your servers through approved commands.</p>
                         <p>The app is organised into five tabs: <strong>SFTP</strong>, <strong>Terminal</strong>, <strong>Servers</strong>, <strong>Code</strong> (tests and snippets), and <strong>Agentic</strong>.</p>
                         <p>Use the sections above to go directly to the part you need.</p>
                     </div>

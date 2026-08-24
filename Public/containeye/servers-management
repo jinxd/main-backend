@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContainEye - Servers Management - hannesnagel</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/retro.css">
 </head>
 <body>
         <div id="site-nav"></div>
@@ -35,22 +35,22 @@
                         <p>On first launch, a 6-step wizard walks you through <strong>Server Name → Hostname → SSH Port → Username → Authentication → Authentication Details</strong>, then <strong>Connect Server</strong> verifies the SSH connection before the server is saved. You can add more servers anytime with the <strong>+</strong> button on the Servers tab. Authentication options: <strong>Password</strong>, <strong>SSH Key</strong>, or <strong>SSH Key + Passphrase</strong>, with an inline "SSH Key Tips" helper (ssh-keygen / ssh-copy-id).</p>
 
                         <h3>Servers Tab</h3>
-                        <p>Servers appear as cards (newest first) with an online/offline status dot, cores/memory/disk/uptime line, and CPU, RAM, and Disk rings — plus a network up/down block on Linux hosts. Each card's menu offers <strong>Edit Server</strong> and a nested <strong>Delete</strong> (deleting a server also removes its Keychain credentials, containers, and snippets).</p>
+                        <p>Servers appear as cards (newest first) with an online/offline status dot, cores/memory/disk/uptime line, and CPU, RAM, and Disk rings, plus a network up/down block on Linux hosts. Each card's menu offers <strong>Edit Server</strong> and a nested <strong>Delete</strong> (deleting a server also removes its Keychain credentials, containers, and snippets).</p>
 
                         <h3>Live Monitoring</h3>
                         <p>Open a server to see live metrics: CPU, memory, disk, swap, load, uptime, total cores/disk/memory, and the detected OS (Ubuntu, Debian, CentOS, RHEL, Fedora, openSUSE, Arch, Alpine, Mint, Kali, Manjaro, or macOS). Linux hosts additionally show network traffic, I/O wait, and steal time; macOS hosts use native <code>ps</code>/<code>sysctl</code>/<code>vm_stat</code> commands and hide network metrics. Everything refreshes continuously while the detail screen is open.</p>
 
                         <h3>Processes</h3>
-                        <p>The <strong>Processes</strong> section shows the top 10 processes (<strong>View All</strong> for the rest) with sortable <strong>PID / Command / User / CPU / Memory</strong> columns, a <strong>"Search processes…"</strong> field, and a <strong>Refresh</strong> button. Rows using more than 50% CPU or memory are flagged red. From a row's menu you can <strong>Copy PID</strong>, <strong>Copy Command</strong>, or <strong>Kill Process</strong> — with a confirm dialog offering <strong>Kill</strong> (<code>kill</code>) or <strong>Force Kill</strong> (<code>kill -9</code>).</p>
+                        <p>The <strong>Processes</strong> section shows the top 10 processes (<strong>View All</strong> for the rest) with sortable <strong>PID / Command / User / CPU / Memory</strong> columns, a <strong>"Search processes…"</strong> field, and a <strong>Refresh</strong> button. Rows using more than 50% CPU or memory are flagged red. From a row's menu you can <strong>Copy PID</strong>, <strong>Copy Command</strong>, or <strong>Kill Process</strong>, with a confirm dialog offering <strong>Kill</strong> (<code>kill</code>) or <strong>Force Kill</strong> (<code>kill -9</code>).</p>
 
                         <h3>Containers</h3>
-                        <p>The <strong>Containers</strong> section lists all containers (running and exited) with their runtime badge (<strong>Docker</strong> / <strong>OrbStack</strong>), status text, and CPU/Memory usage rings. Each row has exactly two actions — <strong>Start</strong> (<code>docker start</code>) and <strong>Stop</strong> (<code>docker stop</code>) — with progress states. Tap a container to see its details and the last 50 log lines (auto-scrolled, refreshed every 2 seconds). <strong>Clear Cache</strong> discards cached container rows; they are re-fetched on the next refresh.</p>
+                        <p>The <strong>Containers</strong> section lists all containers (running and exited) with their runtime badge (<strong>Docker</strong> / <strong>OrbStack</strong>), status text, and CPU/Memory usage rings. Each row has exactly two actions, <strong>Start</strong> (<code>docker start</code>) and <strong>Stop</strong> (<code>docker stop</code>), with progress states. Tap a container to see its details and the last 50 log lines (auto-scrolled, refreshed every 2 seconds). <strong>Clear Cache</strong> discards cached container rows; they are re-fetched on the next refresh.</p>
 
                         <h3>Docker Compose</h3>
-                        <p>Compose files are discovered under <code>/home</code>, <code>/opt</code>, <code>/var</code>, and <code>/root</code> (first 20 files). Each stack shows its services, modified time, and whether it is running. Per stack you can <strong>Start</strong> (<code>docker compose up -d</code>), <strong>Stop</strong> (<code>docker compose down</code>), <strong>Restart</strong>, or <strong>Pull Images</strong> — and the detail view shows the file content read-only with a <strong>Reload</strong> button.</p>
+                        <p>Compose files are discovered under <code>/home</code>, <code>/opt</code>, <code>/var</code>, and <code>/root</code> (first 20 files). Each stack shows its services, modified time, and whether it is running. Per stack you can <strong>Start</strong> (<code>docker compose up -d</code>), <strong>Stop</strong> (<code>docker compose down</code>), <strong>Restart</strong>, or <strong>Pull Images</strong>, and the detail view shows the file content read-only with a <strong>Reload</strong> button.</p>
 
                         <h3>Security</h3>
-                        <p>Credentials (passwords, private keys, passphrases) are stored in the iOS <strong>Keychain</strong>. They ride on iCloud Keychain only if you have iCloud Keychain enabled on your device — there is no CloudKit sync of servers, tests, or snippets. All SSH/SFTP traffic goes directly from your device to your server.</p>
+                        <p>Credentials (passwords, private keys, passphrases) are stored in the iOS <strong>Keychain</strong>. They ride on iCloud Keychain only if you have iCloud Keychain enabled on your device. There is no CloudKit sync of servers, tests, or snippets. All SSH/SFTP traffic goes directly from your device to your server.</p>
                     </div>
                 </div>
             </div>

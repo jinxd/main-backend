@@ -18,7 +18,7 @@
         <section class="hero">
             <p class="eyebrow">Personal site</p>
             <h1>I build apps because I enjoy building useful things.</h1>
-            <p class="lead">I am Hannes, a student and developer from Germany. I work on iOS apps and backend projects, learn in public, and try to ship steadily.</p>
+            <p class="lead">I am Hannes from Germany. I build iOS apps and backend projects.</p>
             <div class="proof-grid">
                 <article>
                     <p class="label">Current focus</p>
@@ -72,15 +72,6 @@
                     </div>
                 </a>
             </div>
-        </section>
-
-        <section class="notes">
-            <p class="eyebrow">Where I am right now</p>
-            <ol>
-                <li><span>01</span>I am still early in this journey and learning every month.</li>
-                <li><span>02</span>I do not have massive user numbers. I focus on improving product quality.</li>
-                <li><span>03</span>Most features start from problems I had myself, then get improved step by step.</li>
-            </ol>
         </section>
 
         <section class="footer-cta">

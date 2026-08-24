@@ -4,65 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContainEye - Adding a Test from Suggestion - hannesnagel</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <style>
-        .subnav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            padding: 1rem;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 100px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        .subnav-link {
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-        .subnav-link:hover, .subnav-link.active {
-            color: var(--accent-color);
-            background: rgba(74, 144, 226, 0.1);
-        }
-        .doc-content {
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .doc-item {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 40px;
-            padding: 3rem;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            margin-bottom: 3rem;
-        }
-        .doc-content h2, .doc-content h3 { color: var(--text-color); margin-bottom: 1.5rem; }
-        .doc-content h2 { font-size: 2rem; }
-        .doc-content h3 { font-size: 1.5rem; margin-top: 2rem; }
-        .doc-content p, .doc-content li { color: var(--secondary-color); line-height: 1.8; margin-bottom: 1.5rem; }
-        .screenshot-box {
-            text-align: center;
-            margin: 2rem 0;
-            background: rgba(0,0,0,0.3);
-            border-radius: 20px;
-            padding: 1rem;
-        }
-        .screenshot-box img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/retro.css">
 </head>
 <body>
         <div id="site-nav"></div>
@@ -90,7 +32,7 @@
                 <div class="doc-content">
                     <div class="doc-item">
                         <h2>Speed Up with Suggestions</h2>
-                        <p>ContainEye ships with <strong>13 built-in test templates</strong>. The <strong>Suggested Tests</strong> section on the Code tab shows up to 6 cards at a time (with an "N available" count) whenever unassigned suggestions remain — even if you already have active tests. The templates:</p>
+                        <p>ContainEye ships with <strong>13 built-in test templates</strong>. The <strong>Suggested Tests</strong> section on the Code tab shows up to 6 cards at a time (with an "N available" count) whenever unassigned suggestions remain, even if you already have active tests. The templates:</p>
                         <ul>
                             <li>Check Website Status</li>
                             <li>Check Disk Space Usage</li>
@@ -108,7 +50,7 @@
                         </ul>
 
                         <h3>Add a Suggestion to a Server</h3>
-                        <p>Tap <strong>Add Test</strong> on a suggestion card, pick the server in the <strong>"Add Test to Server"</strong> sheet, and confirm. The template's command and expected output are copied verbatim and the test is saved as an active test for that server — it drops out of the suggestion pool.</p>
+                        <p>Tap <strong>Add Test</strong> on a suggestion card, pick the server in the <strong>"Add Test to Server"</strong> sheet, and confirm. The template's command and expected output are copied verbatim and the test is saved as an active test for that server. It drops out of the suggestion pool.</p>
 
                         <div class="screenshot-box">
                             <img src="/images/containeye-framed/configure-suggested-test.png" alt="Select a suggestion">

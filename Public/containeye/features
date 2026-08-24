@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContainEye - Features - hannesnagel</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/retro.css">
 </head>
 <body>
         <div id="site-nav"></div>
@@ -47,22 +47,22 @@
                         <p>See all containers with their CPU and memory usage and start or stop them. Discovered docker-compose stacks can be started, stopped, restarted, or pulled; compose file contents are viewable read-only.</p>
 
                         <h3>Automated Tests</h3>
-                        <p>Run a command over SSH — or check a URL — and validate the output against an expected pattern (regex or exact). Create tests with the AI, or add one of 13 built-in suggestions. Run them manually, from the home-screen widget, or via Shortcuts; ContainEye also attempts background checks when iOS allows.</p>
+                        <p>Run a command over SSH, or check a URL, and validate the output against an expected pattern (regex or exact). Create tests with the AI, or add one of 13 built-in suggestions. Run them manually, from the home-screen widget, or via Shortcuts; ContainEye also attempts background checks when iOS allows.</p>
 
                         <h3>Agentic AI Assistant</h3>
                         <p>A conversational assistant that lists your servers, runs approved commands, reads and writes files, and creates or updates tests and snippets for you. Every server command goes through an approval dialog unless you allow it permanently.</p>
 
                         <h3>Shortcuts &amp; Widgets</h3>
-                        <p>Two Shortcuts actions — <strong>Test Servers</strong> and <strong>Run a single Test</strong> — run your checks without opening the app. A single systemSmall <strong>Test Widget</strong> shows your most important test and can re-run it in one tap.</p>
+                        <p>Two Shortcuts actions, <strong>Test Servers</strong> and <strong>Run a single Test</strong>, run your checks without opening the app. A single systemSmall <strong>Test Widget</strong> shows your most important test and can re-run it in one tap.</p>
 
                         <h3>Privacy by Design</h3>
                         <p>Credentials live in the iOS Keychain and sync through iCloud Keychain only if you have it enabled. SSH and SFTP traffic goes directly from your device to your server.</p>
 
                         <h3>In-Depth Walkthroughs</h3>
                         <ul>
-                            <li><a href="/containeye/features-1" class="accent-link">Part 1</a> — servers &amp; terminal</li>
-                            <li><a href="/containeye/features-2" class="accent-link">Part 2</a> — automated tests</li>
-                            <li><a href="/containeye/features-3" class="accent-link">Part 3</a> — SFTP, Agentic &amp; automations</li>
+                            <li><a href="/containeye/features-1" class="accent-link">Part 1</a>, servers &amp; terminal</li>
+                            <li><a href="/containeye/features-2" class="accent-link">Part 2</a>, automated tests</li>
+                            <li><a href="/containeye/features-3" class="accent-link">Part 3</a>, SFTP, Agentic &amp; automations</li>
                         </ul>
                     </div>
                 </div>

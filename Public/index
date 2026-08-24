@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hannes Nagel — apps built by hand</title>
+    <title>Hannes Nagel: apps built by hand</title>
     <meta name="description" content="Hannes Nagel is a student and indie developer from Germany building iOS apps and backend projects: ContainEye, I Told You So, Recipes, and Superghost.">
-    <meta property="og:title" content="Hannes Nagel — apps built by hand">
-    <meta property="og:description" content="Student and indie developer from Germany. iOS apps and backend projects, shipped steadily.">
+    <meta property="og:title" content="Hannes Nagel: apps built by hand">
+    <meta property="og:description" content="Student and indie developer from Germany. iOS apps and backend projects.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hannesnagel.com/">
     <meta property="og:image" content="https://hannesnagel.com/images/containeye_promo.png">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/retro.css">
 </head>
 
 <body>
@@ -43,7 +43,7 @@
             </div>
             <span class="status-pill" title="Click me :)"><span class="dot"></span>Currently building The Podcatcher</span>
             <h1>I build apps because I enjoy building <em>useful</em> things.</h1>
-            <p class="lead">I am Hannes, a student and developer from Germany. I work on iOS apps and backend projects, learn in public, and try to ship steadily.</p>
+            <p class="lead">I am Hannes from Germany. I build iOS apps and backend projects.</p>
             <div class="proof-grid">
                 <article>
                     <p class="label">Current focus</p>
@@ -109,15 +109,6 @@
             </div>
         </section>
 
-        <section class="notes">
-            <p class="sub-header">Where I am right now</p>
-            <ol>
-                <li><span>01</span>I am still early in this journey and learning every month.</li>
-                <li><span>02</span>I do not have massive user numbers. I focus on improving product quality.</li>
-                <li><span>03</span>Most features start from problems I had myself, then get improved step by step.</li>
-            </ol>
-        </section>
-
         <section class="marquee-section" aria-hidden="true">
             <div class="marquee">
                 <div class="marquee-track">
@@ -125,7 +116,7 @@
                     <span>SwiftUI</span><span class="tick">✦</span>
                     <span>Vapor</span><span class="tick">✦</span>
                     <span>iOS apps</span><span class="tick">✦</span>
-                    <span>student by day, indie dev after homework</span><span class="tick">✦</span>
+                    
                     <span>shipped from Germany</span><span class="tick">✦</span>
                     <span>probably debugging right now</span><span class="tick">✦</span>
                 </div>
@@ -134,7 +125,7 @@
                     <span>SwiftUI</span><span class="tick">✦</span>
                     <span>Vapor</span><span class="tick">✦</span>
                     <span>iOS apps</span><span class="tick">✦</span>
-                    <span>student by day, indie dev after homework</span><span class="tick">✦</span>
+                    
                     <span>shipped from Germany</span><span class="tick">✦</span>
                     <span>probably debugging right now</span><span class="tick">✦</span>
                 </div>

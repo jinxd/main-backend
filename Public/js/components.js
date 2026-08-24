@@ -36,6 +36,15 @@
                 metas[i].setAttribute('content', rename(c));
             }
         }
+        // mailto: links - rewrite the href too so the (already renamed) contact
+        // address actually mails to contact@chaaarlie.com
+        var mails = document.querySelectorAll('a[href^="mailto:"]');
+        for (var m = 0; m < mails.length; m++) {
+            var h = mails[m].getAttribute('href');
+            if (h) {
+                mails[m].setAttribute('href', rename(h));
+            }
+        }
         // visible text: walk text nodes, skip script/style
         var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
             acceptNode: function (n) {

@@ -4,65 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContainEye - Features Walkthrough - hannesnagel</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <style>
-        .subnav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            padding: 1rem;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 100px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        .subnav-link {
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-        .subnav-link:hover, .subnav-link.active {
-            color: var(--accent-color);
-            background: rgba(74, 144, 226, 0.1);
-        }
-        .doc-content {
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .doc-item {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 40px;
-            padding: 3rem;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            margin-bottom: 3rem;
-        }
-        .doc-content h2, .doc-content h3 { color: var(--text-color); margin-bottom: 1.5rem; }
-        .doc-content h2 { font-size: 2rem; }
-        .doc-content h3 { font-size: 1.5rem; margin-top: 2rem; }
-        .doc-content p, .doc-content li { color: var(--secondary-color); line-height: 1.8; margin-bottom: 1.5rem; }
-        .screenshot-box {
-            text-align: center;
-            margin: 2rem 0;
-            background: rgba(0,0,0,0.3);
-            border-radius: 20px;
-            padding: 1rem;
-        }
-        .screenshot-box img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/retro.css">
 </head>
 <body>
         <div id="site-nav"></div>
@@ -97,13 +39,13 @@
                         </div>
 
                         <h3>SFTP Files</h3>
-                        <p>Browse your server's files over SFTP using the same credentials as SSH: go up and down directories, navigate to a path, toggle hidden files, upload (multi-select with progress), create folders and files, rename or delete, and export or open any file — including a full-screen text editor that saves changes straight back to the server. From the terminal, pressing Enter after <code>open</code>/<code>nano</code>/<code>vim</code>/<code>nvim &lt;file&gt;</code> can open the file right in this editor.</p>
+                        <p>Browse your server's files over SFTP using the same credentials as SSH: go up and down directories, navigate to a path, toggle hidden files, upload (multi-select with progress), create folders and files, rename or delete, and export or open any file, including a full-screen text editor that saves changes straight back to the server. From the terminal, pressing Enter after <code>open</code>/<code>nano</code>/<code>vim</code>/<code>nvim &lt;file&gt;</code> can open the file right in this editor.</p>
 
                         <h3>Agentic AI Assistant</h3>
-                        <p>A conversational assistant that lists your servers, runs approved commands, reads and writes files, and creates or updates tests and snippets for you — with every server command going through an approval dialog (<strong>Allow Once</strong>, <strong>Always Allow "…" Commands</strong>, <strong>Always Allow All Commands</strong>, <strong>Deny</strong>, <strong>Cancel</strong>) unless you allow it permanently.</p>
+                        <p>A conversational assistant that lists your servers, runs approved commands, reads and writes files, and creates or updates tests and snippets for you, with every server command going through an approval dialog (<strong>Allow Once</strong>, <strong>Always Allow "…" Commands</strong>, <strong>Always Allow All Commands</strong>, <strong>Deny</strong>, <strong>Cancel</strong>) unless you allow it permanently.</p>
 
                         <h3>Power Automations</h3>
-                        <p>Trigger server tests with the <strong>Test Servers</strong> and <strong>Run a single Test</strong> Shortcuts actions — they run in the background without opening the app, so you can schedule them by time of day, location, or other automations. The home-screen <strong>Test Widget</strong> shows your most important test and re-runs it in one tap. All connections are direct and native.</p>
+                        <p>Trigger server tests with the <strong>Test Servers</strong> and <strong>Run a single Test</strong> Shortcuts actions. They run in the background without opening the app, so you can schedule them by time of day, location, or other automations. The home-screen <strong>Test Widget</strong> shows your most important test and re-runs it in one tap. All connections are direct and native.</p>
                     </div>
                 </div>
             </div>

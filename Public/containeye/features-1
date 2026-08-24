@@ -4,65 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContainEye - Features Walkthrough - hannesnagel</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <style>
-        .subnav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            padding: 1rem;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 100px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        .subnav-link {
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-        .subnav-link:hover, .subnav-link.active {
-            color: var(--accent-color);
-            background: rgba(74, 144, 226, 0.1);
-        }
-        .doc-content {
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .doc-item {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 40px;
-            padding: 3rem;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            margin-bottom: 3rem;
-        }
-        .doc-content h2, .doc-content h3 { color: var(--text-color); margin-bottom: 1.5rem; }
-        .doc-content h2 { font-size: 2rem; }
-        .doc-content h3 { font-size: 1.5rem; margin-top: 2rem; }
-        .doc-content p, .doc-content li { color: var(--secondary-color); line-height: 1.8; margin-bottom: 1.5rem; }
-        .screenshot-box {
-            text-align: center;
-            margin: 2rem 0;
-            background: rgba(0,0,0,0.3);
-            border-radius: 20px;
-            padding: 1rem;
-        }
-        .screenshot-box img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/retro.css">
 </head>
 <body>
         <div id="site-nav"></div>
@@ -90,17 +32,17 @@
                 <div class="doc-content">
                     <div class="doc-item">
                         <h2>Infrastructure Mastery</h2>
-                        <p>ContainEye offers a unified interface for all your server needs — from a robust SSH terminal to live server monitoring and Docker management, all on your iPhone or iPad.</p>
+                        <p>ContainEye offers a unified interface for all your server needs, from a robust SSH terminal to live server monitoring and Docker management, all on your iPhone or iPad.</p>
 
                         <div class="screenshot-box">
                             <img src="/images/containeye-framed/servers-overview.png" alt="Servers overview">
                         </div>
 
                         <h3>Server Monitoring at a Glance</h3>
-                        <p>The Servers tab shows every server as a card with its online status, cores/memory/disk/uptime, and live CPU, RAM, and disk rings — plus network up/down on Linux hosts. Open a server for processes (searchable and sortable, with kill controls), containers (start/stop with CPU and memory usage), and discovered Docker Compose stacks.</p>
+                        <p>The Servers tab shows every server as a card with its online status, cores/memory/disk/uptime, and live CPU, RAM, and disk rings, plus network up/down on Linux hosts. Open a server for processes (searchable and sortable, with kill controls), containers (start/stop with CPU and memory usage), and discovered Docker Compose stacks.</p>
 
                         <h3>Interactive Terminal</h3>
-                        <p>A full-featured terminal with a multi-tab workspace (up to 24 tabs), per-tab tmux sessions, four themes plus custom themes, and command suggestions drawn from your remote shell history, common commands, and snippets. Volume buttons and shake can be mapped to arrow keys and other shortcuts so you're productive even on the go — and you can select any output and ask the AI to explain it.</p>
+                        <p>A full-featured terminal with a multi-tab workspace (up to 24 tabs), per-tab tmux sessions, four themes plus custom themes, and command suggestions drawn from your remote shell history, common commands, and snippets. Volume buttons and shake can be mapped to arrow keys and other shortcuts so you're productive even on the go, and you can select any output and ask the AI to explain it.</p>
 
                         <div class="screenshot-box">
                             <img src="/images/containeye-framed/in-terminal-with-suggestions.png" alt="Terminal suggestions">

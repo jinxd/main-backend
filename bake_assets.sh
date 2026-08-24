@@ -4,14 +4,20 @@ set -e
 # Directory containing the public assets
 PUBLIC_DIR="./Public"
 
-# Get timestamp of main.css for cache busting
-CSS_FILE="$PUBLIC_DIR/css/main.css"
-if [ -f "$CSS_FILE" ]; then
-    TIMESTAMP=$(date -r "$CSS_FILE" +%s)
-    echo "CSS Timestamp: $TIMESTAMP"
-else
-    echo "Warning: css/main.css not found, skipping cache busting."
+# Get timestamp of the newest CSS/JS asset for cache busting
+# (so a change to any busted asset invalidates all busted references)
+TIMESTAMP=0
+for F in "$PUBLIC_DIR/css/retro.css" "$PUBLIC_DIR/js/components.js"; do
+    if [ -f "$F" ]; then
+        T=$(date -r "$F" +%s)
+        if [ "$T" -gt "$TIMESTAMP" ]; then TIMESTAMP=$T; fi
+    fi
+done
+if [ "$TIMESTAMP" -eq 0 ]; then
+    echo "Warning: none of css/retro.css, js/components.js found; skipping cache busting."
     TIMESTAMP=$(date +%s)
+else
+    echo "Asset Timestamp: $TIMESTAMP"
 fi
 
 # Function to process a file
@@ -27,8 +33,8 @@ process_file() {
     echo "Processing $file..."
 
     # Inject cache busting
-    # strict replacement of /css/main.css with /css/main.css?v=TIMESTAMP
-    sed -i "s|/css/main.css|/css/main.css?v=$TIMESTAMP|g" "$file"
+    # strict replacement of /css/retro.css with /css/retro.css?v=TIMESTAMP
+    sed -i "s|/css/retro.css|/css/retro.css?v=$TIMESTAMP|g" "$file"
     # strict replacement of /js/components.js with /js/components.js?v=TIMESTAMP
     sed -i "s|/js/components.js|/js/components.js?v=$TIMESTAMP|g" "$file"
 

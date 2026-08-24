@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — Hannes Nagel</title>
-    <meta name="description" content="Hannes Nagel is a student and developer from Germany, building native apps with Swift since 2020.">
-    <link rel="stylesheet" href="/css/main.css">
+    <title>About: Hannes Nagel</title>
+    <meta name="description" content="Hannes Nagel is a developer from Germany, building native apps with Swift since 2020.">
+    <link rel="stylesheet" href="/css/retro.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <div class="doc-content">
                 <p class="sub-header">About</p>
                 <h1>Hannes <em>Nagel</em></h1>
-                <p class="lead" style="margin-top: 1rem;">I am a student and developer from Germany. I started coding in 2020 and mostly build native apps with Swift, plus backend services when needed.</p>
+                <p class="lead" style="margin-top: 1rem;">I am a developer from Germany. I started coding in 2020 and build native apps with Swift, plus backend services when needed.</p>
             </div>
         </section>
 

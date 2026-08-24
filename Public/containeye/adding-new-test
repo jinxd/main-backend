@@ -4,67 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContainEye - Adding a New Test - hannesnagel</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <style>
-        .subnav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            padding: 1rem;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 100px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        .subnav-link {
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-        .subnav-link:hover, .subnav-link.active {
-            color: var(--accent-color);
-            background: rgba(74, 144, 226, 0.1);
-        }
-        .doc-content {
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .doc-item {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 40px;
-            padding: 3rem;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            margin-bottom: 3rem;
-        }
-        .doc-content h2, .doc-content h3 { color: var(--text-color); margin-bottom: 1.5rem; }
-        .doc-content h2 { font-size: 2rem; }
-        .doc-content h3 { font-size: 1.5rem; margin-top: 2rem; }
-        .doc-content p, .doc-content li { color: var(--secondary-color); line-height: 1.8; margin-bottom: 1.5rem; }
-        .steps { padding-left: 1.5rem; }
-        .steps li { margin-bottom: 1rem; }
-        .screenshot-box {
-            text-align: center;
-            margin: 2rem 0;
-            background: rgba(0,0,0,0.3);
-            border-radius: 20px;
-            padding: 1rem;
-        }
-        .screenshot-box img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/retro.css">
 </head>
 <body>
         <div id="site-nav"></div>
@@ -92,7 +32,7 @@
                 <div class="doc-content">
                     <div class="doc-item">
                         <h2>Create a Test with the AI</h2>
-                        <p>There is no blank "new test" form — tests are created with the help of the Agentic assistant. Tap <strong>Create Test</strong> in the Code tab's <strong>+</strong> menu (or <strong>Create Your First Test</strong> on the empty state) and describe what you want to check in plain language, e.g. <em>"Check if nginx is running."</em></p>
+                        <p>There is no blank "new test" form, tests are created with the help of the Agentic assistant. Tap <strong>Create Test</strong> in the Code tab's <strong>+</strong> menu (or <strong>Create Your First Test</strong> on the empty state) and describe what you want to check in plain language, e.g. <em>"Check if nginx is running."</em></p>
                         <p>ContainEye switches to the <strong>Agentic</strong> tab with a pre-filled draft instructing the assistant to create a server test for you.</p>
 
                         <div class="screenshot-box">
@@ -101,18 +41,18 @@
 
                         <h3>Step-by-Step</h3>
                         <ol class="steps">
-                            <li>The assistant may list your servers to confirm labels, and may probe the server first by running a command — if it does, you get an <strong>"Allow command execution?"</strong> dialog (<strong>Allow Once</strong>, <strong>Always Allow "…" Commands</strong>, <strong>Always Allow All Commands</strong>, <strong>Deny</strong>, <strong>Cancel</strong>).</li>
+                            <li>The assistant may list your servers to confirm labels, and may probe the server first by running a command. If it does, you get an <strong>"Allow command execution?"</strong> dialog (<strong>Allow Once</strong>, <strong>Always Allow "…" Commands</strong>, <strong>Always Allow All Commands</strong>, <strong>Deny</strong>, <strong>Cancel</strong>).</li>
                             <li>It analyzes the output and proposes the test's command and expected output.</li>
                             <li>It creates the test with <code>create_test</code> and <strong>runs it immediately</strong> so you see the result right away.</li>
                             <li>The test appears in <strong>Active Tests</strong> on the Code tab.</li>
                         </ol>
 
                         <div class="screenshot-box">
-                            <img src="/images/containeye-framed/ai-has-question.png" alt="AI clarification">
+                            <img src="/images/containeye-framed/assistant-has-question.png" alt="clarification">
                         </div>
 
                         <h3>Interactive AI Flow</h3>
-                        <p>The assistant can ask clarifying questions to make sure the test is accurate — answer them in the chat to refine the command or expected output. You can also fine-tune a test afterwards by editing its name, command, expected output, notes, or target server.</p>
+                        <p>The assistant can ask clarifying questions to make sure the test is accurate, answer them in the chat to refine the command or expected output. You can also fine-tune a test afterwards by editing its name, command, expected output, notes, or target server.</p>
                     </div>
                 </div>
             </div>

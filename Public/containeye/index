@@ -4,133 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ContainEye — Server &amp; Docker checks from your phone</title>
+    <title>ContainEye: Server &amp; Docker checks from your phone</title>
     <meta name="description" content="ContainEye is an iPhone &amp; iPad app for working with your servers: SSH terminal, SFTP files, live monitoring, Docker &amp; Compose controls, automated tests, and an AI assistant.">
-    <link rel="stylesheet" href="/css/main.css">
-    <style>
-        :root {
-            --ce: #0e6b54;
-            --ce-glow: #2bd99f;
-        }
-
-        /* ---- terminal mock ---- */
-
-        .term {
-            width: 100%;
-            max-width: 720px;
-            margin-top: 1.4rem;
-            border-radius: 14px;
-            overflow: hidden;
-            border: 1px solid #2a322f;
-            background: #101513;
-            box-shadow: var(--shadow-hover);
-            font: 0.88rem/1.65 ui-monospace, "SF Mono", Menlo, monospace;
-        }
-
-        .term-bar {
-            display: flex;
-            align-items: center;
-            gap: 0.45rem;
-            padding: 0.6rem 0.9rem;
-            background: #181f1c;
-            border-bottom: 1px solid #232b27;
-        }
-
-        .term-bar i {
-            width: 11px;
-            height: 11px;
-            border-radius: 50%;
-        }
-
-        .term-bar i:nth-child(1) { background: #f4695e; }
-        .term-bar i:nth-child(2) { background: #f5bd4f; }
-        .term-bar i:nth-child(3) { background: #61c454; }
-
-        .term-bar span {
-            margin-left: 0.5rem;
-            color: #8fa39b;
-            font-size: 0.78rem;
-            font-family: var(--sans);
-        }
-
-        .term-body {
-            padding: 1rem 1.1rem 1.2rem;
-            min-height: 215px;
-            color: #cfe3da;
-        }
-
-        .term-body .line {
-            white-space: pre-wrap;
-            word-break: break-word;
-        }
-
-        .term-body .prompt {
-            color: var(--ce-glow);
-            font-weight: 700;
-        }
-
-        .term-body .ok {
-            color: #7fdfb6;
-        }
-
-        .term-body .dim {
-            color: #7d8f88;
-        }
-
-        .cursor {
-            display: inline-block;
-            width: 0.55em;
-            height: 1.05em;
-            background: var(--ce-glow);
-            vertical-align: text-bottom;
-            animation: blink 1s steps(1) infinite;
-        }
-
-        @keyframes blink {
-            50% { opacity: 0; }
-        }
-
-        /* ---- live checks row ---- */
-
-        .checks {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .check {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.45rem;
-            border: 1px solid var(--line);
-            background: var(--surface-strong);
-            border-radius: 999px;
-            padding: 0.4rem 0.85rem;
-            font-size: 0.84rem;
-            font-weight: 600;
-            color: var(--muted);
-        }
-
-        .check i {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--ce);
-            animation: pulse 2.4s infinite;
-        }
-
-        .check:nth-child(2) i { animation-delay: 0.5s; }
-        .check:nth-child(3) i { animation-delay: 1s; }
-        .check:nth-child(4) i { animation-delay: 1.5s; }
-
-        @media (prefers-reduced-motion: reduce) {
-            .cursor,
-            .check i {
-                animation: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/css/retro.css">
 </head>
 
 <body>
@@ -140,10 +16,10 @@
         <section class="hero" id="hero">
             <p class="sub-header">ContainEye</p>
             <h1>Your servers, in your <em>pocket</em>.</h1>
-            <p class="lead">Server and Docker checks from your phone — built for practical maintenance work when you are away from your desk.</p>
+            <p class="lead">Server and Docker checks from your phone.</p>
 
             <div class="term" aria-hidden="true">
-                <div class="term-bar"><i></i><i></i><i></i><span>containeye — ssh</span></div>
+                <div class="term-bar"><i></i><i></i><i></i><span>containeye, ssh</span></div>
                 <div class="term-body" id="term-body"><span class="cursor"></span></div>
             </div>
 
@@ -175,7 +51,7 @@
                         <li>SFTP file browser with upload, download, rename, and a built-in text editor.</li>
                         <li>Live server monitoring: CPU, memory, disk, network, and processes.</li>
                         <li>Docker and Docker Compose controls: start, stop, restart, pull images.</li>
-                        <li>Automated tests — from 13 built-in suggestions or drafted by the AI.</li>
+                        <li>Automated tests, from 13 built-in suggestions or drafted by the AI.</li>
                         <li>Agentic AI assistant that operates your servers through approved commands.</li>
                         <li>Shortcuts actions and a home-screen widget for your tests.</li>
                     </ul>
