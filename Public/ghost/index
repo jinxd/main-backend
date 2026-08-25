@@ -34,9 +34,9 @@
             <div class="doc-content">
                 <h2>How a round goes</h2>
                 <p>The idea comes from a classroom game: one letter is added each turn, and the goal is to avoid completing a full word yourself. In this version players can <strong>prepend or append</strong>, which keeps rounds fast and a bit unpredictable.</p>
-                <div class="round"><span class="who">You:</span><span class="word">PLA<span class="new">N</span></span><span class="who">: hmm, "plan" is a word, but wait.</span></div>
-                <div class="round"><span class="who">Friend:</span><span class="word">PLAN<span class="new">E</span></span><span class="who">: you can keep going toward "planet".</span></div>
-                <div class="round"><span class="who">You:</span><span class="word">PLANE<span class="new">T</span></span><span class="who">: that completes a word. Game over.</span></div>
+                <div class="round"><span class="who">You:</span><span class="word">S<span class="new">T</span></span><span class="who">: "st" is not a word. Safe.</span></div>
+                <div class="round"><span class="who">Friend:</span><span class="word">ST<span class="new">A</span></span><span class="who">: "sta" is not a word either. Still safe.</span></div>
+                <div class="round"><span class="who">You:</span><span class="word">STA<span class="new">R</span></span><span class="who">: "star" is a word. Game over.</span></div>
                 <p>Multiplayer. Short rounds. Grudges included.</p>
             </div>
         </section>
