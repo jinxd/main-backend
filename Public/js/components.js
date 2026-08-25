@@ -568,8 +568,8 @@
             return;
         }
 
-        var maxDx = 3.5;
-        var maxDy = 3.5;
+        var maxDx = 6.5;
+        var maxDy = 6.5;
 
         window.addEventListener('pointermove', function (e) {
             for (var i = 0; i < eyes.length; i++) {
