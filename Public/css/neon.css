@@ -281,16 +281,16 @@ img { max-width: 100%; height: auto; }
 .card-link { color: var(--neon-ink); text-decoration: none; }
 .card-link:hover { border-color: var(--neon-magenta); box-shadow: var(--neon-glow); text-decoration: none; }
 
-/* whole-card clickable (stretched link) */
+/* whole-card link: every tap on the panel opens the app's details */
 .app-card { position: relative; }
 .app-card .card-stretch {
     position: absolute;
     inset: 0;
-    z-index: 1;
+    z-index: 5; /* above all card content: any tap goes to details */
     border-radius: inherit;
 }
-.app-card > *:not(.card-stretch) { position: relative; z-index: 2; }
-.app-card .app-body a { z-index: 3; position: relative; }
+.app-card > *:not(.card-stretch) { position: relative; }
+.app-card .app-body a { position: relative; }
 
 .card-media {
     border-bottom: 1px solid var(--neon-line);
