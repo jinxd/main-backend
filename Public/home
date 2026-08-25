@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hannes Nagel: apps built by hand</title>
-    <meta name="description" content="Hannes Nagel is a student and indie developer from Germany building iOS apps and backend projects: ContainEye, I Told You So, Recipes, and Superghost.">
-    <meta property="og:title" content="Hannes Nagel: apps built by hand">
-    <meta property="og:description" content="Student and indie developer from Germany. iOS apps and backend projects.">
+    <title>jinxd // apps</title>
+    <meta name="description" content="ContainEye, Superghost, Recipes, The Podcatcher, and more.">
+    <meta property="og:title" content="jinxd // apps">
+    <meta property="og:description" content="Native iOS apps and the tools around them.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hannesnagel.com/">
     <meta property="og:image" content="https://hannesnagel.com/images/containeye_promo.png">
-    <link rel="stylesheet" href="/css/retro.css">
+    <link rel="stylesheet" href="/css/neon.css">
 </head>
 
 <body>
@@ -42,28 +42,28 @@
                 </span>
             </div>
             <span class="status-pill" title="Click me :)"><span class="dot"></span>Currently building The Podcatcher</span>
-            <h1>I build apps because I enjoy building <em>useful</em> things.</h1>
-            <p class="lead">I am Hannes from Germany. I build iOS apps and backend projects.</p>
+            <h1>This shit is <em>useful</em> to me.</h1>
+            <p class="lead">You may use it or not.</p>
             <div class="proof-grid">
                 <article>
-                    <p class="label">Current focus</p>
+                    <p class="label">Now</p>
                     <p>The Podcatcher</p>
                 </article>
                 <article>
-                    <p class="label">Background</p>
-                    <p>Student + indie dev</p>
+                    <p class="label">Usually runs on</p>
+                    <p>iPhone · iPad · Mac</p>
                 </article>
                 <article>
-                    <p class="label">Based in</p>
-                    <p>Germany</p>
+                    <p class="label">Motto</p>
+                    <p>Push to main and hope it works</p>
                 </article>
             </div>
         </section>
 
         <section class="work">
             <div class="section-head">
-                <p class="sub-header">Selected Work</p>
-                <h2>Some projects I have built <em>so far</em>.</h2>
+                <p class="sub-header">THE GOODS</p>
+                <h2>The <em>stuff</em>.</h2>
             </div>
             <div class="cards">
                 <a class="card" href="/i-told-you-so/" aria-label="Open I Told You So details">
@@ -102,7 +102,7 @@
                     </div>
                     <div class="card-body">
                         <h3>Superghost</h3>
-                        <p>A small multiplayer word game I made for quick rounds with friends.</p>
+                        <p>A multiplayer word game. Fast rounds, petty grudges.</p>
                         <span class="card-cta">Open details</span>
                     </div>
                 </a>
@@ -116,29 +116,27 @@
                     <span>SwiftUI</span><span class="tick">✦</span>
                     <span>Vapor</span><span class="tick">✦</span>
                     <span>iOS apps</span><span class="tick">✦</span>
-                    
-                    <span>shipped from Germany</span><span class="tick">✦</span>
-                    <span>probably debugging right now</span><span class="tick">✦</span>
+                    <span>servers</span><span class="tick">✦</span>
+                    <span>debugging at 3am</span><span class="tick">✦</span>
                 </div>
                 <div class="marquee-track">
                     <span>Swift</span><span class="tick">✦</span>
                     <span>SwiftUI</span><span class="tick">✦</span>
                     <span>Vapor</span><span class="tick">✦</span>
                     <span>iOS apps</span><span class="tick">✦</span>
-                    
-                    <span>shipped from Germany</span><span class="tick">✦</span>
-                    <span>probably debugging right now</span><span class="tick">✦</span>
+                    <span>servers</span><span class="tick">✦</span>
+                    <span>debugging at 3am</span><span class="tick">✦</span>
                 </div>
             </div>
         </section>
 
         <section class="footer-cta">
-            <p class="sub-header">Say hello</p>
-            <h2>If you want to talk about apps, code, or ideas, <em>write me</em>.</h2>
+            <p class="sub-header">Hit me up</p>
+            <h2>Got an idea, a bug, or a rant? <em>Send it.</em></h2>
             <div class="links">
                 <a href="/contact">Contact</a>
                 <a href="/thoughts/">Thoughts</a>
-                <a href="https://mastodon.social/@hannesmnagel">Mastodon</a>
+                <a href="https://woof.tech/@jinxd" rel="me">Mastodon</a>
             </div>
         </section>
     </main>

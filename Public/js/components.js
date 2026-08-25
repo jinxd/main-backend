@@ -62,6 +62,7 @@
                     .replace(/https?:\/\/mastodon\.social\/@hannesmnagel/g, 'https://woof.tech/@jinxd')
                     .replace(/Hannes Nagel/g, 'Jinxd')
                     .replace(/Hannes/g, 'Jinxd')
+                    .replace(/contact@hannesnagel\.com/g, 'fuckyou@jinxd.net')
                     .replace(/hannesnagel\.com/g, 'jinxd.net')
                     .replace(/hannesmnagel/g, 'jinxd')
                     .replace(/hannesnagel/g, 'jinxd');
@@ -194,7 +195,9 @@
         var brandMark = brand.mark;
         var brandLabel = brand.label;
         mount.innerHTML = '<nav class="nav-container" aria-label="Main">' +
-            '<a href="' + homeHref + '" class="nav-brand" aria-label="' + brandLabel + '">' + brandMark + '</a>' +
+            '<a href="' + homeHref + '" class="nav-brand" aria-label="' + brandLabel + '">' +
+            '<img src="/images/jinxd/logo-nav.svg" alt="jinxd" class="nav-logo">' +
+            '</a>' +
             links.join('') +
             '</nav>';
 
@@ -229,7 +232,7 @@
             '<a href="' + brand.mastodon + '" rel="me">Mastodon</a>' +
             '<a href="' + brand.github + '">GitHub</a>' +
             '</nav>' +
-            '<span>&copy; ' + new Date().getFullYear() + ' &middot; Made in Germany, by hand</span>';
+            '<span>&copy; ' + new Date().getFullYear() + ' &middot; built by jinxd</span>';
         document.body.appendChild(footer);
     }
 
@@ -545,6 +548,54 @@
         });
     }
 
+    /* ---------------- corner mascot (follows the mouse) ---------------- */
+
+    function setupMascot() {
+        var m = document.createElement('div');
+        m.className = 'jinxd-mascot';
+        m.setAttribute('aria-hidden', 'true');
+        m.innerHTML = '<img src="/images/jinxd/logo-nav.svg" alt="">';
+        document.body.appendChild(m);
+        // pivot at the logo's tail tip: the tail stays planted, the head tilts
+        m.style.transformOrigin = '97.1% 99.9%';
+
+        // no eyes: the logo just tilts its head toward the cursor
+        var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!window.matchMedia('(hover: hover)').matches || reduced) {
+            return;
+        }
+
+        var maxTilt = 10;              // degrees (pivots at the tail tip)
+        var target = 0;
+        var current = 0;
+        var raf = null;
+
+        function tick() {
+            current += (target - current) * 0.15;
+            if (Math.abs(target - current) < 0.05) {
+                current = target;
+                raf = null;
+            } else {
+                raf = requestAnimationFrame(tick);
+            }
+            m.style.transform = 'rotate(' + current.toFixed(2) + 'deg)';
+        }
+
+        function setTarget(e) {
+            // head tilts side to side, following the cursor's horizontal position
+            var nx = (e.clientX / window.innerWidth) * 2 - 1;   // -1 left .. +1 right
+            target = nx * maxTilt;
+            if (!raf) { raf = requestAnimationFrame(tick); }
+        }
+
+        window.addEventListener('pointermove', setTarget, { passive: true });
+        // relax back to level when the cursor leaves the window
+        document.addEventListener('pointerleave', function () {
+            target = 0;
+            if (!raf) { raf = requestAnimationFrame(tick); }
+        });
+    }
+
     /* ---------------- init ---------------- */
 
     function init() {
@@ -558,6 +609,7 @@
         setupParallax();
         setupGhost();
         setupTabWink();
+        setupMascot();
     }
 
     if (document.readyState === 'loading') {

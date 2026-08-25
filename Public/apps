@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>apps - hannesnagel</title>
-    <link rel="stylesheet" href="/css/retro.css">
+    <link rel="stylesheet" href="/css/neon.css">
 </head>
 
 <body>
@@ -15,10 +15,11 @@
         <section>
             <div class="apps-head reveal">
                 <p class="sub-header">Apps</p>
-                <h1>Things I have built and keep improving.</h1>
+                <h1>The <em>stuff</em>.</h1>
             </div>
             <div class="apps-grid reveal">
                 <article class="app-card">
+<a class="card-stretch" href="/podcatcher/" aria-label="Open details" tabindex="-1"></a>
                     <div class="app-media pod-art" aria-hidden="true">
                         <div class="pod-eq">
                             <i style="--h:55%;--dl:0s"></i><i style="--h:85%;--dl:-.2s"></i><i style="--h:65%;--dl:-.5s"></i><i style="--h:100%;--dl:-.3s"></i><i style="--h:75%;--dl:-.7s"></i><i style="--h:90%;--dl:-.1s"></i><i style="--h:60%;--dl:-.4s"></i>
@@ -27,7 +28,7 @@
                     <div class="app-body">
                         <span class="wip-chip">● In development</span>
                         <h2><a class="card-link" href="/podcatcher/">The Podcatcher</a></h2>
-                        <p>The podcast app I am building right now: iCloud sync, iPhone + iPad + Mac, up to 5× speed, transcripts, automatic chapters and chapter skip rules.</p>
+                        <p>A podcast app that actually respects your time: iCloud sync everywhere, up to 5× speed, transcripts, automatic chapters, skip rules.</p>
                         <div class="badge-list">
                             <a href="/podcatcher/" class="chip-link">Open details</a>
                             <a href="/contact" class="chip-link">Get notified</a>
@@ -36,6 +37,7 @@
                 </article>
 
                 <article class="app-card">
+<a class="card-stretch" href="/i-told-you-so/" aria-label="Open details" tabindex="-1"></a>
                     <div class="app-media light">
                         <img src="/images/i-told-you-so_receipt.png?v=2" alt="I Told You So">
                     </div>
@@ -53,6 +55,7 @@
                 </article>
 
                 <article class="app-card">
+<a class="card-stretch" href="/containeye/" aria-label="Open details" tabindex="-1"></a>
                     <div class="app-media">
                         <img src="/images/containeye_promo.png" alt="ContainEye">
                     </div>
@@ -69,6 +72,7 @@
                 </article>
 
                 <article class="app-card">
+<a class="card-stretch" href="/recipes/" aria-label="Open details" tabindex="-1"></a>
                     <div class="app-media">
                         <img src="/images/recipes_promo.png" alt="Recipes">
                     </div>
@@ -86,6 +90,7 @@
                 </article>
 
                 <article class="app-card">
+<a class="card-stretch" href="/ghost/" aria-label="Open details" tabindex="-1"></a>
                     <div class="app-media">
                         <img src="/images/superghost_promo.png" alt="Superghost">
                     </div>
@@ -101,26 +106,6 @@
             </div>
         </section>
 
-        <section>
-            <div class="apps-head reveal">
-                <p class="sub-header">Earlier Projects</p>
-                <h2>Still part of my path.</h2>
-            </div>
-            <div class="small-grid reveal">
-                <article class="small-card">
-                    <img src="/images/zettl" alt="Zettl">
-                    <h3>Zettl</h3>
-                    <p>Time tracking app work during my time at codeunity.</p>
-                    <a href="https://zettl.app" class="chip-link">zettl.app</a>
-                </article>
-                <article class="small-card">
-                    <img src="/images/ear2brain" alt="ear2brain">
-                    <h3>ear2brain</h3>
-                    <p>My first released app. Vocabulary learning project.</p>
-                    <a href="https://ear2brain.app" class="chip-link">ear2brain.app</a>
-                </article>
-            </div>
-        </section>
     </main>
 
     <script src="/js/components.js"></script>

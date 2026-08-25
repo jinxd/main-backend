@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>I Told You So Privacy Policy</title>
-  <link rel="stylesheet" href="/css/retro.css">
+  <link rel="stylesheet" href="/css/neon.css">
 </head>
 <body>
   <div id="site-nav"></div>
@@ -39,7 +39,7 @@
         <p class="sub-header">Contact</p>
         <h2>Questions?</h2>
       </div>
-      <p>Contact the developer at <a href="/contact">hannesnagel.com/contact</a>.</p>
+      <p>Contact the developer at <a href="/contact">jinxd.net/contact</a>.</p>
     </section>
   </main>
   <script src="/js/components.js"></script>

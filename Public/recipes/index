@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Recipes App: Hannes Nagel</title>
     <meta name="description" content="The Recipes App: collect recipes, organize them, and keep shopping lists in sync across iPhone and the web.">
-    <link rel="stylesheet" href="/css/retro.css">
+    <link rel="stylesheet" href="/css/neon.css">
 </head>
 
 <body>
@@ -15,8 +15,8 @@
     <main class="page">
         <section class="hero rcp-hero">
             <p class="sub-header">iOS + Web App</p>
-            <h1>Your recipes, finally <em>organized</em>.</h1>
-            <p class="lead">Collect recipes, organize them, and keep shopping lists in sync across devices, built for everyday cooking, not food photography.</p>
+            <h1>Recipes that <em>stay</em> organized.</h1>
+            <p class="lead">Store recipes, sync shopping lists, stop losing scraps of paper.</p>
             <div class="cta-buttons">
                 <a href="https://apps.apple.com/de/app/the-recipes-app/id6745904570" class="nav-link">Get it on the App Store</a>
                 <a href="https://recipes.hannesnagel.com" class="nav-link">Open the web app</a>
@@ -35,7 +35,7 @@
                     </ol>
                 </div>
                 <div class="shopping-card">
-                    <span class="card-tag" style="color: var(--rcp-herb);">Shopping list</span>
+                    <span class="card-tag" style="color: var(--neon-cyan);">Shopping list</span>
                     <h3>Tap to check off</h3>
                     <ul id="shop-list">
                         <li><span class="box"></span>Spaghetti, 250 g</li>
@@ -44,50 +44,50 @@
                         <li><span class="box"></span>Fresh basil</li>
                         <li><span class="box"></span>Parmesan</li>
                     </ul>
-                    <p class="shopping-hint">In the real app this syncs to your phone while you shop.</p>
+                    <p class="shopping-hint">In the real app this syncs to your phone as you shop.</p>
                 </div>
             </div>
         </section>
 
         <section class="work rcp-cards">
             <div class="section-head">
-                <p class="sub-header" style="color: var(--rcp);">Core features</p>
-                <h2>Less scrolling, more cooking.</h2>
+                <p class="sub-header" style="color: var(--neon-magenta);">What it does</p>
+                <h2>The <em>useful</em> parts.</h2>
             </div>
             <div class="cards">
                 <article class="card">
                     <div class="card-body">
                         <span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5V14m0 0l-3.5-3.5M12 14l3.5-3.5"/><path d="M4.5 16.5v2a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></span>
                         <h3>Import recipes</h3>
-                        <p>Add recipes manually, from photos, or from text, grandma's handwriting included.</p>
+                        <p>Type them, photograph them, or paste them. Even grandma's handwriting.</p>
                     </div>
                 </article>
                 <article class="card">
                     <div class="card-body">
                         <span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19.5a5.5 5.5 0 0 1 11 0"/><circle cx="17.2" cy="9.5" r="2.4"/><path d="M16.4 14.6a4.6 4.6 0 0 1 4.6 4.4"/></svg></span>
                         <h3>Share with others</h3>
-                        <p>Collaborate on recipe collections with family or friends.</p>
+                        <p>Share the collection. Let everyone add to it.</p>
                     </div>
                 </article>
                 <article class="card">
                     <div class="card-body">
                         <span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9.5" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/><path d="M3.5 4.5h2L8 15.5h10.5L20.5 7.5H6.2"/></svg></span>
                         <h3>Shopping lists</h3>
-                        <p>Build ingredient lists and keep them practical while you are actually standing in the store.</p>
+                        <p>Turn recipes into a shopping list that actually matches the store aisle.</p>
                     </div>
                 </article>
                 <article class="card">
                     <div class="card-body">
                         <span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="3" width="11" height="18" rx="2.4"/><path d="M10.5 18h3"/></svg></span>
                         <h3>Cross-device access</h3>
-                        <p>Use it on iPhone and on the web, your collection is wherever you are.</p>
+                        <p>iPhone and web, same list, everywhere.</p>
                     </div>
                 </article>
             </div>
         </section>
 
         <section class="footer-cta">
-            <p class="sub-header">Say hello</p>
+            <p class="sub-header">Hit me up</p>
             <h2>Questions, ideas, or a recipe to brag about?</h2>
             <div class="links">
                 <a href="/contact">Contact</a>

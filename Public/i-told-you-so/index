@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I Told You So: Hannes Nagel</title>
     <meta name="description" content="I Told You So is a tiny iOS app for recording predictions and friendly bets, settling them later, and sharing a clean receipt.">
-    <link rel="stylesheet" href="/css/retro.css">
+    <link rel="stylesheet" href="/css/neon.css">
 </head>
 
 <body>
@@ -46,7 +46,7 @@
 
         <section class="work itys-cards">
             <div class="section-head">
-                <p class="sub-header" style="color: var(--itys);">What it does</p>
+                <p class="sub-header" style="color: var(--neon-purple);">What it does</p>
                 <h2>For the moments people conveniently forget.</h2>
             </div>
             <div class="cards">

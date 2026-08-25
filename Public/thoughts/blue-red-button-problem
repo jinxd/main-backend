@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="fediverse:creator" content="@jinxd@woof.tech">
     <title>The Blue-Red Button Problem - thoughts</title>
-    <link rel="stylesheet" href="/css/retro.css">
+    <link rel="stylesheet" href="/css/neon.css">
 </head>
 
 <body>
@@ -55,13 +56,13 @@
                 <p>For N people, that means the benefit in the pivotal case is roughly N/2 lives.</p>
                 <p>The chance of being pivotal shrinks as N grows. For N-1 other voters choosing independently at 50:50, the probability that they are exactly tied is:</p>
                 <div style="overflow-x: auto; margin: 1.25rem 0;">
-                    <p style="display: inline-block; min-width: min(100%, 34rem); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
+                    <p style="display: inline-block; min-width: min(100%, 34rem); border: 1px solid var(--neon-line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
                         P(pivotal) = C(N − 1, (N − 1) / 2) · (1 / 2)<sup>(N − 1)</sup>
                     </p>
                 </div>
                 <p>By Stirling's approximation, this behaves like:</p>
                 <div style="overflow-x: auto; margin: 1.25rem 0;">
-                    <p style="display: inline-block; min-width: min(100%, 22rem); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
+                    <p style="display: inline-block; min-width: min(100%, 22rem); border: 1px solid var(--neon-line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
                         √(2 / (πN))
                     </p>
                 </div>
@@ -71,7 +72,7 @@
                 <h3>The net calculation</h3>
                 <p>For odd N, the expected advantage of pressing blue instead of red is approximately:</p>
                 <div style="overflow-x: auto; margin: 1.25rem 0;">
-                    <p style="display: inline-block; min-width: min(100%, 24rem); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
+                    <p style="display: inline-block; min-width: min(100%, 24rem); border: 1px solid var(--neon-line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
                         (N / 2) · P(pivotal) − 0.5
                     </p>
                 </div>
@@ -96,14 +97,14 @@
                 <p>The 50:50 assumption is clean, but it is also generous to the symmetry of the problem. What if we think people are somewhat biased toward red?</p>
                 <p>Let p be the probability that any other person chooses blue. For N = 2r + 1 total people, there are 2r other voters. If p is known, the expected advantage of blue over red is:</p>
                 <div style="overflow-x: auto; margin: 1.25rem 0;">
-                    <p style="display: inline-block; min-width: min(100%, 34rem); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
+                    <p style="display: inline-block; min-width: min(100%, 34rem); border: 1px solid var(--neon-line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
                         r · P(K = r) − P(K &lt; r)
                     </p>
                 </div>
                 <p>where K is the number of blue voters among the other 2r people.</p>
                 <p>If p itself is uncertain, we average that expression over our prior:</p>
                 <div style="overflow-x: auto; margin: 1.25rem 0;">
-                    <p style="display: inline-block; min-width: min(100%, 36rem); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
+                    <p style="display: inline-block; min-width: min(100%, 36rem); border: 1px solid var(--neon-line); border-radius: 14px; padding: 1rem 1.1rem; background: rgba(255, 255, 255, 0.03); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: clamp(0.95rem, 2.5vw, 1.15rem); line-height: 1.8; text-align: center;">
                         E<sub>p</sub>[r · P(K = r | p) − P(K &lt; r | p)]
                     </p>
                 </div>

@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About: Hannes Nagel</title>
-    <meta name="description" content="Hannes Nagel is a developer from Germany, building native apps with Swift since 2020.">
-    <link rel="stylesheet" href="/css/retro.css">
+    <title>About: jinxd</title>
+    <meta name="description" content="jinxd builds native iOS apps and server tooling. No CV, no credentials — just the work.">
+    <link rel="stylesheet" href="/css/neon.css">
 </head>
 
 <body>
@@ -16,15 +16,15 @@
         <section class="hero">
             <div class="doc-content">
                 <p class="sub-header">About</p>
-                <h1>Hannes <em>Nagel</em></h1>
-                <p class="lead" style="margin-top: 1rem;">I am a developer from Germany. I started coding in 2020 and build native apps with Swift, plus backend services when needed.</p>
+                <h1>jinxd <em>//</em></h1>
+                <p class="lead" style="margin-top: 1rem;">A pile of apps.</p>
             </div>
         </section>
 
         <section>
             <div class="doc-content">
-                <h2>Background</h2>
-                <p>I released my first app, <strong>ear2brain</strong>, when I was 15. Later I worked at <strong>codeunity</strong> on a SwiftUI rewrite of Zettl. These days most of my time goes into ContainEye and a handful of smaller apps I keep improving.</p>
+                <h2>What's here</h2>
+                <p><strong>ContainEye</strong> runs servers and Docker from your phone. Around it: Superghost, Recipes, I Told You So, The Podcatcher, and the backends that keep them alive.</p>
                 <div class="cta-buttons">
                     <a href="/apps" class="nav-link">View apps</a>
                     <a href="/contact" class="nav-link">Contact</a>

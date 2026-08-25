@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - Ghost - Duel with Words</title>
-    <link rel="stylesheet" href="/css/retro.css">
+    <link rel="stylesheet" href="/css/neon.css">
 </head>
 <body>
         <div id="site-nav"></div>
 
     <main class="page">
         <section>
-            <div class="reveal" style="max-width: 800px; padding: 3rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 40px;">
+            <div class="reveal" style="max-width: 800px; padding: 3rem; background: rgba(26, 15, 46, 0.75); border: 1px solid var(--neon-line); border-radius: 12px;">
                 <h1 style="font-size: 3rem;">Terms of Service</h1>
                 
                 <div style="text-align: left; color: var(--text-color);">
@@ -24,7 +24,7 @@
                     <h2 style="margin-top: 2rem;">Governing Law</h2>
                     <p>These terms are governed by the laws of Baden-Württemberg, Germany.</p>
                     
-                    <p style="margin-top: 2rem;">For support or questions, please <a href="/contact" style="color: var(--accent-color);">contact me</a>.</p>
+                    <p style="margin-top: 2rem;">For support or questions, please <a href="/contact" style="color: var(--neon-cyan);">contact me</a>.</p>
                 </div>
             </div>
         </section>
