@@ -568,7 +568,7 @@
             return;
         }
 
-        var maxDx = 6.5;
+        var maxDx = 6;
         var maxDy = 6.5;
 
         window.addEventListener('pointermove', function (e) {
