@@ -832,30 +832,6 @@ html.js .reveal.visible { opacity: 1 !important; transform: none !important; tra
     height: 100%;
     object-fit: contain;
 }
-.m-eye {
-    position: absolute;
-    width: 22px;
-    height: 26px;
-    background: #fff;
-    border-radius: 50%;
-    display: block;
-    overflow: hidden;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.55);
-}
-.m-eye-l { top: 12.3%; left: 35.2%; }
-.m-eye-r { top: 13.6%; right: 33.7%; }
-.m-eye i {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 10px;
-    height: 12px;
-    margin: -6px 0 0 -5px;
-    background: #1a0f2e;
-    border-radius: 50%;
-    display: block;
-    transition: transform 0.05s linear;
-}
 
 /* ---- responsive ---- */
 
