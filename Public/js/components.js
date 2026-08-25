@@ -556,6 +556,8 @@
         m.setAttribute('aria-hidden', 'true');
         m.innerHTML = '<img src="/images/jinxd/logo-nav.svg" alt="">';
         document.body.appendChild(m);
+        // pivot at the logo's tail tip: the tail stays planted, the head tilts
+        m.style.transformOrigin = '97.1% 99.9%';
 
         // no eyes: the logo just tilts its head toward the cursor
         var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -563,7 +565,7 @@
             return;
         }
 
-        var maxTilt = 12;              // degrees
+        var maxTilt = 8;               // degrees (pivots at the tail tip)
         var target = 0;
         var current = 0;
         var raf = null;
