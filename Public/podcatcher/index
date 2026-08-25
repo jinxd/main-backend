@@ -15,7 +15,7 @@
     <main class="page">
         <section class="hero pod-hero">
             <span class="status-pill pod"><span class="dot"></span>In development, coming to the App Store</span>
-            <h1>Podcasts, the way <em>you</em> listen.</h1>
+            <h1>Podcasts but <em>faster</em>.</h1>
             <p class="lead">The Podcatcher is the podcast app I am building right now for iPhone, iPad, Mac, and Apple Watch. Fast playback, transcripts, smart chapters, and rules that skip the parts you never listen to anyway.</p>
 
             <div class="player" aria-hidden="true">
