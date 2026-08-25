@@ -17,7 +17,7 @@
     <main class="page">
         <section class="hero">
             <p class="eyebrow">Personal site</p>
-            <h1>I build apps because I enjoy building useful things.</h1>
+            <h1>This shit is <em>useful</em> to me.</h1>
             <p class="lead">I am Hannes from Germany. I build iOS apps and backend projects.</p>
             <div class="proof-grid">
                 <article>
