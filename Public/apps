@@ -93,7 +93,7 @@
                         <h2><a class="card-link" href="/ghost/">Ghost / Superghost</a></h2>
                         <p>A multiplayer word game. Open source backend in Swift and Vapor.</p>
                         <div class="badge-list">
-                            <a href="https://github.com/hannesmnagel/superghost" class="chip-link">Source code</a>
+                            <a href="https://github.com/jinxd/superghost" class="chip-link">Source code</a>
                             <a href="/ghost/" class="chip-link">Open details</a>
                         </div>
                     </div>

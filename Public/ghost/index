@@ -46,7 +46,7 @@
                 <h2>Project details</h2>
                 <p>Ghost is open source. The backend is written in Swift using Vapor. The project started as a small side game and is currently not actively maintained, but everything still works and the code is public.</p>
                 <div class="cta-buttons">
-                    <a href="https://github.com/hannesmnagel/superghost" class="nav-link">Source code</a>
+                    <a href="https://github.com/jinxd/superghost" class="nav-link">Source code</a>
                     <a href="/ghost/privacy" class="nav-link">Privacy</a>
                     <a href="/ghost/tos" class="nav-link">Terms</a>
                 </div>

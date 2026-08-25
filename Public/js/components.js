@@ -7,25 +7,89 @@
 
     /* ---------------- host branding ---------------- */
 
-    // When served via chaaarlie.com, brand as "Charlie"; keep "Hannes" on hannesnagel.com.
-    function isCharlieHost() {
-        var h = window.location.hostname || '';
-        return h === 'chaaarlie.com' || h.slice(-('.chaaarlie.com'.length)) === '.chaaarlie.com';
+    // Brand the site per host:
+    //   hannesnagel.com -> Hannes (original)
+    //   chaaarlie.com   -> Charlie (transitional)
+    //   jinxd.net       -> Jinxd (current; no Hannes/Charlie mentions)
+    function hostSuffix(host, suffix) {
+        return host === suffix || host.slice(-(suffix.length + 1)) === '.' + suffix;
+    }
+    function brandFor(host) {
+        host = host || '';
+        if (hostSuffix(host, 'jinxd.net')) return 'jinxd';
+        if (hostSuffix(host, 'chaaarlie.com')) return 'charlie';
+        return 'hannes';
     }
 
-    var charlieHost = isCharlieHost();
+    var siteBrand = brandFor(window.location.hostname);
+
+    var BRAND = {
+        hannes: {
+            name: 'Hannes Nagel',
+            mark: 'hn.',
+            label: 'hannesnagel home',
+            mailDomain: 'hannesnagel.com',
+            mastodon: 'https://mastodon.social/@hannesmnagel',
+            github: 'https://github.com/jinxd'
+        },
+        charlie: {
+            name: 'Charlie Nagel',
+            mark: 'cn.',
+            label: 'chaaarlie home',
+            mailDomain: 'chaaarlie.com',
+            mastodon: 'https://mastodon.social/@hannesmnagel',
+            github: 'https://github.com/jinxd'
+        },
+        jinxd: {
+            name: 'Jinxd',
+            mark: 'jn.',
+            label: 'jinxd home',
+            mailDomain: 'jinxd.net',
+            mastodon: 'https://woof.tech/@jinxd',
+            github: 'https://github.com/jinxd'
+        }
+    };
 
     function applyHostBranding() {
-        if (!charlieHost) {
+        var brand = BRAND[siteBrand];
+        if (!brand || siteBrand === 'hannes') {
             return;
         }
-        // document title + meta description / og tags (Hannes -> Charlie)
+        // document title + meta description / og tags
         var rename = function (s) {
+            if (siteBrand === 'jinxd') {
+                return s
+                    .replace(/https?:\/\/mastodon\.social\/@hannesmnagel/g, 'https://woof.tech/@jinxd')
+                    .replace(/Hannes Nagel/g, 'Jinxd')
+                    .replace(/Hannes/g, 'Jinxd')
+                    .replace(/hannesnagel\.com/g, 'jinxd.net')
+                    .replace(/hannesmnagel/g, 'jinxd')
+                    .replace(/hannesnagel/g, 'jinxd');
+            }
             return s
                 .replace(/Hannes Nagel/g, 'Charlie Nagel')
                 .replace(/Hannes/g, 'Charlie')
                 .replace(/hannesnagel/g, 'chaaarlie');
         };
+        if (document.title) {
+            document.title = rename(document.title);
+        }
+        var metas = document.querySelectorAll('meta[name="description"], meta[property="og:title"], meta[property="og:description"], meta[property="og:url"], meta[property="og:image"]');
+        for (var i = 0; i < metas.length; i++) {
+            var c = metas[i].getAttribute('content');
+            if (c) {
+                metas[i].setAttribute('content', rename(c));
+            }
+        }
+        // links - rewrite hrefs that point at the old identity (mailto: and any
+        // other hannesnagel/hannesmnagel URL) so nothing on this host reveals it
+        var links = document.querySelectorAll('a[href]');
+        for (var m = 0; m < links.length; m++) {
+            var h = links[m].getAttribute('href');
+            if (h && (h.indexOf('hannesnagel') !== -1 || h.indexOf('hannesmnagel') !== -1)) {
+                links[m].setAttribute('href', rename(h));
+            }
+        }
         if (document.title) {
             document.title = rename(document.title);
         }
@@ -61,7 +125,7 @@
             nodes.push(node);
         }
         for (var j = 0; j < nodes.length; j++) {
-            if (nodes[j].nodeValue.indexOf('Hannes') !== -1 || nodes[j].nodeValue.indexOf('hannesnagel') !== -1) {
+            if (nodes[j].nodeValue.indexOf('Hannes') !== -1 || nodes[j].nodeValue.indexOf('hannesnagel') !== -1 || nodes[j].nodeValue.indexOf('hannesmnagel') !== -1) {
                 nodes[j].nodeValue = rename(nodes[j].nodeValue);
             }
         }
@@ -126,8 +190,9 @@
             makeLink('/contact', 'Contact', active === 'contact')
         ];
 
-        var brandMark = charlieHost ? 'cn.' : 'hn.';
-        var brandLabel = charlieHost ? 'chaaarlie home' : 'hannesnagel home';
+        var brand = BRAND[siteBrand];
+        var brandMark = brand.mark;
+        var brandLabel = brand.label;
         mount.innerHTML = '<nav class="nav-container" aria-label="Main">' +
             '<a href="' + homeHref + '" class="nav-brand" aria-label="' + brandLabel + '">' + brandMark + '</a>' +
             links.join('') +
@@ -153,15 +218,16 @@
         }
         var footer = document.createElement('footer');
         footer.className = 'site-footer';
+        var brand = BRAND[siteBrand];
         footer.innerHTML =
-            '<span class="footer-name">' + (charlieHost ? 'Charlie Nagel' : 'Hannes Nagel') + '</span>' +
+            '<span class="footer-name">' + brand.name + '</span>' +
             '<nav aria-label="Footer">' +
             '<a href="/apps">Apps</a>' +
             '<a href="/thoughts/">Thoughts</a>' +
             '<a href="/about">About</a>' +
             '<a href="/contact">Contact</a>' +
-            '<a href="https://mastodon.social/@hannesmnagel" rel="me">Mastodon</a>' +
-            '<a href="https://github.com/hannesmnagel">GitHub</a>' +
+            '<a href="' + brand.mastodon + '" rel="me">Mastodon</a>' +
+            '<a href="' + brand.github + '">GitHub</a>' +
             '</nav>' +
             '<span>&copy; ' + new Date().getFullYear() + ' &middot; Made in Germany, by hand</span>';
         document.body.appendChild(footer);
