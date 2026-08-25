@@ -19,6 +19,7 @@
             </div>
             <div class="apps-grid reveal">
                 <article class="app-card">
+<a class="card-stretch" href="/podcatcher/" aria-label="Open details" tabindex="-1"></a>
                     <div class="app-media pod-art" aria-hidden="true">
                         <div class="pod-eq">
                             <i style="--h:55%;--dl:0s"></i><i style="--h:85%;--dl:-.2s"></i><i style="--h:65%;--dl:-.5s"></i><i style="--h:100%;--dl:-.3s"></i><i style="--h:75%;--dl:-.7s"></i><i style="--h:90%;--dl:-.1s"></i><i style="--h:60%;--dl:-.4s"></i>
@@ -36,6 +37,7 @@
                 </article>
 
                 <article class="app-card">
+<a class="card-stretch" href="/i-told-you-so/" aria-label="Open details" tabindex="-1"></a>
                     <div class="app-media light">
                         <img src="/images/i-told-you-so_receipt.png?v=2" alt="I Told You So">
                     </div>
@@ -53,6 +55,7 @@
                 </article>
 
                 <article class="app-card">
+<a class="card-stretch" href="/containeye/" aria-label="Open details" tabindex="-1"></a>
                     <div class="app-media">
                         <img src="/images/containeye_promo.png" alt="ContainEye">
                     </div>
@@ -69,6 +72,7 @@
                 </article>
 
                 <article class="app-card">
+<a class="card-stretch" href="/recipes/" aria-label="Open details" tabindex="-1"></a>
                     <div class="app-media">
                         <img src="/images/recipes_promo.png" alt="Recipes">
                     </div>
@@ -86,6 +90,7 @@
                 </article>
 
                 <article class="app-card">
+<a class="card-stretch" href="/ghost/" aria-label="Open details" tabindex="-1"></a>
                     <div class="app-media">
                         <img src="/images/superghost_promo.png" alt="Superghost">
                     </div>
