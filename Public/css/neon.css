@@ -445,17 +445,36 @@ img { max-width: 100%; height: auto; }
 .itys-cards, .pod-cards, .rcp-cards, .work { }
 .container-wrapper { }
 
-/* recipes core-features cards: compact */
-.rcp-cards .cards {
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-    gap: 0.8rem;
+/* other apps' feature cards: compact (slightly larger than recipes) */
+.pod-cards .cards,
+.itys-cards .cards {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.95rem;
 }
-.rcp-cards .card { border-radius: 10px; }
-.rcp-cards .card-body { padding: 0.7rem 0.9rem; }
-.rcp-cards .card-body h3 { font-size: 1rem; margin: 0.2rem 0 0.3rem; }
-.rcp-cards .card-body p { font-size: 0.85rem; line-height: 1.45; margin: 0; }
-.rcp-cards .f-icon { font-size: 1em; }
-.rcp-cards .f-icon svg { width: 20px; height: 20px; }
+.pod-cards .card,
+.itys-cards .card { border-radius: 11px; }
+.pod-cards .card-body,
+.itys-cards .card-body { padding: 0.9rem 1.1rem; }
+.pod-cards .card-body h3,
+.itys-cards .card-body h3 { font-size: 1.08rem; margin: 0.25rem 0 0.35rem; }
+.pod-cards .card-body p,
+.itys-cards .card-body p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+.pod-cards .f-icon,
+.itys-cards .f-icon { font-size: 1.05em; }
+.pod-cards .f-icon svg,
+.itys-cards .f-icon svg { width: 22px; height: 22px; }
+
+/* recipes core-features cards: compact (matches other apps) */
+.rcp-cards .cards {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.95rem;
+}
+.rcp-cards .card { border-radius: 11px; }
+.rcp-cards .card-body { padding: 0.9rem 1.1rem; }
+.rcp-cards .card-body h3 { font-size: 1.08rem; margin: 0.25rem 0 0.35rem; }
+.rcp-cards .card-body p { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+.rcp-cards .f-icon { font-size: 1.05em; }
+.rcp-cards .f-icon svg { width: 22px; height: 22px; }
 
 /* settle button (i-told-you-so) */
 .settle-btn {
