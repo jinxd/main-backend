@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="fediverse:creator" content="@jinxd@woof.tech">
     <title>Thoughts: Hannes Nagel</title>
     <meta name="description" content="Occasional writing by Hannes Nagel on building apps, tools, and other things on my mind.">
     <link rel="stylesheet" href="/css/neon.css">
