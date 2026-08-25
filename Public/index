@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hannes Nagel: apps built by hand</title>
-    <meta name="description" content="Native iOS apps and server tooling, built by hand: ContainEye, Superghost, Recipes, I Told You So, The Podcatcher.">
-    <meta property="og:title" content="Hannes Nagel: apps built by hand">
-    <meta property="og:description" content="Native iOS apps and server tooling, built by hand.">
+    <title>jinxd // apps</title>
+    <meta name="description" content="Apps and tools that actually do stuff. ContainEye, Superghost, Recipes, The Podcatcher.">
+    <meta property="og:title" content="jinxd // apps">
+    <meta property="og:description" content="Apps and tools that actually do stuff.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hannesnagel.com/">
     <meta property="og:image" content="https://hannesnagel.com/images/containeye_promo.png">
@@ -43,27 +43,27 @@
             </div>
             <span class="status-pill" title="Click me :)"><span class="dot"></span>Currently building The Podcatcher</span>
             <h1>I build apps because I enjoy building <em>useful</em> things.</h1>
-            <p class="lead">Native iOS apps and server tooling, built by hand. No fluff, no filler — just things that work.</p>
+            <p class="lead">Apps that do stuff. Servers that stay up. No resume, no "hello world", no nonsense.</p>
             <div class="proof-grid">
                 <article>
-                    <p class="label">Current focus</p>
+                    <p class="label">Now</p>
                     <p>The Podcatcher</p>
                 </article>
                 <article>
-                    <p class="label">Platform</p>
+                    <p class="label">Runs on</p>
                     <p>iPhone · iPad · Mac</p>
                 </article>
                 <article>
-                    <p class="label">Vibe</p>
-                    <p>Ship it, then improve it</p>
+                    <p class="label">Motto</p>
+                    <p>Ship, break, fix, repeat</p>
                 </article>
             </div>
         </section>
 
         <section class="work">
             <div class="section-head">
-                <p class="sub-header">Selected Work</p>
-                <h2>Some projects I have built <em>so far</em>.</h2>
+                <p class="sub-header">THE GOODS</p>
+                <h2>The <em>stuff</em>.</h2>
             </div>
             <div class="cards">
                 <a class="card" href="/i-told-you-so/" aria-label="Open I Told You So details">
@@ -102,7 +102,7 @@
                     </div>
                     <div class="card-body">
                         <h3>Superghost</h3>
-                        <p>A small multiplayer word game I made for quick rounds with friends.</p>
+                        <p>A multiplayer word game. Fast rounds, petty grudges.</p>
                         <span class="card-cta">Open details</span>
                     </div>
                 </a>
@@ -131,8 +131,8 @@
         </section>
 
         <section class="footer-cta">
-            <p class="sub-header">Say hello</p>
-            <h2>If you want to talk about apps, code, or ideas, <em>write me</em>.</h2>
+            <p class="sub-header">Hit me up</p>
+            <h2>Got an idea, a bug, or a rant? <em>Send it.</em></h2>
             <div class="links">
                 <a href="/contact">Contact</a>
                 <a href="/thoughts/">Thoughts</a>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact: Hannes Nagel</title>
-    <meta name="description" content="Get in touch with Hannes Nagel: questions about an app, bug reports, or just to say hello.">
+    <meta name="description" content="Questions, bug reports, rants — send them. jinxd reads everything.">
     <link rel="stylesheet" href="/css/neon.css">
 </head>
 
@@ -17,7 +17,7 @@
             <div class="doc-content" style="text-align: center; margin: 0 auto;">
                 <p class="sub-header" style="justify-content: center;">Contact</p>
                 <h1 style="margin: 0 auto;">Get in <em>touch</em></h1>
-                <p style="margin: 1rem auto 0; text-align: center;">If you want to ask something about an app, report a bug, or just say hello, send a mail. I read everything myself.</p>
+                <p style="margin: 1rem auto 0; text-align: center;">Bug report, dumb idea, death threat about a feature — send it. I read everything.</p>
                 <div class="cta-buttons" style="justify-content: center; margin-top: 1.6rem;">
                     <a href="mailto:contact@hannesnagel.com" class="nav-link" style="font-size: 1.05rem;">contact@hannesnagel.com</a>
                     <a href="https://mastodon.social/@hannesmnagel" class="nav-link">Mastodon</a>

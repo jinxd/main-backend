@@ -17,14 +17,14 @@
             <div class="doc-content">
                 <p class="sub-header">About</p>
                 <h1>jinxd <em>//</em></h1>
-                <p class="lead" style="margin-top: 1rem;">Building native iOS apps and server tooling. If it ships and it works, it stays.</p>
+                <p class="lead" style="margin-top: 1rem;">No bio, no backstory. Just a pile of apps and tools that work.</p>
             </div>
         </section>
 
         <section>
             <div class="doc-content">
-                <h2>What I work on</h2>
-                <p><strong>ContainEye</strong> is the main project — an iOS app for checking servers and Docker containers from your phone. Alongside it there are smaller apps (Superghost, Recipes, I Told You So, The Podcatcher) and the backend services that power them.</p>
+                <h2>What's here</h2>
+                <p><strong>ContainEye</strong> runs servers and Docker from your phone. Around it: Superghost, Recipes, I Told You So, The Podcatcher, and the backends that keep them alive.</p>
                 <div class="cta-buttons">
                     <a href="/apps" class="nav-link">View apps</a>
                     <a href="/contact" class="nav-link">Contact</a>
