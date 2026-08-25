@@ -34,6 +34,10 @@ html, body {
         linear-gradient(180deg, var(--neon-bg) 0%, var(--neon-bg-2) 100%);
     background-attachment: fixed;
     background-color: var(--neon-bg);
+    /* lock horizontal scroll: viewport-fit=cover lets iOS overscroll sideways */
+    overflow-x: hidden;   /* fallback */
+    overflow-x: clip;     /* modern Safari: clips without a scroll container */
+    overscroll-behavior-x: none;
     color: var(--neon-ink);
     font-family: var(--sans);
     font-size: 16px;
