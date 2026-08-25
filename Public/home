@@ -136,7 +136,7 @@
             <div class="links">
                 <a href="/contact">Contact</a>
                 <a href="/thoughts/">Thoughts</a>
-                <a href="https://mastodon.social/@hannesmnagel">Mastodon</a>
+                <a href="https://woof.tech/@jinxd" rel="me">Mastodon</a>
             </div>
         </section>
     </main>
