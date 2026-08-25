@@ -767,6 +767,50 @@ html.js .reveal.visible { opacity: 1 !important; transform: none !important; tra
 .hl { background: rgba(255, 46, 136, 0.18); }
 .hint { font-size: 0.85rem; color: var(--neon-muted); }
 
+/* ---- corner mascot ---- */
+
+.jinxd-mascot {
+    position: fixed;
+    right: 1.1rem;
+    bottom: 1.1rem;
+    z-index: 90;
+    width: 64px;
+    height: 64px;
+    pointer-events: none;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.45));
+}
+.jinxd-mascot img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.m-eye {
+    position: absolute;
+    top: 72%;
+    width: 13px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    display: block;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+.m-eye-l { left: 20%; }
+.m-eye-r { right: 20%; }
+.m-eye i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6px;
+    height: 7px;
+    margin: -3.5px 0 0 -3px;
+    background: #1a0f2e;
+    border-radius: 50%;
+    display: block;
+    transition: transform 0.05s linear;
+}
+
 /* ---- responsive ---- */
 
 @media (max-width: 640px) {

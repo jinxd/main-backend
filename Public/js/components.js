@@ -548,6 +548,45 @@
         });
     }
 
+    /* ---------------- corner mascot (follows the mouse) ---------------- */
+
+    function setupMascot() {
+        var host = window.location.hostname || '';
+        // skip the hannesnagel.com host (legacy) - mascot is jinxd identity
+        var m = document.createElement('div');
+        m.className = 'jinxd-mascot';
+        m.setAttribute('aria-hidden', 'true');
+        m.innerHTML =
+            '<img src="/images/jinxd/logo-nav.svg" alt="">' +
+            '<span class="m-eye m-eye-l"><i></i></span>' +
+            '<span class="m-eye m-eye-r"><i></i></span>';
+        document.body.appendChild(m);
+
+        var pupils = m.querySelectorAll('.m-eye i');
+        var eyes = m.querySelectorAll('.m-eye');
+        if (!pupils.length || !window.matchMedia('(hover: hover)').matches) {
+            return;
+        }
+
+        var maxDx = 3.5;
+        var maxDy = 3.5;
+
+        window.addEventListener('pointermove', function (e) {
+            for (var i = 0; i < eyes.length; i++) {
+                var r = eyes[i].getBoundingClientRect();
+                var cx = r.left + r.width / 2;
+                var cy = r.top + r.height / 2;
+                var dx = e.clientX - cx;
+                var dy = e.clientY - cy;
+                var d = Math.sqrt(dx * dx + dy * dy) || 1;
+                var m2 = Math.min(d / 60, 1);
+                var tx = (dx / d) * maxDx * m2;
+                var ty = (dy / d) * maxDy * m2;
+                pupils[i].style.transform = 'translate(' + tx.toFixed(2) + 'px,' + ty.toFixed(2) + 'px)';
+            }
+        }, { passive: true });
+    }
+
     /* ---------------- init ---------------- */
 
     function init() {
@@ -561,6 +600,7 @@
         setupParallax();
         setupGhost();
         setupTabWink();
+        setupMascot();
     }
 
     if (document.readyState === 'loading') {
