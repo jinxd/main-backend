@@ -17,7 +17,7 @@
             <div class="doc-content" style="text-align: center; margin: 0 auto;">
                 <p class="sub-header" style="justify-content: center;">Contact</p>
                 <h1 style="margin: 0 auto;">Get in <em>touch</em></h1>
-                <p style="margin: 1rem auto 0; text-align: center;">Bug report, dumb idea, death threat about a feature — send it. I read everything.</p>
+                <p style="margin: 1rem auto 0; text-align: center;">Bug report, dumb idea, death threat — send it. I read everything.</p>
                 <div class="cta-buttons" style="justify-content: center; margin-top: 1.6rem;">
                     <a href="mailto:fuckyou@jinxd.net" class="nav-link" style="font-size: 1.05rem;">fuckyou@jinxd.net</a>
                     <a href="https://woof.tech/@jinxd" class="nav-link" rel="me">Mastodon</a>
