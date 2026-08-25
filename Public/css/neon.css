@@ -384,12 +384,21 @@ img { max-width: 100%; height: auto; }
 
 .post-list { list-style: none; padding-left: 0; margin: 1.2rem 0; }
 .post {
+    display: block;
     border: 1px solid var(--neon-line);
     background: rgba(26, 15, 46, 0.75);
     padding: 1.1rem 1.3rem;
     margin-bottom: 1rem;
     border-radius: 10px;
+    text-decoration: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
+.post:hover {
+    border-color: var(--neon-magenta);
+    box-shadow: var(--neon-glow);
+    text-decoration: none;
+}
+.post h3 { color: var(--neon-ink); }
 .post h3 { margin-top: 0; }
 .read-more { color: var(--neon-cyan); font-weight: 700; }
 .ts { font-size: 0.8rem; color: var(--neon-muted); }
