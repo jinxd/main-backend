@@ -101,26 +101,6 @@
             </div>
         </section>
 
-        <section>
-            <div class="apps-head reveal">
-                <p class="sub-header">Earlier Projects</p>
-                <h2>Still part of my path.</h2>
-            </div>
-            <div class="small-grid reveal">
-                <article class="small-card">
-                    <img src="/images/zettl" alt="Zettl">
-                    <h3>Zettl</h3>
-                    <p>Time tracking app work during my time at codeunity.</p>
-                    <a href="https://zettl.app" class="chip-link">zettl.app</a>
-                </article>
-                <article class="small-card">
-                    <img src="/images/ear2brain" alt="ear2brain">
-                    <h3>ear2brain</h3>
-                    <p>My first released app. Vocabulary learning project.</p>
-                    <a href="https://ear2brain.app" class="chip-link">ear2brain.app</a>
-                </article>
-            </div>
-        </section>
     </main>
 
     <script src="/js/components.js"></script>

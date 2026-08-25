@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jinxd // apps</title>
-    <meta name="description" content="Apps and tools that actually do stuff. ContainEye, Superghost, Recipes, The Podcatcher.">
+    <meta name="description" content="ContainEye, Superghost, Recipes, The Podcatcher, and more.">
     <meta property="og:title" content="jinxd // apps">
-    <meta property="og:description" content="Apps and tools that actually do stuff.">
+    <meta property="og:description" content="Native iOS apps and the tools around them.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hannesnagel.com/">
     <meta property="og:image" content="https://hannesnagel.com/images/containeye_promo.png">
@@ -43,7 +43,7 @@
             </div>
             <span class="status-pill" title="Click me :)"><span class="dot"></span>Currently building The Podcatcher</span>
             <h1>I build apps because I enjoy building <em>useful</em> things.</h1>
-            <p class="lead">Apps that do stuff. Servers that stay up. No resume, no "hello world", no nonsense.</p>
+            <p class="lead">No resume, no "hello world". Just apps.</p>
             <div class="proof-grid">
                 <article>
                     <p class="label">Now</p>
