@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Podcatcher: Hannes Nagel</title>
-    <meta name="description" content="The Podcatcher is a podcast app for iPhone, iPad, and Mac with iCloud sync, up to 5x speed, transcripts, automatic chapters, and chapter skip rules. Currently in development.">
+    <meta name="description" content="The Podcatcher is a podcast app for iPhone, iPad, Mac, and Apple Watch with iCloud sync, up to 5x speed, transcripts, automatic chapters, and chapter skip rules. Currently in development.">
     <link rel="stylesheet" href="/css/neon.css">
 </head>
 
@@ -16,7 +16,7 @@
         <section class="hero pod-hero">
             <span class="status-pill pod"><span class="dot"></span>In development, coming to the App Store</span>
             <h1>Podcasts, the way <em>you</em> listen.</h1>
-            <p class="lead">The Podcatcher is the podcast app I am building right now for iPhone, iPad, and Mac. Fast playback, transcripts, smart chapters, and rules that skip the parts you never listen to anyway.</p>
+            <p class="lead">The Podcatcher is the podcast app I am building right now for iPhone, iPad, Mac, and Apple Watch. Fast playback, transcripts, smart chapters, and rules that skip the parts you never listen to anyway.</p>
 
             <div class="player" aria-hidden="true">
                 <div class="player-top">
@@ -94,8 +94,8 @@
                 <article class="card">
                     <div class="card-body">
                         <span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="13.5" height="9.5" rx="2"/><path d="M7 18.5h4.5"/><path d="M9.25 14.5v4"/><rect x="17.5" y="9" width="4" height="9.5" rx="1.4"/></svg></span>
-                        <h3>iPhone, iPad &amp; Mac</h3>
-                        <p>One app everywhere, with the Mac version built using Catalyst.</p>
+                        <h3>iPhone, iPad, Mac &amp; Watch</h3>
+                        <p>One app everywhere, with the Mac version built using Catalyst and an Apple Watch app with standalone playback.</p>
                     </div>
                 </article>
             </div>
