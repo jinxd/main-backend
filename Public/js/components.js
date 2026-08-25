@@ -566,34 +566,41 @@
         }
 
         var maxTilt = 8;               // degrees (pivots at the tail tip)
-        var target = 0;
-        var current = 0;
+        var targetX = 0;
+        var targetY = 0;
+        var currentX = 0;
+        var currentY = 0;
         var raf = null;
 
         function tick() {
-            current += (target - current) * 0.15;
-            if (Math.abs(target - current) < 0.05) {
-                current = target;
+            currentX += (targetX - currentX) * 0.15;
+            currentY += (targetY - currentY) * 0.15;
+            var settled = Math.abs(targetX - currentX) < 0.05 && Math.abs(targetY - currentY) < 0.05;
+            if (settled) {
+                currentX = targetX;
+                currentY = targetY;
                 raf = null;
             } else {
                 raf = requestAnimationFrame(tick);
             }
-            m.style.transform = 'rotate(' + current.toFixed(2) + 'deg)';
+            m.style.transform =
+                'perspective(600px) rotateX(' + currentX.toFixed(2) + 'deg) rotateY(' + currentY.toFixed(2) + 'deg)';
         }
 
         function setTarget(e) {
-            var r = m.getBoundingClientRect();
-            var dx = e.clientX - (r.left + r.width / 2);
-            var dy = e.clientY - (r.top + r.height / 2);
-            var angle = Math.atan2(dy, dx) * 180 / Math.PI;
-            target = Math.max(-maxTilt, Math.min(maxTilt, angle));
+            // map the cursor across the whole viewport so the head follows it smoothly
+            var nx = (e.clientX / window.innerWidth) * 2 - 1;   // -1 left .. +1 right
+            var ny = (e.clientY / window.innerHeight) * 2 - 1;  // -1 top .. +1 bottom
+            targetY = -nx * maxTilt;   // head turns toward the cursor
+            targetX = -ny * maxTilt;   // head nods toward the cursor
             if (!raf) { raf = requestAnimationFrame(tick); }
         }
 
         window.addEventListener('pointermove', setTarget, { passive: true });
         // relax back to level when the cursor leaves the window
         document.addEventListener('pointerleave', function () {
-            target = 0;
+            targetX = 0;
+            targetY = 0;
             if (!raf) { raf = requestAnimationFrame(tick); }
         });
     }
