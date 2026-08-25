@@ -62,6 +62,7 @@
                     .replace(/https?:\/\/mastodon\.social\/@hannesmnagel/g, 'https://woof.tech/@jinxd')
                     .replace(/Hannes Nagel/g, 'Jinxd')
                     .replace(/Hannes/g, 'Jinxd')
+                    .replace(/contact@hannesnagel\.com/g, 'fuckyou@jinxd.net')
                     .replace(/hannesnagel\.com/g, 'jinxd.net')
                     .replace(/hannesmnagel/g, 'jinxd')
                     .replace(/hannesnagel/g, 'jinxd');
