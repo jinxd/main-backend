@@ -807,8 +807,25 @@ html.js .reveal.visible { opacity: 1 !important; transform: none !important; tra
     width: 110px;
     height: 110px;
     pointer-events: none;
-    opacity: 0.9;
-    filter: drop-shadow(0 0 14px rgba(168, 85, 247, 0.5));
+    opacity: 0.95;
+    filter:
+        drop-shadow(0 0 6px rgba(255, 46, 136, 0.65))
+        drop-shadow(0 0 18px rgba(168, 85, 247, 0.55))
+        drop-shadow(0 0 36px rgba(124, 58, 237, 0.35));
+    animation: mascot-glow 3.2s ease-in-out infinite;
+}
+@keyframes mascot-glow {
+    0%, 100% { filter:
+        drop-shadow(0 0 6px rgba(255, 46, 136, 0.6))
+        drop-shadow(0 0 16px rgba(168, 85, 247, 0.5))
+        drop-shadow(0 0 30px rgba(124, 58, 237, 0.3)); }
+    50% { filter:
+        drop-shadow(0 0 10px rgba(255, 46, 136, 0.85))
+        drop-shadow(0 0 26px rgba(168, 85, 247, 0.7))
+        drop-shadow(0 0 48px rgba(124, 58, 237, 0.5)); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .jinxd-mascot { animation: none; }
 }
 .jinxd-mascot img {
     width: 100%;
