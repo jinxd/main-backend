@@ -33,6 +33,7 @@ html, body {
         radial-gradient(900px 500px at -10% 110%, rgba(255, 46, 136, 0.16), transparent 55%),
         linear-gradient(180deg, var(--neon-bg) 0%, var(--neon-bg-2) 100%);
     background-attachment: fixed;
+    background-color: var(--neon-bg);
     color: var(--neon-ink);
     font-family: var(--sans);
     font-size: 16px;
@@ -111,7 +112,7 @@ img { max-width: 100%; height: auto; }
     z-index: 1;
     max-width: 920px;
     margin: 0 auto;
-    padding: 1.5rem 1rem 3rem;
+    padding: 1.5rem calc(1rem + env(safe-area-inset-left)) calc(3rem + env(safe-area-inset-bottom)) calc(1rem + env(safe-area-inset-right));
 }
 
 /* ---- navigation (rendered by components.js) ---- */
@@ -124,7 +125,7 @@ img { max-width: 100%; height: auto; }
     gap: 0.4rem;
     flex-wrap: wrap;
     max-width: 920px;
-    margin: 0 auto;
+    margin: env(safe-area-inset-top) auto 0;
     padding: 0.8rem 1rem;
     border: 1px solid var(--neon-line);
     border-radius: 10px;
@@ -783,7 +784,7 @@ img { max-width: 100%; height: auto; }
     z-index: 1;
     max-width: 920px;
     margin: 0 auto;
-    padding: 1.2rem 1rem 2.5rem;
+    padding: 1.2rem calc(1rem + env(safe-area-inset-left)) calc(2.5rem + env(safe-area-inset-bottom)) calc(1rem + env(safe-area-inset-right));
     border-top: 1px solid var(--neon-line);
     font-size: 0.85rem;
     color: var(--neon-muted);
@@ -811,8 +812,8 @@ html.js .reveal.visible { opacity: 1 !important; transform: none !important; tra
 
 .jinxd-mascot {
     position: fixed;
-    right: 1.2rem;
-    bottom: 1.2rem;
+    right: calc(1.2rem + env(safe-area-inset-right));
+    bottom: calc(1.2rem + env(safe-area-inset-bottom));
     z-index: 90;
     width: 150px;
     height: 150px;

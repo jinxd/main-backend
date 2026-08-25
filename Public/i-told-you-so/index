@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0514">
     <title>I Told You So: Hannes Nagel</title>
     <meta name="description" content="I Told You So is a tiny iOS app for recording predictions and friendly bets, settling them later, and sharing a clean receipt.">
     <link rel="stylesheet" href="/css/neon.css">
