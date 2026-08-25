@@ -11,7 +11,7 @@
 
     <main class="page">
         <section>
-            <div class="reveal" style="max-width: 800px; padding: 3rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 40px;">
+            <div class="reveal" style="max-width: 800px; padding: 3rem; background: rgba(26, 15, 46, 0.75); border: 1px solid var(--neon-line); border-radius: 12px;">
                 <h1 style="font-size: 3rem;">Privacy Policy</h1>
                 <p style="margin-bottom: 2rem;">Effective Date: August 3, 2024</p>
                 
@@ -30,7 +30,7 @@
                     <h2 style="margin-top: 2rem;">3. Storage</h2>
                     <p>Your data is stored securely on servers located in Amsterdam, Netherlands. I implement appropriate measures to protect your data.</p>
                     
-                    <p style="margin-top: 2rem;">If you have any questions, please <a href="/contact" style="color: var(--accent-color);">contact me</a>.</p>
+                    <p style="margin-top: 2rem;">If you have any questions, please <a href="/contact" style="color: var(--neon-cyan);">contact me</a>.</p>
                 </div>
             </div>
         </section>

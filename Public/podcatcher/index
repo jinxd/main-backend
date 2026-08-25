@@ -52,8 +52,8 @@
 
         <section class="work pod-cards">
             <div class="section-head">
-                <p class="sub-header" style="color: var(--pod);">What it does</p>
-                <h2>Built for people who actually listen a lot.</h2>
+                <p class="sub-header" style="color: var(--neon-cyan);">What it does</p>
+                <h2>For people who actually <em>listen</em>.</h2>
             </div>
             <div class="cards">
                 <article class="card">
@@ -103,7 +103,7 @@
 
         <section>
             <div class="doc-content">
-                <p class="sub-header" style="color: var(--pod);">Transcripts, for example</p>
+                <p class="sub-header" style="color: var(--neon-cyan);">Transcripts, for example</p>
                 <h2 style="margin-bottom: 0.8rem;">Find the sentence, not the timestamp.</h2>
                 <p style="max-width: 62ch;">Every episode can have a transcript you can read and search. Tap a line and playback jumps right there.</p>
                 <div class="transcript" aria-hidden="true">

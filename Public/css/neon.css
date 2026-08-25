@@ -475,6 +475,50 @@ img { max-width: 100%; height: auto; }
 .box { border: 1px solid var(--neon-line); background: rgba(26, 15, 46, 0.7); padding: 0.8rem 1rem; margin: 0.6rem 0; border-radius: 8px; }
 .f-icon { font-size: 1.2em; }
 
+/* ---- shopping list (recipes) ---- */
+.shopping-card ul {
+    list-style: none;
+    margin: 0.6rem 0;
+    padding: 0;
+}
+.shopping-card li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.45rem 0.4rem;
+    cursor: pointer;
+    border-radius: 6px;
+    user-select: none;
+}
+.shopping-card li:hover { background: rgba(168, 85, 247, 0.1); }
+.shopping-card li .box {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    border: 1.5px solid var(--neon-purple);
+    border-radius: 4px;
+    background: transparent;
+    display: inline-block;
+}
+.shopping-card li.done { color: var(--neon-muted); text-decoration: line-through; }
+.shopping-card li.done .box {
+    background: var(--neon-magenta);
+    border-color: var(--neon-magenta);
+    box-shadow: var(--neon-glow);
+}
+.shopping-card li.done .box::after {
+    content: "";
+    display: block;
+    width: 9px;
+    height: 5px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg) translate(1px, -1px);
+    margin: 3px auto 0;
+}
+
 /* ---- i-told-you-so receipt ---- */
 
 .receipt-wrap {

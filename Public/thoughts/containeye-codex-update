@@ -17,7 +17,7 @@
             <article class="doc-content" style="max-width: 1080px;">
                 <p style="margin-bottom: 1rem;"><a href="/thoughts/" class="accent-link">Back to thoughts</a></p>
                 <h1 style="text-align: left; margin-bottom: 1rem; font-size: clamp(2.2rem, 6vw, 4rem);">How Codex Rebuilt the ContainEye Terminal (and Why I Let It)</h1>
-                <p style="color: var(--secondary-color); margin-bottom: 1.5rem;">A story about frustration, reverse-engineering what worked, and shipping a better terminal + agentic workflow with far less manual coding than I expected.</p>
+                <p style="color: var(--neon-muted); margin-bottom: 1.5rem;">A story about frustration, reverse-engineering what worked, and shipping a better terminal + agentic workflow with far less manual coding than I expected.</p>
 
                 <div class="cta-buttons" style="margin-bottom: 2rem;">
                     <a href="https://apps.apple.com/us/app/containeye-terminal-docker/id6741063706" class="nav-link">Download ContainEye</a>
