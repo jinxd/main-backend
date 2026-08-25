@@ -817,7 +817,7 @@ html.js .reveal.visible { opacity: 1 !important; transform: none !important; tra
 }
 .m-eye {
     position: absolute;
-    top: 72%;
+    top: 17%;
     width: 13px;
     height: 15px;
     background: #fff;
@@ -826,8 +826,8 @@ html.js .reveal.visible { opacity: 1 !important; transform: none !important; tra
     overflow: hidden;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
-.m-eye-l { left: 20%; }
-.m-eye-r { right: 20%; }
+.m-eye-l { left: 36%; }
+.m-eye-r { right: 35%; }
 .m-eye i {
     position: absolute;
     left: 50%;
