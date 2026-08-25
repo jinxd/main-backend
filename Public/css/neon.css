@@ -584,9 +584,17 @@ img { max-width: 100%; height: auto; }
     max-width: 540px;
     border-radius: 10px;
 }
-.player-top { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; }
-.player-title { font-weight: 700; }
-.speed-row { display: flex; gap: 0.4rem; margin: 0.4rem 0; }
+.player-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+.player-title { font-weight: 700; display: flex; flex-direction: column; }
+.player-title small { font-weight: 400; color: var(--neon-muted); font-size: 0.78rem; }
+.speed-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin: 0.4rem 0; }
 .speed-btn {
     border: 1px solid var(--neon-line);
     background: rgba(34, 20, 66, 0.7);
@@ -600,7 +608,7 @@ img { max-width: 100%; height: auto; }
 .speed-btn.on { background: var(--neon-magenta); color: #fff; border-color: var(--neon-magenta); }
 .eq { display: flex; align-items: flex-end; gap: 2px; height: 28px; margin: 0.5rem 0; }
 .eq i, .eq span { display: inline-block; width: 3px; height: 12px; background: var(--neon-cyan); }
-.eq i[style*="--h"] { height: 12px; }
+.eq i[style*="--h"] { height: var(--h); }
 .chapters { margin-top: 0.6rem; }
 .chapter-bar {
     display: flex;
@@ -610,9 +618,20 @@ img { max-width: 100%; height: auto; }
     overflow: hidden;
     border-radius: 4px;
 }
-.chapter-bar span { display: block; background: var(--neon-purple); }
+.chapter-bar span { display: block; min-width: 0; background: var(--neon-purple); }
 .chapter-bar span.skip { background: var(--neon-magenta); }
-.chapter-legend { font-size: 0.8rem; color: var(--neon-muted); margin-top: 0.4rem; }
+.chapter-legend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    color: var(--neon-muted);
+    margin-top: 0.5rem;
+}
+.chapter-legend .skipped { color: var(--neon-muted); text-decoration: line-through; opacity: 0.8; }
+.chapter-legend b { color: var(--neon-ink); }
+.pod-accent { color: var(--neon-cyan); font-size: 0.78rem; }
 
 /* ---- home page widgets ---- */
 
