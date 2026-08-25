@@ -39,13 +39,13 @@
                         <span style="flex: 1.4"></span>
                     </div>
                     <div class="chapter-legend">
-                        <span class="skipped">Intro</span>
-                        <span><b>Interview</b></span>
-                        <span class="skipped">Sponsor read</span>
-                        <span>Deep dive</span>
-                        <span>Outro</span>
-                        <span style="margin-left:auto" class="pod-accent">↑ skipped by your rules</span>
+                        <span class="skipped" style="flex:1.2">Intro</span>
+                        <span style="flex:5"><b>Interview</b></span>
+                        <span class="skipped" style="flex:1.6">Sponsor read</span>
+                        <span style="flex:4">Deep dive</span>
+                        <span style="flex:1.4">Outro</span>
                     </div>
+                    <div class="chapter-note">↑ skipped by your rules</div>
                 </div>
             </div>
         </section>

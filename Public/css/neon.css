@@ -649,18 +649,28 @@ img { max-width: 100%; height: auto; }
     border-radius: 4px;
 }
 .chapter-bar span { display: block; min-width: 0; background: var(--neon-purple); }
-.chapter-bar span.skip { background: var(--neon-magenta); }
+.chapter-bar span.skip { background: var(--neon-magenta); margin: 0; }
 .chapter-legend {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 0.5rem 0.8rem;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     color: var(--neon-muted);
     margin-top: 0.5rem;
 }
+.chapter-legend span {
+    flex-basis: 0;
+    min-width: 0;
+    margin: 0;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.25;
+}
 .chapter-legend .skipped { color: var(--neon-muted); text-decoration: line-through; opacity: 0.8; }
 .chapter-legend b { color: var(--neon-ink); }
+.chapter-note { margin-top: 0.35rem; font-size: 0.78rem; color: var(--neon-cyan); }
 .pod-accent { color: var(--neon-cyan); font-size: 0.78rem; }
 
 /* ---- home page widgets ---- */
