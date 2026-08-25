@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Podcatcher: Hannes Nagel</title>
     <meta name="description" content="The Podcatcher is a podcast app for iPhone, iPad, and Mac with iCloud sync, up to 5x speed, transcripts, automatic chapters, and chapter skip rules. Currently in development.">
-    <link rel="stylesheet" href="/css/retro.css">
+    <link rel="stylesheet" href="/css/neon.css">
 </head>
 
 <body>

@@ -194,7 +194,9 @@
         var brandMark = brand.mark;
         var brandLabel = brand.label;
         mount.innerHTML = '<nav class="nav-container" aria-label="Main">' +
-            '<a href="' + homeHref + '" class="nav-brand" aria-label="' + brandLabel + '">' + brandMark + '</a>' +
+            '<a href="' + homeHref + '" class="nav-brand" aria-label="' + brandLabel + '">' +
+            '<img src="/images/jinxd/logo-nav.svg" alt="jinxd" class="nav-logo">' +
+            '</a>' +
             links.join('') +
             '</nav>';
 
@@ -229,7 +231,7 @@
             '<a href="' + brand.mastodon + '" rel="me">Mastodon</a>' +
             '<a href="' + brand.github + '">GitHub</a>' +
             '</nav>' +
-            '<span>&copy; ' + new Date().getFullYear() + ' &middot; Made in Germany, by hand</span>';
+            '<span>&copy; ' + new Date().getFullYear() + ' &middot; built by jinxd</span>';
         document.body.appendChild(footer);
     }
 

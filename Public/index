@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hannes Nagel: apps built by hand</title>
-    <meta name="description" content="Hannes Nagel is a student and indie developer from Germany building iOS apps and backend projects: ContainEye, I Told You So, Recipes, and Superghost.">
+    <meta name="description" content="Native iOS apps and server tooling, built by hand: ContainEye, Superghost, Recipes, I Told You So, The Podcatcher.">
     <meta property="og:title" content="Hannes Nagel: apps built by hand">
-    <meta property="og:description" content="Student and indie developer from Germany. iOS apps and backend projects.">
+    <meta property="og:description" content="Native iOS apps and server tooling, built by hand.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hannesnagel.com/">
     <meta property="og:image" content="https://hannesnagel.com/images/containeye_promo.png">
-    <link rel="stylesheet" href="/css/retro.css">
+    <link rel="stylesheet" href="/css/neon.css">
 </head>
 
 <body>
@@ -43,19 +43,19 @@
             </div>
             <span class="status-pill" title="Click me :)"><span class="dot"></span>Currently building The Podcatcher</span>
             <h1>I build apps because I enjoy building <em>useful</em> things.</h1>
-            <p class="lead">I am Hannes from Germany. I build iOS apps and backend projects.</p>
+            <p class="lead">Native iOS apps and server tooling, built by hand. No fluff, no filler — just things that work.</p>
             <div class="proof-grid">
                 <article>
                     <p class="label">Current focus</p>
                     <p>The Podcatcher</p>
                 </article>
                 <article>
-                    <p class="label">Background</p>
-                    <p>Student + indie dev</p>
+                    <p class="label">Platform</p>
+                    <p>iPhone · iPad · Mac</p>
                 </article>
                 <article>
-                    <p class="label">Based in</p>
-                    <p>Germany</p>
+                    <p class="label">Vibe</p>
+                    <p>Ship it, then improve it</p>
                 </article>
             </div>
         </section>
@@ -116,18 +116,16 @@
                     <span>SwiftUI</span><span class="tick">✦</span>
                     <span>Vapor</span><span class="tick">✦</span>
                     <span>iOS apps</span><span class="tick">✦</span>
-                    
-                    <span>shipped from Germany</span><span class="tick">✦</span>
-                    <span>probably debugging right now</span><span class="tick">✦</span>
+                    <span>servers</span><span class="tick">✦</span>
+                    <span>debugging at 3am</span><span class="tick">✦</span>
                 </div>
                 <div class="marquee-track">
                     <span>Swift</span><span class="tick">✦</span>
                     <span>SwiftUI</span><span class="tick">✦</span>
                     <span>Vapor</span><span class="tick">✦</span>
                     <span>iOS apps</span><span class="tick">✦</span>
-                    
-                    <span>shipped from Germany</span><span class="tick">✦</span>
-                    <span>probably debugging right now</span><span class="tick">✦</span>
+                    <span>servers</span><span class="tick">✦</span>
+                    <span>debugging at 3am</span><span class="tick">✦</span>
                 </div>
             </div>
         </section>
